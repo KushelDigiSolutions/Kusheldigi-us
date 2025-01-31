@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    <!-- <script src="form.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+  <div class="formm" id="popupForm" style="display: none;">
+    <div class="image-section">
+      <img src="image/Rectangle 18430.png" alt="kushel_rectangle" width="370px" height="600px">
+    </div>
+    <div class="formm-section">
+      <button class="close-btn" id="closePopup">&times;</button>
+  
+      <h1 class="form-heading">
+        <img src="/image/Vector 18.png" alt="vector" width="40px" height="30px"> Get in touch
+      </h1>
+      <p>Let us know your requirements and we’ll get back to you as soon as possible</p>
+      <form id="popupFormElement">
+        <div class="formm-group">
+          <input type="text" id="popFullname" name="popFullname" placeholder="Full Name" required>
+        </div>
+        <div class="formm-group">
+          <input type="email" id="popEmail" name="popEmail" placeholder="Email" required>
+        </div>
+        <div class="formm-group">
+          <input type="number" id="popMobile" name="popMobile" placeholder="Mobile*" required>
+        </div>
+        <div class="formm-group">
+          <input type="text" id="popMessage" name="popMessage" placeholder="Message">
+        </div>
+        <div style="display: flex; gap: 18px">
+          <a href="tel:+1-585-566-2070">
+            <button type="button" class="form-contactbtn">Contact us</button>
+          </a>
+          <button type="submit" id="submitButton" class="btn btn-primary rounded-pill">
+            <span id="buttonText">Submit<i class="ri-arrow-right-line"></i></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+
+<script>
+
+  console.log("woring");
+  
+//   THIS IS FOR POPUP MAIL FORM 
+document.addEventListener("DOMContentLoaded", () => {
+  // Select the form by its updated ID
+  const form = document.getElementById("popupFormElement");
+  const buttonText = document.getElementById("buttonText");
+  const loader = document.getElementById("loader");
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault(); // Prevent the default behavior
+
+    loader.style.display = "inline-block";
+    buttonText.style.display = "none";
+
+    const formData = {
+      popFullname: document.getElementById("popFullname").value,
+      popEmail: document.getElementById("popEmail").value,
+      popMobile: document.getElementById("popMobile").value,
+      popMessage: document.getElementById("popMessage").value,
+    };
+
+    console.log("Form Data Submitted:", formData);
+
+    try {
+      const response = await fetch("https://backend.kusheldigi.us/api/v1/sendPopupmaill", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        alert(" email sent successfully!");
+        form.reset(); 
+      } else {
+        alert(`Failed to send  email: ${result.message || "Unknown error"}`);
+      }
+    } catch (error) {
+      console.error("Error while sending  email:", error);
+      alert("An error occurred while sending the email. Please try again.");
+    } finally {
+      loader.style.display = "none";
+      buttonText.style.display = "inline";
+document.getElementById("popFullname").value="",
+      document.getElementById("popEmail").value ="",
+      document.getElementById("popMobile").value ="",
+document.getElementById("popMessage").value ="",
+    }
+  });
+});
+
+</script>
+
+  </body>
+
+
+</html>

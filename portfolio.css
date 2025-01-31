@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
+ *{
+  font-family: "Wix Madefor Display", serif !important;
+ }
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Wix Madefor Display', sans-serif;      
+}
+
+.expollorew{
+  width: 100%;
+  position: relative;
+  background-image: url("assets/leftImage.png"), url('assets/centreImage.png'), url('assets/rightImage.png');
+  background-position: left, center, right;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+ background-size: 33.3%, 33.3%, 33.3%; 
+  background-color:  #006974;
+}
+.Explore{
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 90px 40px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+       
+    }
+
+
+    .exploreP{
+        line-height: 45px;
+        text-align: center;
+        color: white;
+        font-weight: 400;
+        font-size: 35px;
+        margin: 0px !important;
+    }
+    .exploreP span{
+        color: #FFCB17;
+        font-weight:600;
+    }
+    .explorePara{
+        text-align: center;
+        color: white;
+        font-size: 18px;
+        text-transform: capitalize;
+        line-height: 28px;
+        margin: 0px !important;
+    }
+    .hero_btn{
+        text-align:center;
+    }
+    .button{
+        text-align: center;
+        border-radius: 40px;
+        color: white;
+        background-color: #0B56E4;
+        border: 1px solid #0B56E4;
+        height: 49px;
+    width: 162px;
+    font-size: 15px;
+       text-transform: uppercase;
+    }
+    .button:hover{
+        color:#0B56E4;
+        background-color: white;
+        border: 1px solid white;
+        cursor: pointer;
+    }
+.mainSec{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid #F5F5F5;
+    background-color: #F5F5F5;
+     width: 100%;
+    padding: 36px 10px;
+}
+.mainse{
+    font-weight: 700;
+    font-size: 25px;
+    padding-left: 15px;
+ 
+  
+}
+.mainSec1{
+  
+    display: flex;
+    justify-content: flex-start;
+        align-items: center;
+        margin-left: 12px;
+        gap: 20px;
+        margin: 37px 10px;
+        
+}
+.mainSec1 p{
+    border: 1px solid #D7E9F7;
+    background-color: #D7E9F7;
+    border-radius: 40px;
+    font-weight:500;
+    font-size:20px;
+text-align: center;
+padding-top: 10px;
+padding: 20px 20px;
+}
+.mainSec2{
+    display: flex;
+    justify-content: space-between;
+    gap:30px;
+    align-items: center;
+    margin: 20px;
+}
+
+
+.mainp{
+   
+    font-weight: bolder !important;
+    color: #0B56E4;
+    font-size: 25px !important;
+    text-align: center;
+}
+
+.mainSec2 p{
+    font-weight: 500;
+    font-size:17px;
+    
+}
+.caseBtn{
+    border: 1px solid #3464FD;
+    color: #3464FD;
+    border-radius: 40px;
+    background-color: #F4FAFE;
+    height: 50px;
+    width: 190px;
+    font-size: 15px;
+    font-weight: 600;
+  align-self: center;
+
+}
+.caseBtn:hover{
+    border: 1px solid white;
+    color: white;
+    background-color: #3464FD;
+    cursor: pointer;
+  }
+
+
+
+
+
+.allportwrap{
+     width: 100%;
+     position: relative;
+}
+
+
+.allpocont{
+  max-width: 1420px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+  .sixRow{
+    text-align: center;
+    background-color: #031D51;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 324px;
+    width: 100%;
+  }
+  
+ .sixRowP{
+  font-size: 32px;
+  line-height: 42px;
+    color: white;
+    font-weight: 600;
+    font-family: Poppins, 'sans-serif';
+    margin-bottom: 1rem;
+  }
+  .sixRowP span{
+    display: inline-block;
+   color: #FFCB17;
+   font-size: 32px;
+  }
+.sixPara {
+    font-size:18px;
+    color: white;
+  font-family: Poppins, 'sans-serif';
+  max-width: 631px;
+  width: 100%;
+
+  }
+  
+  .btn-light{
+    background-color: white; 
+   color: #0B56E4 !important;
+    font-size:15px;
+    font-weight:600;
+    text-align: center;
+    border: none;
+  height: 55px;
+  width:200px;
+    border-radius: 5px;
+    cursor: pointer;
+ border-radius: 30px;
+
+  }
+  .btn-light:hover{
+background-color: #3464FD !important;
+color: white !important;
+  }
+  .sixRow button{
+    margin-top: 40px !important;
+  }
+
+
+
+
+  .singport{
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    
+  }
+  
+  .portcolor1{
+    
+    background:rgba(54, 195, 28, 0.05);
+  }
+  .portcolor2{
+    
+    background:rgba(124, 18, 23, 0.05);
+  }
+  .portcolor3{
+    
+    background:rgba(0, 153, 255, 0.05);
+  }
+  .portcolor4{
+    
+    background:rgba(239, 134, 7, 0.05);
+  }
+  .portcolor5{
+    
+    background:rgba(229, 220, 220, 0.05);
+  }
+  .portcolor6{
+    
+    background:rgba(156, 0, 0, 0.05);
+  }
+  .portcolor7{
+    background:rgba(245, 252, 244, 0.05);
+  }
+
+  .astarline{
+    border: 1px solid #ccc;
+    height: 455px;
+  }
+
+  .singleftpor{
+    max-width: 65%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .singleftpor h3{
+    font-family: Wix Madefor Display;
+font-size: 32px;
+font-weight: 600;
+line-height: 34px;
+text-align: left;
+color: #0E151D;
+  }
+  .singleftpor h4{
+    font-family: Wix Madefor Display;
+font-size: 32px;
+font-weight: 600;
+line-height: 34px;
+text-align: left;
+color: #0E151D;
+  }
+
+  .portags{
+    display: flex;
+    align-items: center;
+    gap: 20px;  
+  }
+
+  .portags p{
+    max-width: 368px;
+    max-height: 74px;
+    border-radius: 50px ;
+    background: #D7E9F7;
+     padding: 10px 14px;
+     font-family: Wix Madefor Display;
+font-size: 16px;
+font-weight: 500;
+line-height: 26px;
+text-align: center;
+color: #0E151D;
+margin: 0px !important;
+  }
+
+  
+
+  .incranfkjsdf{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .siglpor{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  .siglpor h4{
+    font-family: Wix Madefor Display;
+font-size: 26px;
+font-weight: 700;
+line-height: 36px;
+text-align: center;
+color: #0B56E4;
+  }
+
+  .siglpor p{
+    font-family: Wix Madefor Display;
+font-size: 16px;
+font-weight: 500;
+line-height: 26px;
+text-align:center;
+color: #0E151D;
+margin: 0px !important;
+  }
+
+  .addb2{
+    border-right: 1px solid rgba(0, 0, 0, 0.5) ;
+    padding-right: 20px;
+
+  }
+
+  .singlrighport{
+    max-width: 600px;
+    width: 100%;
+  }
+  .singlrighport img{
+    max-width: 100%;
+    width: 100%;
+  }
+
+  @media (max-width:1050px) {
+    .singport{
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 40px 20px;
+    }
+    .singlrighport{
+      max-width: 100%;
+      width: 100%;
+    }
+  
+    .astarline{
+      display: none;
+    }
+    .singleftpor{
+      max-width: 100%;
+    }
+    .addb2{
+      max-width: 33%;
+      width: 100%;
+    }
+    .allpocont{
+      padding: 60px 20px;
+    }
+  }
+
+
+  @media (max-width:650px) {
+    .incranfkjsdf{
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .addb2{
+      /* border-right: 1px solid rgba(0, 0, 0, 0.5) ; */
+      border: none;
+      padding-right: 0px;
+      max-width: none;
+    }
+    .siglpor{
+      max-width: 250px !important;
+      width: 100% !important; 
+    }
+    .catnvfsf{
+      text-align: center;
+    }
+    .portags{
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+    }
+
+  }
+
+
+  .btn-light{
+    background-color: white; 
+   color: #0B56E4 !important;
+    font-size:15px;
+    font-weight:600;
+    text-align: center;
+    border: none;
+  height: 55px;
+  width:200px;
+    border-radius: 5px;
+    cursor: pointer;
+ border-radius: 30px;
+ display: flex;
+ align-items: center;
+ gap: 10px;
+ justify-content: center;
+ margin: 0 auto;
+  }
+
+  .btn-light svg path {
+    fill: #3464FD; 
+  }
+  
+  .btn-light:hover svg path {
+    fill: #ffffff; 
+  }
+  .btn-light:hover{
+background-color: #3464FD !important;
+color: white !important;
+  }
+
+  
+  @media (max-width:650px) {
+    .singleftpor h3{
+      margin: 0 auto;
+      text-align: center;
+      font-size: 24px;
+      line-height: 34px;
+    }
+    .Explore{
+       padding: 60px 20px;
+    }
+    .exploreP{
+       font-size: 28px !important;
+       line-height: 38px !important;
+    }
+    .exploreP span{
+       font-size: 28px;
+       line-height: 38px;
+    }
+    .explorePara{
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }

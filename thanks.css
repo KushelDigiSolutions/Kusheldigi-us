@@ -1,0 +1,382 @@
+
+*{
+    /* margin: 0px ; */
+    /* padding: 0px; */
+    overflow-x: hidden;
+    box-sizing: border-box;
+
+}
+.thank_you_wrap{
+    width: 100%;
+    position: relative;
+    background-color: rgba(246, 246, 246, 0.2)
+    ;
+    /* background-color: red; */
+}
+
+.thankyou_cont{
+    max-width: 1420px;
+    width: 100%;
+     margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      padding: 60px 40px;
+}
+
+.thankyou_cont h1{
+    font-family: Poppins;
+font-size: 44px;
+font-weight: 600;
+line-height: 54px;
+text-align: center;
+color: #000000;
+overflow: hidden;
+max-width: 745px;
+margin: 0px;
+width: 100%;
+}
+
+.thankp1{
+    font-family: Poppins;
+font-size: 24px;
+font-weight: 400;
+line-height: 32px;
+text-align: center;
+color: #000000;
+max-width: 900px;
+overflow: hidden;
+
+margin: 0px;
+
+width: 100%;
+}
+
+.thank_btns{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 30px;
+   justify-content: center;
+}
+
+.back_hompa{
+    font-family: Poppins;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+text-align: left;
+text-decoration-line: underline;
+color: #3595F6;
+display: flex;
+align-items: center;
+gap: 6px;
+cursor: pointer;
+
+}
+
+.thank_butn1{
+    width: 180px;
+height: 64px;
+border-radius: 6px ;
+background: var(--Secondary, #3595F6);
+border: none;
+cursor: pointer;
+transition: all 0.4s;
+
+}
+
+.thank_butn1:hover{
+    background-color: white;
+    border: 1px solid #3595F6;
+}
+.thank_butn1 span{
+    color: #FFFFFF;
+    font-family: Poppins;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+text-align: center;
+
+}
+
+
+.thank_butn1:hover span{
+   color: #3595F6;
+}
+
+.thank_btn2{
+    width: 180px;
+    height: 64px;
+    border-radius: 6px ;
+    background: #404040;
+    cursor: pointer;
+    transition: all 0.4s;
+    
+}
+.thank_btn2:hover{
+   border: 1px solid #404040;
+   background-color: white;
+    
+}
+
+
+.thank_btn2 span{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align:center;
+color: #FFFFFF;    
+}
+
+.thank_btn2:hover span{
+    color:  #404040;
+     
+ }
+
+
+.thanks2wrap{
+    width: 100%;
+    position: relative;
+    background-color: rgba(246, 246, 246, 0.2)  ;
+
+}
+
+.thakn2cont{
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.thakn2cont h2{
+    font-family: Poppins;
+font-size: 44px;
+font-weight: 600;
+line-height: 42px;
+text-align: left;
+overflow: hidden;
+
+margin: 0px;
+
+color: #000000;
+}
+
+.thank2para{
+    font-family: Poppins;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: left;
+color: #000000;    
+overflow: hidden;
+
+margin: 0px ;
+}
+
+.thank2lefri{
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.thank_right{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.singerig{
+ display: flex;
+ flex-direction: column;
+ gap: 8px;
+}
+
+.singerig h3{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: left;
+    margin: 0px;
+
+color: #000000;    
+}
+
+.singerig p{
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+    margin: 0px;
+
+color: #000000;    
+max-width: 894px;
+width: 100%;
+}
+
+.thank3wrap{
+    background: #1B72E1;
+ width: 100vw;
+ min-width: 100vw;
+ position: relative;
+
+}
+
+.thank3cont{
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto ;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.thank3cont h3{
+    font-family: Wix Madefor Display;
+font-size: 32px;
+font-weight: 600;
+line-height: 42px;
+margin: 0px;
+
+text-align: center;
+color: #FFFFFF;
+}
+
+.thank3cont button{
+    width: 162px;
+height: 56px;
+border-radius: 50px ;
+background: #F4FAFE;
+border: 1px solid #3464FD;
+display: flex;
+align-items: center;
+gap: 5px;
+justify-content: center;
+cursor: pointer;
+
+}
+.thank3cont button span{
+    font-family: Wix Madefor Display;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+color: #3464FD;    
+}
+
+.thank3cont button:hover{
+    background-color: #3464FD;
+    border: 1px solid white;
+
+}
+.thank3cont button:hover span{
+  color: white;
+  margin: 0px;
+
+
+}
+.thank3cont button:hover svg path{
+ fill: white;
+}
+
+@media (max-width:1200px) {
+    .thankyou_cont{
+        padding: 60px 20px;
+    }
+    .thakn2cont{
+        padding: 60px 20px;
+    }
+    .thank3cont{
+        padding: 60px 20px;
+    }
+}
+
+@media (max-width:920px) {
+    .thankyou_cont{
+        padding: 30px 20px;
+    }
+    .thakn2cont{
+        padding: 30px 20px;
+    }
+    .thank3cont{
+        padding: 30px 20px;
+    }
+    .thank2lefri img{
+        display: none;
+    }
+    .thank_right{
+        gap: 24px;
+    }
+}
+
+@media (max-width:550px) {
+  
+    .thankyou_cont h1{
+        max-width: 100%;
+        width: 100%;
+        font-size: 26px;
+        line-height: 36px;
+    }
+    .thankp1{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .thank2para{
+        font-size: 17px;
+        line-height: 25px;
+        text-align: center;
+    }
+    .thank_btns{
+        gap: 14px;
+    }
+    .thankyou_cont{
+        gap: 14px;
+    }
+    .thakn2cont{
+        gap: 14px;
+        align-items: center;
+    }
+    .thakn2cont h2{
+         font-size: 26px;
+         line-height: 36px;
+         text-align: center;
+        }
+        .singerig h3{
+            text-align: center;
+    }
+    .thank3cont h3{
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .singerig p{
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+    }
+  
+}
+
+@media (max-width:400px){
+    .thank_btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.footer-section p{
+    margin-bottom: 1rem;
+}
+
+.footer-section p{
+    line-height: 28px;
+}
