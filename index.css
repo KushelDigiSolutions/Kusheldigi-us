@@ -934,7 +934,7 @@ body {
 
 .digital1 {
   display: flex;
-  justify-content: space-evenly;
+  /* justify-content: space-evenly; */
   align-items: center;
   font-family: 'Wix Madefor Display', sans-serif; 
   padding: 0px 10px;
@@ -2019,6 +2019,10 @@ body {
   margin-top: 1.5rem;
 }
 
+.lets-connect-btn > a {
+  display: inline-block;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .big-cmrc {
@@ -2453,7 +2457,7 @@ width: 100%;
 button {
   background: none;
   border: none;
-  font-size: 24px;
+  /* font-size: 24px; */
   cursor: pointer;
 }
 
@@ -2828,7 +2832,7 @@ button {
 }
 
 .digita { 
-  max-width: 400px;
+  max-width: 358px;
   width: 100%;
 }
 
@@ -3145,11 +3149,15 @@ footer {
   gap: 14px;
 }
 
-.social-icons-1 a {
+.social-icons-1 > a {
   margin: 0 5px;
   color: rgba(68, 68, 68, 1);
   font-size: 20px !important;
-  text-decoration: none;
+  text-decoration: none !important;
+}
+
+.social-icons-1 > a:nth-child(1){
+  margin-left: 0px;
 }
 
 .social-icons a:hover {

@@ -326,6 +326,10 @@ body {
   color: #0E151D;
 }
 
+.singleftpor > a {
+  cursor: initial;
+}
+
 .portags {
   display: flex;
   align-items: center;
@@ -476,7 +480,7 @@ body {
   align-items: center;
   gap: 10px;
   justify-content: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .btn-light svg path {
@@ -490,6 +494,10 @@ body {
 .btn-light:hover {
   background-color: #3464FD !important;
   color: white !important;
+}
+
+.service-btn-container > a {
+  display: inline-block;
 }
 
 

@@ -386,7 +386,7 @@ h1 {
   align-items: center;
   gap: 10px;
   justify-content: center;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .btn-light svg path {
