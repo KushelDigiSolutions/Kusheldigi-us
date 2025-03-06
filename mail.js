@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (response.ok) {
         // alert("Email sent successfully!");
-        window.location.href("thankyou.html")
+        window.location.href = "thankyou.html";
       } else {
         alert(`Failed to send email: ${result.message || "Unknown error"}`);
       }
@@ -130,9 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
             mobileInput.setCustomValidity("Mobile number must be exactly 10 digits.");
         } else if (!/^\d{10}$/.test(mobileNumber)) {
             mobileInput.setCustomValidity("Mobile number must only contain digits.");
-        } else if (!mobileNumber.startsWith("1")) {
-            mobileInput.setCustomValidity("Mobile number must start with 1 (USA valid number).");
-        } else {
+        }  else {
             mobileInput.setCustomValidity(""); 
         }
     });

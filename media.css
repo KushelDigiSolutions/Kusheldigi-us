@@ -1,94 +1,5 @@
-
-  /* @media (max-width: 768px) {
-      .digital {
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 10px;
-          text-align: left;
-      }
-      
-      .digita {
-          margin-bottom: 50px;
-          width: 100%;
-          text-align: left;
-      }
-  
-      .digital1 {
-          font-size: 24px;
-          text-align: center;
-          text-align: left;
-      }
-  
-      .digital2 li {
-          font-size: 14px;
-          margin-bottom: 10px;
-          text-align: left;
-      }
-  
-      .digital3{
-          font-size: 17px;
-       text-align: left;
-         }
-      .digital4{
-        font-size: 17px;
-        text-align: left;
-      }
-      .digital5{
-        font-size: 17px;
-        text-align: left;
-         margin-bottom: 40px;
-      }
-      .digital6{
-        font-size: 17px;
-        text-align: left;
-         margin-bottom: 40px;
-      }
-      .digital7{
-        font-size: 17px;
-        text-align: left;
-         margin-bottom: 40px;
-      }
-      .digital8{
-        font-size: 17px;
-        text-align: left;
-         margin-bottom: 40px;
-      }
-     
-      .digi {
-          flex-direction: column;
-          align-items: flex-start;
-          text-align: left;
-      }
-  
-      .digi1 {
-          font-size: 18px;
-          text-align: left;
-      }
-  
-      .digi2 li {
-          font-size: 14px;
-          text-align: left;
-      }
-  
-      .digita, .digita1, .digita2, .digita3, .digita4 {
-          padding-bottom: 20px;
-          width: 100%;
-          text-align: left;
-      }
-  
-      img {
-          width: 20px;
-          height:10px;
-          margin-top: 10px;
-      }
-  
-      hr {
-          margin: 20px 0;
-      }
-  } */
   @media (max-width:1200px){
   .mainsec{
-    /* width: auto; */
     padding: auto;
     margin: auto;
   }
@@ -172,7 +83,7 @@
 
     .caseBtn {
       font-size: 12px;
-      /* padding: 8px 15px; */
+
     }
 
     .mainSec2 div {

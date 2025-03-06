@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="blogdetails.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index1.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="canonical" href="https://www.kusheldigi.us/" />
+    <title>Blog Details | Kushel Digi Solutions - eCommerce Experts </title>
+
+
+
+    <meta name="description"
+        content="Kushel Digi crafts custom e-commerce solutions with professional website development services. We create user-friendly designs and robust platforms for seamless shopping, scalable growth, and optimized performance.">
+
+    <meta name="keywords"
+        content="Kushel Digi crafts custom e-commerce solutions with professional website development services. Custom eCommerce Development, Store Design & Development, Platform Migration, Mobile eCommerce Solutions, Digital Marketing, website developed, BigCommerce Development, Shopify Development, WooCommerce Development, Magento Development, Ecommerce Technology, The Best of Ecommerce, ECommerce SEO & Optimization, eCommerce development services, Website Design Services.">
+
+
+    <meta property="og:title" content=Expert E-Commerce Website Development>
+    <meta property="og:site_name" content=Kushel Digi Solutions>
+    <meta property="og:url" content=https://www.kusheldigi.us />
+    <meta property="og:description" content=Kushel Digi crafts custom e-commerce solutions with professional website
+        development services. We create user-friendly designs and robust platforms for seamless shopping, scalable
+        growth, and optimized performance.>
+    <meta property="og:type" content=website>
+    <meta property="og:image" content=https://res.cloudinary.com/dx9k1aeon/image/upload/v1737718719/Kds_logo_f4hvwm.png>
+
+
+    <script type="application/ld+json">
+    {         
+       "@context": "https://schema.org/",         
+       "@type": "WebPage",         
+       "@id": "#WebPage",         
+       "url": "https://www.kusheldigi.us/",          
+       "name": "Kushel Digi Solutions"
+      "logo": "https://res.cloudinary.com/dx9k1aeon/image/upload/v1737718719/Kds_logo_f4hvwm.png",
+  "description": "Kushel Digi crafts custom e-commerce solutions with professional website development services. We create user-friendly designs and robust platforms for seamless shopping, scalable growth, and optimized performance.",
+     } 
+  </script
+  
+  
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/fontawesome.min.css"
+      integrity="sha512-v8QQ0YQ3H4K6Ic3PJkym91KoeNT5S3PnDKvqnwqFD1oiqIl653crGZplPdU5KKtHjO0QKcQ2aUlQZYjHczkmGw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"/>
+  <link rel="shortcut icon" href="images/Kds logo fab icon.png" type="image/x-icon">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
+  
+    <link rel="stylesheet" type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" />
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-K0EFPSD81C"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-K0EFPSD81C');
+    </script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbarwrap {
+            position: relative;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .navbar_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .navitems {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .navitems a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .navitems .nav_button {
+            background-color: #007bff;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .threelines,
+        .crossimage {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            transition: left 0.3s ease;
+            z-index: 1100;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .sidebar .nav_button {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+        }
+
+        .sidebar.open {
+            left: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    
+
+
+
+    <section class="article-container">
+        <div class="image-container">
+            <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985625/AI9_puky8e.webp" alt="AI Illustration">
+        </div>
+        <div class="content-container">
+            <p class="date1">FEBRUARY 12, 2025</p>
+            <h1 class="title1">From Hype to Reality: Practical AI Integration Guide</h1>
+            <p class="description1">
+                How to integrate AI into your business without turmoil and how you can get the best results.
+            </p>
+            <div class="author">
+                <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985625/ava-71_rw4jo8.png" alt="Author">
+                <div>
+                    <p class="author-name">Mitya Smusin</p>
+                    <p class="author-role">Chief Executive Officer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="toc-container">
+        <div class="toc-header">
+            <h2>Contents</h2>
+            <span class="toggle-btn">expand &#9660;</span> <!-- Default state: 'expand' -->
+        </div>
+        <ul class="toc-list toc-hidden"> <!-- Default hidden -->
+            <li><a href="#ai-capabilities">1. Current AI capabilities vs. limitations</a></li>
+            <li><a href="#legacy-systems">2. Integration challenges with legacy systems</a></li>
+            <li><a href="#resource-allocation">3. Resource allocation reality check</a></li>
+            <li><a href="#roi-framework">4. ROI calculation framework</a></li>
+            <li><a href="#summary">5. To sum up</a></li>
+        </ul>
+
+    </section>
+    
+
+
+    <section class="para-section">
+
+        <div class="para-content">
+
+            <p class="para1">
+                It’s obvious that in recent years, companies have increasingly turned to AI to solve their problems and
+                achieve business goals. And this is quite justified, because AI does indeed improve some indicators. For
+                example, 44% of businesses noted cost savings as an advantage of adopting AI. This is a decent figure.
+                Therefore, your desire to integrate AI into your processes is understandable.
+            </p>
+            <p class="para2">
+                However, this is not so easy to do. Integrating AI is not just creating an account in OpenAI. This is a
+                large process that requires a lot of attention and resources. In this guide, we will tell you how to
+                properly integrate AI into your business and how to cope with possible difficulties. Stay tuned!
+            </p>
+        </div>
+
+        <div class="cta-section">
+            <p class="cta-text">Harness the AI power to reach your business <br />goals!</p>
+            <a style="text-decoration: none;" href="contact.html" >
+                <button class="cta-button">Contact us</button>
+            </a>
+        </div>
+
+
+        <div class="para3" id="ai-capabilities">
+            <h1>
+                Current AI capabilities vs. limitations
+            </h1>
+
+            <p>
+                Before we start talking about integrating AI into your business, we need to know what functions this
+                technology can perform in general and what limitations it has. This will help you understand whether
+                your business is even worth the resources and time to take this step.
+            </p>
+
+            <div class="img-section">
+                <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985620/AI_integration_Infographics_ytbbou.webp" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <div class="para-section">
+        <div class="para3" id="legacy-systems">
+
+            <h1>
+                Integration challenges with legacy systems
+            </h1>
+
+            <p>
+                Now you know what AI can and cannot do and you are definitely sure that it fits your goal. You are
+                preparing for your next move. However, there’s one more piece of knowledge you should know before the
+                process takes off. You need to know about the challenges you and your team may face during the
+                integration. Here’s what you need to be prepared for:
+            </p>
+
+            <div class="img-section">
+                <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985624/AI_integration2_npgsjj.webp" alt="">
+            </div>
+        </div>
+        <div class="container1">
+            <ul class="styled-list">
+                <li><strong>Data compatibility issues:</strong> Usually, legacy systems store data in outdated formats
+                    or old databases so AI may not even have access to it. And as we already know, inconsistent or
+                    poor-quality data leads to inaccurate AI insights.</li>
+                <li><strong>Scalability constraints:</strong> Older systems weren’t designed for the massive processing
+                    power AI needs, so be ready for performance bottlenecks.</li>
+                <li><strong>API and infrastructure limitations:</strong> Many legacy systems lack APIs necessary for AI
+                    integration (and we are not even talking about monolithic architectures).</li>
+                <li><strong>Security and compliance risks:</strong> AI introduces new vulnerabilities that older systems
+                    weren’t built to deal with. Compliance with data privacy laws like GDPR, HIPAA can become trickier
+                    when automation is involved.</li>
+                <li><strong>Change resistance:</strong> Employees who are used to legacy workflows may resist changes as
+                    a whole, but with AI, there’s a strong fear that artificial intelligence will replace real people in
+                    one way or another. Also, lack of general knowledge about AI can slow down adoption.</li>
+                <li><strong>Long-term maintenance:</strong> Legacy vendors may not provide AI-ready updates or support
+                    and custom AI integrations usually require ongoing maintenance and tuning.</li>
+            </ul>
+        </div>
+
+        <div class="heading1">
+            <h3>
+                Well, how to overcome these challenges, you may ask. Here’s the answer:
+            </h3>
+        </div>
+
+        <div class="container1">
+            <ul class="styled-list">
+                <li>Gradually update legacy components instead of a full overhaul.</li>
+                <li>Bridge the gap between AI and older systems.</li>
+                <li>Clean, standardize, and structure your data.</li>
+                <li>Educate teams on AI capabilities.</li>
+            </ul>
+        </div>
+
+        <div class="heading1">
+            <h3>
+                These steps will help you a lot during the realisation of your project.
+            </h3>
+        </div>
+
+    </div>
+
+    <section class="para-section">
+        <div class="para3-section" id="resource-allocation">
+            <h1>
+                Resource allocation reality check
+            </h1>
+
+            <p>
+                Integrating AI requires careful planning across multiple resource areas. Here’s what you need to
+                consider:
+            </p>
+
+            <div class="img-section">
+                <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985624/AI_integration_clxker.webp" alt="">
+            </div>
+
+            <div class="para3-section">
+                <h1>
+                    Budget
+                </h1>
+                <p>
+                    AI integration can be expensive, so financial planning is key. You need to take into account
+                    development, operational, and personnel training costs. Besides, don’t forget about unexpected
+                    expenses like data cleaning and compliance updates.
+                </p>
+                <p>
+                    💡 Tip: Start with a pilot project to test feasibility before committing full-scale investments.
+                </p>
+            </div>
+            <div class="para3-section">
+                <h1>
+                    Human Resources
+                </h1>
+                <p>
+                    AI is only as good as the people managing it. You need the right mix of data scientists (to build,
+                    and train AI models), software engineers (for possible API and legacy system integrations), and IT &
+                    DevOps specialists (to manage infrastructure and security).
+                </p>
+                <p>
+                    💡 Tip: If hiring an in-house AI team is too costly, consider AI-as-a-Service or partnering with a
+                    software development agency like Yellow.
+                </p>
+            </div>
+
+            <div class="para3-section">
+                <h1>
+                    Infrastructure
+                </h1>
+                <p>
+                    AI requires a lot of computing power and storage. Consider where you are going to store everything
+                    (cloud/on-premise), how you are going to process data, and how secure you need everything to be.
+                </p>
+                <p>
+                    💡 Tip: Assess your current IT stack—many businesses find their legacy systems can’t handle AI
+                    workloads without upgrades.
+                </p>
+            </div>
+            <div class="para3-section">
+                <h1>
+                    Data Management
+                </h1>
+                <p>
+                    As we already know, AI success depends on good data. You must ensure AI has access to relevant,
+                    clean, standardized, and high-quality data.
+                </p>
+                <p>
+                    💡 Tip: You need to allocate resources to data governance teams to maintain AI accuracy over time.
+                </p>
+            </div>
+            <div class="para3-section">
+                <h1>
+                    Time
+                </h1>
+                <p>
+                    AI integration isn’t an overnight thing—it needs structured timelines:
+                </p>
+
+                <div class="container1">
+                    <ul class="styled-list">
+                        <li>Short-term (0-6 months): Research, pilot projects, data preparation.</li>
+                        <li>Mid-term (6-12 months): Full AI integration, process automation, team training.</li>
+                        <li>Long-term (12+ months): Optimization, ROI evaluation, scaling.</li>
+                    </ul>
+                </div>
+                <p>
+                    💡 Tip: Don’t forget about employee resistance—change management strategies will help with AI
+                    adoption.
+                </p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <p class="cta-text">Build your perfect AI solution with Yellow!</p>
+            <button class="cta-button">Get a quote</button>
+        </div>
+    </section>
+
+    <section class="para-section">
+        <div class="para3-section" id="roi-framework">
+            <h1>
+                ROI calculation framework
+            </h1>
+            <p>
+                Finally, to determine whether AI integration is worth your time and money, you need to correctly
+                calculate ROI. Well, we have what you need for that: a practical framework that will help you see the
+                whole picture. Here’s what you need to do:
+            </p>
+        </div>
+
+
+        <div class="para3-heading">
+            <h2>
+                Step #1: Define the objective
+            </h2>
+
+            <p class="paragraph">
+                First thing you need to do is to clearly state the goal of your AI integration. For example, automating
+                manual data entry to reduce costs. Or improving customer service response time with AI chatbots. Or
+                enhancing demand forecasting to optimize inventory.
+            </p>
+        </div>
+
+        <div class="para3-heading">
+            <h2>
+                Step #2: Identify costs
+            </h2>
+
+            <p class="paragraph">
+                Next thing: Break down all expenses related to AI integration. Here’s what it can look like:
+            </p>
+
+            <div class="list-setion">
+                <h3 class="list-heading">
+                    1. <strong>Development & implementation</strong>
+                    <div class="listtype">
+                        <ul class="styled-list">
+                            <li>AI software or model development</li>
+                            <li>Integration with legacy systems</li>
+                            <li>Infrastructure upgrades</li>
+                            <li>APIs</li>
+                        </ul>
+                    </div>
+                </h3>
+            </div>
+            <div class="list-setion">
+                <h3 class="list-heading">
+                    2. <strong>Operational & maintenance</strong>
+                    <div class="listtype">
+                        <ul class="styled-list">
+                            <li>AI training and retraining costs</li>
+                            <li>Data preparation</li>
+                            <li>Cloud computing/on-premise hosting fees</li>
+                            <li>Support and monitoring</li>
+                        </ul>
+                    </div>
+                </h3>
+            </div>
+            <div class="list-setion">
+                <h3 class="list-heading">
+                    3. <strong>Change management & training</strong>
+                    <div class="listtype">
+                        <ul class="styled-list">
+                            <li>Employee training programs</li>
+                            <li>Hiring AI specialists (if needed)</li>
+                            <li>Process adjustments/resistance mitigation</li>
+                        </ul>
+                    </div>
+                </h3>
+            </div>
+        </div>
+
+        <div class="para3-heading">
+            <h2>
+                Step #3: Identify financial benefits
+            </h2>
+
+            <p class="paragraph">
+                Now you need to express in numbers the value AI brings to your business. Usually, the benefits are:
+            </p>
+
+            <div class="list-section">
+                <h4 class="list-heading">
+                    <ul class="styled-list">
+                        <li style="list-style:decimal;">Cost savings (reduction in labor costs, lower IT maintenance
+                            costs)</li>
+                        <li style="list-style:decimal;">Revenue growth (increased sales from better personalization,
+                            faster time-to-market thanks to automation)</li>
+                        <li style="list-style:decimal;">Efficiency gains (shorter processing times, reduced error rates)
+                        </li>
+                    </ul>
+                </h4>
+            </div>
+        </div>
+
+
+        <div class="para3-heading">
+            <h2>
+                Step #4: Calculate ROI
+            </h2>
+
+            <p class="paragraph">
+                Moving to the most important and thrilling part of it all: calculating ROI. The standard formula for it
+                looks like that:
+            </p>
+
+            <div class="img-section">
+                <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985620/AI_integration_List_2_hxkopc.webp" alt="">
+            </div>
+
+            <h4>
+                Let’s imagine some numbers:
+            </h4>
+
+            <div class="list-section">
+                <h4 class="list-heading">
+                    <ul class="styled-list">
+                        <li><strong>Total costs:</strong> $500,000 (AI software, implementation, training)</li>
+                        <li><strong>Total financial gains (over 2 years):</strong>$1,200,000 (labor savings, improved
+                            sales, efficiency)</li>
+                    </ul>
+                </h4>
+            </div>
+
+            <div class="img-section">
+                <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985620/AI_integration_List_3_kqovc3.webp" alt="">
+            </div>
+
+            <p class="paragraph">
+                A 140% ROI means the business gains $1.40 for every $1 invested. Quite a nice outcome!
+            </p>
+
+
+        </div>
+
+        <div class="para3-heading">
+            <h2>
+                Step #5: Consider non-financial gains
+            </h2>
+
+            <p class="paragraph">
+                Finally, as a bonus step, try to think about something that cannot be easily measured, but AI
+                integration often brings:
+            </p>
+
+            <div class="list-section">
+                <h4 class="list-heading">
+                    <ul class="styled-list">
+                        <li>Improved customer experience (faster response times, personalization).</li>
+                        <li>Stronger compliance & security (automated fraud detection, anomaly detection).</li>
+                        <li>Competitive advantage (better insights, faster innovation).</li>
+                    </ul>
+                </h4>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="para-section">
+        <div class="para3-section" id="summary">
+            <h1>
+                Top sum up
+            </h1>
+            <p>
+                Congratulations, you now have a practical guide on how to successfully integrate AI into your business
+                and how to see whether this initiative was worth the struggles. AI is a powerful tool that can be your
+                greatest companion if done right.
+            </p>
+            <p>
+                If you need any help with integrating AI or building an AI solution from scratch, contact us! We are
+                here to help you make your dreams and goals come true.
+            </p>
+
+            <h3 class="tag-heading" style="font-size: 32px; font-weight: 600;">
+                Tags
+            </h3>
+
+
+            <div class="tags-container">
+                <span class="tag">Software development</span>
+                <span class="tag small">AI</span>
+                <span class="tag">Machine learning</span>
+                <span class="tag">Chatbots</span>
+                <span class="tag">How to</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="subscribe-container">
+        <div class="subscribe-text">
+            <h2>Subscribe to new posts.</h2>
+            <p>Get weekly updates on the newest design stories, case studies and tips right in your mailbox.</p>
+        </div>
+        <div class="subscribe-form">
+            <input type="email" placeholder="Your email address">
+            <button>Subscribe</button>
+        </div>
+    </section>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleBtn = document.querySelector(".toggle-btn");
+            const tocList = document.querySelector(".toc-list");
+
+            // Default hidden state already set in HTML & CSS
+            toggleBtn.addEventListener("click", function () {
+                if (tocList.classList.contains("toc-hidden")) {
+                    tocList.classList.remove("toc-hidden");
+                    toggleBtn.innerHTML = 'hide &#9650;'; // Up Arrow
+                } else {
+                    tocList.classList.add("toc-hidden");
+                    toggleBtn.innerHTML = 'expand &#9660;'; // Down Arrow
+                }
+            });
+        });
+
+
+    </script>
+
+<div id="footer"></div>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+
+<script>
+  const phoneInput2 = document.getElementById("phone");
+
+  phoneInput2.addEventListener("input", () => {
+    // Remove non-digit characters
+    phoneInput2.value = phoneInput2.value.replace(/[^0-9]/g, "");
+
+    // Optional: Restrict to 10 digits
+    if (phoneInput2.value.length > 10) {
+      phoneInput2.value = phoneInput2.value.slice(0, 10);
+    }
+  });
+</script>
+
+  
+
+  <script>
+
+    $(document).ready(function () {
+      $('#footer').load('footer.html', function (response, status, xhr) {
+        if (status === "error") {
+          console.error("Error loading footer:", xhr.status, xhr.statusText);
+        }
+      });
+    });
+    // Use jQuery to load the header
+    $(document).ready(function () {
+      $('#header').load('header.html', function (response, status, xhr) {
+        if (status === "error") {
+          console.error("Error loading header:", xhr.status, xhr.statusText);
+        }
+      });
+    });
+
+
+
+
+
+
+
+    const sidebarToggle = document.getElementById("sidebar-toggle");
+    const sidebarClose = document.getElementById("sidebar-close");
+    const sidebar = document.createElement("div");
+
+    sidebar.className = "sidebar";
+    sidebar.innerHTML = `
+<a href="/">Home</a>
+<a href="about.html">About Us</a>
+<a href="service.html">Services</a>
+<a href="blog.html">Blog</a>
+<a href="portfolio.html">Portfolio</a>
+<a href="contact.html" class="nav_button descfonts_kkyu">Contact Us</a>
+`;
+    document.body.appendChild(sidebar);
+
+    sidebarToggle.addEventListener("click", () => {
+      sidebar.classList.add("open");
+      sidebarToggle.style.display = "none";
+      sidebarClose.style.display = "block";
+    });
+
+    sidebarClose.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+      sidebarToggle.style.display = "block";
+      sidebarClose.style.display = "none";
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth > 1024) {
+        sidebar.classList.remove("open");
+        sidebarToggle.style.display = "none";
+        sidebarClose.style.display = "none";
+        document.querySelector(".navbar_conts nav").style.display = "flex";
+      } else {
+        document.querySelector(".navbar_conts nav").style.display = "none";
+        if (sidebar.classList.contains("open")) {
+          sidebarToggle.style.display = "none";
+          sidebarClose.style.display = "block";
+        } else {
+          sidebarToggle.style.display = "block";
+          sidebarClose.style.display = "none";
+        }
+      }
+    });
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+
+
+
+  </script>
+
+
+  <script src="mail.js"></script>
+  
+
+
+
+</body>
+
+</html>

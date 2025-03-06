@@ -1,10 +1,10 @@
-* Global styles */
+/* 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: #fff;
-    /* overflow-x: hidden; */
+    
   }
   @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
 
@@ -3261,7 +3261,7 @@ select {
 }
 
 .btn {
-    /* display: flex; */
+     
     flex-direction: row;
     align-items: center;
     border: none;
@@ -18529,8 +18529,9 @@ video {
     display: flex;
     max-width: 18%;
     flex-direction: column;
-    justify-content: center
+    justify-content: center;
 }
+
 
 .project {
     color: #fff;
@@ -24917,9 +24918,9 @@ video {
     flex-direction: column;
     gap: 30px;
     background-color: #094AC6;
-    padding: 40px 50px 60px 50px;
+    padding: 80px 50px 60px 50px;
     border-radius: 24px 0 0 24px;
-    height: 705px;
+    height: 732px;
 }
 
 
@@ -24961,7 +24962,7 @@ video {
     justify-content: center
 }
 
-.hoGet_inTouchWrap .getInSingleBox {
+.hoGet_inTouchWrap .getInSingleBox1 {
     max-width: 450px;
     width: 100%;
     border-radius: 12px;
@@ -24971,9 +24972,29 @@ video {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
 
 }
+.hoGet_inTouchWrap .getInSingleBox {
+    max-width: 450px;
+    width: 100%;
+    border-radius: 12px;
+    height: fit-content;
+    display: flex;
+   
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hoGet_inTouchWrap .getInSingleBox img {
+    width: 100%;  
+    max-width: 430px;  
+    height: auto;  
+}
+
+
+
+
+
 
 .hoGet_inTouchWrap .calImg {
     width: 100%;
@@ -25029,7 +25050,7 @@ video {
     padding: 32px 68px 80px 60px;
     background-color: #0B56E4;
     border-radius: 0 24px 24px 0;
-    height: 705px;
+    height: 732px;
 }
 
 .getInRight input {
@@ -25087,8 +25108,8 @@ option {
 
 .hoGet_inTouchWrap .getInRight .getInRigHead {
     font-family: Raleway;
-    font-size: 35px;
-    font-weight: 700;
+    font-size: 28px;
+    font-weight: 500;
     line-height: 40.35px;
     color: #fff;
     margin: 0px !important;
@@ -25153,7 +25174,7 @@ option {
     justify-content: center !important;
     gap: 10px !important;
     
-} */
+} 
 
 
 .letConnecBtn {
@@ -25194,7 +25215,7 @@ option {
 /*   
   .letConnecBtn:hover svg path {
     fill: white !important; /* Change SVG icon color on hover */
-  /* }  */
+  /* }  
   
 
 .hoGet_inTouchWrap .letConTextarea {
@@ -25259,7 +25280,7 @@ option {
     .hoGet_inTouchWrap .getINleftSide .getInPARA,
     .hoGet_inTouchWrap .getInSingleBox {
         width: 100%;
-        max-width: 100%
+        
     }
 }
 
@@ -25268,7 +25289,7 @@ option {
         font-size: 28px;
         line-height: 32px;
         text-align: center
-        /* font-weight: 800; */
+       
     }
 
     .hoGet_inTouchWrap .getINleftSide .getInPARA {
@@ -26368,7 +26389,7 @@ option {
     display: flex;
     gap: 20px;
     padding-top: 20px
-}
+}   
 
 .USA-ourWork-toprighty a {
     display: flex;
@@ -26769,7 +26790,7 @@ option {
     width: 100%;
     height: 100vh;
     position: fixed;
-    /* top: 130px; */
+   
     right: -100%;
     transition: transform 0.3s ease-in-out;
     z-index: 1000;
@@ -27024,4 +27045,4 @@ option {
     .php_navbar::before {
         border-bottom: none !important;
     }
-}
+} */

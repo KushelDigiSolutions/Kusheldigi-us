@@ -1,0 +1,619 @@
+/* Reset Default Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Main Container */
+.article-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 50px auto;
+    gap: 40px;
+    padding: 20px;
+}
+
+/* Image Styling */
+.image-container img {
+    width: 100%;
+    height: 480px;
+    max-width: 550px;
+}
+
+/* Content Styling */
+.content-container {
+    max-width: 500px;
+    width: 100%;
+    height: 460px;
+    
+}
+
+.date1 {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 100px;
+}
+
+.title1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 52px;
+}
+
+.description1 {
+    font-size: clamp(16px, 2vw, 19px); 
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 4vw;  
+}
+
+
+@media (max-width: 768px) {
+    .description1 {
+        font-size: 17px; 
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .description1 {
+        font-size: 16px; 
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Author Section */
+.author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.author-name {
+    font-weight: 700;
+    font-size: 18px;
+    margin: 0;
+}
+
+.author-role {
+    font-size: 14px;
+    font-weight: 600;
+    color: gray;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .article-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-container img {
+        max-width: 478px;
+    }
+
+    .author {
+        justify-content: center;
+    }
+}
+
+
+
+/* TOC Container */
+.toc-container {
+    background: #f7f7f7;
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+
+/* TOC Header */
+.toc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.toc-header h2{
+    font-size: 38px;
+    font-weight: 700;
+}
+
+
+
+.toggle-btn {
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 500;
+    color: #666;
+}
+
+/* TOC List */
+.toc-list {
+    list-style: none;
+    margin-top: 16px;
+    overflow: hidden;
+    max-height: 500px; /* Default height */
+    opacity: 1;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.toc-list li {
+    margin: 10px 0;
+}
+
+.toc-list a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 38px;
+    text-underline-offset: 3px;
+}
+
+.toc-list a:hover {
+    text-decoration: underline;
+}
+
+/* Hide TOC Animation */
+.toc-hidden {
+    max-height: 0;
+    opacity: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .toc-container {
+        max-width: 90%;
+    }
+}
+
+
+.para-section{
+    padding: 20px;
+    max-width: 800px;
+    margin: 15px auto;
+}
+
+.para-content .para1{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+.para-content .para2{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* CTA Section */
+.cta-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 60px 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* CTA Text */
+.cta-section .cta-text {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+/* CTA Button */
+.cta-button {
+    background: rgba(52, 100, 253, 1); 
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: white;
+    color: rgba(52, 100, 253, 1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cta-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .cta-text {
+        margin-bottom: 15px;
+    }
+}
+
+.para3 h1{
+    color: rgba(16, 16, 16, 1);
+}
+.para3 p{
+    margin: 42px auto;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+
+/* Main Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    max-width: 400px;
+    width: 100%;
+    background: #f7f7f7;
+    
+    border-radius: 10px;
+
+}
+
+/* Speech Bubbles */
+.bubble {
+    width: 320px;
+    padding: 25px;
+    background: #fcb0ff;
+    border-radius: 10px;
+    position: relative;
+}
+
+.bubble.right {
+    background: #ffdcfc;
+}
+
+.bubble h2 {
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bubble ul {
+    padding: 0;
+    list-style-type: disc;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.bubble li {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+/* Speech Bubble Arrows */
+.bubble.left::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 30px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #fcb0ff;
+}
+
+.bubble.right::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 30px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid #ffdcfc;
+}
+
+/* Robot Image */
+.robot img {
+    width: 150px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .bubble {
+        width: 90%;
+    }
+
+    .bubble.left::after,
+    .bubble.right::after {
+        display: none;
+    }
+
+    .robot img {
+        width: 120px;
+    }
+}
+
+
+.container1 {
+    max-width: 900px; /* 👈 Maintain proper width */
+    width: 100%;
+    margin: 40px auto;
+   
+}
+
+/* Styled List */
+.styled-list {
+    list-style-type: disc; /* 👈 Ensuring bullet points */
+    padding-left: 20px;
+}
+
+.styled-list li {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #222;
+    margin-bottom: 15px;
+}
+
+.styled-list li strong {
+    font-weight: bold;
+}
+
+.heading1 h3{
+    font-size: 18px !important;
+    font-weight: 600;
+    color: #4a4545bf;
+}
+
+.para-section p{
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.756);
+    margin-top: 5rem !important;
+}
+
+.img-section img {
+    width: 100%;
+    max-width: 800px;
+    height: 400px; /* Fixed height for desktop */
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .img-section img {
+        height: 350px; /* Slightly reduce height for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .img-section img {
+        height: 300px; /* Adjust height for better visibility on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .img-section img {
+        height: auto; /* Allow image to scale naturally on very small screens */
+        max-width: 100%;
+    }
+}
+
+
+.para3-section{
+    margin: 53px auto;
+}
+
+.para3-section h1{
+    font-size: 30px !important;
+    margin: 40px auto;
+}
+
+.para3-heading .paragraph{
+    font-weight: 500 !important;
+    margin: 10px auto;
+}
+
+.para3-heading h2{
+    font-size: 20px;
+    font-weight: 800;
+    margin: 30px auto;
+}
+
+.para3-heading .list-heading{
+    margin: 55px auto;
+}
+
+.listtype{
+    max-width: 900px; /* 👈 Maintain proper width */
+    width: 100%;
+    margin: 20px auto;
+    padding: 0px 35px;
+}
+
+
+/* Centering the tags */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap; /* Ensures wrapping on small screens */
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Tag Button Styles */
+.tag {
+    font-size: 16px;
+    font-weight: 500;
+    color: #999;
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 30px; /* Rounded shape */
+    background-color: white;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    white-space: nowrap; /* Prevents text from breaking */
+}
+
+/* Smaller tag for AI */
+.tag.small {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+/* Hover Effect */
+.tag:hover {
+    color: #333;
+    border-color: #bbb;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .tags-container {
+        gap: 10px; /* Reduce gap for smaller screens */
+        padding: 15px;
+    }
+    
+    .tag {
+        font-size: 14px; /* Reduce font size slightly */
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tags-container {
+        justify-content: center;
+        gap: 8px; /* Further reduce gap */
+    }
+
+    .tag {
+        font-size: 13px; /* Slightly smaller text */
+        padding: 6px 12px; /* Adjust padding */
+    }
+}
+
+
+/* Main Container */
+.subscribe-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1024px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Left Side - Text */
+.subscribe-text h2 {
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.subscribe-text p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 34px;
+    color: #777777d8;
+    max-width: 400px;
+}
+
+/* Right Side - Form */
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    width: 250px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+
+.subscribe-form button {
+    background: rgba(52, 100, 253, 1);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background: white;
+    color: rgba(52, 100, 253, 1);
+}
+
+input::placeholder {
+    color: gray; /* Placeholder ka color */
+    opacity: 1;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .subscribe-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .subscribe-form input {
+        width: 100%;
+    }
+
+    .subscribe-form button {
+        width: 100%;
+    }
+}
+
+
+
+
