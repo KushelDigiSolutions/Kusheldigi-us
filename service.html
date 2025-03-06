@@ -716,17 +716,17 @@
           <h2 class="getInRigHead">Get Answers to your Questions</h2>
 
           <form class="getInForm">
-
+    
             <div class="getInTwo">
               <input id="firstName2" name="firstName" required type="text" placeholder="Full Name*" />
               <input id="lastName2" name="lastName" required type="text" placeholder="Last Name*" />
-
+    
             </div>
-
-            <input id="phone" class="busnessInput" type="tel" name="phone" placeholder="Enter phone number" />
-
+    
+            <input id="phone" class="busnessInput intl-tel-input" type="tel" name="phone" placeholder="Enter phone number" />
+    
             <input id="email2" name="email" required type="email" placeholder="Bussiness email*" class="busnessInput" />
-
+    
             <select id="service2" name="service" class="selectSERVICE contactseleservice">
               <option value="">Services</option>
               <option value="UI/UX Design">UI/UX Design</option>
@@ -738,12 +738,12 @@
               <option value="Staff Augmentation">Staff Augmentation</option>
               <option value="Other">Other</option>
             </select>
-
+    
             <textarea id="message2" name="message" cols="30" rows="10" class="letConTextarea"
               placeholder="Message"></textarea>
-
-
-
+    
+    
+    
             <button type="submit" class="letConnecBtn" id="connectButton">
               <span class="arrowSubmitText">
                 Let's Connect <svg style="margin-left: 6px; margin-bottom: 3px;" width="8" height="13"
@@ -755,8 +755,8 @@
               </span>
               <span class="loader" style="display: none;"></span>
             </button>
-
-
+    
+    
           </form>
 
         </div>
@@ -774,21 +774,7 @@
 
 
 
-    <script>
-      const phoneInput2 = document.getElementById("phone");
-
-      phoneInput2.addEventListener("input", () => {
-
-        phoneInput2.value = phoneInput2.value.replace(/[^0-9]/g, "");
-
-        if (phoneInput2.value.length > 10) {
-          phoneInput2.value = phoneInput2.value.slice(0, 10);
-        }
-      });
-    </script>
-
-
-
+   
     <script>
 
 
@@ -862,6 +848,29 @@
         const thankYouPopup = document.getElementById("thankYouPopup");
         thankYouPopup.style.display = "none";
       }
+
+      const phoneInput = document.getElementById('phone')
+
+    phoneInput.addEventListener("input", () => {
+  phoneInput.value = phoneInput.value.replace(/[^0-9]/g, "");
+  if (phoneInput.value.length > 10) {
+    phoneInput.value = phoneInput.value.slice(0, 10);
+  }
+});
+
+    document.addEventListener("DOMContentLoaded", function () {
+  const phoneInputField = document.querySelector("#phone");
+  const phoneInput = window.intlTelInput(phoneInputField, {
+    initialCountry: "us",
+    geoIpLookup: function (callback) {
+      fetch("https://ipapi.co/json")
+        .then((res) => res.json())
+        .then((data) => callback(data.country_code))
+        .catch(() => callback("us"));
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+  });
+});
 
 
 
