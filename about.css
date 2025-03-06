@@ -349,6 +349,10 @@
     gap: 24px;
 }
 
+.raw2-left > a{
+    text-decoration: none;
+}
+
 .raw-2-p2 {
     font-size: 23px;
     line-height: 30px;
@@ -888,7 +892,7 @@
     align-items: center;
     gap: 10px;
     outline: none;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     justify-content: center;
 }
 
@@ -919,4 +923,8 @@
     color: #ffffff;
     display: inline-block;
     border-radius: 10px;
+}
+
+.sixrow_cont > a {
+    display: inline-block;
 }
