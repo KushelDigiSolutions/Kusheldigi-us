@@ -6,7 +6,6 @@
   <title>Document</title>
  
   <style>
-    <style>
   .navbarwrap {
     position: relative;
     background-color: #fff;
@@ -95,44 +94,88 @@
   </style>
 </head>
 <body>
-  <!-- <nav style="overflow-x: hidden;" class="navbarwrap">
-    <div class="navbar_container">
-      <div class="">
-        <a href="/">
-          <img class="brand_log"
-            src="https://res.cloudinary.com/dx9k1aeon/image/upload/v1737718719/Kds_logo_f4hvwm.png"
-            alt="Kushel Digi Logo">
-        </a>
-      </div>
-      <div class="navitems">
-        <a href="/">Home</a>
+ 
+
+
+  <div class="navbar_wraps">
+    <div class="navbar_conts">
+
+      <a href="/"><img class="log0_img"
+          src="https://res.cloudinary.com/dx9k1aeon/image/upload/v1737718719/Kds_logo_f4hvwm.png" alt="kushel_logo">
+      </a>
+
+      <nav>
+        <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
-        <a href="service.html">Services</a>
+        <a href="service.html">Service</a>
+        <a href="blog.html">Blog</a>
         <a href="portfolio.html">Portfolio</a>
-
-       <a href="contact.html">
-          <p class="nav_button">Contact Us</p>
+        <a href="contact.html">
+          <button>
+            <span>Contact Us</span>
+          </button>
         </a>
+      </nav>
 
-      </div>
 
-      <img class="threelines" id="sidebar-toggle"
+      <img class="small_nav_logo" id="sidebar-toggle"
         src="https://res.cloudinary.com/dd9tagtiw/image/upload/v1735567447/download_gcquzm.png" alt="kushel_image">
 
-      <img class="crossimage" id="sidebar-close"
+      <img class="small_nav_logo" id="sidebar-close"
         src="https://res.cloudinary.com/dd9tagtiw/image/upload/v1735570383/download_s4loyx.png" alt="kushel_image"
         style="display:none;">
+
     </div>
-  </nav> -->
-
-
-
+  </div>
 
 
    <script>
  
 
+ const sidebarToggle = document.getElementById("sidebar-toggle");
+      const sidebarClose = document.getElementById("sidebar-close");
+      const sidebar = document.createElement("div");
 
+      sidebar.className = "sidebar";
+      sidebar.innerHTML = `
+  <a href="/">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="service.html">Services</a>
+  <a href="blog.html">Blog</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html" class="nav_button descfonts_kkyu">Contact Us</a>
+`;
+      document.body.appendChild(sidebar);
+
+      sidebarToggle.addEventListener("click", () => {
+        sidebar.classList.add("open");
+        sidebarToggle.style.display = "none";
+        sidebarClose.style.display = "block";
+      });
+
+      sidebarClose.addEventListener("click", () => {
+        sidebar.classList.remove("open");
+        sidebarToggle.style.display = "block";
+        sidebarClose.style.display = "none";
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 1024) {
+          sidebar.classList.remove("open");
+          sidebarToggle.style.display = "none";
+          sidebarClose.style.display = "none";
+          document.querySelector(".navbar_conts nav").style.display = "flex";
+        } else {
+          document.querySelector(".navbar_conts nav").style.display = "none";
+          if (sidebar.classList.contains("open")) {
+            sidebarToggle.style.display = "none";
+            sidebarClose.style.display = "block";
+          } else {
+            sidebarToggle.style.display = "block";
+            sidebarClose.style.display = "none";
+          }
+        }
+      });
     
   </script>
   <script src="script.js"></script>

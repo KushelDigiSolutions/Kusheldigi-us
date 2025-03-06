@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <link rel="stylesheet" href="form.css">
-    <!-- <script src="form.js"></script> -->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="form.css">
+  <!-- <script src="form.js"></script> -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
 
-    </style>
+  </style>
 </head>
 
 <body>
@@ -18,13 +18,13 @@
 
   <div class="formm" id="popupForm" style="display: none;">
     <div class="image-section">
-      <img src="image/Rectangle 18430.png" alt="kushel_rectangle" width="370px" height="600px">
+      <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740986778/Rectangle_18430_yt6yew.png" alt="kushel_rectangle" width="370px" height="600px">
     </div>
     <div class="formm-section">
       <button class="close-btn" id="closePopup">&times;</button>
-  
+
       <h1 class="form-heading">
-        <img src="/image/Vector 18.png" alt="vector" width="40px" height="30px"> Get in touch
+        <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740986799/Vector_18_pj4msz.png" alt="vector" width="40px" height="30px"> Get in touch
       </h1>
       <p>Let us know your requirements and we’ll get back to you as soon as possible</p>
       <form id="popupFormElement">
@@ -51,68 +51,68 @@
       </form>
     </div>
   </div>
-  
 
-<script>
 
-  console.log("woring");
-  
-//   THIS IS FOR POPUP MAIL FORM 
-document.addEventListener("DOMContentLoaded", () => {
-  // Select the form by its updated ID
-  const form = document.getElementById("popupFormElement");
-  const buttonText = document.getElementById("buttonText");
-  const loader = document.getElementById("loader");
+  <script>
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault(); // Prevent the default behavior
+    console.log("woring");
 
-    loader.style.display = "inline-block";
-    buttonText.style.display = "none";
+    //   THIS IS FOR POPUP MAIL FORM 
+    document.addEventListener("DOMContentLoaded", () => {
+      // Select the form by its updated ID
+      const form = document.getElementById("popupFormElement");
+      const buttonText = document.getElementById("buttonText");
+      const loader = document.getElementById("loader");
 
-    const formData = {
-      popFullname: document.getElementById("popFullname").value,
-      popEmail: document.getElementById("popEmail").value,
-      popMobile: document.getElementById("popMobile").value,
-      popMessage: document.getElementById("popMessage").value,
-    };
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault(); // Prevent the default behavior
 
-    console.log("Form Data Submitted:", formData);
+        loader.style.display = "inline-block";
+        buttonText.style.display = "none";
 
-    try {
-      const response = await fetch("https://backend.kusheldigi.us/api/v1/sendPopupmaill", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+        const formData = {
+          popFullname: document.getElementById("popFullname").value,
+          popEmail: document.getElementById("popEmail").value,
+          popMobile: document.getElementById("popMobile").value,
+          popMessage: document.getElementById("popMessage").value,
+        };
 
-      const result = await response.json();
+        console.log("Form Data Submitted:", formData);
 
-      if (response.ok) {
-        alert(" email sent successfully!");
-        form.reset(); 
-      } else {
-        alert(`Failed to send  email: ${result.message || "Unknown error"}`);
-      }
-    } catch (error) {
-      console.error("Error while sending  email:", error);
-      alert("An error occurred while sending the email. Please try again.");
-    } finally {
-      loader.style.display = "none";
-      buttonText.style.display = "inline";
-document.getElementById("popFullname").value="",
-      document.getElementById("popEmail").value ="",
-      document.getElementById("popMobile").value ="",
-document.getElementById("popMessage").value ="",
+        try {
+          const response = await fetch("https://backend.kusheldigi.us/api/v1/sendPopupmaill", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+
+          const result = await response.json();
+
+          if (response.ok) {
+            alert(" email sent successfully!");
+            form.reset();
+          } else {
+            alert(`Failed to send  email: ${result.message || "Unknown error"}`);
+          }
+        } catch (error) {
+          console.error("Error while sending  email:", error);
+          alert("An error occurred while sending the email. Please try again.");
+        } finally {
+          loader.style.display = "none";
+          buttonText.style.display = "inline";
+      document.getElementById("popFullname").value = "";
+      document.getElementById("popEmail").value = "";
+      document.getElementById("popMobile").value = "";
+      document.getElementById("popMessage").value = "";
     }
-  });
-});
+      });
+    });
 
-</script>
+  </script>
 
-  </body>
+</body>
 
 
 </html>
