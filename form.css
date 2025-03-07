@@ -6,7 +6,7 @@
     overflow: hidden;
     max-width: 800px;
     width: 100%;
-    max-height: 500px;
+    max-height: 530px;
     height: 100%;
 }
 
@@ -245,11 +245,12 @@ input::placeholder { /* Firefox 19+ */
 }
 .form-contactbtn{
     width: 130px !important;
-    height: 53px !important;
+    height: 43px !important;
     border-radius: 50px !important;
     background-color: white;
     border: 1px solid blue;
     color:blue;
+    margin-top: 10px !important;
 }
 
 
@@ -274,6 +275,7 @@ input::placeholder { /* Firefox 19+ */
     border: 1px solid transparent;
     border-radius: 4px;
     width: 126px !important;
+    height: 43px !important;
 }
 
 .popup_wala_Wrao{
