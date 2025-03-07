@@ -4952,3 +4952,58 @@ a:hover {
     font-size: 14px;
   }
 }
+
+.iti {
+  width: 100%;
+}
+
+#popMobile {
+  padding-left: 50px !important;
+}
+
+.pop-captcha-box {
+  display: flex;
+  flex-wrap: wrap;
+ gap: 30px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+#pop-captchaQuestion {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+#pop-captchaAnswer {
+  border:none;
+  border-bottom: 2px solid #000;
+  text-align: center;
+  width: 40px;
+  margin-left: 6px;
+  padding: 5px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#pop-captchaAnswer:focus {
+  border:none;
+  border-bottom: 2px solid #000;
+  outline: none;
+}
+
+.pop-captcha-btn {
+  background: #0ea80e;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pop-captcha-btn:hover {
+  background: #0b7e0b;
+}
+
+.form-heading {
+  margin-top: 5px !important;
+}

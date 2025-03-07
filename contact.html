@@ -50,10 +50,21 @@
         <input type="text" placeholder="Enter your name" id="popFullname" required>
         <input type="email" placeholder="Email Address" id="popEmail" required>
         <div class="containpufds">
-          <input type="number" placeholder="Mobile Number*" id="popMobiler4" maxlength="10" />
-          <span>+1</span>
+          <input type="number" placeholder="Mobile Number*" id="contactMobile" maxlength="10" />
         </div>
         <textarea id="popMessage" placeholder="Message"></textarea>
+
+        <div class="contact-captcha-box">
+          <div>
+            <span id="contact-captchaQuestion"></span>
+          <input
+            type="number"
+            id="contact-captchaAnswer"
+            required />
+          </div>
+
+          <span class="contact-captcha-btn">Verify Captcha</span>
+        </div>
 
         <button type="submit" class="sec-3-btn11">
           <span id="contact_btn_text" style="display: flex; align-items: center; gap: 5px;"> Submit
@@ -178,7 +189,8 @@
     </div>
 
   </footer> -->
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
 
 
@@ -202,7 +214,9 @@
       });
     });
 
-    document.getElementById("popMobiler4").addEventListener("input", function (event) {
+    const contactMobile = document.getElementById('contactMobile');
+
+    document.getElementById("contactMobile").addEventListener("input", function (event) {
       let value = event.target.value;
 
       value = value.replace(/\D/g, '');
@@ -229,7 +243,7 @@
         const formData = {
           popFullname: document.getElementById("popFullname").value,
           popEmail: document.getElementById("popEmail").value,
-          popMobile: document.getElementById("popMobiler4").value,
+          popMobile: document.getElementById("contactMobile").value,
           popMessage: document.getElementById("popMessage").value,
         };
 
@@ -261,20 +275,57 @@
       });
     });
 
-
-
-
-
-    const phoneInputField = document.querySelector("#phone");
-    const phoneInput = window.intlTelInput(phoneInputField, {
-      utilsScript:
-        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    contactMobile.addEventListener("input", () => {
+      contactMobile.value = contactMobile.value.replace(/[^0-9]/g, "");
+      if (contactMobile.value.length > 10) {
+        contactMobile.value = contactMobile.value.slice(0, 10);
+      }
     });
 
+    document.addEventListener("DOMContentLoaded", function () {
+      const contactMobileField = document.querySelector("#contactMobile");
+      const contactMobile = window.intlTelInput(contactMobileField, {
+        initialCountry: "us",
+        geoIpLookup: function (callback) {
+          fetch("https://ipapi.co/json")
+            .then((res) => res.json())
+            .then((data) => callback(data.country_code))
+            .catch(() => callback("us"));
+        },
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      });
+    });
 
+    const contactCaptchaBtn = document.querySelector('.contact-captcha-btn');
 
+      let contactCorrectAnswer = 0;
 
+      function contactGenerateCaptcha() {
+        const firstNo = Math.floor(Math.random() * 10);
+        const secondNo = Math.floor(Math.random() * 10);
+        contactCorrectAnswer = firstNo + secondNo;
+        document.getElementById(
+          "contact-captchaQuestion"
+        ).innerText = `${firstNo} + ${secondNo} =`;
+        document.getElementById("contact-captchaAnswer").value = ""; 
+      }
 
+      function contactVerifyCaptcha() {
+        const userAnswer = parseInt(
+          document.getElementById("contact-captchaAnswer").value
+        );
+        if (userAnswer !== contactCorrectAnswer) {
+          alert("Wrong Captcha! Try again.");
+          contactGenerateCaptcha();
+          return false;
+        }
+        alert('Captcha Verified!!');
+        return true;
+      }
+
+      contactCaptchaBtn.addEventListener('click',contactVerifyCaptcha);
+
+      document.addEventListener("DOMContentLoaded", contactGenerateCaptcha);
 
   </script>
 
