@@ -177,6 +177,11 @@ input::placeholder { /* Firefox 19+ */
         display: none; /* Hide image for smaller devices */
         width: auto;
         height: auto;
+        object-fit: cover !important;
+    }
+
+    .image-section > img {
+        object-fit: cover !important;
     }
 
     .formm-section {
@@ -283,4 +288,5 @@ input::placeholder { /* Firefox 19+ */
     align-items: center;
     justify-content: center;
     z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.7);
 }
