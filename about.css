@@ -1007,3 +1007,7 @@
 .sixrow_cont > a {
     display: inline-block;
 }
+
+a {
+    display: inline-block;
+}

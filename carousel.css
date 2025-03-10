@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Wix Madefor Display';
+}
+
+.carousel-container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.inner-carousel-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.carousel-container-heading {
+    text-align: center;
+        font-size: 3rem;
+        font-weight: 500;
+}
+
+.carousel-container-para {
+    margin: 15px 0px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.carousel-item {
+    width: 90%;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.left-carousel-item {
+    width: 60%;
+    position: relative;
+}
+
+.left-carousel-btn-div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 12;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.left-carousel-item > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-carousel-item {
+    width: 40%;
+    background-color: #f1f2f3;
+    padding: 20px;
+}
+
+.left-carousel-btn {
+    background: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.blue-bg {
+    background-color: #0000ff;
+    color: #fff;
+}
+
+.right-carousel-heading{
+    font-size: 1.5rem;
+    line-height: 31px;
+}
+
+.right-service-stack-div {
+    margin-top: 20px;
+    display: flex;
+    gap: 25px;
+    align-items: baseline;
+}
+
+.right-service-stack {
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.right-service-stack > ul {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.right-service-stack > ul > li {
+    font-weight: 500;
+    margin: 5px 0px;
+}
+
+.right-carousel-para {
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 24px;
+}
+
+.right-carousel-inner-btn {
+    font-size: 16px;
+    margin: 20px 0px;
+}
+
+.carousel-item {
+    margin: 30px auto;
+}
+
+.swiper-horizontal {
+    margin-top: 20px;
+}
+
+@media screen and (max-width:576px){
+    .carousel-container-heading {
+        font-size: 2rem;
+    }
+
+    .carousel-item {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-carousel-item , .right-carousel-item {
+        width: 100%;
+    }
+
+    .right-service-stack-div {
+        flex-direction: column;
+    }
+
+    .left-carousel-btn-div {
+        flex-direction: column;
+    }
+
+    .right-service-stack {
+        width: 100%;
+    }
+}
