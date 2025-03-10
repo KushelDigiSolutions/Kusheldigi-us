@@ -158,6 +158,8 @@ body {
 }
 
 
+
+
 /* ----- FAQ SECTION ----- */
 .faq-section {
     max-width: 1024px;
@@ -292,6 +294,19 @@ body {
     }
 }
 
+.mobile-tech-carousel {
+    display: none;
+}
 
 
+@media screen and (max-width:578px){
+    .container.none {
+        display: none;
+    }
+
+    .mobile-tech-carousel {
+        display: block;
+    }
+
+}
  
