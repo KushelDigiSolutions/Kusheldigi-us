@@ -1011,3 +1011,19 @@
 a {
     display: inline-block;
 }
+
+@media screen and (max-width:1000px){
+    .inner-contact-container {
+      flex-direction: column;
+    }
+  
+    .clients::after {
+      width: 744px;
+  }
+  }
+  
+  @media screen and (max-width:576px){
+    .clients::after {
+      width: 200px;
+    }
+  }

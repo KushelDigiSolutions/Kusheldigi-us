@@ -30,16 +30,27 @@
     text-align: center;
 }
 
+.carousel-div {
+    width: 95%;
+    margin: 0px auto;
+}
+
 .carousel-item {
-    width: 100%;
+    width: 90%;
     display: flex;
     border-radius: 15px;
     overflow: hidden;
     margin-top: 30px;
 }
 
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .left-carousel-item {
-    width: 60%;
+    width: 50%;
     position: relative;
 }
 
@@ -61,7 +72,7 @@
 }
 
 .right-carousel-item {
-    width: 40%;
+    width: 50%;
     background-color: #f1f2f3;
     padding: 20px;
 }
@@ -71,6 +82,7 @@
     padding: 10px 20px;
     border-radius: 50px;
     font-weight: 600;
+    font-size: 18px;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border: none;
@@ -173,5 +185,56 @@
 
     .right-service-stack {
         width: 100%;
+    }
+}
+
+.swiper-button-prev,.swiper-button-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0000ff;   
+}
+
+.swiper-button-prev::after,.swiper-button-next::after{
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+}
+
+@media screen and (max-width:1000px){
+    .carousel-item {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .left-carousel-item,.right-carousel-item{
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width:576px){
+    .carousel-container {
+        padding: 40px 10px;
+    }
+
+    .carousel-div {
+        width: 100%;
+    }
+
+    .carousel-item {
+        flex-direction: column;
+        width: 85%;
+    }
+
+    .left-carousel-item > img {
+        aspect-ratio: 1/1;
+    }
+
+    .left-carousel-btn-div {
+        display: none;
     }
 }
