@@ -21,6 +21,9 @@
   <meta property="og:type" content=website>
   <meta property="og:image" content=https://res.cloudinary.com/dx9k1aeon/image/upload/v1737718719/Kds_logo_f4hvwm.png>
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="application/ld+json">
   {         
      "@context": "https://schema.org/",         
@@ -143,7 +146,7 @@
 
   </div> -->
   
-  <section class="tech-section" style="background-color: rgba(85, 80, 127, 0.05);">
+  <!-- <section class="tech-section" style="background-color: rgba(85, 80, 127, 0.05);">
     <div class="tech-container">
         <div class="tech-heading">
             <h2>Our Technology Partnership</h2>
@@ -185,9 +188,92 @@
             <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
         </div>
     </div>
+</section> -->
+
+<section class="tech-section">
+  <div class="tech-container">
+    <div class="tech-heading">
+      <h2>Our Technology Partnership</h2>
+      <p>Bringing Together Leading Platforms for Your Ultimate Digital Commerce Success</p>
+    </div>
+  </div>
+
+  <!-- Desktop Grid (Visible in Desktop) -->
+  <div class="containers">
+    <div class="card-1">
+      <img src="/images/auxible.png" alt="auxible Partner">
+      <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+    </div>
+    <div class="card-1">
+      <img src="/images/usha fasteners.png" alt="Usha Partner">
+      <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+    </div>
+    <div class="card-1">
+      <img src="/images/deliotte.png" alt="deliotte Partner">
+      <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+    </div>
+    <div class="card-1">
+      <img src="/images/codepxl.png" alt="codepxl Partner">
+      <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+    </div>
+    <div class="card-1">
+      <img src="/images/cronus.png" alt="cronus Partner">
+      <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+    </div>
+    <div class="card-1">
+      <img src="/images/madfish.png" alt="madfish Partner">
+      <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+    </div>
+    <div class="card-1">
+      <img src="/images/havells.png" alt="havellsPartner">
+      <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+    </div>
+    <div class="card-1">
+      <img src="/images/auxible.png" alt="auxible Partner">
+      <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+    </div>
+  </div>
+
+  <!-- Swiper Slider (Only Mobile) -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide card-1">
+        <img src="/images/auxible.png" alt="auxible Partner">
+        <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+      </div>
+      <div class="swiper-slide card-1">
+        <img src="/images/usha fasteners.png" alt="Usha Partner">
+        <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+      </div>
+      <div class="swiper-slide card-1">
+        <img src="/images/deliotte.png" alt="deliotte Partner">
+        <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+      </div>
+      <div class="swiper-slide card-1">
+        <img src="/images/codepxl.png" alt="codepxl Partner">
+        <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+      </div>
+      <div class="swiper-slide card-1">
+        <img src="/images/cronus.png" alt="cronus Partner">
+        <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+      </div>
+      <div class="swiper-slide card-1">
+        <img src="/images/madfish.png" alt="madfish Partner">
+        <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+      </div>
+      <div class="swiper-slide card-1">
+        <img src="/images/havells.png" alt="havellsPartner">
+        <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+      </div>
+      <div class="swiper-slide card-1">
+        <img src="/images/auxible.png" alt="auxible Partner">
+        <a href="#" class="read-more-1">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+      </div>
+    </div>
+    <!-- Pagination Dots -->
+    <div class="swiper-pagination"></div>
+  </div>
 </section>
-
-
 
   <div class="sec-3">
 
@@ -2090,6 +2176,21 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
+    });
+
+
+    var swiper = new Swiper(".swiper-container", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
     });
 </script>
 
