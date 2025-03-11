@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Kushel Digi Solutions | Your Trusted eCommerce Partner</title>
@@ -10,7 +11,7 @@
   <link rel="stylesheet" href="form.css">
 
   <link rel="canonical" href="https://www.kusheldigi.us/about.html" />
-
+  <!-- <link rel="stylesheet" href="/contact-section.css"> -->
 
   <link rel="shortcut icon" href="images/Kds logo fab icon.png" type="image/x-icon">
   <meta name="description"
@@ -432,6 +433,7 @@
 
 
 
+
   <div class="hoGet_inTouchWrap" id="HomeSlide">
     <div class="GetinTouchContain">
       <div class="getINleftSide">
@@ -509,6 +511,99 @@
     </div>
   </div>
 
+
+<div class="contact-container">
+  <div class="container">
+    <div class="left">
+      <h1 class="left-contact-heading">
+        Want to Lead Market with AI-led Digital Solutions?
+      </h1>
+      <div class="contact-box">
+        <div class="contact-card">
+          <p class="call-us">Call us</p>
+          <h3 class="us-number">+1-585-566-2070</h3>
+          <p class="country">United States</p>
+          <img src="/image/phone-png.png" alt="call" class="phone-icon" />
+        </div>
+        <div class="contact-card">
+          <p class="call-us">Call us</p>
+          <h3 class="us-number">+91 9045301702</h3>
+          <p class="country">India</p>
+          <img src="/image/phone-png.png" alt="call" class="phone-icon" />
+        </div>
+      </div>
+      <span class="clients">Our Clients</span>
+      <div class="company-images">
+        <img class="contact-company" src="/image/contact-companies.png" alt="companies">
+      </div>
+    </div>
+    <div class="right">
+      <h2 class="contact-heading">Share Your Ideas, We'll Build it.</h2>
+      <form class="contact-form" id="contactForm">
+        <div class="contact-first-div">
+          <div>
+            <label for="name" class="contact-label">Name</label>
+            <input
+              class="contact-input"
+              type="text"
+              placeholder="Your Name"
+              name="name"
+              id="name"
+              required
+            />
+          </div>
+          <div>
+            <label for="phone" class="contact-label">Phone Number</label>
+            <input
+              class="contact-input"
+              type="text"
+              placeholder="Phone Number"
+              name="phone"
+              id="phone"
+              required
+            />
+          </div>
+        </div>
+        <div class="contact-div">
+          <label for="email" class="contact-label">Business Email</label>
+          <input
+            class="contact-input"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div class="contact-div">
+          <label for="msg" class="contact-label">Project Description</label>
+          <textarea
+            class="contact-textArea"
+            name="msg"
+            id="msg"
+            placeholder="How Can We Help You?"
+            required
+          ></textarea>
+        </div>
+
+        <div class="captcha-box">
+          <div>
+            <span id="captchaQuestion"></span>
+          <input
+            type="number"
+            id="captchaAnswer"
+            required />
+          </div>
+
+          <span class="captcha-btn">Verify Captcha</span>
+        </div>
+
+        <button class="contact-form-btn" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
   <div id="footer"></div>
   <!-- 
 <footer>    
@@ -580,7 +675,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
 
-
+<script src="/captcha.js"></script>
 
   <script>
     const phoneInput2 = document.getElementById("phone");
