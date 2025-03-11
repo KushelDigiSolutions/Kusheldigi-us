@@ -5601,8 +5601,7 @@ overflow: hidden;
 .upper-modal-box,.bottom-modal-box {
   display: none;
 }
-
-
+}
 
 /* ----- FAQ SECTION ----- */
 .faq-section {
@@ -5739,6 +5738,7 @@ overflow: hidden;
 
   .faq-question h3 {
       font-size: 17px;
+      margin-top: 1rem !important;
   }
 
   .faq-answer{
@@ -5773,6 +5773,7 @@ overflow: hidden;
   font-size: 3vw;
   font-weight: 600;
   line-height: 1.2;
+  text-align: center;
 }
 
 .tech-heading p {
@@ -5781,6 +5782,7 @@ overflow: hidden;
   line-height: 1.6;
   color: #333333d9;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* ----- CARDS ----- */
