@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tech.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <section class="tech-section">
+        <div class="tech-container">
+            <div class="tech-heading">
+                <h2>Our Technology Partnership</h2>
+                <p>Bringing Together Leading Platforms for Your Ultimate Digital Commerce Success</p>
+            </div>
+        </div>
+
+        <div class="container none">
+            <div class="card">
+                <img src="/images/madfish.png" alt="Adobe Partner">
+                <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+            </div>
+            <div class="card">
+                <img src="/images/usha fasteners.png" alt="Magento Partner">
+                <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+            </div>
+            <div class="card">
+                <img src="/images/deliotte.png" alt="Odoo Partner">
+                <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+            </div>
+            <div class="card">
+                <img src="/images/auxible.png" alt="BigCommerce Partner">
+                <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+            </div>
+            <div class="card">
+                <img src="/images/codepxl.png" alt="Microsoft Partner">
+                <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+            </div>
+            <div class="card">
+                <img src="/images/deliotte.png" alt="Shopify Partner">
+                <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+            </div>
+            <div class="card">
+                <img src="/images/cronus.png" alt="Salesforce Partner">
+                <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+            </div>
+            <div class="card">
+                <img src="/images/instacertify.png" alt="AWS Partner">
+                <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="mobile-tech-carousel">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card">
+                    <img src="/images/madfish.png" alt="Adobe Partner">
+                    <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                <img src="/images/usha fasteners.png" alt="Magento Partner">
+                <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+            </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                    <img src="/images/deliotte.png" alt="Odoo Partner">
+                    <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                    <img src="/images/auxible.png" alt="BigCommerce Partner">
+                    <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                    <img src="/images/codepxl.png" alt="Microsoft Partner">
+                    <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                    <img src="/images/cronus.png" alt="Salesforce Partner">
+                    <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                    <img src="/images/instacertify.png" alt="AWS Partner">
+                    <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card">
+                    <img src="/images/deliotte.png" alt="Odoo Partner">
+                    <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+                </div>
+              </div>
+              <div class="swiper-slide"><div class="card">
+                <img src="/images/instacertify.png" alt="AWS Partner">
+                <a href="#" class="read-more">Read More <img src="/image/circle-arrow-icon.svg" alt=""></a>
+            </div></div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 1,
+          spaceBetween: 10,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          breakpoints: {
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            }
+          },
+        });
+      </script>
+    
+</body>
+
+</html>

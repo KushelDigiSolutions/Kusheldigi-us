@@ -637,7 +637,7 @@
     }
 
     .img {
-        width: 60%;
+        width: 100%;
         height: auto;
     }
 
@@ -645,6 +645,8 @@
         width: auto;
         display: inline-block;
         text-align: center;
+        font-size: 20px;
+        line-height: 29px;
     }
 
     .raw-2-flex {
@@ -992,8 +994,6 @@
     background-color: #3464FD !important;
     color: white !important;
 }
-
-
 
 .counter {
     font-weight: 800;
