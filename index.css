@@ -488,8 +488,8 @@
 
 .r-img {
   position: absolute;
-  right: 0px;
-  top: 12rem;
+  right: 15px;
+  top: 17px;
   width: 170px;
 }
 
@@ -1486,11 +1486,10 @@
 
 
 #main {
-  margin-top: 40px;
   display: flex;
   justify-content: space-evenly;
-
-
+  max-width: 1400px;
+  margin: 40px auto 0px;
 }
 
 
@@ -2142,7 +2141,7 @@
 .big-cmrc {
   background-color: #0E62FF;
   width: 100%;
-  max-width: 1920px;
+  /* max-width: 1920px; */
   min-height: 250px;
   /* Avoid fixed height */
   padding: 2rem 1rem;
@@ -2466,23 +2465,23 @@
 
 /* Staggered effect using nth-child */
 .phase:nth-child(2) {
-  transform: translate(-16px, 193px);
+  transform: translate(-16px, 183px);
 }
 
 .phase:nth-child(3) {
-  transform: translateY(92px);
+  transform: translateY(82px);
 }
 
 .phase:nth-child(4) {
-  transform: translate(35px, 25px);
+  transform: translate(35px, 17px);
 }
 
 .phase:nth-child(5) {
-  transform: translate(52px, -32px);
+  transform: translate(52px, -45px);
 }
 
 .phase:nth-child(6) {
-  transform: translate(73px, -98px);
+  transform: translate(34px, -98px);
 }
 
 /* Phase button style */
@@ -2549,7 +2548,7 @@
 
 .timeline-svg img {
   position: absolute;
-  width: 86%;
+  width: 83%;
   top: 56px;
   left: 112px;
 }
@@ -2659,22 +2658,28 @@ button {
 .prev {
   border-radius: 100%;
   background-color: white;
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
-  font-weight: 800;
+  width: 35px;
+  height: 35px;  
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .next {
-  width: 30px;
-  height: 30px;
-  font-size: 18px;
-  font-weight: 800;
   border-radius: 100%;
   background-color: white;
+  width: 35px;
+  height: 35px; 
+  align-items: center;
+  justify-content: center;
+  display: flex
 }
 
-
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 /* Responsive Design */
 @media screen and (max-width: 1024px) {
   .timeline {
@@ -5067,6 +5072,7 @@ input::-webkit-inner-spin-button {
 }
 
 .modal-box {
+  max-width: 1000px;
   width: 70%;
   background-color: #fff;
   padding: 20px;
@@ -5104,10 +5110,10 @@ input::-webkit-inner-spin-button {
   background: linear-gradient(180deg, hsla(0, 0%, 100%, .6), hsla(0, 0%, 100%, 0) 267.27%);
   border-radius: 50%;
   position: absolute;
-  right: -44px;
-  top: -34px;
-  height: 50px;
-  width: 50px;
+  right: -59px;
+  top: -20px;
+  height: 40px;
+  width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -5116,7 +5122,7 @@ input::-webkit-inner-spin-button {
 
 .cross-icon>i {
   font-weight: 600;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .input-parent-div {
@@ -5201,6 +5207,7 @@ input::-webkit-inner-spin-button {
 .bottom-left-box-heading,
 .bottom-right-box-heading {
   font-size: 22px !important;
+  font-weight: 900;
 }
 
 .bottom-popup-hr {
@@ -5594,6 +5601,8 @@ input::-webkit-inner-spin-button {
   text-align: center;
   cursor: pointer;
   flex-shrink: 0;
+  margin-top: 1rem;
+   
 }
 
 @media (max-width: 480px) {
@@ -5610,16 +5619,20 @@ input::-webkit-inner-spin-button {
   font-size: 19px;
   font-weight: 600;
   padding-right: 10px;
+  margin-top: 16px !important;
 }
 
 .faq-item.expanded .toggle-btn {
   color: rgb(215, 215, 222);
+  
 }
 
 
 .faq-item:not(.expanded) .toggle-btn {
   background-color: #cebbbb;
   color: rgb(59, 54, 54);
+  
+
 }
 
 
@@ -6071,4 +6084,18 @@ input::-webkit-inner-spin-button {
     margin-top: 10px;
     display: none;
   }
+}
+
+#swiperss > .swiper-wrapper > .swiper-slide {
+  display: block !important;
+}
+
+.logo-container {
+  width: 100%;
+  background-color:#f5f3ef ;
+}
+
+.logo-sliders {
+  margin: 0 auto;
+  max-width: 1600px;
 }

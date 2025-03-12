@@ -18,12 +18,6 @@ padding: 40px;
   flex: 1;
 }
 
-.left-contact-heading {
-  font-size: 2.3rem;
-  line-height: 3rem !important;
-  font-weight: 700;
-}
-
 .contact-box {
   display: grid;
   gap: 30px;
@@ -189,16 +183,39 @@ overflow: hidden;
   .clients::after {
     width: 550px;
 }
+
+.left-contact-heading {
+  font-size: 2.3rem;
+  line-height: 2.6rem !important;
+  font-weight: 700 !important;
+}
+
+.contact-box {
+  grid-template-columns: 1fr;
+}
 }
 
 @media screen and (max-width:700px) {
   .clients::after {
     width: 400px;
   }
+
+  .company-images > img {
+    width: 90%;
+}
+
+.contact-first-div {
+  grid-template-columns: 1fr;
+}
+
+.right {
+  width: 100% !important;
+}
 }
 
 @media screen and (max-width:576px){
   .clients::after {
     width: 200px;
   }
+
 }
