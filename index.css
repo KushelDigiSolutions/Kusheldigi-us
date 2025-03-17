@@ -5206,8 +5206,9 @@ input::-webkit-inner-spin-button {
 
 .bottom-left-box-heading,
 .bottom-right-box-heading {
-  font-size: 22px !important;
-  font-weight: 900;
+  font-size: 25px !important;
+  font-weight: 900 !important;
+  color: black;
 }
 
 .bottom-popup-hr {
@@ -5542,7 +5543,7 @@ input::-webkit-inner-spin-button {
   /* max-width: 1024px; */
   width: 100%;
   padding: 35px 8vw;
-  margin: auto;
+  margin: 35px auto;
 }
 
 .faq-section h2 {
@@ -5616,10 +5617,10 @@ input::-webkit-inner-spin-button {
 }
 
 .faq-question h3 {
-  font-size: 19px;
-  font-weight: 600;
+  font-size: 17px;
+  font-weight: 700;
   padding-right: 10px;
-  margin-top: 16px !important;
+  margin-top: 24px !important;
 }
 
 .faq-item.expanded .toggle-btn {
@@ -5644,12 +5645,14 @@ input::-webkit-inner-spin-button {
   font-size: 16px;
   font-weight: 500;
   width: 94%;
+  /* margin-top: 1rem; */
   color: rgba(94, 81, 81, 0.963);
 }
 
 .faq-item.expanded .faq-answer {
   max-height: 200px;
   opacity: 1;
+  margin-top: 1rem;
   transition: max-height 0.4s ease-in, opacity 0.2s ease-in 0.2s;
 }
 
@@ -6099,3 +6102,9 @@ input::-webkit-inner-spin-button {
   margin: 0 auto;
   max-width: 1600px;
 }
+
+
+
+
+
+
