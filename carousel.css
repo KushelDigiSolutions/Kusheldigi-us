@@ -37,6 +37,7 @@
 
 .carousel-item {
     width: 90%;
+    height: 585px;
     display: flex;
     border-radius: 15px;
     overflow: hidden;
@@ -50,14 +51,14 @@
 }
 
 .left-carousel-item {
-    width: 50%;
+    width: 65%;
     position: relative;
 }
 
 .left-carousel-btn-div {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 16px;
+    left: 18px;
     z-index: 12;
     display: flex;
     gap: 10px;
@@ -71,11 +72,7 @@
     object-fit: cover;
 }
 
-.right-carousel-item {
-    width: 50%;
-    background-color: #f1f2f3;
-    padding: 20px;
-}
+ 
 
 .left-carousel-btn {
     background: white;
@@ -97,9 +94,22 @@
     background-color: #2a2aff;
 }
 
+.right-carousel-item {
+    width: 50%;
+    background-color: #f1f2f3;
+    padding: 0px 20px;
+}
+
+ 
+
+.blue-bg {
+    background-color: #0000ff;
+    color: #fff;
+}
+
 .right-carousel-heading{
-    font-size: 2rem;
-    line-height: 40px;
+    font-size: 28px !important;
+    line-height: 34px;
 }
 
 .right-service-stack-div {
@@ -111,46 +121,37 @@
 
 .right-service-stack {
     background: #fff;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100%;
+    padding: 10px 22px;
+    border-radius: 15px;
+    width: 208px;
 }
 
 .right-service-stack > ul {
+    /* margin-left: 30px; */
     margin-top: 10px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding-left: 5px;
+    list-style: disc;
 }
 
 .right-service-stack > ul > li {
-    font-weight: 500;
-    margin: 5px 0px;
-        display: flex;
-        justify-content: space-between;
-        font-size: 1.6rem;
-        padding-bottom: 10px;
-        border-bottom: 1px solid black;
-
+    font-weight: 600 !important;
+    font-size: 17px;
+    margin: 2px 0px;
 }
 
 .right-carousel-para {
-    font-weight: 500;
-    font-size: 1.7rem;
-    margin-top: 24px;
-}
-
-.service-stack-heading {
-    font-size: 1.9rem;
     font-weight: 600;
-    margin-top: 5px !important;
+    font-size: 17px;
+    margin-top: 24px;
 }
 
 .right-carousel-inner-btn {
     font-size: 16px;
     margin: 20px 0px;
+}
+
+.service-stack-heading{
+    font-size: 21px;
+    font-weight: 700;
 }
 
 .carousel-item {
@@ -169,10 +170,15 @@
     .carousel-item {
         flex-direction: column;
         width: 90%;
+        height: auto;
     }
 
     .left-carousel-item , .right-carousel-item {
         width: 100%;
+    }
+
+    .right-service-stack > ul {
+         text-align: left;
     }
 
     .right-service-stack-div {
