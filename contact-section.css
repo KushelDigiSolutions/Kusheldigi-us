@@ -31,10 +31,14 @@ padding: 40px;
 
 .contact-card {
   background: white;
-  padding: 20px 15px;
+  padding: 10px 15px 13px !important ;
   border-radius: 8px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
   position: relative;
+}
+
+.contact-card img{
+  margin: 4px auto;
 }
 
 .call-us {

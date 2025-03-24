@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eCommerce client-section</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+        body {
+            font-family: "Wix Madefor Display";
+            text-align: center;
+            /* background: linear-gradient(to right, #f8f8f8, #e9f0ff); */
+            margin: 0;
+            padding: 0;
+        }
+
+        .client-section {
+            padding: 40px;
+        }
+
+        .client-head {
+            font-size: 37px;
+            margin-bottom: 30px;
+        }
+
+        
+
+        .client-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+             
+        }
+
+        .client-logo {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 37px;
+        }
+
+        
+
+        .client-logo img {
+            max-width: 100%;
+        }
+
+        h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            line-height: 28px;
+        }
+
+
+        .client-img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .review-head {
+            width: 100%;
+            height: auto;
+        }
+
+        .review-head .frst-head {
+            font-size: 14px;
+            line-height: 0;
+            margin: 24px 0;
+            color: #362a2a;
+        }
+
+        .review-head .sec-head {
+            font-size: 14px;
+            line-height: 0;
+            color: #362a2a;
+            font-weight: 600;
+        }
+
+        .review-para {
+            font-size: 16px;
+            line-height: 28px;
+            margin-top: 2rem;
+            font-weight: 100;
+        }
+
+        .swipe-client {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .swiper-container {
+            width: 100%;
+            max-width: 1200px;
+            position: relative;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .swiper-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .swiper-slide {
+            background: #f7f5f576;
+            padding: 15px 18px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            width: 29% !important;
+            height: auto;
+        }
+
+        /* Navigation Buttons */
+        .swiper-button-prev,
+        .swiper-button-next {
+            color: #ffffff !important;
+            position: absolute;
+            top: 60%;
+            transform: translateY(-50%);
+            z-index: 10;
+            width: 30px;
+            height: 30px;
+            background: rgba(13, 130, 225, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .swiper-button-prev {
+            left: 7rem;
+        }
+
+        .swiper-button-next {
+            right: 8rem;
+        }
+
+        .swiper-button-prev::after,
+        .swiper-button-next::after {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+
+        @media (max-width: 1024px) {
+            .swiper-slide {
+                width: 44.2% !important;
+            }
+
+            .swiper-button-prev {
+                left: 2px;
+            }
+
+            .swiper-button-next {
+                right: 2px;
+            }
+            
+        }
+
+        @media (max-width: 768px) {
+            .swiper-slide {
+                width: 94.2% !important;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 25px;
+                height: 25px; 
+            }
+
+            .swiper-button-prev {
+                left: 2px;
+            }
+
+            .swiper-button-next {
+                right: 2px;
+            }
+        }
+
+        @media(max-width:480px){
+            .swiper-slide{
+                width: 88.5% !important;
+                box-shadow: none;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 25px;
+                height: 25px; 
+                display: none;
+            }
+
+            .swiper-button-prev {
+                left: 2px;
+            }
+
+            .swiper-button-next {
+                right: 2px;
+            }
+        }
+
+        @media (max-width:320px){
+            .swiper-slide{
+                width: 93% !important;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+                width: 25px;
+                height: 25px; 
+            }
+
+            .swiper-button-prev {
+                left: 2px;
+            }
+
+            .swiper-button-next {
+                right: 2px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="client-section">
+        <!-- <h2 class="client-head">Hear From our Clients</h2> -->
+        <h2 class="client-head">What Our Clients Say</h2>
+        <div class="swipe-client">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide client-card">
+                        <div class="client-logo"><img
+                                src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740986802/Ellipse_143_cq9ehi.png"
+                                alt="Akash Negi" class="client-img">
+                            <span class="client-img1"><img width="135"
+                                    src="https://res.cloudinary.com/dgif730br/image/upload/v1736396360/Group_1171279525_fwt6t3.png"
+                                    alt="kushel_image" />
+                            </span>
+                        </div>
+                        <div class="review-head">
+                            <h3 class="frst-head">Chirag Negi</h3>
+                            <h3 class="sec-head">Head of Digital Marketing</h3>
+                        </div>
+                        <p class="review-para">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quia ad, neque consequatur
+                            mollitia
+                            eos repellendus, reiciendis laudantium numquam recusandae vel magnam. Eius laudantium
+                            perspiciatis reprehenderit ipsam, ipsum recusandae eos.
+                        </p>
+                    </div>
+                    <div class="swiper-slide client-card">
+                        <div class="client-logo"><img
+                                src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740986802/Ellipse_143_cq9ehi.png"
+                                alt="Akash Negi" class="client-img">
+                            <span class="client-img1"><img width="135"
+                                    src="https://res.cloudinary.com/dgif730br/image/upload/v1736396360/Group_1171279525_fwt6t3.png"
+                                    alt="kushel_image" />
+                            </span>
+                        </div>
+                        <div class="review-head">
+                            <h3 class="frst-head">Chirag Negi</h3>
+                            <h3 class="sec-head">Head of Digital Marketing</h3>
+                        </div>
+                        <p class="review-para">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quia ad, neque consequatur
+                            mollitia
+                            eos repellendus, reiciendis laudantium numquam recusandae vel magnam. Eius laudantium
+                            perspiciatis reprehenderit ipsam, ipsum recusandae eos.
+                        </p>
+                    </div>
+                    <div class="swiper-slide client-card">
+                        <div class="client-logo"><img
+                                src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740986802/Ellipse_143_cq9ehi.png"
+                                alt="Akash Negi" class="client-img">
+                            <span class="client-img1"><img width="135"
+                                    src="https://res.cloudinary.com/dgif730br/image/upload/v1736396360/Group_1171279525_fwt6t3.png"
+                                    alt="kushel_image" />
+                            </span>
+                        </div>
+                        <div class="review-head">
+                            <h3 class="frst-head">Chirag Negi</h3>
+                            <h3 class="sec-head">Head of Digital Marketing</h3>
+                        </div>
+                        <p class="review-para">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quia ad, neque consequatur
+                            mollitia
+                            eos repellendus, reiciendis laudantium numquam recusandae vel magnam. Eius laudantium
+                            perspiciatis reprehenderit ipsam, ipsum recusandae eos.
+                        </p>
+                    </div>
+                    <div class="swiper-slide client-card">
+                        <div class="client-logo"><img
+                                src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740986802/Ellipse_143_cq9ehi.png"
+                                alt="Akash Negi" class="client-img">
+                            <span class="client-img1"><img width="135"
+                                    src="https://res.cloudinary.com/dgif730br/image/upload/v1736396360/Group_1171279525_fwt6t3.png"
+                                    alt="kushel_image" />
+                            </span>
+                        </div>
+                        <div class="review-head">
+                            <h3 class="frst-head">Chirag Negi</h3>
+                            <h3 class="sec-head">Head of Digital Marketing</h3>
+                        </div>
+                        <p class="review-para">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quia ad, neque consequatur
+                            mollitia
+                            eos repellendus, reiciendis laudantium numquam recusandae vel magnam. Eius laudantium
+                            perspiciatis reprehenderit ipsam, ipsum recusandae eos.
+                        </p>
+                    </div>
+
+
+                </div>
+
+                <!-- Navigation Buttons -->
+
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </section>
+
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 3, // Default: Desktop view (3 slides)
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                320: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 }
+            }
+        });
+
+
+    </script>
+
+</body>
+
+</html>

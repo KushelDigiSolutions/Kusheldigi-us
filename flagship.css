@@ -1,0 +1,138 @@
+ 
+
+.flagship-section {
+    padding: 40px;
+    font-family: "Wix Madefor Display";
+    text-align: center;
+    background: linear-gradient(to right, #f8f8f8, #e9f0ff);
+    /* margin: 0;
+    padding: 0; */
+}
+
+.flagship-head {
+    font-size: 41px !important;
+    font-weight: 600 !important;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.flagship-para {
+    font-size: 17px;
+    font-weight: 500;
+    color: #362a2a;
+    max-width: 1142px;
+    margin: 0 auto 30px;
+}
+
+.flagship-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+
+
+}
+
+.flagship-card {
+    position: relative;
+    background: #fff;
+    padding: 18px 20px 33px;
+    border-radius: 10px;
+    text-align: left;
+    border: 1px solid #80808057;
+    width: 320px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.flagship-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+
+
+
+.flagship-logo {
+    /* background: #f0f0f0; */
+    padding: 15px 0;
+    text-align: left;
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+.flagship-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+h3 {
+    font-size: 22px;
+    margin-bottom: 28px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.flagship-ul {
+    padding-left: 20px;
+    margin-bottom: 5rem;
+    list-style: square;
+    /* flex-grow: 1; */
+
+}
+
+.flagship-ul .flagship-li {
+    font-size: 15px;
+    color: #333;
+    /* font-weight: 600; */
+    line-height: 30px;
+    width: 227px;
+
+}
+
+.flagship-btn {
+    color: #000000;
+    text-decoration: underline;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 28px;
+    left: 29px;
+    gap: 15px; 
+}
+
+.flagship-btn:hover{
+    color: black;
+}
+
+.flagship-btn img {
+    width: 45px;
+    height: 45px;
+}
+
+@media (min-width:1200px){
+    .flagship-head{
+        line-height: 36px;
+        font-size: 31px;
+        font-weight: 600;
+    }
+
+   
+}
+@media (min-width:720px){
+    .flagship-head{
+        line-height: 48px;
+        font-size: 40px;
+        font-weight: 500;
+    }
+}
+@media (min-width:320px){
+    .flagship-head{
+        line-height: 40px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+}

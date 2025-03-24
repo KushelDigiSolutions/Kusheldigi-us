@@ -1,4 +1,12 @@
 User-agent: *
-Disallow: 
+
+
+
+
 Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*?*utm_* 
+Disallow: /thank-you/
 Sitemap: https://www.kusheldigi.us/sitemap.xml
+

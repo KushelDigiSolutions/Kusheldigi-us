@@ -95,4 +95,216 @@
     }
   }
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (max-width: 1024px) {
+    .bimagelogMain {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .bimageloDiPara {
+        font-size: 2.2rem;
+        width: 100%;
+        line-height: 40px;
+        text-align: left;
+    }
+    .bimageloDiParra {
+        text-align: left;
+        width: 90%;
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .eightBlogSMain{
+        padding: 0;
+    }
+    .eightBlogSMainDiv{
+        padding: 0;
+    }
+    .eightBlogSMainDiv p {
+        line-height: 39px;
+        font-size: 25px;
+    }
+    .mainsecBlo {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .bimagelog img {
+        width: 100%;
+        height: auto;
+    }
+    .bimageloDiPara {
+        font-size: 1.8rem;
+        line-height: 36px;
+    }
+    .bimageloDiParra {
+        font-size: 18px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bimageloDiPa {
+        font-size: 14px;
+    }
+    .bimageloDiPara {
+        font-size: 1.5rem;
+        line-height: 32px;
+    }
+    .bimageloDiParra {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .bimageloDiPaara {
+        font-size: 13px;
+    }
+}
+
+
+/* first row end */
+
+@media (max-width: 1200px) {
+    .cardMainBlogSec {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding-right: 24px;
+    }
+    .cardBlogStpaara {
+        font-size: 26px;
+        width: 100%;
+    }
+    .cardBlogStpaaragr {
+        font-size: 17px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardsectFive {
+        padding: 0;
+        
+    }
+    .cardsectFive p{
+        line-height: 50px !important;
+        font-size: 25px;
+    }
+    .bimagelogMain {
+        padding: 0;
+    }
+    .cardMainBlogSec {
+        padding: 0;
+        grid-template-columns: repeat(1, 1fr);
+        padding-right: 0;
+        gap: 15px;
+    }
+    .cardBlogStImg img {
+        width: 100%;
+        height: auto;
+    }
+    .cardBlogStpaara {
+        font-size: 22px;
+        line-height: 30px;
+    }
+    .cardBlogStpaaragr {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardBlogStpaara {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .cardBlogStpaaragr {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .cardBlogStpaarw {
+        font-size: 14px;
+    }
+}
+
+
+/* six row start */
+@media (max-width: 1200px) {
+    .blogSixMainDivSS {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blogSixMainSec{
+        height: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .blogSixMainSec {
+        width: 100%;
+        height: auto;
+    }
+    .blogSixMainDivSS {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .blogSixMainSecDiv p {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .blogSixMaiDivparaa{
+        width: 100%;
+        font-size: 20px;
+    }
+    
+    .blogSixMainDivSS {
+        padding: 3px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .blogSixMainSecDiv p {
+        font-size: 30px;
+        line-height: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blogSixMainSecDiv {
+        padding: 15px;
+        text-align: center;
+    }
+.blogSixMainSecDiv hr{
+width: 100%;
+}
+    .blogSixMainSecDiv p {
+        line-height: 35px;
+        font-size: 25px;
+    }
+}
+@media (max-width:374px){
+    .blogSixMaiDivBImgS img {
+        width: 272px;
+    }
+}
+
+/* six row end */
   

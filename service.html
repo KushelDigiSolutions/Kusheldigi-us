@@ -736,13 +736,15 @@
           </h1>
           <div class="contact-box">
             <div class="contact-card">
-              <p class="call-us">Call us</p>
+              <!-- <p class="call-us">Call us</p> -->
+               <img src="img/us.svg" alt="">
               <h3 class="us-number">+1-585-566-2070</h3>
               <p class="country">United States</p>
               <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1741867204/phone-png_kjwe3t.png" alt="call" class="phone-icon" />
             </div>
             <div class="contact-card">
-              <p class="call-us">Call us</p>
+              <!-- <p class="call-us">Call us</p> -->
+               <img src="img/ind.svg" alt="">
               <h3 class="us-number">+91 9045301702</h3>
               <p class="country">India</p>
               <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1741867204/phone-png_kjwe3t.png" alt="call" class="phone-icon" />
@@ -932,6 +934,56 @@
 
     </script>
 
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const submitButton = form.querySelector(".contact-form-btn");
+  
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    submitButton.disabled = true;
+    submitButton.innerText = "Sending...";
+
+    const formData = {
+      popFullname: document.getElementById("name").value,
+      popMobile: document.getElementById("phone").value,
+      popEmail: document.getElementById("email").value,
+      popMessage: document.getElementById("msg").value,
+    };
+
+    try {
+      const response = await fetch("https://backend.kusheldigi.us/api/v1/sendPopupmaill", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        window.location.href = "thankyou.html";
+      } else {
+        alert(`Failed to send email: ${result.message || "Unknown error"}`);
+      }
+    } catch (error) {
+      console.error("Error while sending email:", error);
+      alert("An error occurred while sending the email. Please try again.");
+    } finally {
+      submitButton.disabled = false;
+      submitButton.innerText = "Submit";
+    }
+  });
+
+  const phoneInput = document.getElementById("phone");
+  phoneInput.addEventListener("input", () => {
+    phoneInput.value = phoneInput.value.replace(/\D/g, "").slice(0, 10);
+  });
+});
+
+</script>
 
     <script src="mail.js"></script>
     <script src="/captcha.js"></script>
