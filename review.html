@@ -17,13 +17,16 @@
         body {
             font-family: "Wix Madefor Display";
             text-align: center;
-            /* background: linear-gradient(to right, #f8f8f8, #e9f0ff); */
+            background: linear-gradient(to right, #f8f8f8, #e9f0ff);
             margin: 0;
             padding: 0;
         }
 
         .client-section {
-            padding: 40px;
+            /* padding: 40px; */
+            padding: 40px 50px;
+    max-width: 1720px;
+    margin: 0 auto;
         }
 
         .client-head {
@@ -114,7 +117,7 @@
         }
 
         .swiper-slide {
-            background: #f7f5f576;
+            background: #ffffff;
             padding: 15px 18px 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: left;
@@ -138,6 +141,7 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            /* display: none; */
         }
 
         .swiper-button-prev {
@@ -231,6 +235,8 @@
                 right: 2px;
             }
         }
+
+        
     </style>
 </head>
 
@@ -335,7 +341,7 @@
 
     <script>
         var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3, // Default: Desktop view (3 slides)
+            slidesPerView: 3,  
             spaceBetween: 20,
             loop: true,
             autoplay: {

@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="contact.css">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="aboutc.css">
-  <link rel="stylesheet" href="index1.css">
+  <link rel="stylesheet" href="aboutc.css"> 
   <link rel="stylesheet" href="form.css">
   <link rel="stylesheet" href="privacy.css">
   <link rel="stylesheet" href="header.html">
@@ -24,6 +23,7 @@
 
 <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 
 <body>
 
@@ -57,10 +57,7 @@
         <div class="contact-captcha-box">
           <div>
             <span id="contact-captchaQuestion"></span>
-          <input
-            type="number"
-            id="contact-captchaAnswer"
-            required />
+            <input type="number" id="contact-captchaAnswer" required />
           </div>
 
           <span class="contact-captcha-btn">Verify Captcha</span>
@@ -81,18 +78,19 @@
 
       <div class="form_righcc">
 
-        <label for="">
+        <a href="https://www.google.com/maps/place/Kushel+Digi+Solutions+%7C+eCommerce+Web+Development+%7C+Web+Design+%26+App+Development+Company/@28.609,77.3499231,17z/data=!3m1!4b1!4m6!3m5!1s0x390ce49f5d8cdc4b:0xedb207949cd07d2b!8m2!3d28.609!4d77.352498!16s%2Fg%2F11hbvx7ls2?entry=ttu&g_ep=EgoyMDI1MDMyNS4wIKXMDSoASAFQAw%3D%3D"
+          class="form-link" target="_blank">
           <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985715/location1_h2x4pw.png" alt="location">
           <span>Suite-106, H-28, H Block, Sector 63, Noida, Uttar Pradesh 201301</span>
-        </label>
-        <label for="">
+        </a>
+        <a href="tel:+15855662070" class="form-link">
           <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985664/phone1_xi3fed.png" alt="phone">
           <span>+1-585-566-2070</span>
-        </label>
-        <label for="">
+        </a>
+        <a href="mailto:info@kusheldigi.com" class="form-link">
           <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985690/email1_lcusvf.png" alt="email">
           <span>info@kusheldigi.com</span>
-        </label>
+        </a>
 
         <div class="social-icons">
           <a target="_blank" href="https://www.facebook.com/kusheldigisolutions/"><i
@@ -298,38 +296,38 @@
 
     const contactCaptchaBtn = document.querySelector('.contact-captcha-btn');
 
-      let contactCorrectAnswer = 0;
+    let contactCorrectAnswer = 0;
 
-      function contactGenerateCaptcha() {
-        const firstNo = Math.floor(Math.random() * 10);
-        const secondNo = Math.floor(Math.random() * 10);
-        contactCorrectAnswer = firstNo + secondNo;
-        document.getElementById(
-          "contact-captchaQuestion"
-        ).innerText = `${firstNo} + ${secondNo} =`;
-        document.getElementById("contact-captchaAnswer").value = ""; 
+    function contactGenerateCaptcha() {
+      const firstNo = Math.floor(Math.random() * 10);
+      const secondNo = Math.floor(Math.random() * 10);
+      contactCorrectAnswer = firstNo + secondNo;
+      document.getElementById(
+        "contact-captchaQuestion"
+      ).innerText = `${firstNo} + ${secondNo} =`;
+      document.getElementById("contact-captchaAnswer").value = "";
+    }
+
+    function contactVerifyCaptcha() {
+      const userAnswer = parseInt(
+        document.getElementById("contact-captchaAnswer").value
+      );
+      if (userAnswer !== contactCorrectAnswer) {
+        alert("Wrong Captcha! Try again.");
+        contactGenerateCaptcha();
+        return false;
       }
+      alert('Captcha Verified!!');
+      return true;
+    }
 
-      function contactVerifyCaptcha() {
-        const userAnswer = parseInt(
-          document.getElementById("contact-captchaAnswer").value
-        );
-        if (userAnswer !== contactCorrectAnswer) {
-          alert("Wrong Captcha! Try again.");
-          contactGenerateCaptcha();
-          return false;
-        }
-        alert('Captcha Verified!!');
-        return true;
-      }
+    contactCaptchaBtn.addEventListener('click', contactVerifyCaptcha);
 
-      contactCaptchaBtn.addEventListener('click',contactVerifyCaptcha);
-
-      document.addEventListener("DOMContentLoaded", contactGenerateCaptcha);
+    document.addEventListener("DOMContentLoaded", contactGenerateCaptcha);
 
   </script>
 
-  
+
 
 
 </body>

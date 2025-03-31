@@ -102,6 +102,11 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     transform: translateY(-5px);
 }
+.left-b2b-card:hover .b2b-logo img,
+.right-b2b-card:hover .b2b-logo img ,
+.left-b2b-card-2:hover .b2b-logo img{
+    transform: scale(1.03);  
+}
 
 .b2b-logo {
     overflow: hidden; 
@@ -115,11 +120,6 @@
     transition: transform 0.4s ease-in-out;
 }
 
-.left-b2b-card:hover .b2b-logo img,
-.right-b2b-card:hover .b2b-logo img ,
-.left-b2b-card-2:hover .b2b-logo img{
-    transform: scale(1.03);  
-}
 
 
 
@@ -135,6 +135,7 @@
     align-items: center;
     margin: 30px;
     gap: 15px;
+    display: inline-block;
 }
 
 .b2b-btn:hover {
@@ -144,6 +145,7 @@
 .b2b-btn img {
     width: 45px;
     height: 45px;
+    margin-left: 2rem;
 }
 
 /* ======== Responsive Adjustments ======== */
@@ -272,11 +274,12 @@
 
     .left-b2b-card,
     .right-b2b-card {
-        width: 95%;
+        width: 100%; 
     }
 
     .left-b2b-card-2{
-        width: 95%;
+        width: 100%;
+        margin: 0;
     }
 
     .b2b-btn {

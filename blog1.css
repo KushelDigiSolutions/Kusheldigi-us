@@ -1,0 +1,934 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+
+}
+body{
+    overflow-x: hidden;
+}
+.MainBloggSeC {
+    margin: 0 auto;
+    padding: 45px 0px 0px 10px;
+}
+
+.MainBloggSeCh3 {
+    margin-top: 50px;
+    font-size: 5.1rem;
+    font-weight: bolder;
+    /* width: 960px; */
+    max-width: 1345px;
+    margin: auto; 
+}
+
+.MainBloggSeCh3Img img {
+    padding-top: 70px;
+    height: auto;
+    /* max-height: 650px; */
+    padding-left: 83px;
+    width: 95%;
+    margin: auto;
+    object-fit: cover;
+    /* border-radius: 12px;*/
+}
+
+
+
+
+
+
+/* .MainBloggSeCh3Img img {
+    padding-top: 70px;
+    height: 680px;
+    width: 100%;
+} */
+
+/* content third row start */
+.mainBloContentSt {
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+    /* gap: 100px; */
+    /* padding: 90px 0px 0px 0px; */
+    align-items: self-start;
+    /* max-width: 1345px;
+    margin: auto; */
+}
+
+.mainBloContentStPara {
+    position: relative;
+    right: 16%;
+    margin-top: 8px;
+}
+
+.mainBloContentStPara p {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 20px;
+
+
+}
+
+/* left content  */
+.mainBloContentPa {
+    width: 763px;
+    font-size: 43px;
+    font-weight: 600;
+}
+
+.mainBloContpara {
+    font-size: 21px;
+    font-weight: 500;
+    width: 760px;
+    margin-top: 40px;
+    color: #111111;
+    line-height: 32px;
+}
+
+.mainBloContpara1 {
+    font-size: 21px;
+    font-weight: 500;
+    width: 750px;
+    padding-top: 20px;
+    color: #111111;
+    line-height: 32px;
+}
+
+.mainBloContepara {
+    padding-top: 80px;
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.BlogImhage img {
+    height: 470px;
+    width: 620px;
+    padding-top: 60px;
+}
+
+
+
+
+
+.cardBlogsB {
+    padding: 30px;
+    margin-top: 50px;
+    background-color: aliceblue;
+    width: 100%;
+    max-width: 700px; /* Maintain limit for large screens */
+    box-sizing: border-box;
+}
+
+.cardBlogsBtn button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 11px 22px;
+    color: white;
+    background-color: #d8262c;
+    border-radius: 50px;
+    border: 1px solid #d8262c;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+
+
+.cardBlogsB p {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.5;
+    color: black;
+}
+
+.cardBlogsB p span {
+    display: inline-block;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.cardBlogsB p span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cardBlogsB:hover p span::after {
+    transform: scaleX(1);
+}
+
+.cardBlogsBtn {
+    margin-top: 20px;
+    cursor: pointer;
+}
+/* ✅ Fixed Slide-Up Effect */
+.cardBlogsBtn button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    width: 100%;
+    height: 100%;
+  
+    background-color: #000; /* Matching color */
+    transition: bottom 0.3s ease;
+    z-index: -1;
+}
+
+.cardBlogsBtn button:hover::before {
+ 
+    bottom: 0;
+}
+
+.cardBlogsBtn button:hover {
+    border: 1px solid black;
+    color: white;
+}
+
+/* ✅ Fixed Social Icon Alignment and Responsiveness */
+.cardSocial {
+    position: relative;
+    /* width: 100%; */
+    max-width: 766px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-info h4,
+.profile-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-right: 54px;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #d3d5d8;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.thanksTxt ,.thanksTxt1{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.displayNone {
+    display: none;
+}
+
+.displayBlock {
+    display: block;
+}
+#iconPop{
+    width: 38px;
+  
+    border-radius: 19px;
+    display: flex;
+    gap: 10px;
+    transition: all 0.2s ease-in;
+}
+#popAni{
+    position: absolute;
+    right: 0px;
+    top: 39px;
+    width: 38px;
+    height: 40px;
+    border-radius: 64px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 10;
+    transition: all 0.2s ease-in;
+}
+
+.icon:hover {
+    background: black;
+    color: white;
+}
+
+/* ✅ Improved Responsive Design */
+@media (max-width: 768px) {
+    .cardSocial {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-info h4,
+    .profile-info p {
+        font-size: 12px;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+/* ✅ Fixed Hidden Icon Issue */
+@media (max-width: 1440px) {
+    .social-icon {
+        display: flex !important; /* Ensure visibility */
+    }
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .cardSocial {
+        flex-direction: column;  
+        align-items: center;
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-info h4 {
+        font-size: 12px;  
+    }
+
+    .profile-info p {
+        font-size: 12px;
+    }
+
+    .icon {
+        width: 35px;
+        height: 35px;
+        font-size: 20px;
+    }
+}
+
+@media(max-width:537px){
+    .brrr {
+        display: none;
+    }
+}
+
+@media screen and (max-width:1440px){
+    .social-icon {
+        display: none !important;
+    }
+}
+
+
+
+
+
+
+
+
+.third-section {
+    position: relative; 
+}
+
+.thirddd {
+    max-width: 1345px;
+    margin: auto;
+}
+
+
+.social-icon {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 150px !important;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+ 
+.fixed {
+    position: fixed !important;
+    top: 50%;
+     
+}
+
+ 
+.hidden {
+    opacity: 0;
+    transform: translateX(50px); 
+    pointer-events: none;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+
+
+
+
+/* ====================== RESPONSIVE DESIGN ====================== */
+
+/* Tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    .MainBloggSeC {
+        padding: 13px;
+    }
+
+    .mainBloContentStPara {
+        position: relative;
+        right: 0;
+    }
+
+    .MainBloggSeCh3 {
+        font-size: 4rem;
+        width: 100%;
+    }
+
+    .MainBloggSeCh3Img img {
+        height: 500px;
+        padding: 0;
+    }
+
+    .mainBloContentSt {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        margin: 0;
+    }
+
+    .mainBloContentPa,
+    .mainBloContpara,
+    .mainBloContpara1 {
+        margin-top: 20px;
+        width: 90%;
+        font-size: 22px;
+    }
+
+    .BlogImhage img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cardBlogsB p {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .cardBlogsBtn button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+/* Mobile (0px - 767px) */
+@media (max-width: 767px) {
+    .MainBloggSeC {
+        /* padding-left: 5%; */
+        padding-right: 5%;
+    }
+
+    .MainBloggSeCh3 {
+        font-size: 2.5rem;
+        width: 100%;
+        text-align: left;
+    }
+
+    .MainBloggSeCh3Img img {
+        padding: 0;
+        height: auto;
+        width: 100%;
+    }
+
+    .mainBloContentSt {
+        margin: 0;
+        width: 100%;
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+         text-align: left;
+    }
+
+    .mainBloContentStPara {
+        position: relative;
+        right: 0;
+    }
+
+    .mainBloContentPa {
+        margin-top: 20px;
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .mainBloContpara,
+    .mainBloContpara1 {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .mainBloContepara {
+        font-size: 40px;
+    }
+
+    .BlogImhage img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cardBlogsB p {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .cardBlogsBtn button {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+/* card section */
+.cardBlogSub {
+    background-color: #E4EBF5;
+    margin-top: 70px;
+    display: flex;
+    padding: 100px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.cardBlogSubDiv p {
+    font-size: 23px;
+    font-weight: 600;
+    width: 200px;
+}
+
+.cardBlogSubIn input {
+    padding: 10px;
+    font-size: 20px;
+    border-top: none;
+    border-left: none;
+    background-color: #E4EBF5;
+    border-right: none;
+}
+
+.cardBlogSubIn input::placeholder {
+    font-size: 24px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.cardBlogSubBtn {
+    margin-top: 20px;
+}
+
+.cardBlogSubBtn button {
+    display: flex;
+    margin-top: 50px;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    align-items: center;
+    font-size: 18px;
+    padding: 16px;
+    background-color: rgb(238, 64, 64);
+    border: 1px solid rgb(218, 76, 76);
+    color: white;
+    font-weight: 600;
+    border-radius: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .cardBlogSub {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .cardBlogSubDiv p {
+        font-size: 20px;
+        max-width: 100%;
+    }
+
+    .cardBlogSubIn input {
+        width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cardBlogSub {
+        padding: 30px;
+    }
+
+    .cardBlogSubDiv p {
+        font-size: 18px;
+    }
+
+    .cardBlogSubIn input {
+        width: 200px;
+    }
+
+    .cardBlogSubBtn button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardBlogSub {
+        padding: 20px;
+    }
+
+    .cardBlogSubDiv p {
+        font-size: 16px;
+    }
+
+    .cardBlogSubIn input {
+        width: 180px;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .cardBlogSubBtn button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/* last section */
+.cardsectFiveMain {
+    padding-top: 80px;
+}
+
+.moreee {
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* Section Title */
+.cardsectFive p {
+    line-height: 80px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/* Divider */
+.cardsectFive hr {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+
+.cardMainBlogSec {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Individual Card Styling */
+.cardBlogSt {
+    padding-top: 30px;
+}
+
+/* Image Styling */
+.cardBlogStImg img {
+    width: 450px; /* Makes it fully responsive */
+    height: 220px;
+    object-fit: cover;
+    /* border-radius: 8px; */
+}
+
+/* Category Label */
+.cardBlogStpaa {
+    color: rgb(218, 76, 76);
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+/* Blog Title */
+.cardBlogStpaara {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 8px;
+}
+
+/* Blog Description */
+.cardBlogStpaaragr {
+    padding-top: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #040404;
+}
+
+/* Author Name */
+.cardBlogStpaarw {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    color: #222;
+    margin-top: 10px;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 1024px) {
+    .cardMainBlogSec {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .cardsectFive p {
+        font-size: 36px;
+        line-height: 60px;
+    }
+
+    .cardBlogStpaara {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+    .cardBlogStpaaragr {
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    #popAni{
+        position: relative;
+      top: 0px;
+    left: 40px;
+
+    }
+    .cardMainBlogSec {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .cardsectFive p {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .cardBlogStpaara {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+    .cardBlogStpaaragr {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .cardBlogStImg img {
+        height:auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cardsectFive p {
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .cardMainBlogSec {
+        padding: 0;
+    }
+
+    .cardBlogStpaara {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .cardBlogStpaaragr {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .cardBlogStImg img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 320px) {
+    .cardsectFive p {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .cardBlogStpaara {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .cardBlogStpaaragr {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .cardBlogStImg img {
+        height: auto;
+        width: 100%;
+    }
+}
+
+
+
+/* poppup css */
+#iconPop {
+    /* background-color: #03dac5; */
+    color:black;
+  }
+  
+ #iconPop:hover{
+    color: white;
+ }
+  
+  .thanks-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    background-color: #03dac5;
+    color: #000;
+    padding: 14px 24px;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .thanks-message.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .social-icon.fade-out {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+
+
+  /* poppup css */
+#iconPop {
+    /* background-color: #03dac5; */
+    color:black;
+  }
+  
+ #iconPop:hover{
+    color: white;
+ }
+  
+  .thanks-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.5);
+    background-color: #03dac5;
+    color: #000;
+    padding: 14px 24px;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .thanks-message.show {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .social-icon.fade-out {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+  
+  
+  .thanksTxt ,.thanksTxt1{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.displayNone {
+    display: none;
+}
+
+.displayBlock {
+    display: block;
+}
+#iconPop{
+    width: 38px;
+  
+    border-radius: 19px;
+    display: flex;
+    gap: 10px;
+    transition: all 0.2s ease-in;
+}
+#popAni{
+    position: absolute;
+    right: 0px;
+    top: 39px;
+    width: 38px;
+    height: 40px;
+    border-radius: 64px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    z-index: 10;
+    transition: all 0.2s ease-in;
+}

@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="blogdetails.css">
+    <!-- <link rel="stylesheet" href="blogdetails.css"> -->
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="index1.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog1.css">
+
 
     <link rel="canonical" href="https://www.kusheldigi.us/" />
     <title>Blog Details | Kushel Digi Solutions - eCommerce Experts </title>
@@ -74,448 +76,240 @@
     </script>
 
 
+
+
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+
+
+
+
+<script>
+    document.addEventListener("scroll", function () {
+      let section = document.querySelector(".third-section");
+      let socialIcons = document.querySelector(".social-icon");
+      let cardSection = document.querySelector(".cardBlogSub");
+
+      let sectionTop = section.getBoundingClientRect().top;
+      let sectionHeight = section.getBoundingClientRect().height;
+      let cardSectionTop = cardSection.getBoundingClientRect().top;
+      let windowHeight = window.innerHeight;
+
+      let halfSectionScrolled = cardSectionTop < windowHeight; // Jab "cardBlogSub" viewport ke andar aa jaye
+
+      // Section scroll hone par icons 50% pe fix ho jayein
+      if (sectionTop <= windowHeight / 2 && !halfSectionScrolled) {
+        socialIcons.classList.add("fixed");
+      } else {
+        socialIcons.classList.remove("fixed");
+      }
+
+      // Jab "cardBlogSub" ke pass aaye to icons smoothly hide ho jayein
+      if (halfSectionScrolled) {
+        socialIcons.classList.add("hidden");
+      } else {
+        socialIcons.classList.remove("hidden");
+      }
+    });
+
+
+
+
+  </script>
+
+
+<script>
+    const popAnimation = document.getElementById('iconPop');
+const thanksTxt1=document.querySelector('.thanksTxt1')
+    popAnimation.addEventListener('click', function (e) {
+      console.log('clickkkkkkkkkkk',e)
+      thanksTxt1.classList.add('displayBlock');
+      popAnimation.style.width='112px';
+      confetti({
+        
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
+
+    setTimeout(() => {
+      thanksTxt1.classList.remove('displayBlock');
+      thanksTxt1.classList.add('displayNone');
+      popAnimation.style.width='38px';
+    }, 2000); 
+  });
+   
+    const popAni = document.getElementById('popAni');
+    const thanksTxt = document.querySelector('.thanksTxt')
+
+    popAni.addEventListener('click', function (e) {
+      console.log('clickkkkkkkkkkk',e)
+      thanksTxt.classList.add('displayBlock');
+      popAni.style.width = '112px';
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
+      
+      
+    // popAni.innerText = 'Thanks!';
+    
+   
+    setTimeout(() => {
+      thanksTxt.classList.remove('displayBlock');
+      thanksTxt.classList.add('displayNone')
+      popAni.style.width = '38px';
+    }, 2000); 
+  
+    });
+  </script>
+
+
+
+
 </head>
 
 <body>
     <div id="header"></div>
 
-    <section class="article-container">
-        <div class="image-container">
-            <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985625/AI9_puky8e.webp" alt="AI Illustration">
-        </div>
-        <div class="content-container">
-            <p class="date1">FEBRUARY 12, 2025</p>
-            <h1 class="title1">From Hype to Reality: Practical AI Integration Guide</h1>
-            <p class="description1">
-                How to integrate AI into your business without turmoil and how you can get the best results.
-            </p>
-            <div class="author">
-                <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985625/ava-71_rw4jo8.png" alt="Author">
-                <div>
-                    <p class="author-name">Mitya Smusin</p>
-                    <p class="author-role">Chief Executive Officer</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="MainBloggSeC">
 
-    <section class="toc-container">
-        <div class="toc-header">
-            <h2>Contents</h2>
-            <span class="toggle-btn-1">expand &#9660;</span> <!-- Default state: 'expand' -->
+        <div class="article-container">
+          <h3 id="currentBlogTitle" class="MainBloggSeCh3">
+            How AI Went from Buzz to <br class="brrr"> ‘Buzz off While I Generate This’
+          </h3>
+          <div class="MainBloggSeCh3Img">
+            <img id="currentBlogImage" src="./assets/NL-Ai-transformation-blog-hero-min (1).webp" alt="">
+          </div>
         </div>
-        <ul class="toc-list toc-hidden"> <!-- Default hidden -->
-            <li><a href="#ai-capabilities">1. Current AI capabilities vs. limitations</a></li>
-            <li><a href="#legacy-systems">2. Integration challenges with legacy systems</a></li>
-            <li><a href="#resource-allocation">3. Resource allocation reality check</a></li>
-            <li><a href="#roi-framework">4. ROI calculation framework</a></li>
-            <li><a href="#summary">5. To sum up</a></li>
-        </ul>
-
-    </section>
     
+    
+        <!-- content third row start -->
+        <section class="third-section">
+          <div class="thirddd">
+          <div class="social-icon">
+            <div class="icon"><i class="ri-facebook-fill"></i></div>
+            <div class="icon"><i class="ri-linkedin-fill"></i></div>
+            <div class="icon"><i class="ri-twitter-x-fill"></i></div>
+            <div class="icon" id="iconPop">
+              <span class="thanksTxt1 displayNone">Thanks</span>
+             
+              <i class="ri-hand-heart-line"></i>
+            </div>
+          </div>
+          <div class="mainBloContentSt">
+            <div class="mainBloContentStPara">
+              <p> <b id="blogAuthor">Mia Maček</b></p>
+    
+              <!-- <p>Content Specialist</p>
+              <br> <br>
+              <p>4 min Read in <b>Culture</b>
+                <br> <br>
+              </p> -->
+              <p> Published ON<br>
+                <b id="blogDate">Nov 15, 2024</b>
+              </p>
+            </div>
+            <!-- left content -->
+            <div class="mainBloContentDiv">
+              <p id="currentBlogPara" class="mainBloContentPa">AI’s early days were filled with lofty promises, fears of domination, and hopes of
+                revolution. Two years later, we’re no longer holding our breath. The hype cycle has moved on, and it’s time
+                to talk about what comes after the spectacle.</p>
 
 
-    <section class="para-section">
-
-        <div class="para-content">
-
-            <p class="para1">
-                It’s obvious that in recent years, companies have increasingly turned to AI to solve their problems and
-                achieve business goals. And this is quite justified, because AI does indeed improve some indicators. For
-                example, 44% of businesses noted cost savings as an advantage of adopting AI. This is a decent figure.
-                Therefore, your desire to integrate AI into your processes is understandable.
-            </p>
-            <p class="para2">
-                However, this is not so easy to do. Integrating AI is not just creating an account in OpenAI. This is a
-                large process that requires a lot of attention and resources. In this guide, we will tell you how to
-                properly integrate AI into your business and how to cope with possible difficulties. Stay tuned!
-            </p>
-        </div>
-
-        <div class="cta-section">
-            <p class="cta-text">Harness the AI power to reach your business <br />goals!</p>
-            <a style="text-decoration: none;" href="contact.html" >
-                <button class="cta-button">Contact us</button>
-            </a>
-        </div>
-
-
-        <div class="para3" id="ai-capabilities">
-            <h1>
-                Current AI capabilities vs. limitations
-            </h1>
-
+                
+               
+              
+              
+    
+               
+              <!-- <div class="cardBlogsB">
             <p>
-                Before we start talking about integrating AI into your business, we need to know what functions this
-                technology can perform in general and what limitations it has. This will help you understand whether
-                your business is even worth the resources and time to take this step.
+                <span>If you’re curious about how AI can go beyond the hype</span> <br>
+                <span>for your business, it all starts with understanding where</span> <br>
+                <span>you stand. Take our survey to get a free, personalized</span> <br>
+                <span>assessment of your business’s readiness for AI</span> <br>
+                <span>implementation.</span>
             </p>
-
-            <div class="img-section">
-                <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985620/AI_integration_Infographics_ytbbou.webp" alt="">
+            <div class="cardBlogsBtn">
+                <button>Learn More <i class="ri-arrow-right-long-line"></i></button>
             </div>
-        </div>
-    </section>
-
-
-    <div class="para-section">
-        <div class="para3" id="legacy-systems">
-
-            <h1>
-                Integration challenges with legacy systems
-            </h1>
-
-            <p>
-                Now you know what AI can and cannot do and you are definitely sure that it fits your goal. You are
-                preparing for your next move. However, there’s one more piece of knowledge you should know before the
-                process takes off. You need to know about the challenges you and your team may face during the
-                integration. Here’s what you need to be prepared for:
-            </p>
-
-            <div class="img-section">
-                <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985624/AI_integration2_npgsjj.webp" alt="">
-            </div>
-        </div>
-        <div class="container1">
-            <ul class="styled-list">
-                <li><strong>Data compatibility issues:</strong> Usually, legacy systems store data in outdated formats
-                    or old databases so AI may not even have access to it. And as we already know, inconsistent or
-                    poor-quality data leads to inaccurate AI insights.</li>
-                <li><strong>Scalability constraints:</strong> Older systems weren’t designed for the massive processing
-                    power AI needs, so be ready for performance bottlenecks.</li>
-                <li><strong>API and infrastructure limitations:</strong> Many legacy systems lack APIs necessary for AI
-                    integration (and we are not even talking about monolithic architectures).</li>
-                <li><strong>Security and compliance risks:</strong> AI introduces new vulnerabilities that older systems
-                    weren’t built to deal with. Compliance with data privacy laws like GDPR, HIPAA can become trickier
-                    when automation is involved.</li>
-                <li><strong>Change resistance:</strong> Employees who are used to legacy workflows may resist changes as
-                    a whole, but with AI, there’s a strong fear that artificial intelligence will replace real people in
-                    one way or another. Also, lack of general knowledge about AI can slow down adoption.</li>
-                <li><strong>Long-term maintenance:</strong> Legacy vendors may not provide AI-ready updates or support
-                    and custom AI integrations usually require ongoing maintenance and tuning.</li>
-            </ul>
-        </div>
-
-        <div class="heading1">
-            <h3>
-                Well, how to overcome these challenges, you may ask. Here’s the answer:
-            </h3>
-        </div>
-
-        <div class="container1">
-            <ul class="styled-list">
-                <li>Gradually update legacy components instead of a full overhaul.</li>
-                <li>Bridge the gap between AI and older systems.</li>
-                <li>Clean, standardize, and structure your data.</li>
-                <li>Educate teams on AI capabilities.</li>
-            </ul>
-        </div>
-
-        <div class="heading1">
-            <h3>
-                These steps will help you a lot during the realisation of your project.
-            </h3>
-        </div>
-
-    </div>
-
-    <section class="para-section">
-        <div class="para3-section" id="resource-allocation">
-            <h1>
-                Resource allocation reality check
-            </h1>
-
-            <p>
-                Integrating AI requires careful planning across multiple resource areas. Here’s what you need to
-                consider:
-            </p>
-
-            <div class="img-section">
-                <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985624/AI_integration_clxker.webp" alt="">
-            </div>
-
-            <div class="para3-section">
-                <h1>
-                    Budget
-                </h1>
-                <p>
-                    AI integration can be expensive, so financial planning is key. You need to take into account
-                    development, operational, and personnel training costs. Besides, don’t forget about unexpected
-                    expenses like data cleaning and compliance updates.
+        </div> -->
+              <!-- <div>
+                <p class="mainBloContepara">Past the hype and into reality</p>
+                <p class="mainBloContpara">So, where is artificial intelligence in the hype cycle? According to the Gartner
+                  report published this summer, generative AI has passed the Peak of Inflated Expectations and is entering
+                  the Trough of Disillusionment phase, where real challenges and limitations come to the forefront.
+                  Meanwhile, other AI technologies, such as quantum machine learning and edge AI, are still climbing toward
+                  their peak, with many advancements yet to come.</p>
+                <p class="mainBloContpara1">In other words, the honeymoon is over. AI has shown great potential, but now
+                  we’re in the part of the relationship where the real work begins. And the real work, in this case,
+                  includes managing risks related to AI systems and ensuring the technology is implemented safely and
+                  effectively.</p>
+                <p class="mainBloContpara1">One of the challenges we’re still dealing with is AI’s tendency to hallucinate,
+                  i.e., generate information that sounds plausible but is completely wrong. In enterprise settings, this
+                  isn’t just a bug or an inconvenience; it can be a lawsuit waiting to happen. Air Canada learned this the
+                  hard way when a court ordered them to pay damages after their AI chatbot incorrectly promised a customer a
+                  refund that wasn’t in line with company policy. </p>
+                <p class="mainBloContpara1">Then there’s the whole matter of compliance and regulation – adhering to the
+                  ever-growing list of AI laws and regulations that countries are rolling out. Unlike the fear of AI taking
+                  over the world, which is easy to dismiss, regulatory fines are as real as it gets – and they can make a
+                  noticeable dent in your bottom line.</p>
+                <p class="mainBloContpara1">
+                  We’ve also come to know shadow AI – unauthorized or ad-hoc use of AI tools within an organization. With
+                  GenAI tools just a browser tab away, employees are easily tempted to use them for drafting copy,
+                  generating images, or writing code. However, by doing so, they might inadvertently be training the model
+                  on proprietary or confidential data and exposing the company to data leaks, security breaches, and other
+                  serious risks.
                 </p>
-                <p>
-                    💡 Tip: Start with a pilot project to test feasibility before committing full-scale investments.
-                </p>
-            </div>
-            <div class="para3-section">
-                <h1>
-                    Human Resources
-                </h1>
-                <p>
-                    AI is only as good as the people managing it. You need the right mix of data scientists (to build,
-                    and train AI models), software engineers (for possible API and legacy system integrations), and IT &
-                    DevOps specialists (to manage infrastructure and security).
-                </p>
-                <p>
-                    💡 Tip: If hiring an in-house AI team is too costly, consider AI-as-a-Service or partnering with a
-                    software development agency like Yellow.
-                </p>
-            </div>
-
-            <div class="para3-section">
-                <h1>
-                    Infrastructure
-                </h1>
-                <p>
-                    AI requires a lot of computing power and storage. Consider where you are going to store everything
-                    (cloud/on-premise), how you are going to process data, and how secure you need everything to be.
-                </p>
-                <p>
-                    💡 Tip: Assess your current IT stack—many businesses find their legacy systems can’t handle AI
-                    workloads without upgrades.
-                </p>
-            </div>
-            <div class="para3-section">
-                <h1>
-                    Data Management
-                </h1>
-                <p>
-                    As we already know, AI success depends on good data. You must ensure AI has access to relevant,
-                    clean, standardized, and high-quality data.
-                </p>
-                <p>
-                    💡 Tip: You need to allocate resources to data governance teams to maintain AI accuracy over time.
-                </p>
-            </div>
-            <div class="para3-section">
-                <h1>
-                    Time
-                </h1>
-                <p>
-                    AI integration isn’t an overnight thing—it needs structured timelines:
-                </p>
-
-                <div class="container1">
-                    <ul class="styled-list">
-                        <li>Short-term (0-6 months): Research, pilot projects, data preparation.</li>
-                        <li>Mid-term (6-12 months): Full AI integration, process automation, team training.</li>
-                        <li>Long-term (12+ months): Optimization, ROI evaluation, scaling.</li>
-                    </ul>
+                <p class="mainBloContpara1">These challenges aren’t just theoretical – they’re obstacles that need tackling
+                  if we want to move our relationship with AI past the honeymoon phase and turn it into a long-term, stable
+                  partnership. The rose-colored glasses are off, and comfy sweatpants are on. It’s time to make this AI
+                  thing work – reliably, safely, and without surprises.</p>
+              </div> -->
+    
+              <!-- card section -->
+              <div class="cardBlogSub">
+              </div>
+              <div class="cardSocial">
+                <div class="profile">
+                  <img src="assets/Cybersecurity_chalanges_2025-blog-hero-min.webp" alt="Profile Picture">
+                  <div class="profile-info">
+                    <h4>Mia Maček</h4>
+                    <p>Content Specialist</p>
+                  </div>
                 </div>
-                <p>
-                    💡 Tip: Don’t forget about employee resistance—change management strategies will help with AI
-                    adoption.
-                </p>
+                <div class="social-icons">
+                  <div class="icon"><i class="ri-facebook-fill"></i></div>
+                  <div class="icon"><i class="ri-linkedin-fill"></i></div>
+                  <div class="icon"><i class="ri-twitter-x-fill"></i></div>
+                  <div id="popAni" class="icon" >
+                    <span class="thanksTxt displayNone">Thanks</span><i class="ri-hand-heart-line"></i></div>
+                </div>
+              </div>
+    
+    
             </div>
+          </div>
         </div>
+        </section>
 
-        <div class="cta-section">
-            <p class="cta-text">Build your perfect AI solution with Yellow!</p>
-            <button class="cta-button">Get a quote</button>
+    <section class="cardsectFiveMain">
+        <div class="moreee">
+            <div class="cardsectFive">
+                <p>More in Culture</p>
+                <hr>
+            </div>
+    
+            <section id="cardMainBlogSec" class="cardMainBlogSec">
+                <p>Loading recent blogs...</p>
+            </section>
         </div>
     </section>
 
-    <section class="para-section">
-        <div class="para3-section" id="roi-framework">
-            <h1>
-                ROI calculation framework
-            </h1>
-            <p>
-                Finally, to determine whether AI integration is worth your time and money, you need to correctly
-                calculate ROI. Well, we have what you need for that: a practical framework that will help you see the
-                whole picture. Here’s what you need to do:
-            </p>
-        </div>
 
-
-        <div class="para3-heading">
-            <h2>
-                Step #1: Define the objective
-            </h2>
-
-            <p class="paragraph">
-                First thing you need to do is to clearly state the goal of your AI integration. For example, automating
-                manual data entry to reduce costs. Or improving customer service response time with AI chatbots. Or
-                enhancing demand forecasting to optimize inventory.
-            </p>
-        </div>
-
-        <div class="para3-heading">
-            <h2>
-                Step #2: Identify costs
-            </h2>
-
-            <p class="paragraph">
-                Next thing: Break down all expenses related to AI integration. Here’s what it can look like:
-            </p>
-
-            <div class="list-setion">
-                <h3 class="list-heading">
-                    1. <strong>Development & implementation</strong>
-                    <div class="listtype">
-                        <ul class="styled-list">
-                            <li>AI software or model development</li>
-                            <li>Integration with legacy systems</li>
-                            <li>Infrastructure upgrades</li>
-                            <li>APIs</li>
-                        </ul>
-                    </div>
-                </h3>
-            </div>
-            <div class="list-setion">
-                <h3 class="list-heading">
-                    2. <strong>Operational & maintenance</strong>
-                    <div class="listtype">
-                        <ul class="styled-list">
-                            <li>AI training and retraining costs</li>
-                            <li>Data preparation</li>
-                            <li>Cloud computing/on-premise hosting fees</li>
-                            <li>Support and monitoring</li>
-                        </ul>
-                    </div>
-                </h3>
-            </div>
-            <div class="list-setion">
-                <h3 class="list-heading">
-                    3. <strong>Change management & training</strong>
-                    <div class="listtype">
-                        <ul class="styled-list">
-                            <li>Employee training programs</li>
-                            <li>Hiring AI specialists (if needed)</li>
-                            <li>Process adjustments/resistance mitigation</li>
-                        </ul>
-                    </div>
-                </h3>
-            </div>
-        </div>
-
-        <div class="para3-heading">
-            <h2>
-                Step #3: Identify financial benefits
-            </h2>
-
-            <p class="paragraph">
-                Now you need to express in numbers the value AI brings to your business. Usually, the benefits are:
-            </p>
-
-            <div class="list-section">
-                <h4 class="list-heading">
-                    <ul class="styled-list">
-                        <li style="list-style:decimal;">Cost savings (reduction in labor costs, lower IT maintenance
-                            costs)</li>
-                        <li style="list-style:decimal;">Revenue growth (increased sales from better personalization,
-                            faster time-to-market thanks to automation)</li>
-                        <li style="list-style:decimal;">Efficiency gains (shorter processing times, reduced error rates)
-                        </li>
-                    </ul>
-                </h4>
-            </div>
-        </div>
-
-
-        <div class="para3-heading">
-            <h2>
-                Step #4: Calculate ROI
-            </h2>
-
-            <p class="paragraph">
-                Moving to the most important and thrilling part of it all: calculating ROI. The standard formula for it
-                looks like that:
-            </p>
-
-            <div class="img-section">
-                <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985620/AI_integration_List_2_hxkopc.webp" alt="">
-            </div>
-
-            <h4>
-                Let’s imagine some numbers:
-            </h4>
-
-            <div class="list-section">
-                <h4 class="list-heading">
-                    <ul class="styled-list">
-                        <li><strong>Total costs:</strong> $500,000 (AI software, implementation, training)</li>
-                        <li><strong>Total financial gains (over 2 years):</strong>$1,200,000 (labor savings, improved
-                            sales, efficiency)</li>
-                    </ul>
-                </h4>
-            </div>
-
-            <div class="img-section">
-                <img src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1740985620/AI_integration_List_3_kqovc3.webp" alt="">
-            </div>
-
-            <p class="paragraph">
-                A 140% ROI means the business gains $1.40 for every $1 invested. Quite a nice outcome!
-            </p>
-
-
-        </div>
-
-        <div class="para3-heading">
-            <h2>
-                Step #5: Consider non-financial gains
-            </h2>
-
-            <p class="paragraph">
-                Finally, as a bonus step, try to think about something that cannot be easily measured, but AI
-                integration often brings:
-            </p>
-
-            <div class="list-section">
-                <h4 class="list-heading">
-                    <ul class="styled-list">
-                        <li>Improved customer experience (faster response times, personalization).</li>
-                        <li>Stronger compliance & security (automated fraud detection, anomaly detection).</li>
-                        <li>Competitive advantage (better insights, faster innovation).</li>
-                    </ul>
-                </h4>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="para-section">
-        <div class="para3-section" id="summary">
-            <h1>
-                Top sum up
-            </h1>
-            <p>
-                Congratulations, you now have a practical guide on how to successfully integrate AI into your business
-                and how to see whether this initiative was worth the struggles. AI is a powerful tool that can be your
-                greatest companion if done right.
-            </p>
-            <p>
-                If you need any help with integrating AI or building an AI solution from scratch, contact us! We are
-                here to help you make your dreams and goals come true.
-            </p>
-
-            <h3 class="tag-heading" style="font-size: 32px; font-weight: 600;">
-                Tags
-            </h3>
-
-
-            <div class="tags-container">
-                <span class="tag">Software development</span>
-                <span class="tag small">AI</span>
-                <span class="tag">Machine learning</span>
-                <span class="tag">Chatbots</span>
-                <span class="tag">How to</span>
-            </div>
-        </div>
-    </section>
-
-    <section class="subscribe-container">
-        <div class="subscribe-text">
-            <h2>Subscribe to new posts.</h2>
-            <p>Get weekly updates on the newest design stories, case studies and tips right in your mailbox.</p>
-        </div>
-        <div class="subscribe-form">
-            <input type="email" placeholder="Your email address">
-            <button>Subscribe</button>
-        </div>
-    </section>
 
 
 
@@ -642,7 +436,7 @@
 
 
   <script src="mail.js"></script>
-  
+  <script src="blogDetails.js"></script>
 
 
 

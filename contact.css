@@ -211,17 +211,19 @@ margin-top: 5px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  
 }
-.form_righcc label{
+.form_righcc .form-link{
    display: flex;
    align-items: center;
    gap: 12px;
+   text-decoration: none;
 }
-.form_righcc label img{
+.form_righcc .form-link img{
   max-width: 40px;
   max-height: 40px;
 }
-.form_righcc label span{
+.form_righcc .form-link span{
   font-family: Wix Madefor Display;
   font-size: 16px;
   font-weight: 400;
@@ -241,11 +243,11 @@ color: #060606;
 .social-icons a{
   text-decoration: none;
   font-size: 32px;
-
   padding: 10px;
   color: #fff;
-
 }
+
+ 
 
 
 .contathirdwra{

@@ -14,7 +14,7 @@
 }
 
 .inner-carousel-container {
-    max-width: 1280px;
+    max-width: 1720px;
     margin: 0 auto;
 }
 
@@ -38,7 +38,7 @@
 
 .carousel-item {
     width: 90%;
-    height: 585px;
+    height: 560px;
     display: flex;
     border-radius: 15px;
     overflow: hidden;
@@ -52,7 +52,7 @@
 }
 
 .left-carousel-item {
-    width: 65%;
+    width: 52%;
     position: relative;
 }
 
@@ -109,8 +109,8 @@
 }
 
 .right-carousel-heading{
-    font-size: 29px !important;
-    line-height: 34px;
+    font-size: 36px !important;
+    font-weight: 700;
 }
 
 .right-service-stack-div {
@@ -124,7 +124,7 @@
     background: #fff;
     padding: 10px 22px;
     border-radius: 15px;
-    width: 213px;
+    width: 250px;
 }
 
 .right-service-stack > ul {
@@ -165,7 +165,9 @@
 
 @media screen and (max-width:576px){
     .carousel-container-heading {
-        font-size: 2rem;
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: 600;
     }
 
     .carousel-item {
@@ -211,7 +213,7 @@
     color: #fff;
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1300px){
     .carousel-item {
         width: 90%;
         height: auto;
@@ -222,6 +224,8 @@
     .left-carousel-item,.right-carousel-item{
         width: 100% !important;
     }
+
+    
 }
 
 @media screen and (max-width:576px){
@@ -245,4 +249,22 @@
     .left-carousel-btn-div {
         display: none;
     }
+
+    .swiper-button-prev,.swiper-button-next {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0000ff;   
+    }
+    
+    .swiper-button-prev::after,.swiper-button-next::after{
+        font-size: 13px;
+        font-weight: 900;
+        color: #fff;
+    }
+
+     
 }

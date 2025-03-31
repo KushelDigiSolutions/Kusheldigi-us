@@ -5,8 +5,9 @@
     font-family: "Wix Madefor Display";
     text-align: center;
     background: linear-gradient(to right, #f8f8f8, #e9f0ff);
-    /* margin: 0;
-    padding: 0; */
+    max-width: 1720px;
+    margin: 0 auto;
+    padding: 30px 60px;
 }
 
 .flagship-head {
@@ -37,11 +38,11 @@
 .flagship-card {
     position: relative;
     background: #fff;
-    padding: 18px 20px 33px;
+    padding: 6px 20px 33px;
     border-radius: 10px;
     text-align: left;
     border: 1px solid #80808057;
-    width: 320px;
+    width: 420px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 
@@ -68,8 +69,8 @@
     height: auto;
 }
 
-h3 {
-    font-size: 22px;
+.flagship-card .flag-head {
+    font-size: 27px;
     margin-bottom: 28px;
     line-height: 28px;
     font-weight: 500;
@@ -136,3 +137,4 @@ h3 {
         font-weight: 500;
     }
 }
+ 

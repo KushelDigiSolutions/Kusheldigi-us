@@ -27,7 +27,7 @@ section {
 
 @media only screen and (min-width:768px) {
   section {
-    padding-top: 2.344rem
+    padding-top: 2.344rem;
   }
 }
 
@@ -265,7 +265,12 @@ a {
 
 @media only screen and (min-width: 768px) {
   .services-we-served {
-    padding-top: 4.688rem;
+    padding: 4.688rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .services-we-served {
+    padding: 3.688rem;
   }
 }
 
@@ -383,12 +388,13 @@ a {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 10px;
+    line-height: 2.7rem;
   }
-
+  
   .services-we-served .section-grid .section-grid-item.services-we-served-list {
     flex: 0 0 66.667%;
     max-width: 66.667%;
-    order: 2;
+    order: 2; 
   }
 }
 
@@ -893,10 +899,51 @@ a {
   margin-bottom: 25px;
 }
 
+.title1 .vision-head{
+  text-align: center;
+}
+
 @media screen and (max-width:576px) {
   .services-we-served .section-grid .section-grid-item .services-box-list-nav>li h4 {
     font-size: medium;
     line-height: normal;
     margin: 0px;
+  }
+
+  .services-we-served .section-grid .section-grid-item .services-we-served-search>.services-we-served-search-content {
+    text-align: center;
+    font-size: 19px;
+    line-height: 28px;
+  }
+  .talk-btn-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title1 .vision-head{
+    text-align: center;
+    font-size: 24px;
+  }
+}
+@media screen and (max-width:1000px) {
+  .services-we-served .section-grid .section-grid-item .services-box-list-nav>li h4 {
+    font-size: medium;
+    line-height: normal;
+    margin: 0px;
+  }
+
+  .services-we-served .section-grid .section-grid-item .services-we-served-search>.services-we-served-search-content {
+    text-align: center;
+    font-size: 19px;
+    line-height: 28px;
+  }
+  .talk-btn-container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title1 .vision-head{
+    text-align: center;
+    font-size: 24px;
   }
 }
