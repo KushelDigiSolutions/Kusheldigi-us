@@ -74,7 +74,7 @@ body{
 /* left content  */
 .mainBloContentPa {
     width: 763px;
-    font-size: 43px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -242,8 +242,9 @@ body{
     background: #d3d5d8;
     border-radius: 50%;
     font-size: 20px;
-    color: black;
+    color: black ;
     cursor: pointer;
+    text-decoration: none;
     transition: background 0.3s ease;
 }
 
@@ -526,14 +527,14 @@ body{
 }
 
 /* card section */
-.cardBlogSub {
+/* .cardBlogSub {
     background-color: #E4EBF5;
     margin-top: 70px;
     display: flex;
     padding: 100px;
     align-items: center;
     justify-content: space-evenly;
-}
+} */
 
 .cardBlogSubDiv p {
     font-size: 23px;

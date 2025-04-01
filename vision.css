@@ -458,8 +458,8 @@ a {
 
 @media only screen and (min-width: 991px) {
   .services-we-served .section-grid .section-grid-item .services-box-item-header .services-box-icon>div {
-    height: 3.125rem;
-    width: 2.813rem;
+    height: 6.125rem;
+    width: 3.850rem;
   }
 }
 
@@ -536,8 +536,8 @@ a {
 
 @media only screen and (min-width: 1024px) {
   .services-we-served .section-grid .section-grid-item .services-box-item .services-box-right-corner svg {
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 5.5rem;
+    width: 4.5rem;
   }
 }
 

@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
+    /* flex-wrap: nowrap; */
     margin: 2rem auto;
 
 
@@ -136,5 +136,32 @@
         font-size: 30px;
         font-weight: 500;
     }
+
+    
 }
+@media (max-width:1200px){
+    .flagship-head{
+        line-height: 40px;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .flagship-cards{
+        flex-wrap: wrap;
+    }
+}
+@media (min-width:960px) and (max-width:1200px){
+    .flagship-cards{
+         display: grid;
+         grid-template-columns: repeat(3,1fr);
+    }
+
+    .flagship-card{
+        width: 100%;
+    }
+}
+
+
+
+
  

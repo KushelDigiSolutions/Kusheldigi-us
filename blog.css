@@ -400,10 +400,10 @@
 
 .bimagelogMain {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: flex-start;
     gap: 43px;
-    padding: 0px 30px;
+    /* padding: 0px 30px; */
     /* flex-wrap: wrap;*/
 }
 
@@ -1255,7 +1255,10 @@
 
 /* seven row start */
 .eightBlogSMain {
-    padding-top: 50px;
+    /* padding-top: 50px; */
+    padding: 80px 0px 136px 0px;
+    max-width: 1380px;
+    margin: auto;
 }
 
 .eightBlogSMainDiv {
@@ -1320,3 +1323,35 @@
     text-align: center;
     margin-top: 5px;
 }
+
+
+.bimageloDi>h2{
+    font-size: 42px !important;
+    color: #000; 
+}
+
+.bimageloDi>p{
+    font-size: 20px !important;
+    margin-top: 3rem;
+}
+
+
+.NavButtonn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.navbuttonbtn{
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 4px 12px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+#pageNumber{
+    font-size: 16px;
+    font-weight: 600;
+}
+

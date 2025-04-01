@@ -320,7 +320,7 @@ function renderBlogs() {
     if (currentTasks.length > 0) {
         const firstBlog = currentTasks[0];
         currentBelowBlog.innerHTML = `
-            <div class="bimagelogMain" onclick="navigateToBlog('${item._id}')">
+            <div class="bimagelogMain" onclick="navigateToBlog('${firstBlog._id}')">
                 <div class="bimagelog">
                     <a href="/blogdetails/${firstBlog._id}">
                         <img src="${firstBlog.images?.[0] || 'default-image.jpg'}" alt="${firstBlog.title || 'No Title'}" />
