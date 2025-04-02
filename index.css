@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
 
-
+html{
+  scroll-behavior: smooth;
+}
 iframe {
   overflow: hidden;
   height: 600px;
@@ -1479,309 +1481,7 @@ iframe {
 
 
 
-.review-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  /* height: 85vh; */
-  padding: 35px 20px;
-}
-
-.review-card {
-  background: linear-gradient(269.67deg, #3C83CB 58.8%, #0B60FF 99.75%);
-  max-width: 90%;
-  width: 1150px;
-  height: 100%;
-  padding: 30px;
-  border-radius: 60px;
-  display: flex;
-  align-items: center;
-  color: white;
-  position: relative;
-}
-
-.left-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 35%;
-  height: auto;
-}
-
-.left-section img {
-  width: 260px;
-  height: 260px;
-  border-radius: 50%;
-  background: white;
-  object-fit: cover;
-}
-
-.pagination {
-  display: flex;
-  gap: 1rem;
-  margin-top: 15px;
-  justify-content: center;
-}
-
-.dot1 {
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 50%;
-  opacity: 0.5;
-}
-
-.dot1.active {
-  opacity: 1;
-}
-
-.right-section {
-  width: 55%;
-  height: auto;
-  margin-bottom: 5rem;
-}
-
-.right-section h2 {
-  font-size: 28px;
-  font-weight: 600;
-  line-height: 36px;
-  margin-bottom: 20px;
-}
-
-.right-section p {
-  font-size: 16px;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 1);
-}
-
-#review-text {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 35px;
-}
-
-.reviewer {
-  margin-top: 30px;
-  font-size: 16px;
-}
-
-.separator {
-  width: 100%;
-  height: 1px;
-  background-color: #ccc;
-  margin: 15px 0;
-  opacity: 20%;
-}
-
-#reviewer-name {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 40px;
-}
-
-#reviewer-company {
-  font-size: 20px;
-  font-weight: 300;
-}
-
-
-.next-btn {
-  position: absolute;
-  bottom: 53px;
-  right: 53px;
-  background: transparent;
-  border: 2px solid white;
-  color: white;
-  width: 53px;
-  height: 53px;
-  border-radius: 50%;
-  font-size: 18px;
-  cursor: pointer;
-}
-
-
-@media screen and (max-width: 1024px) {
-  .review-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    height: auto;
-  }
-
-  .left-section {
-    width: 100%;
-  }
-
-  .left-section img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .right-section {
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 3rem;
-  }
-
-  .right-section h2 {
-    font-size: 24px;
-    line-height: 30px;
-  }
-
-  #review-text {
-    font-size: 18px;
-    line-height: 28px;
-  }
-
-  .reviewer {
-    font-size: 14px;
-  }
-
-  #reviewer-name {
-    font-size: 22px;
-  }
-
-  #reviewer-company {
-    font-size: 18px;
-  }
-
-  .next-btn {
-    bottom: 30px;
-    right: 30px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .review-section {
-    height: auto;
-    padding: 38px 10px;
-  }
-
-  .review-card {
-    padding: 15px;
-    border-radius: 40px;
-  }
-
-  .left-section img {
-    width: 150px;
-    height: 150px;
-  }
-
-  .pagination {
-    padding-left: 20rem !important;
-  }
-
-  .dot1 {
-    width: 8px;
-    height: 8px;
-  }
-
-  .right-section h2 {
-    font-size: 20px;
-  }
-
-  #review-text {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  #reviewer-name {
-    font-size: 20px;
-  }
-
-  #reviewer-company {
-    font-size: 16px;
-  }
-
-  .separator {
-    margin: 10px 0;
-  }
-
-  .next-btn {
-    bottom: 15px;
-    right: 15px;
-    width: 40px;
-    height: 40px;
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-
-  .heading>span {
-    font-size: 30px !important;
-    line-height: 40px;
-  }
-
-  .heading>h2 {
-    font-size: 20px;
-  }
-
-  .our_procee_cont>.heading-1 {
-    font-size: 30px !important;
-    line-height: 40px;
-  }
-
-  .our_procee_cont>.heading-2 {
-    font-size: 20px !important;
-    line-height: 30px;
-    margin-top: 10px;
-  }
-
-  .our_procee_cont>.heading-3 {
-    line-height: 32px;
-    margin-top: 10px;
-  }
-
-  .review-card {
-    padding: 10px;
-    border-radius: 30px;
-  }
-
-  .left-section img {
-    width: 130px;
-    height: 130px;
-  }
-
-  .right-section h2 {
-    font-size: 18px;
-  }
-
-  #review-text {
-    font-size: 14px;
-    line-height: 22px;
-  }
-
-  #reviewer-name {
-    font-size: 18px;
-  }
-
-  #reviewer-company {
-    font-size: 14px;
-  }
-
-  .next-btn {
-    bottom: 10px;
-    right: 10px;
-    width: 35px;
-    height: 35px;
-    font-size: 12px;
-  }
-
-  .btn-light1 {
-    width: unset;
-    height: unset;
-    display: flex;
-    align-items: center;
-    padding: 9px 20px;
-    gap: 10px;
-    font-size: 24px;
-    font-size: 18px;
-  }
-
-}
+ 
 
 .logo-container {
   width: 100%;
@@ -3172,7 +2872,7 @@ footer {
   }
 
   .footer-btm img {
-    width: 120px;
+    width: 100px;
   }
 
   .footer-logoss .egplus-logo img {
@@ -5208,6 +4908,7 @@ input::-webkit-inner-spin-button {
   font-size: 3.5rem;
   color: #083792;
   text-align: left;
+  font-weight: 600;
   /* line-height: 5rem !important; */
 }
 
@@ -5761,7 +5462,7 @@ input::-webkit-inner-spin-button {
   }
 
   .left-contact-heading {
-    width: 270px !important;
+    /* width: 270px !important; */
     font-size: 32px !important;
     line-height: 41px;
   }
@@ -5822,7 +5523,7 @@ input::-webkit-inner-spin-button {
   padding: 0 5vw;
 }
 
-.tech-heading h2 {
+.tech-heading h3 {
   font-size: clamp(24px, 3vw, 40px);
   font-weight: 600;
   line-height: 1.2;

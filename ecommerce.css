@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
 
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
 /* Hero Section */
 .Mainhero-sectionss {
     /* margin: 120px 0px 0px 0px; */
@@ -98,6 +104,7 @@
     background-color: white;
     color: #0c61ff;
     border: 1px solid #0c61ff;
+    text-decoration: none;
 }
 
 .buttonsBi a {
@@ -107,9 +114,7 @@
     align-items: center;
 }
 
-.primary-btn img{
-    filter: brightness(0) invert(1); 
-}
+ 
 
 
 .secondary-btn {
@@ -1698,9 +1703,7 @@
 }
 
 
-.logoItem:hover {
-    /* transform: scale(1.2) rotateY(15deg) rotateX(10deg); */
-}
+ 
 
 
 .logoItem::before {
@@ -1819,29 +1822,21 @@
     border-bottom: 1px solid rgb(192 180 180);
 }
 
-.logoItem:nth-child(6) {
-    /* border-right: 1px solid black; */
-    /* border-left: 1px solid black; */
+.logoItem:nth-child(6) { 
     border-bottom: 1px solid rgb(192 180 180);
 }
 
 .logoItem:nth-child(7) {
     border-right: 1px solid rgb(192 180 180);
-    /* border-left: 1px solid black; */
-    /* border-bottom: 1px solid black; */
+     
 }
 
 .logoItem:nth-child(8) {
     border-right: 1px solid rgb(192 180 180);
-    /* border-left: 1px solid black; */
-    /* border-bottom: 1px solid black; */
+     
 }
 
-.logoItem:nth-child(9) {
-    /* border-right: 1px solid black; */
-    /* border-left: 1px solid black; */
-    /* border-bottom: 1px solid black; */
-}
+ 
 
 
 
@@ -1945,15 +1940,11 @@
 
 
 
-.left-b2b-cardKcom:hover {
-    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); */
-    /* transform: translateY(-5px); */
-}
+ 
 
 .left-b2b-cardKcom {
     position: relative;
     background: #fff;
-
     text-align: left;
     width: 529px;
     max-width: 80%;
@@ -2338,7 +2329,6 @@
 
 .industry-container {
     font-family: "Wix Madefor Display";
-
     margin: auto;
 }
 
@@ -2368,6 +2358,14 @@
 
     .clientsSection {
         padding: 20px;
+    }
+    .industry-expertise-header{
+        text-align: center;
+    }
+
+    .lemon{
+        text-align: center;
+        display: inline;
     }
 }
 
@@ -2480,6 +2478,7 @@
 @media screen and (max-width: 576px) {
     .industry-infocus-boxes {
         gap: 15px;
+        padding: 0;
     }
 }
 
@@ -2495,6 +2494,11 @@
 @media screen and (max-width: 1280px) {
     .industry-infocus-boxes li {
         width: calc(25% - 15px);
+    }
+
+    .industry-infocus-boxes {
+        gap: 15px;
+        padding: 0;
     }
 }
 
@@ -2744,7 +2748,7 @@
     
     }
     .hrEcommm{
-      margin-top: -20px;
+      margin-top: -27px;
   
     }
     .heaaader-content h5{
@@ -2778,6 +2782,7 @@
       margin: 30px 0;
       font-size: 18px;
       font-weight: 600;
+      cursor: pointer;
     }
     
     .linkss ul li:hover{
@@ -2790,9 +2795,21 @@
       display: flex;
       justify-content: center;
       justify-content: space-around;
-      scroll-margin-top: 260px;
+      scroll-margin-top: 261px;
       align-items: center;
       margin: 60px;
+    }
+
+
+    @media (min-width:1366px) and (max-width:1500px){
+        .contttent-wrapper{
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            scroll-margin-top: 220px;
+            align-items: center;
+            margin: 60px;
+          }
     }
     
     .content{
@@ -2832,9 +2849,7 @@
       background-color: white;
       border: 1px solid  rgb(40, 105, 244);
     }
-    img{
-      /* margin-right: 60px; */
-    }
+     
     
     .imgg-2nd{
       margin-left: 70px;
@@ -2924,7 +2939,7 @@
   }
   .headdd-div{
     position: sticky;
-    top: -98px;
+    top: -210px;
     z-index: 99 !important;
     background: #f8f8f8;
     overflow: hidden;
@@ -2934,8 +2949,8 @@
   
   .linkss ul li.active {
     text-decoration: underline;
-    text-decoration-thickness: 2.5px;
-    text-underline-offset: 29.5px;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 27.3px;
     color: rgb(18, 88, 241);
     font-weight: bold;
     transition: all 0.3s ease;
