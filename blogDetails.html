@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="blogdetails.css"> -->
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="index1.css">
   <link rel="stylesheet" href="style.css">
@@ -117,54 +116,7 @@
   </script>
 
 
-  <script>
-    const popAnimation = document.getElementById('iconPop');
-    const thanksTxt1 = document.querySelector('.thanksTxt1')
-    popAnimation.addEventListener('click', function (e) {
-      console.log('clickkkkkkkkkkk', e)
-      thanksTxt1.classList.add('displayBlock');
-      popAnimation.style.width = '112px';
-      confetti({
-
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
-
-
-      setTimeout(() => {
-        thanksTxt1.classList.remove('displayBlock');
-        thanksTxt1.classList.add('displayNone');
-        popAnimation.style.width = '38px';
-      }, 2000);
-    });
-
-    const popAni = document.getElementById('popAni');
-    const thanksTxt = document.querySelector('.thanksTxt')
-
-    popAni.addEventListener('click', function (e) {
-      console.log('clickkkkkkkkkkk', e)
-      thanksTxt.classList.add('displayBlock');
-      popAni.style.width = '112px';
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
-      });
-
-
-
-      // popAni.innerText = 'Thanks!';
-
-
-      setTimeout(() => {
-        thanksTxt.classList.remove('displayBlock');
-        thanksTxt.classList.add('displayNone')
-        popAni.style.width = '38px';
-      }, 2000);
-
-    });
-  </script>
+  
 
 
 
@@ -396,6 +348,58 @@
 
     <script src="mail.js"></script>
     <script src="blogDetails.js"></script>
+
+
+
+
+    <script>
+    const popAnimation = document.getElementById('iconPop');
+    const thanksTxt1 = document.querySelector('.thanksTxt1')
+    popAnimation.addEventListener('click', function (e) {
+      console.log('clickkkkkkkkkkk', e)
+      thanksTxt1.classList.add('displayBlock');
+      popAnimation.style.width = '112px';
+      confetti({
+
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
+
+      setTimeout(() => {
+        thanksTxt1.classList.remove('displayBlock');
+        thanksTxt1.classList.add('displayNone');
+        popAnimation.style.width = '38px';
+      }, 2000);
+    });
+
+    const popAni = document.getElementById('popAni');
+    const thanksTxt = document.querySelector('.thanksTxt')
+
+    popAni.addEventListener('click', function (e) {
+      console.log('clickkkkkkkkkkk', e)
+      thanksTxt.classList.add('displayBlock');
+      popAni.style.width = '112px';
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
+
+
+      // popAni.innerText = 'Thanks!';
+
+
+      setTimeout(() => {
+        thanksTxt.classList.remove('displayBlock');
+        thanksTxt.classList.add('displayNone')
+        popAni.style.width = '38px';
+      }, 2000);
+
+    });
+  </script>
 
 
 

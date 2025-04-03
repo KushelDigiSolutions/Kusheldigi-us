@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="ecommerce.css">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="ecommerce.css">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="/contact-section.css">
 
@@ -50,7 +50,7 @@
       </div>
 
       <div class="img-containerCo">
-        <img src="https://res.cloudinary.com/dd9tagtiw/image/upload/v1743079133/ecommerce-banner_tyflss.webp"
+        <img src="img/ecommerce-banner_tyflss.jpg"
           alt="ecommerce" class="image-thumbnail" />
       </div>
   </section>
@@ -772,6 +772,9 @@
   </section>
 
 
+ 
+
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const links = document.querySelectorAll('li');
@@ -820,6 +823,64 @@
     });
 
   </script>
+
+
+<!-- <section class="faq-section" id="faq-section">
+  <h5>Frequent Ask Questions?</h5>
+  <div class="faq-container">
+    <div class="faq-item expanded">
+      <div class="faq-question">
+        <h3>What makes your eCommerce development services different?</h3>
+        <button class="toggle-btn">-</button>
+      </div>
+      <p class="faq-answer">
+        Kushel Digi has over 8 years of experience in building high-performance, user-friendly, and scalable eCommerce
+        solutions using BigCommerce, Shopify and custom technologies.
+
+      </p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <h3>Do you work with startups as well as large businesses?</h3>
+        <button class="toggle-btn">+</button>
+      </div>
+      <p class="faq-answer">Yes, we work with businesses of all sizes, from startups to enterprise-level eCommerce
+        brands and offer solutions that fit their growth stage.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <h3>What industries do you serve with your eCommerce development?</h3>
+        <button class="toggle-btn">+</button>
+      </div>
+      <p class="faq-answer">We have experience working with industries like fashion, electronics, automotive,
+        healthcare, and B2B marketplaces.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <h3>Are your eCommerce solutions mobile-friendly?</h3>
+        <button class="toggle-btn">+</button>
+      </div>
+      <p class="faq-answer">Absolutely! We have been building fully responsive and mobile-optimized stores to enhance
+        the shopping experience on all devices.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <h3>Do you offer third-party app integrations?</h3>
+        <button class="toggle-btn">+</button>
+      </div>
+      <p class="faq-answer">Yes, we integrate payment gateways, CRM tools, ERP solutions, and shipping providers to
+        streamline your eCommerce operations.</p>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <h3>How do I know if BigCommerce is right for my business?</h3>
+        <button class="toggle-btn">+</button>
+      </div>
+      <p class="faq-answer">Our team will analyze your business requirements and recommend the best platform, whether
+        it's BigCommerce, Shopify, or a custom-built solution.</p>
+    </div>
+  </div>
+</section> -->
 
 
   <div class="contact-container" id="form-section">
@@ -982,23 +1043,28 @@
 
   </script>
 
-  <script>
-    document.getElementById("primary-btn").addEventListener("click", function (event) {
-      event.preventDefault();
-      let formSection = document.getElementById("form-section");
-      let offset = 100;
+<script>
+  document.getElementById("primary-btn").addEventListener("click", function (event) {
+    event.preventDefault();
+    
+    let formSection = document.getElementById("form-section");
+    let headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 100; // Adjust based on actual header
 
-      window.scrollTo({
-        top: formSection.offsetTop - offset,
-        behavior: "smooth"
-      });
+    let targetPosition = formSection.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: "smooth"
     });
+  });
+</script>
 
-  </script>
 
 
   <script src="mail.js"></script>
   <script src="/captcha.js"></script>
+  <script src="/faq.js"></script>
+
 
 
 

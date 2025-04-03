@@ -120,7 +120,7 @@
 
 .navbar_conts nav a {
     text-decoration: none;
-    font-family: Wix Madefor Display;
+    font-family: "Wix Madefor Display";
     font-size: 18px;
     font-weight: 500;
     line-height: 28px;
@@ -139,7 +139,7 @@
 }
 
 .navbar_conts nav button span {
-    font-family: Wix Madefor Display;
+    font-family: "Wix Madefor Display";
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -184,15 +184,15 @@
     padding: 0px 40px 40px 0px;
     padding: 0;
     box-sizing: border-box;
-    font-family: Wix Madefor Display;
+    font-family: "Wix Madefor Display";
+
 
  
 }
 
 /* header section start */
 .contt {
-
-    max-width: 1380px;
+    max-width: 1375px;
     margin: 0 auto;
 }
 
@@ -215,7 +215,8 @@
     border-radius: 49px;
     font-size: 14px;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Wix Madefor Display";
+
 }
 
 .button {
@@ -226,7 +227,7 @@
     border-radius: 49px;
     font-size: 16px;
     font-weight: 600;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Wix Madefor Display";
     background-color: white;
     transition: color 0.3s ease-in-out;
     cursor: pointer;
@@ -295,6 +296,7 @@
     display: grid !important;
     grid-template-columns: repeat(3,1fr) !important;
 } */
+
 .bimageloDiPara {
     font-size: 42px;
     font-weight: 600;
@@ -392,7 +394,7 @@
     padding-top: 20px;
 }
 
-@media screen and (min-width:1366px) {
+@media(min-width:1366px) and (max-width:1499px){
     .mainsecBlo {
         padding: 40px;
     }
@@ -401,7 +403,7 @@
 .bimagelogMain {
     display: flex;
     justify-content:center;
-    align-items: flex-start;
+    align-items: center;
     gap: 43px;
     /* padding: 0px 30px; */
     /* flex-wrap: wrap;*/
@@ -444,7 +446,7 @@
 }
 
 .bimageloDiPaara {
-    padding-top: 30px;
+    /* padding-top: 30px; */
     font-size: 15px;
     font-weight: 600;
 }
@@ -675,13 +677,13 @@
     justify-content: space-between;
     font-size: 50px;
     font-weight: 600;
-    font-family: sans-serif;
+    font-family: "Wix Madefor Display";
     margin-bottom: 20px;
 }
 
 .newsroom-header h5{
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 44px;
+    font-weight: 700;
 }
 
 /* Grid Layout */
@@ -720,7 +722,7 @@
     font-weight: 700;
     color: #000;
     margin-bottom: 5px;
-    font-family: sans-serif;
+    font-family: "Wix Madefor Display";
     text-decoration: none;
     display: inline-block;
     transition: color 0.3s;
@@ -903,13 +905,14 @@
     justify-content: space-between;
     font-size: 46px;
     font-weight: bold;
-    font-family: 'Arial', sans-serif;
-    margin-bottom: 20px;
+    font-family: "Wix Madefor Display";
+    max-width: 1375px;
+    margin: 20px auto;
 }
 
 .event-header h5{
-    font-size: 18px;
-    font-weight: 600;
+    font-size: 44px;
+    font-weight: 700;
 }
 
 /* Grid Layout */
@@ -959,8 +962,7 @@
 .event-category {
     color: #ce1207;
     font-size: 15px;
-    font-family: 'Arial', sans-serif;
-
+    font-family: "Wix Madefor Display";
     font-weight: bold;
     margin-top: 20px;
 }
@@ -968,7 +970,7 @@
 /* Title Styling */
 .event-title {
     font-size: 25px;
-    font-family: 'Arial', sans-serif;
+    font-family: "Wix Madefor Display";
     font-weight: bold;
     margin-top: 20px;
     color: #000;
@@ -998,7 +1000,7 @@
 .event-author p {
     margin-top: 20px;
     font-size: 13px;
-    font-family: 'Arial', sans-serif;
+    font-family: "Wix Madefor Display";
     font-weight: bold;
     color: #000;
 }
@@ -1044,7 +1046,7 @@
 .event-title {
     margin-top: 20px;
     font-size: 25px;
-    font-family: 'Arial', sans-serif;
+    font-family: "Wix Madefor Display";
     font-weight: bold;
     color: #000;
     line-height: 1.4;

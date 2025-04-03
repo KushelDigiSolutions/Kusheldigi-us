@@ -15,9 +15,8 @@ body{
     display: flex;
     justify-content: center;
     font-family: "Wix Madefor Display";
-
     align-items: center;
-    height: auto;
+    height: 625px;
     background: linear-gradient(to right, #e4edf3 50%, #aec8db 50%);
 
 }
@@ -35,7 +34,7 @@ body{
 
 .hero-containerMaSub1 {
     /* background-color: #aec8db; */
-    max-width: 400px;
+    /* max-width: 400px; */
     flex: 1;
 }
 
@@ -53,7 +52,7 @@ body{
 
 .hero-contentBi {
     flex: 1;
-    min-width: 320px;
+    /* min-width: 320px; */
     text-align: left;
 }
 
@@ -138,7 +137,7 @@ body{
 /* Image Section */
 .img-containerCo {
     flex: 1;
-    min-width: 320px;
+    /* min-width: 320px; */
 
 }
 
@@ -322,7 +321,7 @@ body{
 
 .sec-contentBan2 {
     flex: 1;
-    min-width: 320px;
+    /* min-width: 320px; */
     text-align: left;
 }
 
@@ -390,6 +389,7 @@ body{
     background-color: white;
     color: #0c61ff;
     border: 1px solid #0c61ff;
+    text-decoration: none;
 }
 
 .secondary-btnssBan2 {
@@ -419,7 +419,7 @@ body{
 
 .image-sec-container {
     flex: 1;
-    min-width: 320px;
+    /* min-width: 320px; */
     display: flex;
     justify-content: center;
 }
@@ -557,7 +557,7 @@ body{
 
     .primary-btnssBan2,
     .secondary-btnssBan2 {
-        width: 100%;
+        /* width: 100%; */
         font-size: 13px;
         padding: 10px 15px;
     }
@@ -710,7 +710,7 @@ body{
 
     .right-sectionEcom {
         width: 100%;
-        padding-right: 0;
+        /* padding-right: 0; */
     }
 
     .content-blockEcom {
@@ -789,7 +789,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 100%;
 }
 
@@ -864,6 +864,10 @@ body{
 
     .audit-img {
         width: 220px;
+    }
+
+    .con--2{
+        width: 100%;
     }
 }
 
@@ -945,7 +949,7 @@ body{
     display: flex !important;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     width: 100%;
     gap: 20px;
 }
@@ -1014,6 +1018,7 @@ body{
         width: 100%;
         text-align: center;
         margin-bottom: 1rem;
+        padding: 0 12px;
     }
 
     .audit-img {
@@ -1133,7 +1138,7 @@ body{
 
 /* Text Styling */
 .con--1-flex h5 {
-    font-weight: 400;
+    font-weight: 700;
     font-size: 23px;
     margin-top: 10px;
     color: #333;
@@ -1230,8 +1235,7 @@ body{
     text-align: center;
     font-size: 38px;
     letter-spacing: 0px !important;
-    font-weight: 400;
-    color: rgb(81, 79, 79);
+    font-weight: 700; 
 }
 
 .con--3-div p {
@@ -1268,13 +1272,13 @@ body{
 .iconImage3 {
     width: 50px;
     height: 50px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
 }
 
 /* Text Adjustments */
 .con--3-flex-content h5 {
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 600;
     margin-top: 15px;
 }
 
@@ -2781,7 +2785,7 @@ body{
       list-style: none;
       margin: 30px 0;
       font-size: 18px;
-      font-weight: 600;
+      font-weight: 600 !important;
       cursor: pointer;
     }
     
@@ -2829,7 +2833,7 @@ body{
     
     .content p{
       line-height: 30px;
-      font-size: 18px;
+      font-size: 18px !important;
       color: #6c6e70;
     
     }

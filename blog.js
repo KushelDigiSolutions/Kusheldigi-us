@@ -7,6 +7,7 @@ const firstBlogImage = document.getElementById('firstBlogImage');
 const firstBlogTitle = document.getElementById('firstBlogTitle');
 const firstBlogDescription = document.getElementById('firstBlogDescription');
 const firstBlodDate = document.getElementById('firstBlodDate');
+const filterContainer = document.querySelector('.filterContainer');
 
 let allBlogs;
 
@@ -39,7 +40,9 @@ const showFirstBlog = () => {
             day: "numeric",
             month: "long",
             year: "numeric"
-        })
+        });
+
+        filterContainer.removeAttribute('id');
     } else {
         console.warn("No blogs available to show");
     }
@@ -140,6 +143,7 @@ const filterBlogsByCategory = () => {
         console.warn("No blogs available to filter");
         return;
     }
+    filterContainer.setAttribute('id', 'filteredBlogContainer');
 
     ecommerceBlog = allBlogs.filter((blog) => blog.category?.title?.toLowerCase() === "e-commerce");
     seoBlogs = allBlogs.filter((blog) => blog.category?.title?.toLowerCase() === "seo");

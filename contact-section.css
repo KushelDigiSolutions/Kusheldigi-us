@@ -225,7 +225,7 @@ overflow: hidden;
 
 @media screen and (max-width:576px){
   .clients::after {
-    width: 200px;
+    width: 158px;
   }
 
   .contact-card img{
