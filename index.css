@@ -2298,7 +2298,7 @@ footer {
   }
 
   .footer-btm img {
-    width: 55px;
+    width: 54px;
   }
 
   .footer-logoss .egplus-logo img {
@@ -4539,7 +4539,7 @@ input::-webkit-inner-spin-button {
 .faq-question {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center !important;
   gap: 10px;
   height: 60px !important;
 }
