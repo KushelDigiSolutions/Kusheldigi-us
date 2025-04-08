@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: "Wix Madefor Display";
+            box-sizing: border-box;
+        }
+
+        body {
+            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+            background: #ffffff;
+            padding: 50px 0;
+        }
+
+        /* Section Background */
+        .services-section {
+            /* background: linear-gradient(to bottom, #ff3c00 0%, #ffffff 45%); */
+            /* padding: 100px 20px; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* White Card */
+        .services-container {
+            background: #fafafa;
+            border-radius: 50px;
+            padding: 60px 40px;
+            max-width: 1100px;
+            text-align: center;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+            background-image: url('https://uploads-ssl.webflow.com/620bc983eb0d9e77c4b70c36/6411a05a8c8cc715ea705cd9_services-bg.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Typography */
+        .subheading {
+            color: #222;
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .main-heading {
+            font-size: 40px;
+            font-weight: bold;
+            color: #09409f;
+            margin-bottom: 24px;
+        }
+
+        .description {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+
+
+        .service-cards {
+            max-width: 1100px;
+            margin: 60px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.07);
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            background-color: #0d53bccf;
+            /* light blue background */
+            color: white;
+            box-shadow: 0 30px 90px rgba(0, 123, 255, 0.15);
+        }
+
+        .card h3,
+        .card p {
+            transition: color 0.3s ease;
+        }
+
+
+        .card:hover h3 {
+            color: #ffffff;
+        }
+
+        .card:hover p {
+            color: #ffffff;
+        }
+
+
+
+        .card .icon img {
+            width: 50px;
+            height: 50px;
+        }
+
+
+        .card:hover .icon img {
+            filter: brightness(0) invert(1);
+            /* makes it white */
+        }
+
+        .card-content h3 {
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .card-content p {
+            font-size: 17px;
+            color: #333;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .card .icon {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="services-section">
+        <div class="services-container">
+            <p class="subheading">OUR SERVICES</p>
+            <h2 class="main-heading">
+                Discover how we can help your <br /> business thrive
+            </h2>
+            <p class="description">
+                We understand the unique challenges of running an e-commerce business.
+                Whether you’re building a new eCommerce store, migrating platforms,
+                or looking to drive more sales, we provide tailored solutions to meet your goals.
+            </p>
+        </div>
+    </section>
+
+
+
+    <section class="service-cards">
+        <div class="card">
+            <div class="icon">
+                <img src="img/serv.svg" alt="Dev Icon">
+            </div>
+            <div class="card-content">
+                <h3>Development & Design</h3>
+                <p>Create stunning e-commerce experiences.<br>
+                    We design and develop online stores that reflect your brand and drive conversions.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">
+                <img src="img/serv1.svg" alt="Migration Icon">
+            </div>
+            <div class="card-content">
+                <h3>Platform Migration</h3>
+                <p>Seamless platform migration.<br>
+                    Migrate your store to a new platform without losing data or functionality.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="icon">
+                <img src="img/serv2.svg" alt="Rescue Icon">
+            </div>
+            <div class="card-content">
+                <h3>Rescue Projects</h3>
+                <p>Get your store back on track. Resolve critical issues and restore your store’s performance.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <img src="img/serv3.svg" alt="Rescue Icon">
+            </div>
+            <div class="card-content">
+                <h3>eCommerce SEO</h3>
+                <p>
+                    Boost visibility and attract traffic.<br>Optimize your store for search engines to increase organic
+                    sales.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="icon">
+                <img src="img/serv4.svg" alt="Rescue Icon">
+            </div>
+            <div class="card-content">
+                <h3>eCommerce CRO</h3>
+                <p>
+                    Turn visitors into loyal customers with strategies that optimize user experience and conversions.
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

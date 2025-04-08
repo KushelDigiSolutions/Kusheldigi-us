@@ -621,4 +621,386 @@ img {
   #country-suggestions div:hover {
     background: #f2f2f2;
   }
+
+
+
+
+
+
+
+  .mainDsContain {
+    background-color: #f8f8ff;
+   
+  }
+  .mainDsDiv{
+    max-width: 1720px;
+    margin: auto;
+    padding: 50px 50px;
+  }
+  .mainDsDivtitle {
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .mainDsDivNum p {
+   
+    font-size: 45px;
+    font-weight: 300;
+  }
+  
+  .mainDsDivNumstart {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .mainDsDiv {
+    text-align: center;
+  }
+  
+  .ds25-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+   padding-bottom: 70px;
+    background-color: #f8f8ff;
+  }
+  
+  .ds25Content {
+    height: 69px;
+    width: 320px;
+    font-size: 27px !important;
+    color: black;
+    font-weight: 600;
+  }
+  
+  .ds25-left {
+    width: 20%;
+    position: relative;
+  }
+  
+  .ds25-arrow {
+    font-size: 30px;
+    color: #3b3bf0;
+    transform: rotate(180deg);
+  }
+  
+  .ds25-heading {
+    position: relative;
+    top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    line-height: 1.4;
+  }
+  
+  .ds25-left-item {
+    position: relative;
+    top: 24px;
+    font-size: 26px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    padding-right: 40px;
+  }
+  
+  .ds25-subtext {
+    font-size: 19px;
+  }
+  
+  .freeSubtextDs {
+    height: 70px;
+    display: flex;
+  
+    font-weight: 500;
+  }
+  
+  .ds25-plus {
+    position: absolute;
+    right: -38px;
+    top: 28px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background-color: #3b3bf0;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 3;
+    animation: pulseGlow 2s infinite;
+    box-shadow: 0 0 0 rgba(59, 59, 240, 0.7);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  @keyframes pulseGlow {
+    0% {
+      box-shadow: 0 0 0 0 rgba(59, 59, 240, 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(59, 59, 240, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(59, 59, 240, 0);
+    }
+  }
+  
+  .ds25-popup {
+    position: absolute;
+    top: 0px;
+    left: 380px;
+    width: 260px;
+    background: white;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    animation: fadeIn 0.2s ease;
+  }
+  .ds25-step-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ds25-bottom-arrow {
+    position: relative;
+    right: 217px;
+    margin-top: -23px;
+  }
+  
+  .ds25-step-title {
+    color: #3b3bf0;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .ds25-popup p {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .ds25-right {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+    z-index: 1;
+  }
+  
+  .ds25-step {
+    display: flex;
+    align-items: center;
+    background-color: #3b3bf0;
+    color: white;
+    border-radius: 50px;
+    padding: 14px 30px;
+  }
+  
+  .ds25-step-num {
+    font-size: 40px;
+    font-weight: 600;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .ds25-step-num::before,
+  .ds25-step-num::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 5px;
+    height: 30px;
+    background-color: #3b3bf0;
+    transform: translateX(0%);
+    z-index: 0;
+  }
+  
+  .ds25-step-num::before {
+    top: -50px;
+  }
+  
+  .ds25-step-num::after {
+    bottom: -50px;
+  }
+  
+  .ds25-step-text {
+    font-size: 17px;
+    width: 420px;
+    line-height: 1.4;
+  }
+  
+  .ds25-arrow-wrapper {
+    position: absolute;
+    top: 0px;
+    left: -80px;
+  }
+  
+  .ds25-arrow-svg {
+    transform: rotate(-40deg);
+  }
+  
+  .mainDsDivNum {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .from0to1-underline {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    z-index: 0;
+  }
+  
+  @media (max-width: 1025px) {
+    .ds25-right {
+      align-items: flex-start;
+    }
+    .ds25-step-num::before, .ds25-step-num::after {
+      display: none;
+    }
+    .ds25-bottom-arrow {
+      position: initial;
+      display: none;
+      }
+      .ds25-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+        padding: 30px;
+      }
+    
+      .ds25-left {
+        width: 100%;
+      }
+    
+      .ds25Content {
+        width: 100%;
+        font-size: 22px !important;
+      }
+    
+      .ds25-popup {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+        left: auto;
+        top: auto;
+      }
+    
+      .ds25-arrow-wrapper {
+        display: none;
+      }
+    
+      .ds25-plus {
+        right: 10px;
+        top: 10px;
+      }
+    
+      .ds25-step-text {
+        width: auto;
+      }
+    }
+  
+    @media (max-width: 767px) {
+      .ds25-bottom-arrow {
+        position: initial;
+        display: none;
+        }
+      .freeSubtextDs{
+  width: 300px;
+      }
+      .mainDsContain {
+        padding: 30px 20px;
+      }
+    
+      .mainDsDivNum p {
+        font-size: 30px;
+      }
+    
+      .mainDsDivtitle,
+      .mainDsDivNumstart {
+        font-size: 12px;
+      }
+    
+      .ds25-left-item {
+        font-size: 20px;
+        padding-right: 0;
+      }
+    
+      .ds25Content {
+        font-size: 20px !important;
+        width: 90%;
+      }
+    
+      .ds25-step {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 16px;
+      }
+    
+      .ds25-step-num {
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+    
+      .ds25-step-num::before,
+      .ds25-step-num::after {
+        display: none;
+      }
+    
+      .ds25-step-text {
+        font-size: 15px;
+        width: 100%;
+      }
+    
+      .ds25-popup {
+        position: static;
+        width: 100%;
+        margin-top: 8px;
+      }
+    
+      .ds25-plus {
+        right: 0;
+        top: 10px;
+      }
+    }
+    @media(max-width:450px){
+      .ds25-bottom-arrow {
+        position: initial;
+     display: none;
+        }
+      .freeSubtextDs{
+          width: 90%;
+      }
+    }
   

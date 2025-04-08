@@ -228,6 +228,152 @@
 
 
 
+    <section class="mainDsContain">
+        <div class="mainDsDiv">
+          <p class="mainDsDivtitle">Let’s Build Something Great</p>
+          <div class="mainDsDivNum">
+            <p>Idea to Execution</p>
+            <svg class="from0to1-underline" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 20" preserveAspectRatio="none">
+              <path d="M5 15 Q 100 0 195 15" stroke="black" stroke-width="2" fill="transparent" />
+            </svg>
+          </div>
+        </div>
+    
+        <div class="ds25-container">
+          <div class="ds25-left">
+            <div class="ds25-arrow-wrapper">
+              <svg class="ds25-arrow-svg" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 100 100" fill="none">
+                <path d="M90,10 C50,10 10,50 50,90" stroke="#3b3bf0" stroke-width="6" fill="none" marker-end="url(#arrowhead)" />
+                <defs>
+                  <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                    <polygon points="0 0, 10 3.5, 0 7" fill="#3b3bf0" />
+                  </marker>
+                </defs>
+              </svg>
+            </div>
+    
+            <div id="leftItems"></div>
+          </div>
+    
+          <div class="ds25-right" id="rightSteps"></div>
+        </div>
+      </section>
+    
+      <script>
+        const leftItems = [
+          {
+            title: "Free Discovery Call",
+            popup: "We define the scope of your project – Vet the feasibility of your wishlist, get the # of screens, the right flow, and the necessary functionality all mapped out!",
+          },
+          {
+            title: "Custom Project Plan",
+            popup: "Avoid wasting resources by planning your build and spend strategically.",
+          },
+          {
+            title: "Design & Strategy Mockups",
+            popup: "Lay down a clear, validated roadmap for your product’s success.",
+          },
+          {
+            title: "Go-to-Market Roadmap",
+            popup: "Visualize your final product with high-fidelity mockups.",
+          },
+          {
+            title: "Final Sync",
+            popup: "We wrap up, review progress, and set you up to launch with confidence.",
+          },
+        ];
+    
+        const rightSteps = [
+          "In this phase, we will understand your project goals, requirements and vision.",
+          "In this phase you will receive a clear roadmap and proposal according to your business needs.",
+          "We’ll create the designs and layouts according to your idea before development begins.",
+          "We will guide every phase of your product journey from beta testing to launching.",
+          "We finalize everything and assign our expert team to deliver your project with right strategy.",
+        ];
+    
+        const leftContainer = document.getElementById("leftItems");
+    
+        let activeIndex = null;
+    
+        leftItems.forEach((item, index) => {
+          const itemDiv = document.createElement("div");
+          itemDiv.className = "ds25-left-item";
+    
+          const title = document.createElement("p");
+          title.className = "ds25Content";
+          title.textContent = item.title;
+    
+          const toggleBtn = document.createElement("span");
+          toggleBtn.className = "ds25-plus";
+          toggleBtn.textContent = "+";
+          toggleBtn.onclick = () => {
+            const existingPopup = itemDiv.querySelector(".ds25-popup");
+            document.querySelectorAll(".ds25-popup").forEach(p => p.remove());
+            document.querySelectorAll(".ds25-plus").forEach(b => b.textContent = "+");
+    
+            if (!existingPopup) {
+              toggleBtn.textContent = "×";
+              const popupDiv = document.createElement("div");
+              popupDiv.className = "ds25-popup";
+    
+              const stepTitle = document.createElement("h4");
+              stepTitle.className = "ds25-step-title";
+              stepTitle.textContent = `Step ${index + 1}`;
+    
+              const popupText = document.createElement("p");
+              popupText.textContent = item.popup;
+    
+              popupDiv.appendChild(stepTitle);
+              popupDiv.appendChild(popupText);
+              itemDiv.appendChild(popupDiv);
+            }
+          };
+    
+          itemDiv.appendChild(title);
+          itemDiv.appendChild(toggleBtn);
+          leftContainer.appendChild(itemDiv);
+        });
+    
+        const rightContainer = document.getElementById("rightSteps");
+    
+        rightSteps.forEach((text, index) => {
+          const wrapper = document.createElement("div");
+          wrapper.className = "ds25-step-wrapper";
+    
+          const step = document.createElement("div");
+          step.className = "ds25-step";
+    
+          const num = document.createElement("div");
+          num.className = "ds25-step-num";
+          num.textContent = index + 1;
+    
+          const txt = document.createElement("div");
+          txt.className = "ds25-step-text";
+          txt.textContent = text;
+    
+          step.appendChild(num);
+          step.appendChild(txt);
+          wrapper.appendChild(step);
+    
+          if (index === rightSteps.length - 1) {
+            const arrow = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+            arrow.setAttribute("class", "ds25-bottom-arrow");
+            arrow.setAttribute("width", "30");
+            arrow.setAttribute("height", "60");
+            arrow.setAttribute("viewBox", "0 0 30 60");
+            arrow.innerHTML = `
+              <path d="M15 0 V50" stroke="#3b3bf0" stroke-width="4"/>
+              <path d="M5 45 L15 55 L25 45" stroke="#3b3bf0" stroke-width="4" fill="none"/>
+            `;
+            wrapper.appendChild(arrow);
+          }
+    
+          rightContainer.appendChild(wrapper);
+        });
+      </script>
+
+
+
 
     <div id="footer"></div>
 

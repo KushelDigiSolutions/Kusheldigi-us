@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+
+*{
+    font-family: "Wix Madefor Display", serif !important;
+    padding: 0;
+    margin: 0;
+}
+.troffi {
+    position: relative;
+    background-color: #8cb35a94;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 20px 50px 80px; /* increased top & bottom padding */
+    max-width: 1720px;
+    margin: auto;
+    overflow: hidden;
+    min-height: 442px; /* Increased height */
+  }
+  
+  
+  
+  .troffi-content {
+    z-index: 2;
+    max-width: 700px;
+  }
+  
+  .troffi-breadcrumb {
+    font-size: 14px;
+    margin-bottom: 1rem;
+    color: #ffffffcc;
+  }
+  
+  .troffi-breadcrumb span {
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .troffi-heading {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #000000c9;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  
+  .troffi-description {
+    font-size: 1.125rem;
+    color: #000000c9;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+  
+  .troffi-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .troffi-button:hover {
+    color: #397eff;
+    transform: translateX(5px);
+  }
+  
+  .troffi-button .arrow {
+    color: #397eff;
+    font-size: 1.5rem;
+  }
+  
+
+  .troffi-image {
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    height: 58%;
+    max-width: 27%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    pointer-events: none;
+  }
+  
+  .troffi-image img {
+    height: 100%;
+    min-height: 470px;
+    width: 100%;
+    min-width: 490px;
+  }
+  
+  /* Responsive: tablets and below */
+  @media (max-width: 992px) {
+    .troffi {
+      padding: 3rem 2rem 3rem 2rem;
+      flex-direction: column;
+      min-height: auto;
+    }
+  
+    .troffi-image {
+      position: static;
+      height: auto;
+      max-width: 100%;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+  
+    .troffi-image img {
+      height: auto;
+      width: 100%;
+      object-fit: contain;
+      min-height: auto;
+      min-width: auto;
+    }
+  
+    .troffi-heading {
+      font-size: 2.2rem;
+    }
+  
+    .troffi-description {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Extra small devices */
+  @media (max-width: 480px) {
+    .troffi {
+      padding: 2rem 1rem;
+    }
+  
+    .troffi-heading {
+      font-size: 1.8rem;
+    }
+  
+    .troffi-description {
+      font-size: 0.95rem;
+    }
+  
+    .troffi-button {
+      font-size: 1rem;
+    }
+  
+    .troffi-button .arrow {
+      font-size: 1.2rem;
+    }
+  }
+
+
+
+
+
+
+
+
+ 
+
+.Sss {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4rem 2rem;
+    background: #fff;
+    max-width: 1300px;
+    margin: auto;
+    gap: 2rem;
+  }
+  
+  .Sss-content {
+    flex: 1;
+    min-width: 320px;
+    max-width: 600px;
+  }
+  
+  .Sss-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Sss-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+  }
+  
+  .Sss-tagline {
+    color: #007BFF;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+  
+  .Sss-heading {
+    font-size: 2.5rem;
+    color: #111;
+    line-height: 1.3;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  
+  .Sss-description {
+    color: #444;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  .Sss-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+  
+  .Sss-features li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #111;
+    line-height: 1.6;
+  }
+  
+  .Sss-features li::before {
+    content: "✔";
+    color: #007BFF;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2rem;
+  }
+  .Sssi-btn {
+    margin-top: 1.5rem;
+    background-color: #007BFF;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .Sssi-btn:hover {
+    background-color: #ffffff !important;
+    color: #111;
+    border: 1px solid #007BFF;
+  }
+  
+  
+  /* ✅ Responsive */
+  @media (max-width: 1024px) {
+    .Sss {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .Sss-content {
+      max-width: 100%;
+    }
+  
+    .Sss-image {
+      max-width: 100%;
+    }
+    .Sss {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: space-between;
+        padding: 4rem 2rem;
+        max-width: 1200px;
+        margin: auto;
+        background-color: #f9fbff;
+      }
+      
+      .Sss-content {
+        flex: 1;
+        min-width: 300px;
+      }
+      
+      .Sss-tagline {
+        color: #1e40af;
+        font-weight: 600;
+        letter-spacing: 2px;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+      }
+      
+      .Sss-heading {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: #111827;
+      }
+      
+      .Sss-description {
+        color: #333;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        line-height: 1.6;
+      }
+      
+      .Sss-features {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 1.5rem;
+      }
+      
+      .Sss-features li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        color: #111;
+      }
+      
+      .Sss-icon {
+        color: #1d4ed8;
+        margin-right: 0.5rem;
+        min-width: 20px;
+      }
+      
+      .Sssi-btn {
+        margin-top: 1.5rem;
+        background-color: #2f37f1;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        display: inline-flex;
+        align-items: center;
+        transition: background-color 0.3s ease;
+      }
+      
+      .Sss-btn:hover {
+        background-color: #1d25cc;
+      }
+      
+      .Sss-image {
+        flex: 1;
+        min-width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .Sss-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.5rem;
+      }
+      
+      /* ✅ Responsive Design */
+      
+      /* Tablets and below */
+      @media (max-width: 1024px) {
+        .Sss {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+        }
+      
+        .Sss-content {
+          order: 2;
+        }
+      
+        .Sss-image {
+          order: 1;
+          margin-bottom: 2rem;
+        }
+      
+        .Sss-heading {
+          font-size: 2rem;
+        }
+      
+        .Sss-description {
+          font-size: 0.95rem;
+        }
+      
+        .Sss-features li {
+          font-size: 0.95rem;
+        }
+      
+        .Sss-btn {
+          font-size: 0.95rem;
+          padding: 0.65rem 1.3rem;
+        }
+      }
+      
+      /* Mobile devices */
+      @media (max-width: 768px) {
+        .Sss {
+          padding: 3rem 1.5rem;
+        }
+      
+        .Sss-heading {
+          font-size: 1.8rem;
+        }
+      
+        .Sss-description {
+          font-size: 0.9rem;
+        }
+      
+        .Sss-features li {
+          font-size: 0.9rem;
+        }
+      
+        .Sss-btn {
+          font-size: 0.9rem;
+          padding: 0.6rem 1.2rem;
+        }
+      }
+      
+    .Sss-heading {
+      font-size: 2rem;
+    }
+  
+    .Sss-description, .Sss-features li {
+      font-size: 0.95rem;
+    }
+  
+    .Sss-features li::before {
+      left: 10px;
+    }
+  }
+
+
+
+
+  .softyy {
+    background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  .softyy1{
+    max-width: 1380px;
+    margin: auto;
+  }
+  
+  .softyy-header h2 {
+    font-size: 2.5rem;
+    color: #111111cb;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+  
+  .softyy-header p {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: #444;
+  }
+  
+  .softyy-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+  
+  .softyy-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .softyy-box:hover {
+    transform: translateY(-5px);
+    background-color: rgba(220, 220, 220, 0.514);
+  }
+  
+  .softyy-icon {
+    font-size: 2rem;
+    color: #007BFF;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+  
+  .softyy-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #111;
+  }
+  
+  
+  

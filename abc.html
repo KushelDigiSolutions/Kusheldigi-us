@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.project-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.project-image {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.project-content {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.9) 60%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 80px;
+  z-index: 2;
+}
+
+.content-box {
+  max-width: 600px;
+}
+
+.content-box h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.project-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.project-btn:hover {
+  background-color: #ddd;
+}
+
+    </style>
+</head>
+
+
+<body>
+  <div class="project-section">
+    <div class="project-image">
+      <img src="https://e8y3g8u9.delivery.rocketcdn.me/wp-content/uploads/2024/05/a-to-z-new.webp" alt="Office Image">
+    </div>
+    <div class="project-content">
+      <div class="content-box">
+        <h2>A to Z Stores: Multi-Store Platform for Wholesale Stores</h2>
+        <p>
+          A to Z stores offer products like markerboards, projection screens & extinguishers.
+        </p>
+        <p>
+          Find out how TBI’s expertise in Migration to Magento & custom PDP designing enhanced customer footprint and online sales.
+        </p>
+        <a href="#" class="project-btn">View Project →</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
