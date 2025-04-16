@@ -376,7 +376,7 @@
                 </li>
                 <li>
                   <h4>
-                    <a href="/customecommerce.html" target=""><span>Custom eCommerce</span></a>
+                    <a href="/custom-ecommerce-devlopment.html" target=""><span>Custom eCommerce</span></a>
                   </h4>
                 </li>
                 <li>
@@ -1406,7 +1406,7 @@
 
       <div class="left-b2b-cards">
         <div class="left-b2b-card">
-          <div class="b2b-logo"> <img loading="lazy" src="img/b2.png" alt="B2B"></div>
+          <div class="b2b-logo"> <img loading="lazy" src="img/asit-sir-4_xa7bco.jpg" alt="B2B"></div>
           <div class="b2b-contain">
             <h3 class="b2b-headsss">B2B</h3>
             <p class="b2b-para">Our experts at Kushel Digi have long years of experience in designing eCommerce
@@ -1419,7 +1419,7 @@
         </div>
 
         <div class="left-b2b-card-2">
-          <div class="b2b-logo"> <img loading="lazy" src="img/b13.png" alt="Multi-vendors"></div>
+          <div class="b2b-logo"> <img loading="lazy" src="img/asit-sir-1_xchvkj.jpg" alt="Multi-vendors"></div>
           <div class="b2b-contain">
             <h3 class="b2b-headsss">Multi-vendor</h3>
             <p class="b2b-para">We have delivered various marketplace solutions that allow multiple sellers to showcase
@@ -1438,7 +1438,7 @@
 
 
         <div class="right-b2b-card">
-          <div class="b2b-logo"> <img loading="lazy" src="img/b12.png" alt="B2C"></div>
+          <div class="b2b-logo"> <img loading="lazy" src="img/indrpal-images-5_zvtdky.png" alt="B2C"></div>
           <div class="b2b-contain">
             <h3 class="b2b-headsss">B2C</h3>
             <p class="b2b-para">Kushel Digi has expertise to deliver engaging, scalable, and user-friendly eCommerce
@@ -1448,7 +1448,7 @@
           <a href="#" class="b2b-btn">Learn More <img loading="lazy" src="img/arrow-up.svg" alt="learn-more"></a>
         </div>
         <div class="right-b2b-card">
-          <div class="b2b-logo"> <img loading="lazy" src="img/b14.png" alt="D2C"></div>
+          <div class="b2b-logo"> <img loading="lazy" src="img/asit-sir-3_nkuizh.jpg" alt="D2C"></div>
           <div class="b2b-contain">
             <h3 class="b2b-headsss">D2C (Direct-to-Consumer)</h3>
             <p class="b2b-para">We have been helping brands to establish a direct connection with consumers by removing
@@ -1666,7 +1666,7 @@
   <iframe src="review.html" width="100%" height="500px" style="border: none;" scrolling="no"></iframe>
 
 
-  <section class="container-section">
+  <!-- <section class="container-section">
 
 
     <h3 class="blog-heading">Our Blogs</h3>
@@ -1724,9 +1724,75 @@
         <button id="loadMore" class="load-more">View All Blogs</button></a>
     </div>
 
-  </section>
+  </section> -->
 
+  <div class="blog-section-outer-container">
+    <div class="blog-section-inner-container">
+        <div class="blog-section-header">
+            <div class="blog-section-left-div">
+                <h3 class="primary-heading">Our Insights</h3>
+                <p class="secondary-heading">Want to work with some of the best global talent and build software
+                    used by all the companies you know and love?</p>
+            </div>
+            <a href="/blog.html"><button class="viewAllBtnKcom">View More</button></a>
+        </div>
 
+        <div class="blog-section-blogs-wrapper" id="blogsWrapper">
+            <!-- Blogs will be injected here -->
+        </div>
+    </div>
+</div>
+
+<script>
+    const baseUrl = "https://backblog.kusheldigi.com";
+
+    const fetchAllBlog = async () => {
+        try {
+            const response = await fetch(`${baseUrl}/api/v1/auth/getAllBlog`);
+            const data = await response.json();
+            if (response.ok) {
+                const blogs = data.blogs.filter(blog => blog.domain === "kusheldigi.com");
+                renderBlogs(blogs.slice(0, 4));
+            } else {
+                console.error("Failed to fetch blogs:", data?.message);
+            }
+        } catch (error) {
+            console.error("Error fetching blogs:", error);
+        }
+    };
+
+    const renderBlogs = (blogs) => {
+        const wrapper = document.getElementById("blogsWrapper");
+        wrapper.innerHTML = "";
+
+        blogs.forEach(blog => {
+            const blogLink = document.createElement("a");
+            blogLink.href = `blogDetails.html?id=${blog._id}`;
+            blogLink.className = "blog-section-blog";
+
+            blogLink.innerHTML = `
+      <img src="${blog.images}" alt="blog image" class="blog-section-blog-image" />
+      <div class="blog-section-content">
+        <h3 class="blog-section-blog-title">${blog.title}</h3>
+        <p class="blog-section-blog-desc">${blog.subdescription}</p>
+        <div class="blog-section-author-details">
+          <div class="blog-section-blog-autorname">
+            <span class="blog-section-author">${blog.author}</span>
+            <span class="blog-section-date">${new Date(blog.date).toLocaleDateString("en-GB", {
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            })}</span>
+          </div>
+        </div>
+      </div>
+    `;
+            wrapper.appendChild(blogLink);
+        });
+    };
+
+    document.addEventListener("DOMContentLoaded", fetchAllBlog);
+</script>
 
 
 

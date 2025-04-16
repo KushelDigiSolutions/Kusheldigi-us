@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+* {
+
+  box-sizing: border-box;
+  font-family: Wix Madefor Display;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+
+.case-studies-wrapper {
+  width: 100%;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 10%;
+  gap: 50px;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  z-index: 1;
+
+}
+
+.case-head {
+  text-align: center;
+  font-size: 58px;
+  margin: 0;
+}
+
+.case-study {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  gap: 40px;
+  position: sticky;
+  padding: 50px 0px 0px 0px;
+  top: 10%;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.case-study.reverse {
+  flex-direction: row-reverse;
+  position: sticky;
+  top: 10%;
+  padding: 50px 0px 0px 0px;
+  background-color: rgb(255, 255, 255);
+}
+
+.case-image {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.case-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  transform: scale(1);
+  transition: transform 0.8s ease;
+}
+
+.case-study:hover .case-image img {
+  transform: scale(1.03);
+}
+
+.case-content {
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.case-content h2 {
+  font-size: 37px;
+  font-weight: 800;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.case-content p {
+  padding: 10px 0px 0px 0px;
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.view-project-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  color: #397eff;
+  border: 1px solid #0b56e4;
+  border-radius: 50px;
+  font-weight: 600;
+  padding: 17px 20px;
+  font-size: 17px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-project-btn:hover {
+  background-color: #2b65d9;
+  border: 1px solid #2b65d9;
+  color: #fff;
+  /* transform: translateX(5px); */
+}
+
+.view-project-btn svg {
+  stroke-width: 2.2;
+  height: 20px;
+  width: 20px;
+  transition: transform 0.3s ease;
+}
+
+.view-project-btn:hover svg {
+  transform: translateX(3px);
+}
+
+/* Smooth scroll and stacked image effect */
+.case-studies-wrapper>.case-study {
+  scroll-snap-align: start;
+  scroll-margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .case-study {
+    flex-direction: column;
+  }
+
+  .case-study.reverse {
+    flex-direction: column;
+  }
+
+  .case-image,
+  .case-content {
+    max-width: 100%;
+  }
+
+  .case-content {
+    text-align: center;
+  }
+
+  .view-project-btn {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .case-content h2 {
+    font-size: 22px;
+  }
+
+  .case-content p {
+    font-size: 14px;
+  }
+
+  .view-project-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .view-project-btn svg {
+    height: 18px;
+    width: 18px;
+  }
+}

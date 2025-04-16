@@ -1,113 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Scroll Stack Effect</title>
+  <link rel="stylesheet" href="index.css">
 
-    <style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Wix Madefor Display;
+    }
+
+    body {
+
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    section {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+    }
+
+    .panel {
+      width: 100%;
+      height: 90vh;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+    }
+
+    .content {
+      max-width: 1300px;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      z-index: 2;
+    }
+
+    @media (min-width: 768px) {
+      .content {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .hero-image {
+      flex: 1;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-text {
+      flex: 1;
+      padding-left: 20px;
+    }
+
+    .hero-text h2 {
+      font-size: 39px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: white;
+    }
+
+    .hero-text p {
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: white;
+      font-weight: 500;
+
+    }
+
+    .hero-text a {
+      display: inline-block;
+      padding: 14px 28px;
+      background-color: #fff;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold; 
+      transition: background 0.3s ease;
+    }
+
+    .hero-text a:hover {
+      background-color: #e4e4e4;
+    }
+
+  /* ✅ Responsive Fix */
+  @media (max-width: 767px) {
+      .content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
         
-        * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+      }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #000;
-  color: #fff;
-}
+      .hero-text {
+        padding: 0;
+        margin-top: 6rem;
+      }
 
-.project-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
+      .hero-text h2 {
+        font-size: 28px;
+      }
 
-.project-image img {
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-}
+      .hero-text p {
+        font-size: 16px;
+      }
 
-.project-image {
-  flex: 1;
-  position: relative;
-  z-index: 1;
-}
+      .hero-text a {
+        padding: 12px 20px;
+        font-size: 16px;
+      }
 
-.project-content {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.9) 60%, transparent);
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0 80px;
-  z-index: 2;
-}
 
-.content-box {
-  max-width: 600px;
-}
+      .hero-image{
+        display: none;
+      }
+    }
+   
 
-.content-box h2 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.content-box p {
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 10px;
-  color: #ccc;
-}
-
-.project-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background-color: #fff;
-  color: #000;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background 0.3s;
-}
-
-.project-btn:hover {
-  background-color: #ddd;
-}
-
-    </style>
+  </style>
 </head>
 
-
 <body>
-  <div class="project-section">
-    <div class="project-image">
-      <img src="https://e8y3g8u9.delivery.rocketcdn.me/wp-content/uploads/2024/05/a-to-z-new.webp" alt="Office Image">
-    </div>
-    <div class="project-content">
-      <div class="content-box">
-        <h2>A to Z Stores: Multi-Store Platform for Wholesale Stores</h2>
-        <p>
-          A to Z stores offer products like markerboards, projection screens & extinguishers.
-        </p>
-        <p>
-          Find out how TBI’s expertise in Migration to Magento & custom PDP designing enhanced customer footprint and online sales.
-        </p>
-        <a href="#" class="project-btn">View Project →</a>
+
+  <div id="header"></div>
+
+  <div class="panel" style="background-image: url('img/a-to-z-bg-new-scaled.webp');">
+    <div class="content">
+      <div class="hero-image">
+        <img src="img/a-to-z-new.webp" alt="Office product image" />
+      </div>
+      <div class="hero-text">
+        <h2>A to Z Stores: Multi-Store Platform for wholesale Stores</h2>
+        <p>Products like markerboards, projection screens & extinguishers.</p>
+        <p>Find out how TBI’s Magento Migration & custom PDP design enhanced customer experience.</p>
+        <a href="#">View Project →</a>
       </div>
     </div>
   </div>
+
+  <div class="panel" style="background-image: url('img/xtreme-4x4-bg-new-scaled.webp');">
+    <div class="content">
+
+      <div class="hero-text">
+        <h2>Xtreme 4×4 Sales Soar with Magento 2 Migration</h2>
+        <p>Xtreme 4×4 is a wholesale platform offering various vehicle recovery products.</p>
+        <p>Learn how TBI’s curated custom store sections & product comparison filters improved user engagement. Our
+          custom search functionality improves user interaction and converts it into store sales.</p>
+        <a href="#">View Project →</a>
+      </div>
+
+      <div class="hero-image">
+        <img src="img/xtreme-4x4-new.webp" alt="Second Project" />
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="background-image: url('img/multi-store-bg-new-scaled.webp');">
+    <div class="content">
+
+      <div class="hero-image">
+        <img src="img/multi-store-new.webp" alt="Second Project" />
+      </div>
+
+      <div class="hero-text">
+        <h2>Custom Multi-store Plugin Driving Cosmetic B2B Sales</h2>
+        <p>Custom multi-store plugin for a cosmetic website streamlining their business operations.</p>
+        <p>Learn how TBI helped the client manage multiple vendors & monitor B2B sale operations with a centralized
+          admin dashboard. Our multiple subscription plans for vendors fostered engagement and increased sales.</p>
+        <a href="#">View Project →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="background-image: url('img/substral-bg-new-scaled.webp');">
+    <div class="content">
+
+      <div class="hero-text">
+        <h2>Ecommerce Solution for Store Display Equipment Platform</h2>
+        <p>Substral Inc. deals with store units like jewellery displays, Mannequins & display cases.</p>
+        <p>Find out how TBI helped improve website sales with Magento 2 migration, custom cart & shipping class designs.
+        </p>
+        <a href="#">View Project →</a>
+
+      </div>
+
+      <div class="hero-image">
+        <img src="img/substral-new.webp" alt="Second Project" />
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="panel" style="background-image: url('img/wholesale-store-bg-new-scaled.webp');">
+    <div class="content">
+
+      <div class="hero-image">
+        <img src="img/wholesale-store-new.webp" alt="Second Project" />
+      </div>
+
+      <div class="hero-text">
+        <h2>A Robsust B2B ecommerce Store Like Alibaba</h2>
+        <p>Built a Magento 2 wholesale store specializing in custom merchandise from the ground up.</p>
+        <p>Learn how TBI’s dedicated team helped streamline store operations & improved user interaction with custom
+          shipping extension. Our UI enhancements improved customer footprint by 30%.</p>
+        <a href="#">View Project →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP and ScrollTrigger CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    const panels = document.querySelectorAll(".panel");
+
+    panels.forEach((panel, index) => {
+      ScrollTrigger.create({
+        trigger: panel,
+        start: "top top+=80",  
+        pin: true,
+        pinSpacing: false,
+        scrub: true
+      });
+
+    });
+  </script>
+
+
+
+
+  <script>
+    $(document).ready(function () {
+      $('#header').load('header.html', function (response, status, xhr) {
+        if (status === "error") {
+          console.error("Error loading header:", xhr.status, xhr.statusText);
+        }
+      });
+    });
+
+    $(document).ready(function () {
+      $('#footer').load('footer.html', function (response, status, xhr) {
+        if (status === "error") {
+          console.error("Error loading footer:", xhr.status, xhr.statusText);
+        }
+      });
+    });
+  </script>
 </body>
+
 </html>

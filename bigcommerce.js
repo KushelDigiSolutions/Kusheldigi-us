@@ -118,52 +118,42 @@ updatePhases();
 
 
 const caseStudies = [
-    {
-      img: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829270/loveky-2_cfdys3.jpg', smHeading: 'Certified Bigcommerce Agency', smallBtnText: "View Case Study", smallImg: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829269/lovely-2-5_iqgxfy.jpg', heading: "Expert BigCommerce Development Solutions for Scalable Growth", bigCommerce: [
-        {
-          bigImg1: 'https://res.cloudinary.com/dgif730br/image/upload/v1743429262/bigcommerce-8_1_tyghz8.png',
-          bigImg2: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340284/bcb2b-1_onvun7.png',
-          bigImg3: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340304/Partner-Certified-Wordmark_j6b9ar.png'
-        }
-      ]
-    },
-    {
-      img: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829271/lovely-1_hhxfih.jpg', smHeading: 'Certified Bigcommerce Agency', smallBtnText: "View Case Study", smallImg: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829269/lovely-1-2_by2dtq.jpg', heading: "Expert BigCommerce Development Solutions for Scalable Growth", bigCommerce: [
-        {
-          bigImg1: 'https://res.cloudinary.com/dgif730br/image/upload/v1743429262/bigcommerce-8_1_tyghz8.png',
-          bigImg2: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340284/bcb2b-1_onvun7.png',
-          bigImg3: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340304/Partner-Certified-Wordmark_j6b9ar.png'
-        }
-      ]
-    },
-    {
-      img: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829270/lovely-3_fanqxf.jpg', smHeading: 'Certified Bigcommerce Agency', smallBtnText: "View Case Study", smallImg: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829268/lovely-3-4_mi9o33.jpg', heading: "Expert BigCommerce Development Solutions for Scalable Growth", bigCommerce: [
-        {
-          bigImg1: 'https://res.cloudinary.com/dgif730br/image/upload/v1743429262/bigcommerce-8_1_tyghz8.png',
-          bigImg2: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340284/bcb2b-1_onvun7.png',
-          bigImg3: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340304/Partner-Certified-Wordmark_j6b9ar.png'
-        }
-      ]
-    },
-    {
-      img: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829269/lovely-4_sgdj3e.jpg', smHeading: 'Certified Bigcommerce Agency', smallBtnText: "View Case Study", smallImg: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829268/lovely-4-2_ffzapa.jpg', heading: "Expert BigCommerce Development Solutions for Scalable Growth", bigCommerce: [
-        {
-          bigImg1: 'https://res.cloudinary.com/dgif730br/image/upload/v1743429262/bigcommerce-8_1_tyghz8.png',
-          bigImg2: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340284/bcb2b-1_onvun7.png',
-          bigImg3: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340304/Partner-Certified-Wordmark_j6b9ar.png'
-        }
-      ]
-    },
-    {
-      img: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829269/lovely-5_akjurr.jpg', smHeading: 'Certified Bigcommerce Agency', smallBtnText: "View Case Study", smallImg: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829268/lovely-5-3_tykoz4.jpg', heading: "Expert BigCommerce Development Solutions for Scalable Growth", bigCommerce: [
-        {
-          bigImg1: 'https://res.cloudinary.com/dgif730br/image/upload/v1743429262/bigcommerce-8_1_tyghz8.png',
-          bigImg2: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340284/bcb2b-1_onvun7.png',
-          bigImg3: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340304/Partner-Certified-Wordmark_j6b9ar.png'
-        }
-      ]
-    },
-  ];
+  { img: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744175098/home-banner-3_1_i2ugio.jpg', smHeading: 'Certified BigCommerce Agency', smallBtnText: "View Case Study", smallImg: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744175094/circle_vvibyg.png', heading: "Expert BigCommerce Development Solutions for Scalable Growth",bigCommerce : [
+      {
+          bigImg1 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744104912/bigcommerce_iuneyd.png',
+          bigImg2 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340284/bcb2b-1_onvun7.png',
+          bigImg3 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744104912/certified-bifgcommerce_fmyqvz.png'
+      }
+  ] },
+  { img: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829271/lovely-1_hhxfih.jpg', smHeading: 'Certified BigCommerce Agency', smallBtnText: "View Case Study", smallImg: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829269/lovely-1-2_by2dtq.jpg', heading: "Expert BigCommerce Development Solutions for Scalable Growth",bigCommerce : [
+      {
+          bigImg1 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744104912/bigcommerce_iuneyd.png',
+          bigImg2 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340284/bcb2b-1_onvun7.png',
+          bigImg3 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744104912/certified-bifgcommerce_fmyqvz.png'
+      }
+  ]  },
+  { img: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829270/lovely-3_fanqxf.jpg', smHeading: 'Certified BigCommerce Agency', smallBtnText: "View Case Study", smallImg: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829268/lovely-3-4_mi9o33.jpg', heading: "Expert BigCommerce Development Solutions for Scalable Growth",bigCommerce : [
+      {
+          bigImg1 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744104912/bigcommerce_iuneyd.png',
+          bigImg2 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340284/bcb2b-1_onvun7.png',
+          bigImg3 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744104912/certified-bifgcommerce_fmyqvz.png'
+      }
+  ]  },
+  { img: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829269/lovely-4_sgdj3e.jpg', smHeading: 'Certified BigCommerce Agency', smallBtnText: "View Case Study", smallImg: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829268/lovely-4-2_ffzapa.jpg', heading: "Expert BigCommerce Development Solutions for Scalable Growth",bigCommerce : [
+      {
+          bigImg1 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744104912/bigcommerce_iuneyd.png',
+          bigImg2 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340284/bcb2b-1_onvun7.png',
+          bigImg3 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744104912/certified-bifgcommerce_fmyqvz.png'
+      }
+  ]  },
+  { img: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829269/lovely-5_akjurr.jpg', smHeading: 'Certified BigCommerce Agency', smallBtnText: "View Case Study", smallImg: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829268/lovely-5-3_tykoz4.jpg', heading: "Expert BigCommerce Development Solutions for Scalable Growth",bigCommerce : [
+      {
+          bigImg1 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744104912/bigcommerce_iuneyd.png',
+          bigImg2 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340284/bcb2b-1_onvun7.png',
+          bigImg3 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744104912/certified-bifgcommerce_fmyqvz.png'
+      }
+  ]  },
+];
 
   let currentIndex = 0;
 
@@ -197,3 +187,75 @@ const caseStudies = [
   }
 
   renderCaseStudy(currentIndex);
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+const caseStudies2 = [
+  {
+    title: 'A to Z Stores: Multi-Store Platform for Wholesale Stores',
+    description1: 'A to Z stores offer products like markerboards, projection screens & extinguishers.',
+    description2: 'Find out how TBI\u2019s expertise in Migration to Magento & custom PDP designing enhanced customer footprint and online sales.',
+    img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145937/a-to-z-new_cfxrxm.webp',
+    reverse: false
+  },
+  {
+    title: 'Xtreme 4×4 Sales Soar with Magento 2 Migration',
+    description1: 'Xtreme 4×4 is a wholesale platform offering various vehicle recovery products.',
+    description2: 'Learn how TBI\u2019s curated custom store sections & product comparison filters improved user engagement. Our custom search functionality improves user interaction and converts it into store sales.',
+    img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145937/xtreme-4x4-new_zobf3w.webp',
+    reverse: true
+  },
+  {
+    title: 'Custom Multi-store Plugin Driving Cosmetic B2B Sales',
+    description1: 'Custom multi-store plugin for a cosmetic website streamlining their business operations.',
+    description2: 'Learn how TBI helped the client manage multiple vendors & monitor B2B sale operations with a centralized admin dashboard. Our multiple subscription plans for vendors fostered engagement and increased sales.',
+    img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145938/multi-store-new_eorhy9.webp',
+    reverse: false
+  },
+  {
+    title: 'Ecommerce Solution for Store Display Equipment Platform',
+    description1: 'Substral Inc. deals with store units like jewellery displays, Mannequins & display cases.',
+    description2: 'Find out how TBI helped improve website sales with Magento 2 migration, custom cart & shipping class designs.',
+    img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145937/substral-new_hhxcks.webp',
+    reverse: true
+  },
+  {
+    title: 'A Robsust B2B ecommerce Store Like Alibaba',
+    description1: 'Built a Magento 2 wholesale store specializing in custom merchandise from the ground up.',
+    description2: 'Learn how TBI\u2019s dedicated team helped streamline store operations & improved user interaction with custom shipping extension. Our UI enhancements improved customer footprint by 30%.',
+    img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145937/wholesale-store-new_zkwpky.webp',
+    reverse: false
+  }
+];
+
+const container = document.getElementById('caseStudiesContainer');
+
+caseStudies2.forEach(({ title, description1, description2, img, reverse }) => {
+  const div = document.createElement('div');
+  div.className = `case-study ${reverse ? 'reverse' : ''}`;
+  div.innerHTML = `
+    <div class="case-image">
+      <img src="${img}" alt="${title}" />
+    </div>
+    <div class="case-content">
+      <h2>${title}</h2>
+      <p>${description1}</p>
+      <p>${description2}</p>
+      <button class="view-project-btn">
+        View Project →
+      </button>
+    </div>
+  `;
+  container.appendChild(div);
+});
+ 
