@@ -1,83 +1,185 @@
 .navbarwrap {
-    position: relative;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
 
-  .navbar_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
 
-  .navitems {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-  }
+/* Basic Dropdown Styling */
+ ul{
+  margin: 0;
+  padding: 0;
+ }
 
-  .navitems a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-  }
+.dropdown {
+  list-style: none !important;
+  position: relative;
+  display: inline-block;
+}
 
-  .navitems .nav_button {
-    background-color: #007bff;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-transform: uppercase;
-  }
+.dropdown > a {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
 
-  .threelines,
-  .crossimage {
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 210px;
+  border-radius: 5px;
+  /* box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3); */
+  z-index: 1000;
+  padding: 32px 0 0 0;
+  left: -11px;
+  list-style: none !important;
 
-  /* Sidebar (hidden initially) */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px; 
-    width: 250px;
-    height: 100%;
-    background-color: #fff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    overflow-y: auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    transition: left 0.3s ease;
-    z-index: 1100;
-  }
+}
 
-  .sidebar a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-  .sidebar a:hover {
-    background-color: #f1f1f1;
-  }
+.dropdown-content li {
+  padding: 10px 15px;
+  position: relative;
+}
 
-  .sidebar .nav_button {
-    background-color: #007bff;
-    color: white;
-    text-align: center;
-  }
+.dropdown-content li a {
+  text-decoration: none;
+  color: #333;
+  text-align: left;
+}
 
-  .sidebar.open {
-    left: 0; /* Sidebar appears */
-  }
+.dropdown-content li a:hover{
+  color: #007bff;
+
+}
+
+/* Headless submenu */
+.dropdown-submenu {
+  display: none;
+  /* margin-left: 10px;
+  padding-left: 10px;*/
+  border-left: 2px solid #e7dddd;
+  width: 234px;
+  list-style: none !important;
+  
+}
+
+.dropdown-sub.open .dropdown-submenu {
+  display: block;
+  /* box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3); */
+}
+
+.headless-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-btn1 {
+  background: none !important;
+  border: none !important;
+  font-size: 14px !important;
+  cursor: pointer !important; 
+  width: 30px !important;
+  color: #333333 !;
+  margin: 0;
+  display: inline-block;
+}
+
+.dropdown-sub.open .toggle-btn1 {
+  transform: rotate(180deg);
+}
+
+
+
+
+
+ 
+
+    
+
+
+.navbar_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.navitems {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.navitems a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.navitems .nav_button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.threelines,
+.crossimage {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Sidebar (hidden initially) */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: left 0.3s ease;
+  z-index: 1100;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #f1f1f1;
+}
+
+.sidebar .nav_button {
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+}
+
+.sidebar.open {
+  left: 0;
+  /* Sidebar appears */
+}

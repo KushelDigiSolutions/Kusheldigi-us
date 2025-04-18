@@ -1,244 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Dropdown Example</title>
+  <style>
+    /* Basic Dropdown Styling */
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
 
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: "Wix Madefor Display";
-            box-sizing: border-box;
-        }
+    .dropdown > a {
+      padding: 10px 15px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+    }
 
-        body {
-            /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-            background: #ffffff;
-            padding: 50px 0;
-        }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
 
-        /* Section Background */
-        .services-section {
-            /* background: linear-gradient(to bottom, #ff3c00 0%, #ffffff 45%); */
-            /* padding: 100px 20px; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
 
-        /* White Card */
-        .services-container {
-            background: #fafafa;
-            border-radius: 50px;
-            padding: 60px 40px;
-            max-width: 1100px;
-            text-align: center;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
-            background-image: url('https://uploads-ssl.webflow.com/620bc983eb0d9e77c4b70c36/6411a05a8c8cc715ea705cd9_services-bg.svg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
+    .dropdown-content li {
+      padding: 10px 15px;
+      position: relative;
+    }
 
-        /* Typography */
-        .subheading {
-            color: #222;
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 16px;
-        }
+    .dropdown-content li a {
+      text-decoration: none;
+      color: #333;
+    }
 
-        .serv-headss {
-            font-size: 40px;
-            font-weight: bold;
-            color: #09409f;
-            margin-bottom: 24px;
-        }
+    /* Headless submenu */
+    .dropdown-submenu {
+      display: none;
+      margin-left: 10px;
+      padding-left: 10px;
+      border-left: 1px solid #eee;
+    }
 
-        .serv-description {
-            font-size: 18px;
-            color: #333;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .dropdown-sub.open .dropdown-submenu {
+      display: block;
+    }
 
+    .headless-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
+    .toggle-btn {
+      background: none;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
 
-        .service-serv-crds {
-            max-width: 1100px;
-            margin: 60px auto;
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            padding: 0 20px;
-        }
-
-        .serv-crd {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 40px;
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.07);
-            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .serv-crd:hover {
-            transform: scale(1.02);
-            background-color: #0d53bccf;
-            /* light blue background */
-            color: white;
-            box-shadow: 0 30px 90px rgba(0, 123, 255, 0.15);
-        }
-
-        .serv-crd h3,
-        .serv-crd p {
-            transition: color 0.3s ease;
-        }
-
-
-        .serv-crd:hover h3 {
-            color: #ffffff;
-        }
-
-        .serv-crd:hover p {
-            color: #ffffff;
-        }
-
-
-
-        .serv-crd .serv-icon img {
-            width: 50px;
-            height: 50px;
-        }
-
-
-        .serv-crd:hover .serv-icon img {
-            filter: brightness(0) invert(1);
-            /* makes it white */
-        }
-
-        .serv-crd-content h3 {
-            font-size: 30px;
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-
-        .serv-crd-content p {
-            font-size: 17px;
-            color: #333;
-            line-height: 1.6;
-            font-weight: 500;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .serv-crd {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .serv-crd .serv-icon {
-                margin-bottom: 15px;
-            }
-        }
-    </style>
+    .dropdown-sub.open .toggle-btn {
+      transform: rotate(180deg);
+    }
+  </style>
 </head>
+
 
 <body>
 
-   
-
-    <section class="services-section">
-        <div class="services-container">
-            <p class="subheading">OUR SERVICES</p>
-            <h2 class="serv-headss">
-                Discover how we can help your <br /> business thrive
-            </h2>
-            <p class="serv-description">
-                We understand the unique challenges of running an e-commerce business.
-                Whether you’re building a new eCommerce store, migrating platforms,
-                or looking to drive more sales, we provide tailored solutions to meet your goals.
-            </p>
-        </div>
-    </section>
 
 
+  <ul class="dropdown">
+    <li>
+      <a href="service.html">Services</a>
+      <ul class="dropdown-content">
+        <li><a href="ecommerce.html">E-commerce</a></li>
+        <li><a href="bigcommerce.html">Bigcommerce</a></li>
+        <li><a href="custom-ecommerce-devlopment.html">Custom eCommerce</a></li>
 
-    <section class="service-serv-crds">
-        <div class="serv-crd">
-            <div class="serv-icon">
-                <img src="img/serv.svg" alt="Dev Icon">
-            </div>
-            <div class="serv-crd-content">
-                <h3>Development & Design</h3>
-                <p>Create stunning e-commerce experiences.<br>
-                    We design and develop online stores that reflect your brand and drive conversions.</p>
-            </div>
-        </div>
+        <li class="dropdown-sub">
+          <div class="headless-wrapper">
+            <a href="headless.html">Headless</a>
+            <button class="toggle-btn">▼</button>
+          </div>
+          <ul class="dropdown-submenu">
+            <li><a href="shopify-headless.html">Shopify Headless</a></li>
+            <li><a href="bigcommerce-headless.html">Bigcommerce Headless</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
 
-        <div class="serv-crd">
-            <div class="serv-icon">
-                <img src="img/serv1.svg" alt="Migration Icon">
-            </div>
-            <div class="serv-crd-content">
-                <h3>Platform Migration</h3>
-                <p>Seamless platform migration.<br>
-                    Migrate your store to a new platform without losing data or functionality.</p>
-            </div>
-        </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.querySelector(".toggle-btn");
+      const dropdownSub = document.querySelector(".dropdown-sub");
 
-        <div class="serv-crd">
-            <div class="serv-icon">
-                <img src="img/serv2.svg" alt="Rescue Icon">
-            </div>
-            <div class="serv-crd-content">
-                <h3>Rescue Projects</h3>
-                <p>Get your store back on track. Resolve critical issues and restore your store’s performance.</p>
-            </div>
-        </div>
-        <div class="serv-crd">
-            <div class="serv-icon">
-                <img src="img/serv3.svg" alt="Rescue Icon">
-            </div>
-            <div class="serv-crd-content">
-                <h3>eCommerce SEO</h3>
-                <p>
-                    Boost visibility and attract traffic.<br>Optimize your store for search engines to increase organic
-                    sales.</p>
-            </div>
-        </div>
-        <div class="serv-crd">
-            <div class="serv-icon">
-                <img src="img/serv4.svg" alt="Rescue Icon">
-            </div>
-            <div class="serv-crd-content">
-                <h3>eCommerce CRO</h3>
-                <p>
-                    Turn visitors into loyal customers with strategies that optimize user experience and conversions.
-                </p>
-            </div>
-        </div>
-    </section>
+      toggleBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        dropdownSub.classList.toggle("open");
+      });
 
-
- 
-
-
-
-
-
-
+      document.addEventListener("click", function (e) {
+        if (!dropdownSub.contains(e.target)) {
+          dropdownSub.classList.remove("open");
+        }
+      });
+    });
+  </script>
 
 </body>
+
 
 </html>

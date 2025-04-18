@@ -8,7 +8,6 @@
 }
 
 body {
-    margin: 0;
     padding: 0;
 }
 
@@ -1188,6 +1187,7 @@ body {
     width: 40px;
     height: 40px;
     margin-bottom: 10px;
+    filter: brightness(0) saturate(100%) invert(21%) sepia(98%) saturate(1797%) hue-rotate(215deg) brightness(101%) contrast(103%);
 }
 
 /* Text Styling */
@@ -1327,6 +1327,7 @@ body {
 .iconImage3 {
     width: 50px;
     height: 50px;
+    filter: brightness(0) saturate(100%) invert(21%) sepia(98%) saturate(1797%) hue-rotate(215deg) brightness(101%) contrast(103%);
     /* margin-bottom: 10px; */
 }
 
@@ -3449,7 +3450,7 @@ body {
 
 .blog-section-inner-container {
     width: 100%;
-    padding: 50px 60px;
+    padding: 50px 95px;
 }
 
 .blog-section-header {

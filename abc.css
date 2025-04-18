@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   position: fixed;
   top: 10%;
-  gap: 50px;
+  /* gap: 50px; */
   background-color: rgb(255, 255, 255);
   position: relative;
   z-index: 1;
@@ -161,6 +161,10 @@ body {
 
   .view-project-btn {
     justify-content: center;
+  }
+
+  .case-head{
+    font-size: 40px;
   }
 }
 
