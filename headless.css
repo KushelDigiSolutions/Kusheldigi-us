@@ -1071,7 +1071,7 @@
 
 .step-card {
   background: white;
-  padding: 40px;
+  padding: 20px 10px 30px 10px;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1248,8 +1248,8 @@
 }
 
 .online-why-choose-card {
-  background: white;
-  padding: 24px 2px 39px 63px;
+  background: white;  
+  padding: 24px 35px 21px 63px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: left;
@@ -1998,6 +1998,7 @@
   margin: 10px 0;
   line-height: 1.8rem;
   display: flex;
+  font-weight: 500 !important;
   align-items: center;
 }
 
@@ -3291,8 +3292,8 @@
 
 
 
-/* Section Background */
-.services-section {
+ /* Section Background */
+ .services-section {
   /* background: linear-gradient(to bottom, #ff3c00 0%, #ffffff 45%); */
   /* padding: 100px 20px; */
   display: flex;
@@ -3437,16 +3438,21 @@
 
   .serv-crd {
     padding: 30px 20px;
-    gap: 20px;
+    gap: 0px;
     border-radius: 30px;
+    flex-direction: column;
   }
 
   .serv-crd-content h3 {
     font-size: 24px;
+    text-align: center;
+
   }
 
   .serv-crd-content p {
     font-size: 15px;
+    text-align: center;
+
   }
 }
 
@@ -3465,10 +3471,12 @@
 
   .serv-crd-content h3 {
     font-size: 20px;
+    text-align: center;
   }
 
   .serv-crd-content p {
     font-size: 14px;
+    text-align: center;
   }
 
   .serv-crd .serv-icon img {

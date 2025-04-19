@@ -62,8 +62,7 @@
 
 
             <div>
-                <img src="img/Group 21.png"
-                    alt="Your image" class="your-image-class" />
+                <img src="img/Group 21.png" alt="Your image" class="your-image-class" />
             </div>
 
 
@@ -132,70 +131,72 @@
 
     <section class="updatee-section">
         <div class="update-container">
-      
-          <div class="headless-intro">
-            <h3>What is Headless Development?</h3>
-            <p>
-              Headless commerce is a modern eCommerce solution that separates the frontend from the backend. The decoupled design makes it easier for developers to build and personalize the customer experience without disrupting the backend systems.
-            </p>
-          </div>
-      
-          <div id="update-sections"></div>
-      
+
+            <div class="headless-intro">
+                <h3>What is Headless Development?</h3>
+                <p>
+                    Headless commerce is a modern eCommerce solution that separates the frontend from the backend. The
+                    decoupled design makes it easier for developers to build and personalize the customer experience
+                    without disrupting the backend systems.
+                </p>
+            </div>
+
+            <div id="update-sections"></div>
+
         </div>
-      </section>
-      
-      <script>
+    </section>
+
+    <script>
         const updates = [
-          {
-            title: "Frontend Flexibility",
-            text1: `Most important advantage of headless commerce is that the frontend and backend are decoupled. It offers greater freedom to design and customize the user interface on various platforms.`,
-            text2: [
-              "Complete creative freedom for UI/UX design.",
-              "Design Custom interfaces for web, mobile, IoT, and more.",
-              "Break past backend limitations in design and layout."
-            ],
-            img: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743811229/easy-updates-and-upgrades-1_tdp5di.webp"
-          },
-          {
-            title: "Omnichannel Experience",
-            text1: "Headless Commerce provides unified and customized experiences at all customer touchpoints through a single backend for your website, mobile applications and even the latest technologies like kiosks and voice assistants.",
-            text2: [
-              "Seamless integration for multiple platforms.",
-              "Integrated customer experiences across websites, apps, and stores.",
-              "Tailor experiences for each device from one system."
-            ],
-            img: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743813099/microservices-approach-1_fxnv3h.webp"
-          },
-          {
-            title: "API-Driven Architecture",
-            text1: "The API-first approach strategy allows easy integration of third-party services, with the freedom to link your commerce engine to any frontend tooling or external software.",
-            text2: [
-              "Easy integration with third-party systems (e.g. payment gateways, CRM).",
-              "Scale and adapt your tech stack without limitations.",
-              "Faster development cycles with API connectivity."
-            ],
-            img: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743813099/less-dependency-and-easy-to-build-1-1_hur8fh.webp"
-          },
-          {
-            title: "Faster Time-to-Market",
-            text1: `As the frontend and backend decouples in headless commerce, it allows your teams to work faster and release updates without disruption. It ultimately speeds up your ability to respond to market changes.`,
-            text2: [
-              "Faster updates and feature launches.",
-              "No need to wait for backend changes to adjust the frontend",
-              "Scale rapidly with minimal downtime and reduced dependencies."
-            ],
-            img: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743813098/search-engine-optimization-1_pcqpwv.webp"
-          }
+            {
+                title: "Frontend Flexibility",
+                text1: `Most important advantage of headless commerce is that the frontend and backend are decoupled. It offers greater freedom to design and customize the user interface on various platforms.`,
+                text2: [
+                    "Complete creative freedom for UI/UX design.",
+                    "Design Custom interfaces for web, mobile, IoT, and more.",
+                    "Break past backend limitations in design and layout."
+                ],
+                img: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743811229/easy-updates-and-upgrades-1_tdp5di.webp"
+            },
+            {
+                title: "Omnichannel Experience",
+                text1: "Headless Commerce provides unified and customized experiences at all customer touchpoints through a single backend for your website, mobile applications and even the latest technologies like kiosks and voice assistants.",
+                text2: [
+                    "Seamless integration for multiple platforms.",
+                    "Integrated customer experiences across websites, apps, and stores.",
+                    "Tailor experiences for each device from one system."
+                ],
+                img: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743813099/microservices-approach-1_fxnv3h.webp"
+            },
+            {
+                title: "API-Driven Architecture",
+                text1: "The API-first approach strategy allows easy integration of third-party services, with the freedom to link your commerce engine to any frontend tooling or external software.",
+                text2: [
+                    "Easy integration with third-party systems (e.g. payment gateways, CRM).",
+                    "Scale and adapt your tech stack without limitations.",
+                    "Faster development cycles with API connectivity."
+                ],
+                img: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743813099/less-dependency-and-easy-to-build-1-1_hur8fh.webp"
+            },
+            {
+                title: "Faster Time-to-Market",
+                text1: `As the frontend and backend decouples in headless commerce, it allows your teams to work faster and release updates without disruption. It ultimately speeds up your ability to respond to market changes.`,
+                text2: [
+                    "Faster updates and feature launches.",
+                    "No need to wait for backend changes to adjust the frontend",
+                    "Scale rapidly with minimal downtime and reduced dependencies."
+                ],
+                img: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743813098/search-engine-optimization-1_pcqpwv.webp"
+            }
         ];
-      
+
         const containerss = document.getElementById("update-sections");
-      
+
         updates.forEach((update, index) => {
-          const section = document.createElement("div");
-          section.className = `update-section ${index % 2 !== 0 ? "reverse" : ""}`;
-      
-          section.innerHTML = `
+            const section = document.createElement("div");
+            section.className = `update-section ${index % 2 !== 0 ? "reverse" : ""}`;
+
+            section.innerHTML = `
             <div class="update-text">
               <h2>${update.title}</h2>
               <p>${update.text1}</p>
@@ -209,10 +210,10 @@
               </div>
             </div>
           `;
-      
-          containerss.appendChild(section);
+
+            containerss.appendChild(section);
         });
-      </script>
+    </script>
 
 
 
@@ -221,8 +222,9 @@
         <div class="content-wrapper">
             <div class="text-content">
                 <h2>Why <strong style="color: #0c61ff;">Headless Commerce?</strong></h2>
-                <p>Headless commerce offers unmatched flexibility, speed, and scalability—empowering your business to
-                    craft seamless, omnichannel experiences and adapt quickly to changing market demands.</p>
+                <p>Headless commerce known for its unmatched flexibility, speed and scalability. It has been greatly
+                    helping modern businesses to create seamless, omnichannel experiences and adapt quickly to changing
+                    market demands.</p>
             </div>
             <div class="principles-list" id="principles-list"></div>
         </div>
@@ -234,37 +236,37 @@
                 id: 1,
                 title: "Total Design Freedom",
                 content:
-                    "Break free from rigid templates. Headless commerce gives your design and development teams full control over the user experience across every device and platform.",
+                    "Tired of choosing rigid templates? Headless commerce gives your design and development teams full control over the user experience on every device and platform.",
             },
             {
                 id: 2,
                 title: "Seamless Omnichannel Delivery",
                 content:
-                    "Engage customers on their preferred platforms — web, mobile, kiosks, voice assistants, and more — using a single backend system for consistent messaging and experience.",
+                    "Reach customers on their channel of choice web, mobile, kiosks, voice assistants, and more from a single backend system to provide unified messaging and experience.",
             },
             {
                 id: 3,
                 title: "Lightning-Fast Performance",
                 content:
-                    "With optimized frontend frameworks and decoupled architecture, headless commerce ensures faster page loads and smoother shopping experiences that boost conversions.",
+                    "By leveraging optimized frontend frameworks and decoupled architecture, headless commerce provides accelerated page loads and seamless shopping experiences that drive higher conversions.",
             },
             {
                 id: 4,
                 title: "Scalable & Flexible Architecture",
                 content:
-                    "Scale effortlessly as your business grows. Headless platforms are built to adapt — letting you add new channels, features, or integrations without a full rebuild.",
+                    "Scale effortlessly as your business grows. With Headless platforms, you dnot need to fully rebuild the platform as these are are built to adapt by letting you add new channels, features, or integrations.",
             },
             {
                 id: 5,
                 title: "Faster Innovation & Launches",
                 content:
-                    "Launch new storefronts, updates, or campaigns quickly. With independent frontend/backend workflows, your team can move faster and innovate continuously.",
+                    "Launch new storefronts, updates, or campaigns quickly. With separate frontend/backend workflows, your team can move faster and innovate continuously.",
             },
             {
                 id: 6,
                 title: "Future-Ready Commerce Solution",
                 content:
-                    "Stay ahead of the curve with a system built for change. Headless commerce supports emerging technologies, ensuring you're ready for whatever comes next in eCommerce.",
+                    "Be ahead of the curve with a system built for change. It supports latest technologies to ensure you're ready for whatever comes next in eCommerce.",
             },
         ];
 
@@ -519,70 +521,93 @@
 
     <div class="full-cycle-container">
         <div class="header-with-buttons">
-            <h2 class="full-cycle-heading">Headless Commerce Features</h2>
-            <!-- <div class="arrow-controls">
-            <button class="arrow-btn my-prev-btn">&#8592;</button>
-            <button class="arrow-btn my-next-btn">&#8594;</button>
-        </div> -->
+            <h2 class="full-cycle-heading">Features of Headless Commerce</h2>
         </div>
         <p class="full-cycle-subtext">
-            The headless strategy lets you connect the best possible backend tech stack with suitable frontend
-            platforms. So you can have outstanding features coupled with captivating user interface and experience.
+            Headless Commerce can power your online store by offering scalability, flexibility, seamless integrations
+            and advanced features that will definitely drive success in the eCommerce landscape.
         </p>
 
-
-        <div class="swiper service-slider">
-            <div class="swiper-wrapper" id="swiper-wrapper">
-                <!-- Slides will be injected here by JS -->
-            </div>
+        <!-- First Slider -->
+        <div class="swiper service-slider slider-one">
+            <div class="swiper-wrapper" id="swiper-wrapper-1"></div>
         </div>
+
+        <!-- Second Slider -->
+        <div class="swiper service-slider slider-two">
+            <div class="swiper-wrapper" id="swiper-wrapper-2"></div>
+        </div>
+
     </div>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
         const services = [
-            { title: "Unlimited Customization", icon: "img/Mask group1.png" },
+            { title: "Decoupled Architecture", icon: "img/Mask group1.png" },
             { title: "Omnichannel Experience", icon: "img/Mask group2.png" },
-            { title: "Faster Innovation", icon: "img/Mask group3.png" },
-            { title: "Sign Up via Social Media", icon: "img/Mask group4.png" },
-            { title: "CMS Integration", icon: "img/Mask group5.png" },
-            { title: "Personalization", icon: "img/Mask group6.png" },
-            { title: "Advanced Search and Navigation", icon: "img/Mask group7.png" },
-            { title: "Robust Security and Compliance", icon: "img/Mask group8.png" },
-            { title: "Multi-currency and Multi-language Support", icon: "img/Mask group9.png" },
-            { title: "Marketing Automation Integration", icon: "img/Mask group5.png" },
-            { title: "API-first Architecture", icon: "img/Mask group10.png" },
-            { title: "Microservices Architecture", icon: "img/Mask group11.png" },
-            { title: "Headless CMS Integration", icon: "img/Mask group9.png" },
-            { title: "Progressive Web App (PWA) Support", icon: "img/Mask group12.png" },
-            { title: "Advanced Analytics and Reporting", icon: "img/Mask group1.png" }
+            { title: "Faster Page Load Times", icon: "img/Mask group3.png" },
+            { title: "Customizable Frontend Design", icon: "img/Mask group4.png" },
+            { title: "API-First Approach", icon: "img/Mask group5.png" },
+            { title: "Scalable Infrastructure", icon: "img/Mask group6.png" },
+            { title: "PWA Compatibility", icon: "img/Mask group7.png" },
+            { title: "Centralized Backend Management", icon: "img/Mask group8.png" },
+            { title: "Faster Time-to-Market", icon: "img/Mask group9.png" },
+            { title: "Future-Proof Technology", icon: "img/Mask group5.png" },
+            { title: "Enhanced Developer Workflow", icon: "img/Mask group10.png" },
+            { title: "SEO-Friendly Structure", icon: "img/Mask group11.png" },
+            { title: "A/B Testing Ready", icon: "img/Mask group9.png" },
+            { title: "Improved Security", icon: "img/Mask group12.png" }
         ];
-
-
-        const wrapper = document.getElementById("swiper-wrapper");
-
-        services.forEach(service => {
-            const slide = document.createElement("div");
-            slide.className = "swiper-slide";
-            slide.innerHTML = `
-    <div class="service-card">
-      <div class="service-icon"> <img src="${service.icon}" alt="${service.title}" class="blue-icon"/></div>
-      <h3 class="service-title">${service.title}</h3>
-    </div>
-  `;
-            wrapper.appendChild(slide);
-        });
-
-        const swiper = new Swiper(".service-slider", {
+    
+        const firstHalf = services.slice(0, Math.floor(services.length / 2));
+        const secondHalf = services.slice(Math.floor(services.length / 2));
+    
+        const renderSlides = (wrapperId, data) => {
+            const wrapper = document.getElementById(wrapperId);
+            data.forEach(service => {
+                const slide = document.createElement("div");
+                slide.className = "swiper-slide";
+                slide.innerHTML = `
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="${service.icon}" alt="${service.title}" class="blue-icon"/>
+                        </div>
+                        <h3 class="service-title">${service.title}</h3>
+                    </div>
+                `;
+                wrapper.appendChild(slide);
+            });
+        };
+    
+        renderSlides("swiper-wrapper-1", firstHalf);
+        renderSlides("swiper-wrapper-2", secondHalf);
+    
+        // First slider (left to right)
+        new Swiper(".slider-one", {
             spaceBetween: 20,
             autoplay: {
-                delay: 3000,
+                delay: 2000,
                 disableOnInteraction: false,
+                reverseDirection: false, 
             },
-            navigation: {
-                nextEl: ".my-next-btn",
-                prevEl: ".my-prev-btn",
+            breakpoints: {
+                320: { slidesPerView: 1.2 },
+                480: { slidesPerView: 2 },
+                768: { slidesPerView: 3 },
+                1024: { slidesPerView: 4 },
+                1280: { slidesPerView: 5 },
+            }
+        });
+    
+        // Second slider (right to left)
+        new Swiper(".slider-two", {
+            spaceBetween: 20,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+                reverseDirection: true,
             },
             breakpoints: {
                 320: { slidesPerView: 1.2 },
@@ -593,6 +618,10 @@
             }
         });
     </script>
+    
+    
+
+
 
 
 
@@ -732,13 +761,14 @@
 
             <!-- Right Column: Text Content -->
             <div class="storefront-right">
-                <h2>Launch your next storefront with blazing-fast performance.</h2>
+                <h2>Launch Modern & Future-ready store with our Headless Commerce Solutions</h2>
                 <p>
-                    Next.js commerce delivers the perfect balance of speed-to-market, site performance,
-                    and memorable customer experience. That's why we've built Catalyst. Catalyst allows you
-                    to take advantage of all of these benefits with the flexibility and support of an ecommerce
-                    platform by offering a composable reference architecture in Next.js with React Server Components
-                    and our GraphQL storefront API.
+                    Step into the next era of digital commerce with our advanced headless solutions which are designed
+                    for speed, flexibility and performance. Our team at Kushel Digi Solutions decouples your frontend
+                    from the backend and empower you to create excellent user experiences across web, mobile, and
+                    emerging channels and all this too by maintaining centralized control. It doesn't matter whether
+                    you're growing with your brand, expanding across platforms or optimizing for performance, our
+                    headless commerce approach gives you the freedom to build and grow without any limitations.
                 </p>
             </div>
 
@@ -752,12 +782,14 @@
     <section class="online-why-choose-section">
         <div class="subset">
             <h2 class="online-why-choose-title">
-                Why Choose KushelDigi for Headless Commerce Solutions?
+                Why Choose Headless Development by
+                Kushel Digi Solutions?
+
             </h2>
             <p class="online-why-choose-subtitle">
-                KushelDigi regarded as one of the best headless commerce companies. We offer a comprehensive suite of
-                services, from custom development to integration and testing. Our experts can help businesses of all
-                sizes leverage the benefits of headless commerce.
+                With deep Headless Commerce expertise, Kushel Digi Solutions always believes in a client-centric
+                approach to deliver customized eCommerce solutions. Here are some excellent benefits you can expect by
+                availing our services.
             </p>
 
             <div class="online-why-choose-cards">
@@ -766,8 +798,9 @@
                         <img src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743803640/tick-mark_llehnz.png"
                             alt="check" />
                     </div>
-                    <h3>Deep Understanding of eCommerce</h3>
-                    <p>We have some of the best eCommerce developers with the skills and expertise.</p>
+                    <h3>Proven BigCommerce Expertise</h3>
+                    <p>Our Headless Development solutions are customer-oriented, result-driven, and geared to help
+                        increase your online visibility.</p>
                 </div>
 
                 <div class="online-why-choose-card online-blue">
@@ -775,8 +808,9 @@
                         <img src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743803640/tick-mark_llehnz.png"
                             alt="check" />
                     </div>
-                    <h3>Proven Record in Headless Development</h3>
-                    <p>We have a successful record of delivering the best headless commerce solutions.</p>
+                    <h3>Customized Solutions </h3>
+                    <p>We offer Headless services tailored for the specific needs of your business. Our solution is
+                        carefully designed to optimize your store performance and scalability.</p>
                 </div>
 
                 <div class="online-why-choose-card online-blue">
@@ -784,8 +818,9 @@
                         <img src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743803640/tick-mark_llehnz.png"
                             alt="check" />
                     </div>
-                    <h3>Business-Oriented Approach</h3>
-                    <p>We go beyond technical expertise and prioritize solutions for overall business success.</p>
+                    <h3>Dedicated Support and Maintenance</h3>
+                    <p>Get reliable and continued support from our committed maintenance services. We are always here to
+                        ensure store is secure, updated, and working at maximum capacity.</p>
                 </div>
 
                 <div class="online-why-choose-card online-blue">
@@ -793,18 +828,9 @@
                         <img src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743803640/tick-mark_llehnz.png"
                             alt="check" />
                     </div>
-                    <h3>Adaptable Engagement Models</h3>
-                    <p>You can choose the best approach based on your budget, scope, and level of involvement.</p>
-                </div>
-
-
-                <div class="online-why-choose-card online-blue">
-                    <div class="online-icon-wrapper online-icon-blue">
-                        <img src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743803640/tick-mark_llehnz.png"
-                            alt="check" />
-                    </div>
-                    <h3>Adaptable Engagement Models</h3>
-                    <p>You can choose the best approach based on your budget, scope, and level of involvement.</p>
+                    <h3>Excellent User Experience</h3>
+                    <p>Provide your shop with truly unique innovative design and user experience. We design engaging,
+                        responsive designs that impress your audience and increase conversions.</p>
                 </div>
 
 
@@ -813,8 +839,20 @@
                         <img src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743803640/tick-mark_llehnz.png"
                             alt="check" />
                     </div>
-                    <h3>Adaptable Engagement Models</h3>
-                    <p>You can choose the best approach based on your budget, scope, and level of involvement.</p>
+                    <h3>SEO and Marketing Strategy</h3>
+                    <p>Boost the visibility of your store with our professional SEO and marketing strategies. We
+                        implement tactics that will help drive traffic and maximize your search rankings.</p>
+                </div>
+
+
+                <div class="online-why-choose-card online-blue">
+                    <div class="online-icon-wrapper online-icon-blue">
+                        <img src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743803640/tick-mark_llehnz.png"
+                            alt="check" />
+                    </div>
+                    <h3>Seamless Integration</h3>
+                    <p>Get a smooth transition into Headless with our integration and migration services. We ensure zero
+                        hassle for a seamless process.</p>
                 </div>
 
 
@@ -832,7 +870,7 @@
                 FUTURE-PROOF YOUR STORE
             </h2>
             <p class="developmental-subtitle">
-                With Headless Commerce Development
+                With Our Headless Commerce Development
             </p>
 
             <div class="developmental-cards" id="cards-container"></div>
@@ -845,54 +883,54 @@
                 title: "Shopify Headless Development",
                 image: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743807615/shopify-headless_czd3ql.webp",
                 points: [
-                    "Leverage Shopify's Hydrogen & Oxygen for easy development & deployment.",
-                    "Build bespoke modern storefronts using React.",
-                    "High-Performance Headless Shopify Plus Storefronts."
+                    "Integrate with Shopify Storefront API and Hydrogen framework.",
+                    "Optimize performance and SEO with modern frontend stacks.",
+                    "Sell across channels—web, mobile, social, and more—from one backend."
                 ]
             },
             {
                 title: "BigCommerce Headless Development",
                 image: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743807614/big-headless_v7tmk5.webp",
                 points: [
-                    "Build server-rendered storefronts using Next.js framework.",
-                    "Headless BigCommerce Cart & Checkout Flow.",
-                    "Custom Headless CMS Integration."
+                    "Use React, Next.js, or other JS frameworks for custom frontend.",
+                    "Deliver lightning-fast storefronts with decoupled performance.",
+                    "Integrate BigCommerce APIs for seamless product and checkout flows."
                 ]
             },
             {
                 title: "Magento Headless Development",
                 image: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743807615/magento-headless_obqrnt.webp",
                 points: [
-                    "Custom UI/UX Development with React or Vue.js.",
-                    "Magento 2 GraphQL API Integration.",
-                    "Seamless Payment and Shipping API integration with Magento 2."
+                    "Use PWA Studio or custom frameworks like Vue Storefront.",
+                    "Improve user experience with fast, responsive UIs.",
+                    "Connect with Magento’s robust APIs for real-time data sync."
                 ]
             },
             {
-                title: "Odoo Headless Ecommerce Service",
+                title: "WooCommerce Headless Development",
                 image: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743808470/odoo-headless_wz6t4z.webp",
                 points: [
-                    "Front-end Framework Integration.",
-                    "Odoo PWA Development with React.js.",
-                    "Native app development for the Odoo website (Android & iOS)"
+                    "Build decoupled frontends with React, Gatsby, or Next.js.",
+                    "Maintain WooCommerce backend with enhanced UX and speed.",
+                    "Connect plugins, CRMs, and third-party tools with REST or GraphQL APIs."
                 ]
             },
             {
-                title: "Migrate to Headless Commerce",
+                title: "Headless Migration Services",
                 image: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743808470/headless-migration_ajrjl2.webp",
                 points: [
-                    "Data Migration and Synchronization.",
-                    "API Integration and Storefront Development.",
-                    "Fine-tuning website speed & performance."
+                    "Full data migration including products, users, and orders.",
+                    "Rebuild frontend using advanced frameworks like React or Vue.",
+                    "Minimize downtime with a carefully planned, phased transition."
                 ]
             },
             {
-                title: "Headless Commerce Consulting",
+                title: "Odoo Headless Development",
                 image: "https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743808470/headless-consulting_xs5dfp.webp",
                 points: [
-                    "Select Techstack: headless CMS, APIs, and frameworks.",
-                    "Headless Performance Monitoring and Analytics",
-                    "Security Audits & Compliance."
+                    "Connect with Odoo’s REST APIs for seamless frontend integration.",
+                    "Build dynamic storefronts using frameworks like React or Angular.",
+                    "Extend ERP, CRM, and eCommerce functionalities into a modern UI."
                 ]
             }
         ];
@@ -1078,12 +1116,12 @@
     <section class="step-section">
         <div class="tayp">
             <h2 class="step-title">
-                Be on the winning side of eCommerce <br />
-                with a right-fit headless solution.
+                Start Smart. Go Headless with Kushel Digi Solutions
+
             </h2>
 
             <p class="step-subtitle">
-                Take 4 steps to choose the best approach for your business:
+                Follow these 4 simple steps to choose the best approach for headless commerce solutions:
             </p>
 
             <div class="step-cards">
@@ -1091,28 +1129,28 @@
                     <img src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743799256/Group_1171279665_at9s8v.png"
                         alt="Submit a form" />
                     <span class="stepp-number">1</span>
-                    <p class="step-text">Submit a form</p>
+                    <p class="step-text">Share Your Goals</p>
                 </div>
 
                 <div class="step-card">
                     <img src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743799256/Phone-Guide-Icon_1_yisahz.png"
                         alt="Jump on a call" />
                     <span class="stepp-number">2</span>
-                    <p class="step-text">Jump on a call with us</p>
+                    <p class="step-text">Get on a Strategy Call</p>
                 </div>
 
                 <div class="step-card">
                     <img src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743799256/Group_1171279668_m7aelj.png"
                         alt="Free consultation" />
                     <span class="stepp-number">3</span>
-                    <p class="step-text">Get a free consultation</p>
+                    <p class="step-text">Receive a Proposal</p>
                 </div>
 
                 <div class="step-card">
                     <img src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743799256/Group_1171279672_qanrno.png"
                         alt="Project estimate" />
                     <span class="stepp-number">4</span>
-                    <p class="step-text">Receive a project estimate</p>
+                    <p class="step-text">Start Development</p>
                 </div>
             </div>
             <a href="contact-us.html">
@@ -1126,14 +1164,14 @@
 
 
 
-    <!-- <section class="moniter-commerce-section">
+    <section class="moniter-commerce-section">
         <h2 class="moniter-commerce-title">
-            Feel the difference with the power of <span>headless commerce.</span>
+            Feel the difference with the power of <span>Headless commerce.</span>
         </h2>
 
         <div class="moniter-comparison-container">
 
-             
+
             <div class="moniter-comparison-box">
                 <div class="moniter-comparison-header moniter-traditional">
                     Traditional Commerce
@@ -1142,62 +1180,58 @@
                     alt="Traditional Commerce" class="moniter-comparison-image" />
                 <ul class="moniter-comparison-list">
                     <li><span class="moniter-icon moniter-icon-red"><img src="img/cross.svg" alt="tick-icon"
-                                style="filter: brightness(0) invert(1);" /></span> Dependent on
-                        tech stack</li>
-                    <li><span class="moniter-icon moniter-icon-red"><img src="img/cross.svg" alt="tick-icon"
-                                style="filter: brightness(0) invert(1);" /></span> Pre-built UI/UX
-                        flows, limited customization</li>
-                    <li><span class="moniter-icon moniter-icon-red"><img src="img/cross.svg" alt="tick-icon"
-                                style="filter: brightness(0) invert(1);" /></span> Every
-                        device/channel is managed separately</li>
-                    <li><span class="moniter-icon moniter-icon-red"><img src="img/cross.svg" alt="tick-icon"
-                                style="filter: brightness(0) invert(1);" /></span> Requires
-                        developers across every step</li>
-                    <li><span class="moniter-icon moniter-icon-red"><img src="img/cross.svg" alt="tick-icon"
-                                style="filter: brightness(0) invert(1);" /></span> Hard to scale
+                                style="filter: brightness(0) invert(1);" /></span> Tightly Coupled Frontend & Backend
                     </li>
                     <li><span class="moniter-icon moniter-icon-red"><img src="img/cross.svg" alt="tick-icon"
-                                style="filter: brightness(0) invert(1);" /></span> Database &
-                        server hosting required</li>
+                                style="filter: brightness(0) invert(1);" /></span>
+                        Limited Flexibility
+                    </li>
+                    <li><span class="moniter-icon moniter-icon-red"><img src="img/cross.svg" alt="tick-icon"
+                                style="filter: brightness(0) invert(1);" /></span> Slower Time-to-Market</li>
+                    <li><span class="moniter-icon moniter-icon-red"><img src="img/cross.svg" alt="tick-icon"
+                                style="filter: brightness(0) invert(1);" /></span> Restricted Omnichannel Experience
+                    </li>
+                    <li><span class="moniter-icon moniter-icon-red"><img src="img/cross.svg" alt="tick-icon"
+                                style="filter: brightness(0) invert(1);" /></span> Less Personalization
+                    </li>
+                    <li><span class="moniter-icon moniter-icon-red"><img src="img/cross.svg" alt="tick-icon"
+                                style="filter: brightness(0) invert(1);" /></span> Monolithic Architecture</li>
+
+                    <li><span class="moniter-icon moniter-icon-red"><img src="img/cross.svg" alt="tick-icon"
+                                style="filter: brightness(0) invert(1);" /></span> Complex Third-Party Integrations</li>
                 </ul>
             </div>
 
-           
+
             <div class="moniter-comparison-box">
                 <div class="moniter-comparison-header moniter-headless">
-                    Headless eCommerce Platform
+                    Headless Commerce
                 </div>
                 <img src="https://res.cloudinary.com/dbcmdtr3r/image/upload/v1743857571/Headless-eCommerce-platform-Picture_qoklsz.png"
                     alt="Headless Commerce" class="moniter-comparison-image" />
                 <ul class="moniter-comparison-list">
                     <li><span class="moniter-icon moniter-icon-green"><img src="img/tick.svg" alt="tick-icon"
                                 style="filter: brightness(0) invert(1);" />
-                        </span> Database &
-                        server hosting required</li>
+                        </span>Decoupled Frontend & Backend</li>
                     <li><span class="moniter-icon moniter-icon-green"><img src="img/tick.svg" alt="tick-icon"
                                 style="filter: brightness(0) invert(1);" />
-                        </span> Unlimited
-                        customization potential</li>
+                        </span>High Customization & Flexibility</li>
                     <li><span class="moniter-icon moniter-icon-green"><img src="img/tick.svg" alt="tick-icon"
                                 style="filter: brightness(0) invert(1);" />
-                        </span>
-                        Device-agnostic & omnichannel</li>
+                        </span>Faster Time-to-Market</li>
                     <li><span class="moniter-icon moniter-icon-green"><img src="img/tick.svg" alt="tick-icon"
                                 style="filter: brightness(0) invert(1);" />
-                        </span> Inspires
-                        no-code customization</li>
+                        </span>Omnichannel Ready</li>
                     <li><span class="moniter-icon moniter-icon-green"><img src="img/tick.svg" alt="tick-icon"
                                 style="filter: brightness(0) invert(1);" />
-                        </span> Highly
-                        scalable thanks to APIs</li>
+                        </span>API-Driven Architecture</li>
                     <li><span class="moniter-icon moniter-icon-green"><img src="img/tick.svg" alt="tick-icon"
                                 style="filter: brightness(0) invert(1);" />
-                        </span> API-based, no
-                        hosting needed</li>
+                        </span>Scalable & Future-Proof</li>
                 </ul>
             </div>
         </div>
-    </section> -->
+    </section>
 
 
 
@@ -1217,7 +1251,7 @@
 
 
     <div class="wifi">
-        <h2 class="wifi-title">Business agility accelerates revenue growth</h2>
+        <h2 class="wifi-title">The Smartest Way to Build Digital Retail</h2>
 
         <div class="wifi-stats">
             <div class="wifi-stat">
@@ -1232,7 +1266,7 @@
 
             <div class="wifi-stat">
                 <div id="counter" class="wifi-number" data-target="60" data-suffix="%" data-prefix="+">0</div>
-                <div class="wifi-label">AVERAGE SITE SPEED INCREASE</div>
+                <div class="wifi-label">SITE SPEED INCREASE</div>
             </div>
         </div>
 
@@ -1437,7 +1471,7 @@
                 </div>
 
                 <div class="con--2-div-contentt">
-                    <h3>Our Headless Shopify Experts are Ready to Launch your Dream Store today!</h3>
+                    <h3>Businesses using headless commerce see measurable growth across all key metrics.</h3>
                 </div>
 
                 <div>

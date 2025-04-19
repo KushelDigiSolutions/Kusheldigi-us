@@ -1539,8 +1539,8 @@
   }
   
   .online-why-choose-title {
-    font-size: 35px;
-    padding: 0px 0px 23px 12px;
+    font-size: 40px;
+    padding: 0px 0px 14px 12px;
     text-align: center;
     font-weight: 700;
     color: #1a202c;
@@ -1553,7 +1553,7 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    font-weight: 500;
+    font-weight: 600;
   }
   
   .online-why-choose-cards {
@@ -1568,11 +1568,12 @@
   
   .online-why-choose-card {
     background: white;
-    padding: 24px 2px 39px 63px;
+    padding: 24px 2px 24px 63px;
     border-radius: 15px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     text-align: left;
     position: relative;
+    display: inline-grid;
     border: 2px solid #2563eb;
   }
   
@@ -1824,7 +1825,7 @@
   
     .serv-crd {
       padding: 30px 20px;
-      gap: 20px;
+      gap: 0px;
       border-radius: 30px;
       flex-direction: column;
     }
@@ -2590,6 +2591,7 @@
     display: block;
     position: relative;
     overflow: hidden;
+    border-radius: 50%;
 }
 
 /* Content box */

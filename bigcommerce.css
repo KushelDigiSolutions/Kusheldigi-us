@@ -2,12 +2,12 @@
 
 * {
     font-family: "Wix Madefor Display" !important;
-
+    box-sizing: border-box;
 }
 
 body {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .case-study-container {
@@ -380,11 +380,7 @@ body {
 }
 
 
-/* * {
-    box-sizing: border-box;
-
-} */
-
+ 
 .ResultBccom {
     max-width: 1740px;
     padding: 40px 100px;
@@ -434,7 +430,8 @@ body {
     color: rgba(0, 0, 0, 0.796);
     margin-top: 1rem;
     width: 100%;
-    font-size: 20px;
+    font-size: 17px;
+    font-weight: 500;
     font-family: "Wix Madefor Display";
 
 }
@@ -475,11 +472,12 @@ body {
 }
 
 .feature-imagebbcom {
-    width: 735px;
+    width: 747px;
     height: auto;
     position: relative;
-    left: 30px;
+    left: 37px;
     object-fit: cover;
+    border-radius: 10px;
 
 }
 
@@ -882,7 +880,7 @@ body {
 }
 
 #switch:checked+#switchLabel {
-    background: #12b76a;
+    background: #1668ff;
 }
 
 #switch:checked+#switchLabel:after {
@@ -963,11 +961,11 @@ body {
 }
 
 .process-button {
-    border: 1px solid #12b76a;
+    border: 1px solid #1668ff;
     border-radius: 50px;
     height: 25px;
     display: block;
-    background: linear-gradient(to right, #12b76a 50%, white 50%);
+    background: linear-gradient(to right, #1668ff 50%, white 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all .5s ease-out;
@@ -1127,7 +1125,7 @@ body {
 #phase5Name {
     position: absolute;
     top: 58px;
-    left: 286px;
+    left: 280px;
     display: flex;
     flex-direction: column;
     opacity: 0;

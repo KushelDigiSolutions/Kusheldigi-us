@@ -77,27 +77,41 @@ const dynamicPhases = `
       <div id='phase11Name' class='agile11phase'><span>07</span><span class='procBCom'>Launch & Ongoing Support</span></div>
     `;
 
-const updatePhases = () => {
-    if (switchInput.checked) {
+
+    const updatePhases = () => {
+      if (switchInput.checked) {
         phasesContainer.innerHTML = dynamicPhases;
         customTitle.classList.add("textOpacity");
         dynamicTitle.classList.remove("textOpacity");
-    } else {
+      } else {
         phasesContainer.innerHTML = customPhases;
         customTitle.classList.remove("textOpacity");
         dynamicTitle.classList.add("textOpacity");
-    }
-
-    // Scroll back to start on toggle
-    setTimeout(() => {
+      }
+     
+      setTimeout(() => {
         phasesContainer.scrollLeft = 0;
-    }, 50);
-};
-
-switchInput.addEventListener("change", updatePhases);
-
-// Initial load
-updatePhases();
+      }, 50);
+    };
+     
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            updatePhases(); 
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.3,  
+      }
+    );
+     
+    observer.observe(phasesContainer);
+    switchInput.addEventListener("change", updatePhases);
 
 
 

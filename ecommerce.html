@@ -62,10 +62,49 @@
         </div>
       </div>
 
-      <div class="img-containerCo">
+      <!-- <div class="img-containerCo">
         <img src="img/ecommerce-banner_tyflss.jpg" alt="ecommerce" class="image-thumbnail" />
+      </div> -->
+
+      <div class="img-containerCo">
+        <img src="" alt="ecommerce" class="image-thumbnail" id="rotating-image" />
       </div>
+
+
   </section>
+
+
+
+  <script>
+    const imageArray = [
+      "https://res.cloudinary.com/dd9tagtiw/image/upload/v1744458202/mockup-1_lz5bgz.png",
+      "https://res.cloudinary.com/dd9tagtiw/image/upload/v1744458202/mockup-2_wpwbsq.png",
+      "https://res.cloudinary.com/dd9tagtiw/image/upload/v1744458202/mockup-3_jqdrh1.png",
+    ];
+  
+    let currentImageIndex = 0;
+    const imageElement = document.getElementById("rotating-image");
+  
+    // Set first image
+    imageElement.src = imageArray[currentImageIndex];
+  
+    setInterval(() => {
+      // Fade out
+      imageElement.style.opacity = 0;
+  
+      // After fade-out, change image and fade-in
+      setTimeout(() => {
+        currentImageIndex = (currentImageIndex + 1) % imageArray.length;
+        imageElement.src = imageArray[currentImageIndex];
+  
+        // Fade in
+        imageElement.style.opacity = 1;
+      }, 1000); // matches the CSS transition (1s)
+    }, 3000); // change every 4 sec
+  </script>
+  
+
+
 
 
   <section class="sec-sectionBan2">
@@ -180,75 +219,75 @@
 
   <section class="services-section">
     <div class="services-container">
-        <p class="subheading">OUR SERVICES</p>
-        <h2 class="serv-headss">
-            Discover how we can help your <br /> business thrive
-        </h2>
-        <p class="serv-description">
-            We understand the unique challenges of running an e-commerce business.
-            Whether you’re building a new eCommerce store, migrating platforms,
-            or looking to drive more sales, we provide tailored solutions to meet your goals.
+      <p class="subheading">OUR SERVICES</p>
+      <h2 class="serv-headss">
+        Discover how we can help your <br /> business thrive
+      </h2>
+      <p class="serv-description">
+        We understand the unique challenges of running an e-commerce business.
+        Whether you’re building a new eCommerce store, migrating platforms,
+        or looking to drive more sales, we provide tailored solutions to meet your goals.
+      </p>
+    </div>
+  </section>
+
+
+
+  <section class="service-serv-crds">
+    <div class="serv-crd">
+      <div class="serv-icon">
+        <img src="img/serv.svg" alt="Dev Icon">
+      </div>
+      <div class="serv-crd-content">
+        <h3>Development & Design</h3>
+        <p>Create stunning e-commerce experiences.<br>
+          We design and develop online stores that reflect your brand and drive conversions.</p>
+      </div>
+    </div>
+
+    <div class="serv-crd">
+      <div class="serv-icon">
+        <img src="img/serv1.svg" alt="Migration Icon">
+      </div>
+      <div class="serv-crd-content">
+        <h3>Platform Migration</h3>
+        <p>Seamless platform migration.<br>
+          Migrate your store to a new platform without losing data or functionality.</p>
+      </div>
+    </div>
+
+    <div class="serv-crd">
+      <div class="serv-icon">
+        <img src="img/serv2.svg" alt="Rescue Icon">
+      </div>
+      <div class="serv-crd-content">
+        <h3>Rescue Projects</h3>
+        <p>Get your store back on track. Resolve critical issues and restore your store’s performance.</p>
+      </div>
+    </div>
+    <div class="serv-crd">
+      <div class="serv-icon">
+        <img src="img/serv3.svg" alt="Rescue Icon">
+      </div>
+      <div class="serv-crd-content">
+        <h3>eCommerce SEO</h3>
+        <p>
+          Boost visibility and attract traffic.<br>Optimize your store for search engines to increase organic
+          sales.</p>
+      </div>
+    </div>
+    <div class="serv-crd">
+      <div class="serv-icon">
+        <img src="img/serv4.svg" alt="Rescue Icon">
+      </div>
+      <div class="serv-crd-content">
+        <h3>eCommerce CRO</h3>
+        <p>
+          Turn visitors into loyal customers with strategies that optimize user experience and conversions.
         </p>
+      </div>
     </div>
-</section>
-
-
-
-<section class="service-serv-crds">
-    <div class="serv-crd">
-        <div class="serv-icon">
-            <img src="img/serv.svg" alt="Dev Icon">
-        </div>
-        <div class="serv-crd-content">
-            <h3>Development & Design</h3>
-            <p>Create stunning e-commerce experiences.<br>
-                We design and develop online stores that reflect your brand and drive conversions.</p>
-        </div>
-    </div>
-
-    <div class="serv-crd">
-        <div class="serv-icon">
-            <img src="img/serv1.svg" alt="Migration Icon">
-        </div>
-        <div class="serv-crd-content">
-            <h3>Platform Migration</h3>
-            <p>Seamless platform migration.<br>
-                Migrate your store to a new platform without losing data or functionality.</p>
-        </div>
-    </div>
-
-    <div class="serv-crd">
-        <div class="serv-icon">
-            <img src="img/serv2.svg" alt="Rescue Icon">
-        </div>
-        <div class="serv-crd-content">
-            <h3>Rescue Projects</h3>
-            <p>Get your store back on track. Resolve critical issues and restore your store’s performance.</p>
-        </div>
-    </div>
-    <div class="serv-crd">
-        <div class="serv-icon">
-            <img src="img/serv3.svg" alt="Rescue Icon">
-        </div>
-        <div class="serv-crd-content">
-            <h3>eCommerce SEO</h3>
-            <p>
-                Boost visibility and attract traffic.<br>Optimize your store for search engines to increase organic
-                sales.</p>
-        </div>
-    </div>
-    <div class="serv-crd">
-        <div class="serv-icon">
-            <img src="img/serv4.svg" alt="Rescue Icon">
-        </div>
-        <div class="serv-crd-content">
-            <h3>eCommerce CRO</h3>
-            <p>
-                Turn visitors into loyal customers with strategies that optimize user experience and conversions.
-            </p>
-        </div>
-    </div>
-</section>
+  </section>
 
 
   <section class="sec--2">
@@ -287,8 +326,7 @@
       </div>
       <div class="con--1-flex">
         <div class="con--1-flex-content">
-          <img src="img/ecom1.png" alt="ecommerce-img"
-            class="iconImage" />
+          <img src="img/ecom1.png" alt="ecommerce-img" class="iconImage" />
           <h5>Slow Website Performance
           </h5>
           <p>
@@ -299,8 +337,7 @@
           </p>
         </div>
         <div class="con--1-flex-content">
-          <img src="img/ecom2.png" alt="ecommerce-img"
-            class="iconImage" />
+          <img src="img/ecom2.png" alt="ecommerce-img" class="iconImage" />
           <h5>Poor User Experience (UX/UI)</h5>
           <p>
             Confusing navigation and unorganized layouts are the reasons for high bounce rates. Our skilled UI/UX
@@ -310,8 +347,7 @@
           </p>
         </div>
         <div class="con--1-flex-content">
-          <img src="img/ecom3.png" alt="ecommerce-img"
-            class="iconImage" />
+          <img src="img/ecom3.png" alt="ecommerce-img" class="iconImage" />
           <h5>Inefficient Checkout Process</h5>
           <p>
             A complex checkout process can result in cart abandonment. We simplify the checkout process with auto-fill,
@@ -320,8 +356,7 @@
           </p>
         </div>
         <div class="con--1-flex-content">
-          <img src="img/ecom4.png" alt="ecommerce-img"
-            class="iconImage" />
+          <img src="img/ecom4.png" alt="ecommerce-img" class="iconImage" />
           <h5>Poor Search Engine Visibility</h5>
           <p>
             If your customers can't find you, they can't purchase from you. We practice SEO best practices, optimize
@@ -330,8 +365,7 @@
           </p>
         </div>
         <div class="con--1-flex-content">
-          <img src="img/ecom5.png" alt="ecommerce-img"
-            class="iconImage" />
+          <img src="img/ecom5.png" alt="ecommerce-img" class="iconImage" />
           <h5>Mobile Responsiveness Issues</h5>
           <p>
             With most customers using mobile devices, a non-responsive site will cost your business. We create fully
@@ -340,8 +374,7 @@
           </p>
         </div>
         <div class="con--1-flex-content">
-          <img src="img/ecom6.png" alt="ecommerce-img"
-            class="iconImage" />
+          <img src="img/ecom6.png" alt="ecommerce-img" class="iconImage" />
           <h5>Integration Issues</h5>
           <p>
             From payment gateways to third-party applications, integration problems can hinder operations. Our team
@@ -366,8 +399,7 @@
       </div>
       <div class="con--3-flex">
         <div class="con--3-flex-content">
-          <img src="img/ecom-bft1.png" alt="ecom-bft"
-            class="iconImage3" />
+          <img src="img/ecom-bft1.png" alt="ecom-bft" class="iconImage3" />
           <h5> Personalized Shopping Experience</h5>
           <p>
             A custom eCommerce website enables companies to provide a personalized and customized shopping experience
@@ -376,8 +408,7 @@
           </p>
         </div>
         <div class="con--3-flex-content">
-          <img src="img/ecom-bft2.png" alt="ecom-bft"
-            class="iconImage3" />
+          <img src="img/ecom-bft2.png" alt="ecom-bft" class="iconImage3" />
           <h5>Higher Conversion Rates</h5>
           <p>
             Custom-developed eCommerce sites are tailored for user experience and conversion. With easy UI/UX, organized
@@ -386,8 +417,7 @@
           </p>
         </div>
         <div class="con--3-flex-content">
-          <img src="img/ecom-bft3.png" alt="ecom-bft"
-           class="iconImage3" />
+          <img src="img/ecom-bft3.png" alt="ecom-bft" class="iconImage3" />
           <h5>Mobile Responsive</h5>
           <p>
             A large percentage of online consumers shop using mobile devices. Custom eCommerce development makes your
@@ -416,8 +446,7 @@
           </p>
         </div>
         <div class="con--3-flex-content">
-          <img src="img/ecom-bft6.png" alt="ecom-bft"
-            class="iconImage3" />
+          <img src="img/ecom-bft6.png" alt="ecom-bft" class="iconImage3" />
           <h5>Secure Payment Gateways</h5>
           <p>
             Security is also the top most concern of online commerce. Custom eCommerce websites offer secure payment
@@ -428,8 +457,7 @@
           </p>
         </div>
         <div class="con--3-flex-content">
-          <img src="img/ecom-bft7.png" alt="ecom-bft"
-            class="iconImage3" />
+          <img src="img/ecom-bft7.png" alt="ecom-bft" class="iconImage3" />
           <h5> Easy Checkout Process</h5>
           <p>
             Easy checkout is needed to reduce cart abandonment. Custom eCommerce platforms enable one-click checkout,
@@ -438,8 +466,7 @@
           </p>
         </div>
         <div class="con--3-flex-content">
-          <img src="img/ecom-bft8.png" alt="ecom-bft"
-            class="iconImage3" />
+          <img src="img/ecom-bft8.png" alt="ecom-bft" class="iconImage3" />
           <h5>Third-Party Integrations</h5>
           <p>
             Companies frequently employ multiple tools such as CRM, ERP, inventory management, and marketing automation
@@ -449,9 +476,7 @@
           </p>
         </div>
         <div class="con--3-flex-content">
-          <img
-          src="img/ecom-bft9.png" alt="ecom-bft"
-          class="iconImage3" />
+          <img src="img/ecom-bft9.png" alt="ecom-bft" class="iconImage3" />
           <h5>Long-Term Cost Efficiency</h5>
           <p>
             Although custom eCommerce development is more costly at the outset in comparison to template-based
@@ -529,17 +554,17 @@
         image: "https://res.cloudinary.com/dd9tagtiw/image/upload/v1743078873/Maintenance_and_support_3bd6d42861_kjsk0h.webp",
       },
     ];
-  
+
     const stepsNav = document.getElementById("stepsNav");
     const slickSlider = document.getElementById("slickSlider");
-  
+
     steps.forEach(step => {
       const stepNav = document.createElement("div");
       stepNav.classList.add("step");
       stepNav.textContent = step.number;
       stepNav.onclick = () => $("#slickSlider").slick("slickGoTo", step.number - 1);
       stepsNav.appendChild(stepNav);
-  
+
       const slide = document.createElement("div");
       slide.classList.add("steps-contentcom");
       slide.innerHTML = `
@@ -555,8 +580,8 @@
       `;
       slickSlider.appendChild(slide);
     });
-  
-    $(document).ready(function () { 
+
+    $(document).ready(function () {
       $("#slickSlider").slick({
         dots: true,
         infinite: true,
@@ -565,32 +590,32 @@
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 2000
-      }); 
+      });
 
       $(".step").first().addClass("active");
-  
+
       $("#slickSlider").on("beforeChange", function (event, slick, currentSlide, nextSlide) {
         $(".step").removeClass("active");
         $(".step").eq(nextSlide).addClass("active");
       });
-  
-      
+
+
       const stepsSection = document.getElementById("stepsSection");
       const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             $('#slickSlider').slick('slickPlay');
-            observer.unobserve(entry.target);  
+            observer.unobserve(entry.target);
           }
         });
       }, {
         threshold: 0.3
       });
-  
+
       observer.observe(stepsSection);
     });
   </script>
-  
+
 
 
 
@@ -637,53 +662,53 @@
 
   <div class="case-studies-wrapper" id="caseStudiesContainer">
     <h2 class="case-head">Our Portfolio</h2>
-</div>
+  </div>
 
-<script>
-  const caseStudies = [
-    {
-      title: 'A to Z Stores: Multi-Store Platform for Wholesale Stores',
-      description1: 'A to Z stores offer products like markerboards, projection screens & extinguishers.',
-      description2: 'Find out how TBI\u2019s expertise in Migration to Magento & custom PDP designing enhanced customer footprint and online sales.',
-      img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145937/a-to-z-new_cfxrxm.webp',
-      reverse: false
-    },
-    {
-      title: 'Xtreme 4×4 Sales Soar with Magento 2 Migration',
-      description1: 'Xtreme 4×4 is a wholesale platform offering various vehicle recovery products.',
-      description2: 'Learn how TBI\u2019s curated custom store sections & product comparison filters improved user engagement. Our custom search functionality improves user interaction and converts it into store sales.',
-      img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145937/xtreme-4x4-new_zobf3w.webp',
-      reverse: true
-    },
-    {
-      title: 'Custom Multi-store Plugin Driving Cosmetic B2B Sales',
-      description1: 'Custom multi-store plugin for a cosmetic website streamlining their business operations.',
-      description2: 'Learn how TBI helped the client manage multiple vendors & monitor B2B sale operations with a centralized admin dashboard. Our multiple subscription plans for vendors fostered engagement and increased sales.',
-      img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145938/multi-store-new_eorhy9.webp',
-      reverse: false
-    },
-    {
-      title: 'Ecommerce Solution for Store Display Equipment Platform',
-      description1: 'Substral Inc. deals with store units like jewellery displays, Mannequins & display cases.',
-      description2: 'Find out how TBI helped improve website sales with Magento 2 migration, custom cart & shipping class designs.',
-      img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145937/substral-new_hhxcks.webp',
-      reverse: true
-    },
-    {
-      title: 'A Robsust B2B ecommerce Store Like Alibaba',
-      description1: 'Built a Magento 2 wholesale store specializing in custom merchandise from the ground up.',
-      description2: 'Learn how TBI\u2019s dedicated team helped streamline store operations & improved user interaction with custom shipping extension. Our UI enhancements improved customer footprint by 30%.',
-      img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145937/wholesale-store-new_zkwpky.webp',
-      reverse: false
-    }
-  ];
+  <script>
+    const caseStudies = [
+      {
+        title: 'A to Z Stores: Multi-Store Platform for Wholesale Stores',
+        description1: 'A to Z stores offer products like markerboards, projection screens & extinguishers.',
+        description2: 'Find out how TBI\u2019s expertise in Migration to Magento & custom PDP designing enhanced customer footprint and online sales.',
+        img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145937/a-to-z-new_cfxrxm.webp',
+        reverse: false
+      },
+      {
+        title: 'Xtreme 4×4 Sales Soar with Magento 2 Migration',
+        description1: 'Xtreme 4×4 is a wholesale platform offering various vehicle recovery products.',
+        description2: 'Learn how TBI\u2019s curated custom store sections & product comparison filters improved user engagement. Our custom search functionality improves user interaction and converts it into store sales.',
+        img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145937/xtreme-4x4-new_zobf3w.webp',
+        reverse: true
+      },
+      {
+        title: 'Custom Multi-store Plugin Driving Cosmetic B2B Sales',
+        description1: 'Custom multi-store plugin for a cosmetic website streamlining their business operations.',
+        description2: 'Learn how TBI helped the client manage multiple vendors & monitor B2B sale operations with a centralized admin dashboard. Our multiple subscription plans for vendors fostered engagement and increased sales.',
+        img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145938/multi-store-new_eorhy9.webp',
+        reverse: false
+      },
+      {
+        title: 'Ecommerce Solution for Store Display Equipment Platform',
+        description1: 'Substral Inc. deals with store units like jewellery displays, Mannequins & display cases.',
+        description2: 'Find out how TBI helped improve website sales with Magento 2 migration, custom cart & shipping class designs.',
+        img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145937/substral-new_hhxcks.webp',
+        reverse: true
+      },
+      {
+        title: 'A Robsust B2B ecommerce Store Like Alibaba',
+        description1: 'Built a Magento 2 wholesale store specializing in custom merchandise from the ground up.',
+        description2: 'Learn how TBI\u2019s dedicated team helped streamline store operations & improved user interaction with custom shipping extension. Our UI enhancements improved customer footprint by 30%.',
+        img: 'https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744145937/wholesale-store-new_zkwpky.webp',
+        reverse: false
+      }
+    ];
 
-  const container = document.getElementById('caseStudiesContainer');
+    const container = document.getElementById('caseStudiesContainer');
 
-  caseStudies.forEach(({ title, description1, description2, img, reverse }) => {
-    const div = document.createElement('div');
-    div.className = `case-study ${reverse ? 'reverse' : ''}`;
-    div.innerHTML = `
+    caseStudies.forEach(({ title, description1, description2, img, reverse }) => {
+      const div = document.createElement('div');
+      div.className = `case-study ${reverse ? 'reverse' : ''}`;
+      div.innerHTML = `
       <div class="case-image">
         <img src="${img}" alt="${title}" />
       </div>
@@ -696,9 +721,9 @@
         </button>
       </div>
     `;
-    container.appendChild(div);
-  });
-</script>
+      container.appendChild(div);
+    });
+  </script>
 
 
 
@@ -974,51 +999,51 @@
 
 
 
-<div class="blog-section-outer-container">
-  <div class="blog-section-inner-container">
+  <div class="blog-section-outer-container">
+    <div class="blog-section-inner-container">
       <div class="blog-section-header">
-          <div class="blog-section-left-div">
-              <h3 class="primary-heading">Our Insights</h3>
-              <p class="secondary-heading">Want to work with some of the best global talent and build software
-                  used by all the companies you know and love?</p>
-          </div>
-          <a href="/blog.html"><button class="viewAllBtnKcom">View More</button></a>
+        <div class="blog-section-left-div">
+          <h3 class="primary-heading">Our Insights</h3>
+          <p class="secondary-heading">Want to work with some of the best global talent and build software
+            used by all the companies you know and love?</p>
+        </div>
+        <a href="/blog.html"><button class="viewAllBtnKcom">View More</button></a>
       </div>
 
       <div class="blog-section-blogs-wrapper" id="blogsWrapper">
-          <!-- Blogs will be injected here -->
+        <!-- Blogs will be injected here -->
       </div>
+    </div>
   </div>
-</div>
 
-<script>
-  const baseUrl = "https://backblog.kusheldigi.com";
+  <script>
+    const baseUrl = "https://backblog.kusheldigi.com";
 
-  const fetchAllBlog = async () => {
+    const fetchAllBlog = async () => {
       try {
-          const response = await fetch(`${baseUrl}/api/v1/auth/getAllBlog`);
-          const data = await response.json();
-          if (response.ok) {
-              const blogs = data.blogs.filter(blog => blog.domain === "kusheldigi.com");
-              renderBlogs(blogs.slice(0, 4));
-          } else {
-              console.error("Failed to fetch blogs:", data?.message);
-          }
+        const response = await fetch(`${baseUrl}/api/v1/auth/getAllBlog`);
+        const data = await response.json();
+        if (response.ok) {
+          const blogs = data.blogs.filter(blog => blog.domain === "kusheldigi.com");
+          renderBlogs(blogs.slice(0, 4));
+        } else {
+          console.error("Failed to fetch blogs:", data?.message);
+        }
       } catch (error) {
-          console.error("Error fetching blogs:", error);
+        console.error("Error fetching blogs:", error);
       }
-  };
+    };
 
-  const renderBlogs = (blogs) => {
+    const renderBlogs = (blogs) => {
       const wrapper = document.getElementById("blogsWrapper");
       wrapper.innerHTML = "";
 
       blogs.forEach(blog => {
-          const blogLink = document.createElement("a");
-          blogLink.href = `blogDetails.html?id=${blog._id}`;
-          blogLink.className = "blog-section-blog";
+        const blogLink = document.createElement("a");
+        blogLink.href = `blogDetails.html?id=${blog._id}`;
+        blogLink.className = "blog-section-blog";
 
-          blogLink.innerHTML = `
+        blogLink.innerHTML = `
         <img src="${blog.images}" alt="blog image" class="blog-section-blog-image" />
         <div class="blog-section-content">
           <h3 class="blog-section-blog-title">${blog.title}</h3>
@@ -1027,20 +1052,20 @@
             <div class="blog-section-blog-autorname">
               <span class="blog-section-author">${blog.author}</span>
               <span class="blog-section-date">${new Date(blog.date).toLocaleDateString("en-GB", {
-              day: "numeric",
-              month: "long",
-              year: "numeric"
-          })}</span>
+          day: "numeric",
+          month: "long",
+          year: "numeric"
+        })}</span>
             </div>
           </div>
         </div>
       `;
-          wrapper.appendChild(blogLink);
+        wrapper.appendChild(blogLink);
       });
-  };
+    };
 
-  document.addEventListener("DOMContentLoaded", fetchAllBlog);
-</script>
+    document.addEventListener("DOMContentLoaded", fetchAllBlog);
+  </script>
 
 
   <section class="faq-section" id="faq-section">
@@ -1286,7 +1311,7 @@
       event.preventDefault();
 
       let formSection = document.getElementById("form-section");
-      let headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 100; 
+      let headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 100;
 
       let targetPosition = formSection.getBoundingClientRect().top + window.scrollY - headerHeight;
 
@@ -1296,13 +1321,13 @@
       });
     });
   </script>
-  
+
   <script>
     document.getElementById("secondary-btnssBan3").addEventListener("click", function (event) {
       event.preventDefault();
 
       let formSection = document.getElementById("form-section");
-      let headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 100; 
+      let headerHeight = document.querySelector("header") ? document.querySelector("header").offsetHeight : 100;
 
       let targetPosition = formSection.getBoundingClientRect().top + window.scrollY - headerHeight;
 
