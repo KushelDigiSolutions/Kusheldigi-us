@@ -6,8 +6,9 @@
 }
 
 body {
-    margin: 0;
     padding: 0;
+    margin: 0;
+
 }
 
 .case-study-container {
@@ -268,7 +269,7 @@ body {
 .mmcainBcoSe {
     max-width: 1740px;
     margin: auto;
-    padding: 40px 50px;
+    padding: 40px 100px;
 }
 
 .mainBcoSe {
@@ -518,101 +519,85 @@ body {
 
 }
 
-@media (max-width:769px) {
-    .text-contentBccom {
-        width: 100%;
-        max-width: 100%;
-        padding: 20px;
-    }
-
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
     .ResultBccom {
-        padding: 40px 0px 0px 0px !important;
+      padding: 40px 20px;
     }
-
-    .subtitleBccom {
-        text-align: center;
-    }
-
-    .titlebccom {
-        width: 100%;
-        text-align: center;
-        font-size: 26px;
-        line-height: 26px;
-    }
-
-    .features-gridbbcom {
-        position: initial;
-        width: 100%;
-        padding: 5px;
-    }
-
-    .descriptionbbcom {
-        text-align: center;
-        width: 100% !important;
-    }
-
-    .image-containerbbcom {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .feature-imagebbcom{
-        width: 97%;
-    }
-}
-
-@media (max-width:450px) {
+  
     .text-contentBccom {
-        width: 100%;
-        max-width: 100%;
-        padding: 20px 20px;
+      width: 100%;
+      max-width: 100%;
+      padding: 20px;
     }
-
-    .ResultBccom {
-        padding: 10px;
-    }
-
-    .subtitleBccom {
-        text-align: center;
-    }
-
-    .titlebccom {
-        width: 100%;
-        text-align: center;
-        font-size: 21px;
-    }
-
-    .features-gridbbcom {
-        position: initial;
-        width: 100%;
-        padding: 5px;
-    }
-
+  
+    .subtitleBccom,
+    .titlebccom,
     .descriptionbbcom {
-        text-align: center;
-        width: 100% !important;
-        font-size: 14px;
-        padding: 5px;
-
+      text-align: center;
     }
-
-    .feature-itembbcom p {
-        font-size: 14px;
-    }
-
-    .feature-imagebbcom{
-        width: 94%;
-    }
-
-
-}
-
-@media(max-width:450px) {
+  
     .features-containerbbcom {
-        gap: 30px !important;
+      flex-direction: column;
+      gap: 30px !important;
+      height: auto;
     }
-}
+  
+    .features-gridbbcom {
+      width: 100%;
+      padding: 20px;
+      position: static;
+      height: auto;
+    }
+  
+    .image-containerbbcom {
+      margin-left: 0;
+      justify-content: center;
+    }
+  
+    .feature-imagebbcom {
+      width: 100%;
+      left: 0;
+      padding: 0;
+    }
+  }
+  
+  /* Mobile (max-width: 450px) */
+  @media (max-width: 450px) {
+    .ResultBccom {
+      padding: 20px 10px;
+    }
+  
+    .text-contentBccom {
+      padding: 20px 10px;
+    }
+  
+    .titlebccom {
+      font-size: 21px;
+      line-height: 26px;
+    }
+  
+    .descriptionbbcom {
+      font-size: 14px;
+      padding: 5px;
+    }
+  
+    .feature-itembbcom p {
+      font-size: 14px;
+    }
+  
+    .feature-imagebbcom {
+      width: 100%;
+      padding: 16px;
+      border-radius: 20px;
+    }
+  
+    .features-gridbbcom {
+      grid-template-columns: 1fr;
+      padding: 10px;
+    }
+  }
+  
 
 
 
@@ -1338,7 +1323,7 @@ body {
 }
 
 .agile11phase {
-    right: -96px !important;
+    right: -139px !important;
 }
 
 .first-copmpany {
@@ -1694,6 +1679,9 @@ body {
         font-size: 1.1rem;
     }
 }
+
+
+
 
 
 
@@ -2115,7 +2103,7 @@ body {
 .big-outer-services-container {
     max-width: 1720px;
     margin: 0 auto;
-    padding: 40px 90px;
+    padding: 40px 100px;
 }
 
 .big-services-heading {
@@ -2248,7 +2236,7 @@ body {
 
 /* Inner Flex Container */
 .big-feature-inner-container {
-    padding: 40px 95px;
+    padding: 40px 100px;
     display: flex;
     flex-wrap: wrap;
     gap: 25px;

@@ -7,10 +7,10 @@
 
 
 /* Basic Dropdown Styling */
- ul{
+ul {
   margin: 0;
   padding: 0;
- }
+}
 
 .dropdown {
   list-style: none !important;
@@ -18,26 +18,30 @@
   display: inline-block;
 }
 
-.dropdown > a {
+/* Base link style */
+.dropdown>a {
   padding: 10px 15px;
   background-color: #007bff;
   color: white;
   text-decoration: none;
   display: inline-block;
+  border-radius: 5px;
 }
 
+/* Dropdown content styles */
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #fff;
-  min-width: 210px;
-  border-radius: 5px;
-  /* box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3); */
+  min-width: 285px;
+  box-shadow: 0 45px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
   z-index: 1000;
-  padding: 32px 0 0 0;
-  left: -11px;
-  list-style: none !important;
-
+  padding: 25px 0 0;
+  left:-18px;
+  top: 100%;
+  list-style: none;
+  overflow: hidden;
 }
 
 .dropdown:hover .dropdown-content {
@@ -45,35 +49,24 @@
 }
 
 .dropdown-content li {
-  padding: 10px 15px;
+  padding: 8px 10px;
   position: relative;
+  background: #fff;
 }
 
 .dropdown-content li a {
   text-decoration: none;
   color: #333;
-  text-align: left;
-}
-
-.dropdown-content li a:hover{
-  color: #007bff;
-
-}
-
-/* Headless submenu */
-.dropdown-submenu {
-  display: none;
-  /* margin-left: 10px;
-  padding-left: 10px;*/
-  border-left: 2px solid #e7dddd;
-  width: 234px;
-  list-style: none !important;
-  
-}
-
-.dropdown-sub.open .dropdown-submenu {
   display: block;
-  /* box-shadow: 0 10px 16px rgba(0, 0, 0, 0.3); */
+  text-align: left;
+  padding: 5px 10px;
+}
+
+
+.dropdown-content li a:hover {
+  color: #007bff;
+  background-color: #f7f9fc;
+  border-radius: 4px;
 }
 
 .headless-wrapper {
@@ -82,29 +75,118 @@
   align-items: center;
 }
 
+.dropdown-submenu {
+  display: none;
+  /* padding-left: 20px; */
+  border-left: 2px solid #e7dddd;
+  list-style: none;
+  /* margin-top: 10px; */
+  animation: slideDown 0.3s ease-in-out;
+  position: relative;
+  left: 12px;
+  width: 255px;
+}
+
+.dropdown-sub.open .dropdown-submenu {
+  display: block;
+}
+
+/* Toggle button */
 .toggle-btn1 {
   background: none !important;
   border: none !important;
-  font-size: 14px !important;
-  cursor: pointer !important; 
+  font-size: 14px;
+  cursor: pointer;
   width: 30px !important;
-  color: #333333 !;
-  margin: 0;
-  display: inline-block;
+  padding: 0;
+  margin-left: 5px;
+  transition: transform 0.3s ease;
 }
 
 .dropdown-sub.open .toggle-btn1 {
   transform: rotate(180deg);
 }
 
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: #fff;
+    padding: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .dropdown-content li {
+    border-bottom: 1px solid #eee;
+  }
+
+  .dropdown-content li:last-child {
+    border-bottom: none;
+  }
+
+  .dropdown-submenu {
+    padding-left: 15px;
+    border-left: none;
+    background-color: #fafafa;
+  }
+
+  .toggle-btn1 {
+    width: auto;
+    padding: 5px;
+  }
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 
+.sidebar .has-submenu {
+  position: relative;
+}
+
+.dropdown-icon {
+  display: inline-block;
+  margin-left: 45%;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon svg.rotate {
+  transform: rotate(180deg);
+}
+
+.sidebar .submenu {
+  list-style: none;
+  display: none;
+  background: #fff;
+  padding-left: 10px;
+
+}
+
+.sidebar .has-submenu.open>.submenu {
+  display: block;
+}
+
+.has-menu{
+  padding: 6px 0;
+  border-left: 2px solid #e7dddd;
+  position: relative;
+  left: 6px;
+}
 
  
-
-    
-
 
 .navbar_container {
   display: flex;
@@ -145,7 +227,7 @@
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px;
+  left: -290px;
   width: 250px;
   height: 100%;
   background-color: #fff;
@@ -163,11 +245,12 @@
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
   padding: 10px 15px;
   border-radius: 5px;
   transition: background-color 0.3s;
 }
+
 
 .sidebar a:hover {
   background-color: #f1f1f1;

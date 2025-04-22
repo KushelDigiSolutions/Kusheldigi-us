@@ -1261,13 +1261,6 @@ iframe {
 }
 
 
-* {
-  font-family: "Poppins", serif;
-
-}
-
-
-
 
 .first {
   width: 40%;
@@ -1556,106 +1549,6 @@ iframe {
 
 
 
-/* .blog-heading {
-  text-align: center;
-  font-size: 2.5vw;
-  font-weight: 700;
-  margin-bottom: 30px;
-}
-
-
-.container-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 20vh;
-  width: 100%;
-  background-color: #f9f9f9;
-  padding: 40px 20px;
-}
-
-
-.container-1 {
-  display: flex;
-  gap: 20px !important;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1200px !important;
-  padding: 20px !important;
-  width: 100%;
-}
-
-
-.card {
-  width: 360px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: none !important;
-  background-color: transparent !important;
-}
-
-.card img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  border-radius: 16px;
-}
-
-.card-content {
-  padding: 15px;
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.date {
-  font-size: 18px;
-  font-weight: 500;
-  color: rgba(0, 0, 0, 1);
-}
-
-.title {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 5px 0;
-}
-
-.description {
-  font-size: 16px;
-  color: rgba(0, 0, 0, 1);
-  margin-bottom: 10px;
-}
-
-
-.read-more>img {
-  width: 20px;
-  height: 20px;
-  rotate: -40deg;
-}
-
-
-.load-more-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 20px;
-}
-
-.load-more {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 18px;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.load-more:hover {
-  background-color: #0056b3;
-} */
 
 
 
@@ -1666,7 +1559,7 @@ iframe {
 
 .blog-section-inner-container {
   width: 100%;
-  padding: 50px 60px;
+  padding: 50px 95px;
 }
 
 .blog-section-header {
@@ -2272,7 +2165,7 @@ footer {
   /* width: 100%; */
   margin: 0 auto !important;
   gap: 30px;
-  padding: 60px 20px 30px 20px;
+  padding: 60px 43px 30px 43px;
 }
 
 @media (max-width:550px) {
@@ -4013,7 +3906,7 @@ option {
 }
 
 .sidebar {
-  width: 200px !important;
+  width: 270px !important;
 }
 
 .header {
@@ -4075,6 +3968,7 @@ li {
   font-size: 19.5px;
   font-weight: 400 !important;
   line-height: 32px;
+  /* padding: 6px 0 !important; */
 }
 
 a {
@@ -4699,7 +4593,7 @@ input::-webkit-inner-spin-button {
   background: #ffffff;
   padding: 3px 18px;
   border-radius: 10px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   height: fit-content;
 }
 

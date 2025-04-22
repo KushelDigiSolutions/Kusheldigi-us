@@ -583,8 +583,8 @@ img {
 }
 
 .slider img {
-  width: 166px;
-  height: 49px;
+  width: 200px;
+  height: 50px;
   margin-right: 35px;
 }
 
@@ -607,8 +607,8 @@ img {
   }
 
   .slider img {
-    width: 119px;
-    height: 43px;
+    width: 160px;
+    height: 52px;
     margin-right: 20px;
   }
 }
@@ -767,7 +767,7 @@ img {
 .ds25-popup {
   position: absolute;
   top: 0px;
-  left: 380px;
+  left: 450px;
   width: 280px;
   background: white;
   padding: 16px 20px;

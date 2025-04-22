@@ -166,6 +166,7 @@
 }
 
 /* Responsive: tablets and below */
+
 @media (max-width: 992px) {
     .troffi {
         padding: 3rem 2rem;
@@ -898,14 +899,6 @@
         font-size: 13px;
     }
 }
-
-@media (max-width:450px) {
-    .containerEcom {
-        /* width: 100%; */
-    }
-}
-
-
 
 
 

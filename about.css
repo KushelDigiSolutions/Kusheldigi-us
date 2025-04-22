@@ -1015,9 +1015,9 @@
     display: inline-block;
 }
 
-a {
+/* a {
     display: inline-block;
-}
+} */
 
 @media screen and (max-width:1000px) {
     .inner-contact-container {

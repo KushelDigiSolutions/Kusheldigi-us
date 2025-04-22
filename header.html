@@ -25,13 +25,13 @@
           <li>
             <a href="service.html">Services</a>
             <ul class="dropdown-content">
-              <li><a href="ecommerce.html">E-commerce</a></li>
-              <li><a href="bigcommerce.html">Bigcommerce</a></li>
-              <li><a href="custom-ecommerce-devlopment.html">Custom eCommerce</a></li>
+              <li><a href="ecommerce-development.html">E-commerce</a></li>
+              <li><a href="bigcommerce-development.html">Bigcommerce</a></li>
+              <li><a href="custom-ecommerce-development.html">Custom eCommerce</a></li>
 
               <li class="dropdown-sub">
                 <div class="headless-wrapper">
-                  <a href="headless.html">Headless</a>
+                  <a href="headless-ecommerce-development.html">Headless</a>
                   <button class="toggle-btn1" aria-label="Toggle Menu">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                       <path d="M6 9l6 6 6-6" stroke="#333" stroke-width="2" stroke-linecap="round"
@@ -40,7 +40,7 @@
                   </button>
                 </div>
                 <ul class="dropdown-submenu">
-                  <li><a href="shopify-headless.html">Shopify Headless</a></li>
+                  <li><a href="shopify-headless-development.html">Shopify Headless</a></li>
                   <li><a href="bigcommerce-headless.html">Bigcommerce Headless</a></li>
                 </ul>
               </li>
@@ -70,9 +70,6 @@
 
 
   <script>
-    // document.addEventListener("DOMContentLoaded", function () {
-
-    // });
 
     const toggleBtn = document.querySelector(".toggle-btn1");
     const dropdownSub = document.querySelector(".dropdown-sub");
@@ -103,11 +100,40 @@
     sidebar.innerHTML = `
   <a href="/">Home</a>
   <a href="about.html">About Us</a>
-  <a href="service.html">Services</a>
+  <div class="menu-item has-submenu">
+    <a href="service.html" >Services 
+      </a>
+      <span class="dropdown-icon" id="services-toggle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>
+    <ul class="submenu">
+      <li class="has-menu"><a href="ecommerce-development.html">E-commerce</a></li>
+      <li class="has-menu"><a href="bigcommerce-development.html">Bigcommerce</a></li>
+      <li class="has-menu"><a href="custom-ecommerce-development.html">Custom eCommerce</a></li>
+      <li class="has-submenu">
+        <a href="headless-ecommerce-development.html">Headless</a>
+          <span class="dropdown-icon" id="headless-toggle">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M6 9l6 6 6-6" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </span>  
+        <ul class="submenu">
+          <li class="has-menu" ><a href="shopify-headless-development.html">Shopify Headless</a></li>
+          <li class="has-menu" ><a href="bigcommerce-headless.html">Bigcommerce Headless</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
   <a href="blog.html">Blog</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="contact-us.html" class="nav_button descfonts_kkyu">Contact Us</a>
 `;
+
+
+
+
     document.body.appendChild(sidebar);
 
     sidebarToggle.addEventListener("click", () => {
@@ -140,7 +166,23 @@
       }
     });
 
+
+    document.getElementById("services-toggle").addEventListener("click", function (e) {
+      e.preventDefault();
+      const parent = this.closest(".has-submenu");
+      parent.classList.toggle("open");
+      this.querySelector(".dropdown-icon svg").classList.toggle("rotate");
+    });
+
+    document.getElementById("headless-toggle").addEventListener("click", function (e) {
+      e.preventDefault();
+      const parent = this.closest(".has-submenu");
+      parent.classList.toggle("open");
+      this.querySelector(".dropdown-icon svg").classList.toggle("rotate");
+    });
+
   </script>
+
 
 
 

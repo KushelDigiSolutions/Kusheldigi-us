@@ -181,9 +181,11 @@ overflow: hidden;
 
 
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:1200px){
   .inner-contact-container {
     flex-direction: column;
+    padding: 50px 19px;
+
   }
 
   .clients::after {
@@ -209,6 +211,10 @@ overflow: hidden;
 @media screen and (max-width:700px) {
   .clients::after {
     width: 400px;
+  }
+
+  .inner-contact-container{
+    padding: 50px 19px;
   }
 
   .company-images > img {

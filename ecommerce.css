@@ -94,6 +94,8 @@ body {
   .primary-btn:hover {
     background-color: white;
     color: #0c61ff;
+    text-decoration: none;
+
   }
 
   .secondary-btn {
@@ -118,6 +120,8 @@ body {
 
   .secondary-btn:hover .sec-btn {
     color: white;
+    text-decoration: none;
+
   }
 
   .img-containerCo {
@@ -1476,12 +1480,20 @@ body {
     display: none !important;
 }
 
+@media (min-width:901px) and (max-width:1150px){
+    .steps-containercom{
+        padding: 0 20px;
+    }
+}
+
 /* === Tablet (<= 900px) === */
 @media (max-width: 900px) {
     .steps-contentcom {
         flex-direction: column;
         align-items: center;
-        text-align: center;
+        text-align: center; 
+        padding: 20px 40px;
+
     }
 
     .steps-textcom {
@@ -1495,7 +1507,7 @@ body {
     .steps-nav {
         gap: 25px;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-evenly;
     }
 
     .step {
@@ -2735,7 +2747,7 @@ body {
 }
 
 .hrEcommm {
-    margin-top: -27px;
+    margin-top: -11.5px;
 
 }
 
@@ -2760,7 +2772,7 @@ body {
 
 .linkss ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 10px 0px 0px 0px;
     color: #4a4b4d;
     /* gap: 90px; */
@@ -2841,9 +2853,9 @@ body {
 }
 
 
-.imgg-2nd {
+/* .imgg-2nd {
     margin-left: 70px;
-}
+} */
 
 @media(max-width:1150px) {
     .contttent-wrapper {

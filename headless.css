@@ -7,10 +7,6 @@
   box-sizing: border-box;
 }
 
-/* body {
-  margin: 0;
-  padding: 0;
-} */
 
 .headless-commerce {
   background: #d2d2d239;
@@ -26,7 +22,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* flex-wrap: wrap; */
   max-width: 1345px;
   margin: auto;
   width: 100%;
@@ -40,7 +35,6 @@
 .headless-content h4 {
   font-size: 18px;
   font-weight: 700;
-  /* line-height: 53px; */
   color: #0c61ff;
   margin-bottom: 10px;
 }
@@ -144,7 +138,6 @@
 
   .headless-content {
     max-width: 100%;
-    /* margin-bottom: 30px; */
     padding: 10px 0;
   }
 
@@ -239,12 +232,7 @@
 
 
 
-
-
-
-
-
-
+/*------------- CoreSection -----------*/
 
 
 .core-section {
@@ -310,8 +298,6 @@
   transition: 0.3s;
   cursor: pointer;
   /* box-shadow: 10px 25px rgba(0,0,0, 0.08); */
-
-
 }
 
 .principle-boxx.active {
@@ -322,7 +308,7 @@
 }
 
 .principle-boxx:hover {
-  transform: translateY(-5px);
+  transform: translateY(5px);
 
 }
 
@@ -371,7 +357,6 @@
   font-weight: 500;
 }
 
-/* Medium screens (tablets) */
 @media (max-width: 992px) {
 
   .text-content,
@@ -389,7 +374,6 @@
   }
 }
 
-/* Small screens (phones) */
 @media (max-width: 768px) {
   .content-wrapper {
     flex-direction: column;
@@ -416,7 +400,6 @@
   }
 }
 
-/* Very small devices */
 @media (max-width: 480px) {
   .core-section {
     padding: 40px 4vw;
@@ -443,9 +426,7 @@
 
 
 
-
-
-/* BenSection.css */
+/*======= BenSection =========== */
 
 .ben-section {
   background-color: #f8f9fc;
@@ -503,9 +484,6 @@
   margin-top: 10px;
 }
 
-/* ========== Responsive Styles ========== */
-
-/* Tablets */
 @media (max-width: 1024px) {
   .ben-content h2 {
     text-align: center;
@@ -517,7 +495,6 @@
   }
 }
 
-/* Small tablets and large phones */
 @media (max-width: 768px) {
   .ben-content h2 {
     font-size: clamp(22px, 6vw, 30px);
@@ -537,7 +514,6 @@
   }
 }
 
-/* Phones */
 @media (max-width: 480px) {
   .ben-section {
     padding: 30px 20px;
@@ -567,7 +543,6 @@
 /* ========== Basic Section Styles ========== */
 .storefront-section {
   padding: 60px 5vw;
-  /* Changed to vw for fluidity on wider screens */
   background-color: #fff;
   font-family: sans-serif;
 }
@@ -581,7 +556,6 @@
   justify-content: space-between;
 }
 
-/* ========== Left Column with Single Image ========== */
 .storefront-left {
   flex: 1 1 450px;
   display: flex;
@@ -598,7 +572,6 @@
   display: block;
 }
 
-/* ========== Right Column: Text ========== */
 .storefront-right {
   flex: 1 1 500px;
   max-width: 600px;
@@ -619,9 +592,6 @@
   margin: 0;
 }
 
-/* ========== Responsive Media Queries ========== */
-
-/* Tablets */
 @media (max-width: 1024px) {
   .storefront-container {
     justify-content: center;
@@ -632,7 +602,6 @@
   }
 }
 
-/* Small tablets and phones */
 @media (max-width: 768px) {
   .storefront-container {
     flex-direction: column;
@@ -656,7 +625,6 @@
   }
 }
 
-/* Phones */
 @media (max-width: 480px) {
   .storefront-section {
     padding: 40px 20px;
@@ -678,6 +646,10 @@
 
 
 
+
+
+/* ======= Headless PWA Section ======= */
+
 .headless-pwa {
   background-color: white;
   padding: 50px 20px;
@@ -697,7 +669,7 @@
 }
 
 .headless-pwa-bolld {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 20px;
 }
 
@@ -724,15 +696,14 @@
 
 .headless-pwa-tab.active {
   background-color: #fff;
-  color: #6b46c1;
+  color: #0073e6;
   transform: scale(1.05);
 }
 
 .headless-pwa-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  /* margin-top: 40px; */
+  align-items: flex-start;
   padding: 0 33px;
   gap: 20px;
   flex-wrap: wrap;
@@ -768,9 +739,6 @@
   height: 381px;
 }
 
-/* ========== Responsive Breakpoints ========== */
-
-/* Mobile - Small screens */
 @media (max-width: 767px) {
   .headless-pwa-content {
     flex-direction: column;
@@ -806,7 +774,6 @@
   }
 }
 
-/* Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
   .headless-pwa-content {
     flex-direction: column;
@@ -823,7 +790,6 @@
   }
 }
 
-/* Desktop & Large Screens */
 @media (min-width: 1024px) {
   .headless-pwa {
     padding: 70px 50px;
@@ -834,12 +800,10 @@
   }
 
   .headless-pwa-text-section h2 {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 700;
     padding: 33px 0;
   }
-
-
 
   .headless-pwa-content {
     flex-direction: row;
@@ -879,7 +843,6 @@
   text-align: center;
 }
 
-/* Heading */
 .eshka-container h2 {
   font-size: 41px;
   font-weight: 600;
@@ -890,7 +853,6 @@
   margin-bottom: 40px;
 }
 
-/* Features Row */
 .eshka-features-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -899,7 +861,6 @@
   margin-bottom: 40px;
 }
 
-/* Feature Card */
 .eshka-feature-box {
   background-color: #fff;
   border: 1px solid #cbd3e1;
@@ -917,7 +878,6 @@
   border: 1px solid #007bff;
 }
 
-/* Icon */
 .eshka-feature-icon {
   width: 75px;
   height: 60px;
@@ -929,7 +889,6 @@
   display: block;
 }
 
-/* Card Title */
 .eshka-feature-box h3 {
   font-size: 27px;
   font-weight: 700;
@@ -937,7 +896,6 @@
   color: #1c1e21;
 }
 
-/* Card Description */
 .eshka-feature-box p {
   font-size: 18px;
   text-align: left;
@@ -946,7 +904,6 @@
   margin: 0;
 }
 
-/* CTA Button */
 .eshka-cta-wrapper {
   margin-top: 20px;
 }
@@ -968,7 +925,6 @@
   color: #fff;
 }
 
-/* ========== RESPONSIVE MEDIA QUERIES ========== */
 @media (max-width: 992px) {
   .eshka-container h2 {
     font-size: 28px;
@@ -1037,6 +993,8 @@
 
 
 
+/* ========= Tayp Section Styles ======*/
+
 .tayp {
   max-width: 1300px;
   margin: auto;
@@ -1082,6 +1040,13 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.step-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #f9f9f9;
 }
 
 .step-card img {
@@ -1128,7 +1093,6 @@
   color: white;
 }
 
-/* ================== Responsive Media Queries ================== */
 @media (max-width: 1024px) {
   .step-section {
     padding: 40px 30px;
@@ -1205,6 +1169,7 @@
 
 
 
+/* ======= Why Choose Section ======*/
 
 
 .online-why-choose-section {
@@ -1248,7 +1213,7 @@
 }
 
 .online-why-choose-card {
-  background: white;  
+  background: white;
   padding: 24px 35px 21px 63px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -1288,12 +1253,10 @@
   width: 24px;
 }
 
-/* Blue icon styling */
 .online-icon-blue {
   background: #2563eb;
 }
 
-/* ===================== Responsive Media Queries ===================== */
 @media (max-width: 1024px) {
   .online-why-choose-section {
     padding: 50px 30px;
@@ -1356,6 +1319,8 @@
 
 
 
+
+/* ======= Developmental Section =======*/
 
 .developmental {
   text-align: center;
@@ -1455,7 +1420,6 @@
   flex-shrink: 0;
 }
 
-/* ========== Responsive Media Queries ========== */
 @media (max-width: 1024px) {
   .developmental {
     padding: 20px 50px;
@@ -1518,13 +1482,6 @@
 
 
 
-
-
-
-
-
-
-
 /* Main Section Padding */
 
 
@@ -1559,34 +1516,34 @@
   list-style-position: inside;
 }
 
-.update-li{
-  color: black!important;
-  font-size: 18px!important;
+.update-li {
+  color: black !important;
+  font-size: 18px !important;
 }
 
- 
+
 .update-container {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
- 
+
 .update-section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   gap: 80px;
   max-width: 1380px;
-  margin: auto; 
+  margin: auto;
   padding: 10px 10px;
-  border-radius: 12px; 
+  border-radius: 12px;
   transition: all 0.3s ease;
 }
- 
+
 .update-section.reverse {
   flex-direction: row-reverse;
 }
- 
+
 .update-text {
   flex: 1;
   max-width: 628px;
@@ -1605,16 +1562,16 @@
   padding: 20px 0px 0px 0px;
   color: #111;
   line-height: 1.6;
-  white-space: pre-line; 
+  white-space: pre-line;
 }
- 
+
 .update-card {
   background: #fff;
   border-radius: 10px;
   padding: 10px;
   box-shadow: 0px 6px 14px rgba(0, 0, 0, 0.08);
-  max-width: 500px; 
-  width: 100%; 
+  max-width: 500px;
+  width: 100%;
 }
 
 .product-image {
@@ -1624,8 +1581,6 @@
   display: block;
 }
 
-
-/* Responsive Styles */
 @media (max-width: 768px) {
 
   .update-section,
@@ -1643,7 +1598,7 @@
 
   .update-text h2 {
     font-size: 22px;
-    font-weight: 500;
+    font-weight: 700;
   }
 
   .updatee-section {
@@ -1666,8 +1621,7 @@
 
 @media (max-width:480px) {
   .headless-intro h3 {
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 22px; 
   }
 
 }
@@ -1695,7 +1649,7 @@
 
 
 
-
+/* ===== Full Cycle Section ====*/
 
 
 
@@ -1769,7 +1723,7 @@
   background-color: #f8f9fa;
 } */
 
-/* Hide default Swiper buttons */
+
 .swiper-button-prev,
 .swiper-button-next {
   display: none !important;
@@ -1779,7 +1733,6 @@
   padding-bottom: 20px;
 }
 
-/* Card styles */
 .service-card {
   background-color: #fff;
   border-radius: 16px;
@@ -1834,7 +1787,6 @@
   object-fit: contain;
 }
 
-/* ========== RESPONSIVE STYLES ========== */
 
 @media screen and (max-width: 1024px) {
   .full-cycle-container {
@@ -1924,7 +1876,7 @@
 
 
 
-
+/* ===== Moniter Commerce Section =====*/
 
 
 
@@ -2002,7 +1954,6 @@
   align-items: center;
 }
 
-/* Icons */
 .moniter-icon {
   display: inline-flex;
   align-items: center;
@@ -2024,7 +1975,6 @@
   background-color: #2ecc71;
 }
 
-/* ---------- Responsive Section Below ---------- */
 
 @media (max-width: 1024px) {
   .moniter-comparison-container {
@@ -2114,7 +2064,7 @@
 
 
 
-
+/* ====== Process Section =====*/
 
 
 
@@ -2237,9 +2187,7 @@
   }
 }
 
-/* ========= Responsive Styles ========= */
 
-/* Tablets and below */
 @media screen and (max-width: 1024px) {
   .process-container {
     width: 90%;
@@ -2262,7 +2210,6 @@
   }
 }
 
-/* Mobile (768px and below) */
 @media screen and (max-width: 768px) {
   .process-section {
     padding: 20px 16px;
@@ -2303,7 +2250,6 @@
   }
 }
 
-/* Extra Small (400px and below) */
 @media screen and (max-width: 400px) {
   .process-title {
     font-size: 42px;
@@ -2375,7 +2321,6 @@
   white-space: nowrap;
 }
 
-/* ✅ Testimonial Section */
 .testimonial {
   padding: 4rem 1.5rem;
   max-width: 1000px;
@@ -2435,7 +2380,6 @@
   color: #777;
 }
 
-/* ========== Responsive Styles ========== */
 
 @media (max-width: 1024px) {
   .testimonial-text {
@@ -2531,7 +2475,7 @@
 
 
 
-
+/* ==== Samsung Section =====*/
 
 .samsung-container {
   background-color: #f8fcf9;
@@ -2548,7 +2492,6 @@
   gap: 40px;
 }
 
-/* Tablet & above: side-by-side layout */
 @media (min-width: 768px) {
   .samsung-wrapper {
     flex-direction: row;
@@ -2593,7 +2536,6 @@
   border-radius: 8px;
 }
 
-/* ✅ Tablet screens */
 @media (max-width: 1024px) {
   .samsung-heading {
     font-size: 38px;
@@ -2608,7 +2550,6 @@
   }
 }
 
-/* ✅ Mobile screens */
 @media (max-width: 768px) {
   .samsung-heading {
     font-size: 32px;
@@ -2625,7 +2566,6 @@
   }
 }
 
-/* ✅ Extra small screens */
 @media (max-width: 480px) {
   .samsung-heading {
     font-size: 26px;
@@ -2644,7 +2584,7 @@
 
 
 
-
+/* ===== Samsung 2 Section =====*/
 
 
 .samsung2-section {
@@ -2662,7 +2602,6 @@
   gap: 40px;
 }
 
-/* Desktop & Tablet layout */
 @media (min-width: 768px) {
   .samsung2-wrapper {
     flex-direction: row;
@@ -2728,7 +2667,6 @@
   border: 1px solid #0c61ff;
 }
 
-/* ✅ Medium screens (tablets) */
 @media (max-width: 1024px) {
   .samsung2-title {
     font-size: 40px;
@@ -2743,7 +2681,6 @@
   }
 }
 
-/* ✅ Small screens (mobile) */
 @media (max-width: 768px) {
   .samsung2-title {
     font-size: 32px;
@@ -2764,7 +2701,6 @@
   }
 }
 
-/* ✅ Extra small screens */
 @media (max-width: 480px) {
   .samsung2-title {
     font-size: 26px;
@@ -2812,7 +2748,6 @@
   }
 }
 
-/* FAQ Container */
 .faq-container {
   background-color: #d2dffb8a;
   display: grid;
@@ -2822,12 +2757,11 @@
   gap: 15px;
 }
 
-/* FAQ Item */
 .faq-item {
   background: #ffffff;
   padding: 3px 18px 17px;
   border-radius: 10px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   height: fit-content;
 }
 
@@ -2845,11 +2779,6 @@
   height: 60px !important;
 }
 
-
-
-
-
-/* Toggle Button */
 .toggle-btn {
   width: 35px;
   height: 35px;
@@ -2863,7 +2792,7 @@
   text-align: center;
   cursor: pointer;
   flex-shrink: 0;
-  margin-top: 0rem !important;
+  margin-top: 1rem !important;
 
 }
 
@@ -2877,9 +2806,6 @@
   }
 }
 
-
-
-
 .faq-question h3 {
   font-size: 17px;
   font-weight: 700;
@@ -2890,15 +2816,12 @@
 
 .faq-item.expanded .toggle-btn {
   color: rgb(215, 215, 222);
-
 }
 
 
 .faq-item:not(.expanded) .toggle-btn {
   background-color: #cebbbb;
   color: rgb(59, 54, 54);
-
-
 }
 
 
@@ -2917,7 +2840,7 @@
 .faq-item.expanded .faq-answer {
   max-height: 200px;
   opacity: 1;
-  margin-top: 1rem;
+  margin-top: 5px !important;
   transition: max-height 0.4s ease-in, opacity 0.2s ease-in 0.2s;
 }
 
@@ -2966,6 +2889,7 @@
 
 
 
+/*====== Blog Section =====*/
 
 .blog-section-outer-container {
   max-width: 1720px;
@@ -3078,7 +3002,6 @@
   display: none;
 }
 
-/* Tablet View */
 @media screen and (max-width: 1024px) {
   .blog-section-blogs-wrapper {
     grid-template-columns: repeat(2, 1fr);
@@ -3107,7 +3030,6 @@
   }
 }
 
-/* Mobile View */
 @media screen and (max-width: 600px) {
   .blog-section-blogs-wrapper {
     grid-template-columns: 1fr;
@@ -3136,6 +3058,8 @@
 
 
 
+
+/* ======= Sehduless Section =======*/
 
 .sehduless {
   background-color: #eaf6fc;
@@ -3231,7 +3155,6 @@
   margin: 0;
 }
 
-/* Responsive Design */
 @media (max-width: 991px) {
   .sehduless-wrapper {
     flex-direction: column;
@@ -3292,8 +3215,9 @@
 
 
 
- /* Section Background */
- .services-section {
+/* ===== Services Section ======*/
+
+.services-section {
   /* background: linear-gradient(to bottom, #ff3c00 0%, #ffffff 45%); */
   /* padding: 100px 20px; */
   display: flex;
@@ -3315,7 +3239,6 @@
   background-position: center;
 }
 
-/* Typography */
 .subheading {
   color: #222;
   font-size: 31px;
@@ -3394,7 +3317,6 @@
 
 .serv-crd:hover .serv-icon img {
   filter: brightness(0) invert(1);
-  /* makes it white */
 }
 
 .serv-crd-content h3 {
@@ -3410,7 +3332,6 @@
   font-weight: 500;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .services-container {
     padding: 40px 20px;
@@ -3487,15 +3408,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
+/* ====== Audit Section =====*/
 
 
 .ssec--2 {
@@ -3570,7 +3483,6 @@
   text-decoration: none;
 }
 
-/* Responsive Styles */
 @media screen and (max-width: 1024px) {
   .sec--2 {
     flex-direction: column;
@@ -3599,7 +3511,6 @@
   }
 }
 
-/* hyyyyyyyyyy */
 
 @media screen and (max-width: 768px) {
   .sec--2 {
@@ -3628,7 +3539,6 @@
     box-shadow: none !important;
     /* width: 100% !important; */
     padding: 0;
-
     /* padding: 10px 15px 10px 15px; */
   }
 
@@ -3648,9 +3558,6 @@
   }
 }
 
-
-
-/* Image container */
 .audit-img {
   /* max-width: 68%; */
   height: auto;
@@ -3660,16 +3567,11 @@
   overflow: hidden;
 }
 
-/* Content box */
 .con--2-div-contentt {
   width: 50%;
   min-width: 320px;
   text-align: left;
 }
-
-
-
-
 
 .btn-container {
   text-align: center;
