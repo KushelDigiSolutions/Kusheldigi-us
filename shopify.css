@@ -39,208 +39,216 @@
 
 
 .troffi {
-    position: relative;
-    background: linear-gradient(90deg, hsla(0, 0%, 100%, .59), rgba(0, 225, 248, 0)), url(https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744647125/Shopify-Headless-Commerce-Development-Services_zwleoj.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100%;
-    background-blend-mode: overlay;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    padding: 124px 20px 50px 80px;
-    max-width: 1720px;
-    margin: auto;
-    overflow: hidden;
-    height: 625px;
-    width: 100%;
-    box-sizing: border-box;
+  position: relative;
+  background: linear-gradient(to right, rgb(255 255 255 / 59%), rgb(0 225 248 / 0%)),
+              url('https://res.cloudinary.com/dbcmdtr3r/image/upload/v1744647125/Shopify-Headless-Commerce-Development-Services_zwleoj.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  background-blend-mode: overlay;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2px 0px 44px 58px;
+  max-width: 1720px;
+  margin: 0 auto;
+  overflow: hidden;
+  min-height: 650px;
+}
+
+.trofff {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 57px 0px 0px 46px;
+  /* flex-wrap: wrap; */
+  gap: 2rem;
 }
 
 .troffi-content {
-    z-index: 2;
-    max-width: 640px;
+  z-index: 2;
+  max-width: 640px;
 }
 
 .troffi-breadcrumb {
-    font-size: 14px;
-    margin-bottom: 1rem;
-    color: #ffffffcc;
+  font-size: 14px;
+  margin-bottom: 1rem;
+  color: #ffffffcc;
 }
 
 .troffi-breadcrumb span {
-    font-weight: bold;
-    color: #fff;
+  font-weight: bold;
+  color: #fff;
 }
 
 .troffi-heading {
-    font-size: 52px;
-    font-weight: 800;
-    color: #000000c9;
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    word-wrap: break-word;
+  font-size: 52px;
+  font-weight: 800;
+  color: #000000c9;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  word-wrap: break-word;
 }
 
 .troffi-description {
-    font-size: 1.125rem;
-    color: #000000c9;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    word-wrap: break-word;
+  font-size: 1.125rem;
+  color: #000000c9;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  word-wrap: break-word;
 }
 
 .troffi-button {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: transform 0.3s ease;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s ease;
 }
-
- 
 
 .buttons {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
-  
+
 .primary-btn,
 .secondary-btn {
-    padding: 15px 45px;
-    font-size: 1rem;
-    border-radius: 39px;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
+  padding: 15px 45px;
+  font-size: 1rem;
+  border-radius: 39px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
 }
-  
+
 .primary-btn {
-    background: #fff;
-    border: 1px solid #0c61ff;
-    color: #0c61ff;
+  background: #fff;
+  border: 1px solid #0c61ff;
+  color: #0c61ff;
 }
-  
+
 .primary-btn:hover {
-    background: #0c61ff;
-    color: #fff;
+  background: #0c61ff;
+  color: #fff;
 }
-  
+
 .secondary-btn {
-    background: #fff;
-    color: #0c61ff;
-    padding: 16px 56px;
-    font-weight: 500;
-    border: 1px solid #0c61ff;
+  background: #fff;
+  color: #0c61ff;
+  padding: 16px 56px;
+  font-weight: 500;
+  border: 1px solid #0c61ff;
 }
-  
+
 .secondary-btn:hover {
-    background: #0c61ff;
-    color: #fff;
+  background: #0c61ff;
+  color: #fff;
 }
 
 .troffi-image {
-    position: absolute;
-    top: 130px;
-    right: 0px;
-    height: 58%;
-    max-width: 27%;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    pointer-events: none;
+  max-width: 44%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  margin-top: 2rem;
 }
 
 .troffi-image img {
-  height: 100%;
-  min-height: 486px;
   width: 100%;
-  min-width: 673px;
+  height: auto;
+  min-height: 400px;
+  min-width: 420px;
+  object-fit: contain;
 }
 
-/* Responsive: tablets and below */
-
+/* ✅ Tablets and Below */
 @media (max-width: 992px) {
-    .troffi {
-        padding: 3rem 2rem;
-        flex-direction: column;
-        height: auto;
-    }
+  .trofff {
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+    padding: 3rem 1.5rem;
+  }
 
-    .troffi-image {
-        position: static;
-        height: auto;
-        max-width: 100%;
-        margin-top: 2rem;
-        justify-content: center;
-    }
+  .troffi{
+    padding: 20px 40px;
+  }
 
-    .troffi-image img {
-        height: auto;
-        width: 100%;
-        object-fit: contain;
-        min-height: auto;
-        min-width: auto;
-    }
+  .troffi-content {
+    max-width: 100%;
+  }
 
-    .troffi-heading {
-        font-size: calc(1.8rem + 1vw);
-        text-align: center;
+  .troffi-heading {
+    font-size: 3rem;
+  }
 
-    }
+  .troffi-description {
+    font-size: 1rem;
+  }
 
-    .troffi-description {
-        font-size: calc(0.95rem + 0.3vw);
-        text-align: center;
+  .troffi-image {
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
 
-    }
+  .troffi-image img {
+    min-width: auto;
+    min-height: 300px;
+  }
+
+  .troffi-button{
+    display: block;
+  }
 }
 
-/* Extra small devices */
-@media (max-width: 480px) {
-    .troffi {
-        padding: 2rem 1rem;
-    }
+/* ✅ Mobile */
+@media (max-width: 576px) {
+  .troffi , .trofff{
+    padding: 2rem 1rem;
+  }
 
-    .troffi-heading {
-        font-size: 1.8rem;
-    }
+  .troffi-heading {
+    font-size: 1.6rem;
+  }
 
-    .troffi-description {
-        font-size: 0.95rem;
-        text-align: center;
-    }
+  .troffi-description {
+    font-size: 0.95rem;
+  }
 
-    .troffi-button {
-        font-size: 1rem;
-    }
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
 
-    .troffi-button .arrow {
-        font-size: 1.2rem;
-    }
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+  }
 
-    .buttons {
-        /* flex-direction: column; */
-        gap: 10px;
-    }
 
-    .primary-btn,
-    .secondary-btn {
-        width: 100%;
-        padding: 14px 0;
-        text-align: center;
-    }
+  .troffi-button{
+    display: flex;
+  }
 
-    .troffi-image {
-        display: none;
-    }
+  /* .troffi-image {
+    display: none;
+  } */
+}
+
+@media (min-width:310px) and (max-width:450px){
+  .troffi-button{
+    display: grid;
+  }
 }
 
 
@@ -2320,7 +2328,7 @@
     text-align: center;
     cursor: pointer;
     flex-shrink: 0;
-    margin-top: 0rem !important;
+    margin-top: 1rem !important;
   
   }
   
@@ -2374,7 +2382,7 @@
   .faq-item.expanded .faq-answer {
     max-height: 200px;
     opacity: 1;
-    margin-top: 1rem;
+    margin-top: 0rem !important;
     transition: max-height 0.3s ease-in, opacity 0.2s ease-in 0.2s;
   }
   

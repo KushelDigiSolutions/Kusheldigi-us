@@ -4736,6 +4736,7 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width:1000px) {
   .inner-contact-container {
     flex-direction: column;
+    padding: 40px 20px;
   }
 
   .clients::after {

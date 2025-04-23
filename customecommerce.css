@@ -626,7 +626,7 @@ body {
     flex: 1 1 300px;
     background: white;
     border-radius: 8px;
-    overflow: hidden;
+    /* overflow: hidden; */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
@@ -649,6 +649,7 @@ body {
     color: #111;
     font-weight: 700 !important;
     border-left: 4px solid #0c61ff;
+    border-radius: 8px;
 }
 
 .expertise-right {
