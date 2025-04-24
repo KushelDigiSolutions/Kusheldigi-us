@@ -4,6 +4,7 @@
 
   box-sizing: border-box;
   font-family: Wix Madefor Display;
+  margin: 0;
 }
 
 body {
@@ -17,7 +18,7 @@ body {
 
 .case-studies-wrapper {
   width: 100%;
-  padding: 80px 20px;
+  padding: 30px 70px 65px 70px;
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -30,9 +31,8 @@ body {
 }
 
 .case-head {
+  font-size: 48px;
   text-align: center;
-  font-size: 58px;
-  margin: 0;
 }
 
 .case-study {
@@ -101,6 +101,22 @@ body {
   margin-bottom: 10px;
 }
 
+.cas3-head{
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.case-list {
+  list-style-position: inside;
+  padding: 15px 0 0 0;
+}
+
+.case-listss {
+  font-size: 16.5px;
+  font-weight: 500 !important;
+  line-height: 32px;
+}
+
 .view-project-btn {
   display: inline-flex;
   align-items: center;
@@ -163,7 +179,7 @@ body {
     justify-content: center;
   }
 
-  .case-head{
+  .case-head {
     font-size: 40px;
   }
 }
