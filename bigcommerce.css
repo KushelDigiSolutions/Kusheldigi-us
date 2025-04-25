@@ -177,7 +177,7 @@ body {
 
     .big-card-heading {
         display: block;
-        font-size: 1.9rem;
+        font-size: 2.6rem;
         margin-bottom: 20px;
         text-align: center;
     }
@@ -823,6 +823,7 @@ body {
     color: #000;
     font-size: 2.7rem;
     font-weight: 700;
+    padding: 0 0 25px;
 }
 
 .progress-sm-heading {
@@ -1370,8 +1371,15 @@ body {
     }
 
     .progress-sm-heading {
-        max-width: 90% !important;
+        max-width: 100% !important;
         text-align: center !important;
+        font-size: 18px;
+        padding-top: 17px;
+    }
+
+    .progress-heading{
+        text-align: center;
+    font-size: 29px;
     }
 }
 

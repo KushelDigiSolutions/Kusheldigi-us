@@ -185,6 +185,14 @@ body {
 }
 
 @media (max-width: 480px) {
+  .case-studies-wrapper{
+    padding: 50px 20px;
+  }
+
+  .case-head{
+    font-size: 30px;
+  }
+
   .case-content h2 {
     font-size: 22px;
   }
