@@ -2329,4 +2329,149 @@ body {
 
 
 
+/* ======= Why Choose Section ======*/
 
+
+.online-why-choose-section {
+  text-align: center;
+  padding: 60px 79px;
+  max-width: 1720px;
+  margin: 0 auto;
+}
+
+.subset {
+  max-width: 1348px;
+  margin: auto;
+}
+
+.online-why-choose-title {
+  font-size: 35px;
+  padding: 0px 0px 23px 12px;
+  text-align: center;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+.online-why-choose-subtitle {
+  font-size: 19px;
+  color: #4a5568;
+  padding: 0px 0px 0px 12px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+}
+
+.online-why-choose-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 80px;
+  margin-top: 40px;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.online-why-choose-card {
+  background: white;
+  padding: 24px 35px 21px 63px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  position: relative;
+  border: 2px solid #2563eb;
+}
+
+.online-why-choose-card h3 {
+  font-size: 25px;
+  line-height: 25px;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.online-why-choose-card p {
+  font-size: 16px;
+  color: #4a5568;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.online-icon-wrapper {
+  position: absolute;
+  top: 44px;
+  left: -24px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.online-icon-wrapper img {
+  width: 24px;
+}
+
+.online-icon-blue {
+  background: #2563eb;
+}
+
+@media (max-width: 1024px) {
+  .online-why-choose-section {
+    padding: 50px 30px;
+  }
+
+  .online-why-choose-cards {
+    gap: 30px 40px;
+  }
+
+  .online-why-choose-card {
+    padding: 22px 30px 22px 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .online-why-choose-cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .online-why-choose-title {
+    font-size: 28px;
+  }
+
+  .online-why-choose-subtitle {
+    font-size: 16px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .online-why-choose-section {
+    padding: 40px 20px;
+  }
+
+  .online-why-choose-card {
+    padding: 18px 26px 19px 50px;
+  }
+
+  .online-why-choose-card h3 {
+    font-size: 20px;
+  }
+
+  .online-why-choose-card p {
+    font-size: 14px;
+  }
+
+  .online-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    top: 62px;
+    left: -17px;
+  }
+
+  .online-icon-wrapper img {
+    width: 20px;
+  }
+}
