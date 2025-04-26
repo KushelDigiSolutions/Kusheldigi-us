@@ -4846,6 +4846,7 @@ input::-webkit-inner-spin-button {
 
   .popup-companies {
     width: 265px;
+    height: auto;
   }
 
   .cross-icon {
@@ -4872,6 +4873,7 @@ input::-webkit-inner-spin-button {
   .contact-container>.container {
     display: block;
   }
+  
 
   .left {
     width: 95% !important;
@@ -4880,6 +4882,7 @@ input::-webkit-inner-spin-button {
 
   .company-images>img {
     width: 270px;
+    height: auto;
     margin: 11px auto 33px;
     display: inline-block;
   }

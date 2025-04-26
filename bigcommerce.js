@@ -153,7 +153,7 @@ const caseStudies = [
           bigImg3 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744104912/certified-bifgcommerce_fmyqvz.png'
       }
   ]  },
-  { img: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829269/lovely-4_sgdj3e.jpg', smHeading: 'Certified BigCommerce Agency', smallBtnText: "View Case Study", smallImg: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743829268/lovely-4-2_ffzapa.jpg', heading: "Expert BigCommerce Development Solutions for Scalable Growth",bigCommerce : [
+  { img: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744291962/four-oaks-farm_ku70ia.png', smHeading: 'Certified BigCommerce Agency', smallBtnText: "View Case Study", smallImg: 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744291960/four-oaks-farm-circle_umugkf.png', heading: "Expert BigCommerce Development Solutions for Scalable Growth",bigCommerce : [
       {
           bigImg1 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1744104912/bigcommerce_iuneyd.png',
           bigImg2 : 'https://res.cloudinary.com/dd9tagtiw/image/upload/v1743340284/bcb2b-1_onvun7.png',
