@@ -3214,9 +3214,7 @@ body {
 
 
  /* Section Background */
- .services-section {
-    /* background: linear-gradient(to bottom, #ff3c00 0%, #ffffff 45%); */
-    /* padding: 100px 20px; */
+ .services-section { 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -3241,12 +3239,12 @@ body {
     color: #222;
     font-size: 31px;
     font-weight: 700;
-    margin: 0;
-    /* margin-bottom: 16px; */
+    /* margin: 0; */
+    margin-bottom: 10px;
   }
   
   .serv-headss {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bold;
     color: #09409f;
     margin-bottom: 24px;
