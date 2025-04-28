@@ -69,7 +69,7 @@ ul {
   border-radius: 4px;
 }
 
-.headless-wrapper {
+/* .headless-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,8 +77,7 @@ ul {
 
 .dropdown-submenu {
   display: none;
-  list-style: disc;
-  /* border-left: 2px solid #e7dddd; */
+  list-style: disc; 
   position: relative;
   left: 12px;
   width: 275px;
@@ -99,7 +98,53 @@ ul {
 
 .dropdown-sub.open .dropdown-submenu {
   display: block;
+} */
+
+ 
+.headless-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;  
+  justify-content: space-between;
 }
+ 
+.dropdown-submenu {
+  display: none;
+  list-style: disc; 
+  position: relative;
+  left: 12px;
+  width: 275px;
+  animation: slideDown 0.3s ease-in-out; 
+  padding-left: 10px; 
+  margin: 0; 
+
+}
+
+.dropdown-submenu li {
+  margin-left: 15px;
+}
+
+.dropdown-sub:hover .dropdown-submenu {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-submenu .head-itm{
+  font-size: 16px;
+  padding: 0;
+}
+ 
+.headless-wrapper .toggle-btn1 svg {
+  transition: transform 0.3s ease;
+}
+ 
+.dropdown-sub:hover .toggle-btn1 svg {
+  transform: rotate(180deg);
+}
+ 
+
 
 /* Toggle button */
 .toggle-btn1 {
@@ -147,8 +192,7 @@ ul {
     padding: 5px;
   }
 }
-
-/* Animation */
+ 
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -175,6 +219,7 @@ ul {
 
 .dropdown-icon svg.rotate {
   transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }
 
 .sidebar .submenu {
@@ -182,11 +227,11 @@ ul {
   display: none;
   background: #fff;
   padding-left: 10px;
-
 }
 
 .sidebar .has-submenu.open>.submenu {
   display: block;
+  transform: translateY(0);  
 }
 
 .has-menu{
