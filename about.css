@@ -234,11 +234,12 @@
 .raw-8-h1 {
     font-size: 40px;
     text-align: center;
-    font-weight: 100;
+    font-weight: 600;
     color: #15202E;
     max-width: 760px;
     width: 100%;
     margin: 0 auto;
+
 
 }
 
@@ -300,7 +301,7 @@
 }
 
 .raw-8-flex-item h6 {
-    font-weight: 500;
+    font-weight: 600;
     font-size: 22px;
     line-height: 32px;
     margin: 0px !important;
@@ -308,7 +309,7 @@
 }
 
 .raw-8-flex-item p {
-    font-weight: 200;
+    font-weight: 500;
     font-size: 18px;
     width: 100%;
     line-height: 28px;
@@ -905,7 +906,7 @@
     font-size: 20px;
     color: rgba(125, 125, 125, 1);
     width: 90%;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .team-member a {

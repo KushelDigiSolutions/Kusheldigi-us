@@ -322,9 +322,8 @@
 }
 
 .feature-card img {
-  width: 60px;
-  margin: 0 auto 1.2rem;
-  filter: hue-rotate(444deg) saturate(209%);
+  width: 65px;
+  margin: 0 auto 1.2rem; 
 }
 
 .feature-card h3 {
@@ -1064,8 +1063,8 @@
 }
 
 .industry-icon {
-  width: 3rem;
-  height: 3rem;
+  width: 4rem;
+  height: 4rem;
   flex-shrink: 0;
   filter: brightness(0) saturate(100%) invert(28%) sepia(98%) saturate(2850%) hue-rotate(206deg) brightness(103%) contrast(102%);
 }
