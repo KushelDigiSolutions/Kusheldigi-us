@@ -134,6 +134,8 @@ body {
     border: 1px solid #0c61ff;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+    font-weight: 600;
+
 }
 
 .bigcommerce-banner-btn:hover {
@@ -149,6 +151,7 @@ body {
     border: 1px solid #0c61ff;
     color: #0c61ff;
     padding: 13px 20px;
+    font-weight: 600;
 }
 
 .big-transparent-btn:hover {
@@ -513,8 +516,7 @@ body {
 .feature-itembbcom p {
     margin-top: 0.5rem;
     text-align: center;
-    color: gray;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
 
 }

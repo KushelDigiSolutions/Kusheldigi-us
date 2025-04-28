@@ -295,6 +295,7 @@ body {
 }
 .principles-left p {
      margin: 15px 0;
+     font-weight: 600;
 }
 
 .green-text {
@@ -346,6 +347,7 @@ body {
 
 .content-wrap h3 {
     margin: 0 0 5px 0;
+    font-size: 21px;
 }
 
 .box-content {
@@ -359,6 +361,7 @@ body {
     max-height: 300px;
     opacity: 1;
     margin-top: 8px;
+    font-weight: 500;
 }
 
 /* Responsive */
@@ -595,13 +598,13 @@ body {
 
 
 .expertise-section {
-    padding: 60px 20px;
+    padding: 60px 0px;
     max-width: 1300px;
     margin: auto;
 }
 
 .expertise-title {
-    font-size: 2.8rem;
+    font-size: 3rem;
     font-weight: 600;
     margin-bottom: 20px;
 }
@@ -614,6 +617,7 @@ body {
     font-size: 1.1rem;
     max-width: 900px;
     margin-bottom: 40px;
+    font-weight: 500;
 }
 
 .expertise-content {

@@ -820,7 +820,7 @@ iframe {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: center;
+  justify-content: space-around;
 
 }
 
@@ -3270,7 +3270,7 @@ footer p {
 }
 
 .descfonts_kkyu {
-  font-size: 12px !important;
+  font-size: 15px !important;
 }
 
 .log0_img {

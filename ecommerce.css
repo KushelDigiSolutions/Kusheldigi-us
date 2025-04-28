@@ -51,6 +51,7 @@ body {
     border-left: 2px solid #007BFF;
     padding-left: 8px;
     letter-spacing: 1px;
+    font-weight: 600;
   }
 
   .headssCom {
@@ -63,7 +64,7 @@ body {
 
   .hero-descriptionCom {
     max-width: 600px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     color: #222;
     line-height: 1.7;
@@ -294,6 +295,7 @@ body {
     color: #555;
     line-height: 28px;
     max-width: 87%;
+    font-weight:600;
 }
 
 .pointsBan2 {
@@ -303,9 +305,10 @@ body {
 
 .pointsBan2 li {
     list-style: disc;
-    margin-bottom: 3px;
-    padding-left: 20px;
+    margin-bottom: 3px; 
     color: #333;
+    font-weight: 500 !important;
+    list-style-position: inside;
 }
 
 .headlinBan2 {
@@ -1790,7 +1793,7 @@ body {
 
 @media (max-width: 400px) {
     .logoGrid {
-        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 }
 
