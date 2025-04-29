@@ -5066,6 +5066,8 @@ input::-webkit-inner-spin-button {
   }
 }
 
+ 
+
 @media (max-width: 480px) {
   .tech-heading {
     padding: 0 20px;

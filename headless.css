@@ -1264,6 +1264,7 @@
 
   .online-why-choose-cards {
     gap: 30px 40px;
+    grid-template-columns: 1fr !important;
   }
 
   .online-why-choose-card {

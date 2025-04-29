@@ -446,21 +446,26 @@ body {
     align-items: self-start;
     justify-content: flex-start !important;
     margin-top: 2rem;
+    flex-direction: row;
+        height: 500px;
 }
 
-@media (min-width: 1024px) {
-    .features-containerbbcom {
+@media (min-width: 1024px) and (max-width:1150px) {
+    /* .features-containerbbcom {
         flex-direction: row;
         height: 500px;
+    } */
 
+    .ResultBccom{
+        padding: 40px 50px;
     }
+
 
     .feature-imagebbcom {
         margin: auto !important;
     }
 }
 
-/* Image Container with Same Width for Both Images */
 .image-containerbbcom {
     height: auto;
     /* display: flex; */
@@ -2093,8 +2098,9 @@ body {
     }
 
     .conflict--1-div h4 {
-        font-size: 17px;
+        font-size: 15px;
         text-align: center;
+        padding-bottom: 2rem;
     }
 
     .conflict--1-flex h5 {

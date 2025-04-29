@@ -253,7 +253,7 @@ body {
     color: #333;
     padding: 50px 20px;
     height: 100%;
-    max-height: 1200px;
+    max-height: 1400px;
 }
 
 .sec-containerBan2 {
@@ -424,7 +424,7 @@ body {
 /* Specific spacing for tablets (optional) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .sec-containerBan2 {
-        margin-top: 12rem;
+        margin-top: 5rem;
     }
 }
 
@@ -1294,6 +1294,11 @@ body {
         width: 45px;
         height: 45px;
     }
+
+    .con--3-flex {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1310,7 +1315,7 @@ body {
     }
 
     .con--3-flex {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 15px;
     }
 }
@@ -2146,6 +2151,8 @@ body {
     .projectsHeaderKcom {
         width: 100%;
         padding: 17px;
+        text-align: center;
+        flex-direction: column;
     }
 
     .viewAllBtnKcom {
