@@ -138,6 +138,7 @@ ul {
  
 .headless-wrapper .toggle-btn1 svg {
   transition: transform 0.3s ease;
+  
 }
  
 .dropdown-sub:hover .toggle-btn1 svg {
@@ -156,8 +157,14 @@ ul {
   padding: 0;
   margin-left: 5px;
   transition: transform 0.3s ease;
+  position: relative;
+  height: auto !important;
 }
-
+.toggle-btn1 svg{
+  position: absolute !important;
+  top: -50px !important;
+  left: 230px;
+}
 .dropdown-sub.open .toggle-btn1 {
   transform: rotate(180deg);
 }
