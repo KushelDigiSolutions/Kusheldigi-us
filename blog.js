@@ -428,3 +428,4 @@ categoryDiv.addEventListener("click", (event) => {
         filterByCategory(category);
     }
 });
+
