@@ -332,7 +332,10 @@ iframe {
   align-items: center;
   height: auto
 }
-
+.heroImg img{
+  height: 446px;
+  width: 869px;
+}
 .sec-2cont {
   max-width: 1420px;
   padding: 40px
@@ -4302,7 +4305,7 @@ input::-webkit-outer-spin-button {
   text-align: left;
   border: 2px solid #80808057;
   width: 430px;
-  height: 506px;
+  height:480px;
   position: relative
 }
 
@@ -4324,7 +4327,7 @@ input::-webkit-outer-spin-button {
 
 .h3-head {
   font-size: 18px;
-  margin-bottom: 10px;
+  padding: 8px 0px;
   line-height: 28px;
   font-weight: 700 !important
 }
@@ -4356,7 +4359,7 @@ input::-webkit-outer-spin-button {
 @media (min-width:1200px) {
   .plt-card {
     width: 426px;
-    height: auto
+    /* height: auto */
   }
 
   .plt-btn {

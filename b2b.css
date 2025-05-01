@@ -36,7 +36,7 @@
 
 .b2b-headsss {
     font-size: 40px;
-    margin-bottom: 45px;
+ 
     line-height: 68px;
     font-weight: 500
 }
@@ -120,7 +120,7 @@
 }
 
 .b2b-contain {
-    margin: 25px 15px
+    padding: 10px 30px 30px 20px;
 }
 
 .b2b-btn {
