@@ -185,9 +185,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Wix Madefor Display";
-
-
- 
 }
 
 /* header section start */
@@ -197,8 +194,8 @@
 }
 
 .typing h1 {
-    font-size: 80px;
-    font-weight: 700;
+    font-size: 8rem;
+    font-weight: 700 !important;
 
 }
 
@@ -292,10 +289,79 @@
 /* Underline Animation */
 
 
-/* #filteredBlogContainer{
-    display: grid !important;
-    grid-template-columns: repeat(3,1fr) !important;
-} */
+/* Default blog styling */
+/* Main Container for Filtered Blogs */
+#filteredBlogContainer {
+    padding: 20px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1410px;
+    margin: 0 auto;
+}
+
+/* Heading above filtered blogs */
+.filtered-heading {
+    max-width: 1410px;
+    margin: 0px auto 20px;
+    padding: 0 20px;
+    text-align: left;
+}
+
+.filtered-heading h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin: 0;
+    color: #222;
+}
+
+.filtered-heading hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+.nofilter{
+    max-width: 1365px;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+@media (max-width: 1024px) {
+    #filteredBlogContainer {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 16px;
+    }
+
+    .filtered-heading h2 {
+        font-size: 24px;
+    }
+}
+ 
+@media (max-width: 600px) {
+    #filteredBlogContainer {
+        grid-template-columns: 1fr;
+        padding: 0px;
+    }
+
+    .filtered-heading{
+        padding: 0;
+    }
+
+    .filtered-heading h2 {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
 
 .bimageloDiPara {
     font-size: 42px;
@@ -394,7 +460,7 @@
     padding-top: 20px;
 }
 
-@media(min-width:1366px) and (max-width:1499px){
+@media(min-width:1366px) and (max-width:1499px) {
     .mainsecBlo {
         padding: 40px;
     }
@@ -402,7 +468,7 @@
 
 .bimagelogMain {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     gap: 43px;
     /* padding: 0px 30px; */
@@ -426,7 +492,7 @@
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #ce0c0c;
+    color: #1566ff;
 }
 
 .bimageloDiPara11 {
@@ -526,8 +592,31 @@
 
 }
 
+
+
+.cardBlogStpaarw {
+    display: flex !important;
+    align-items: center;
+    gap: 50%;
+    font-size: 14px;
+    color: #333;
+}
+
+.timeWithIcon {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.iconBlogClock {
+    width: 25px;
+    height: 25px;
+}
+
+
 .cardBlogSt {
-    padding-top: 50px;
+    padding-top: 2.5rem;
+    width: 420px;
 }
 
 .cardBlogStImg img {
@@ -536,7 +625,7 @@
 }
 
 .cardBlogStpaa {
-    color: rgb(218, 76, 76);
+    color: #1566ff;
     text-transform: uppercase;
     font-size: 17px;
     line-height: 50px;
@@ -628,9 +717,9 @@
 
 /* 🟢 Underline effect on .cardBlogStpaara */
 .cardBlogStpaara {
-        /* white-space: nowrap; */
-        position: relative;
-        /* display: inline;*/
+    /* white-space: nowrap; */
+    position: relative;
+    /* display: inline;*/
 }
 
 /* 🟢 Underline animation (Initially hidden) */
@@ -681,7 +770,7 @@
     margin-bottom: 20px;
 }
 
-.newsroom-header h5{
+.newsroom-header h5 {
     font-size: 44px;
     font-weight: 700;
 }
@@ -737,11 +826,11 @@
 
     margin-top: 20px;
     text-align: right;
-    color: #d8262c;
+    color: #1566ff;
 }
 
 .more-news a {
-    color: #d8262c;
+    color: #1566ff;
     font-size: 20px;
     text-decoration: none;
     font-weight: bold;
@@ -749,7 +838,7 @@
 }
 
 .more-news a:hover {
-    color: #d32f2f;
+    color: #1566ff;
 }
 
 /* updated code */
@@ -910,7 +999,7 @@
     margin: 20px auto;
 }
 
-.event-header h5{
+.event-header h5 {
     font-size: 44px;
     font-weight: 700;
 }
@@ -918,7 +1007,7 @@
 /* Grid Layout */
 .event-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 45px;
     padding: 20px 0px 0px 0px;
 }
@@ -960,7 +1049,7 @@
 
 /* Category Styling */
 .event-category {
-    color: #ce1207;
+    color: #1566ff;
     font-size: 15px;
     font-family: "Wix Madefor Display";
     font-weight: bold;
@@ -984,7 +1073,7 @@
 }
 
 .event-title a:hover {
-    color: #cd0c01;
+    color: #1566ff;
 }
 
 /* Description Styling */
@@ -999,16 +1088,16 @@
 /* Author Styling */
 .event-author p {
     margin-top: 20px;
-    font-size: 13px;
+    font-size: 16px;
     font-family: "Wix Madefor Display";
-    font-weight: bold;
+    font-weight: 600;
     color: #000;
 }
 
 /* More Episodes Link Styling */
 .more-episodes {
     text-align: right;
-    color: #d8262c;
+    color: #1566ff;
     margin-top: 20px;
 }
 
@@ -1021,7 +1110,7 @@
 }
 
 .more-episodes a:hover {
-    color: #d8262c;
+    color: #1566ff;
 }
 
 /* update code */
@@ -1034,8 +1123,8 @@
 
 .event-image img {
     width: 100%;
-    height: auto;
-    transition: transform 0.4s ease-in-out;
+    height: 240px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .event-card:hover .event-image img {
@@ -1176,7 +1265,7 @@
     line-height: 40px;
     color: rgb(218, 76, 76);
     font-weight: 600;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .blogSixMaiDivparaa {
@@ -1188,17 +1277,15 @@
 .blogSixMaiDivpaA {
     font-size: 17px;
     font-weight: 600;
-    text-transform: uppercase;
     line-height: 40px;
 }
 
 .blogSixMaiDivpaA {
-
-    /* display:inline-block; */
-    position: relative;
-    /* white-space: nowrap; */
-    text-decoration: none;
-    color: black;
+    display: flex !important;
+    align-items: center;
+    gap: 32%;
+    font-size: 16px;
+    color: #333;
 }
 
 .blogSixMaiDivpaA::after {
@@ -1327,33 +1414,32 @@
 }
 
 
-.bimageloDi>h2{
+.bimageloDi>h2 {
     font-size: 42px !important;
-    color: #000; 
+    color: #000;
 }
 
-.bimageloDi>p{
+.bimageloDi>p {
     font-size: 20px !important;
     margin-top: 3rem;
 }
 
 
-.NavButtonn{
+.NavButtonn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
 }
 
-.navbuttonbtn{
+.navbuttonbtn {
     border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 4px 12px;
     border-radius: 5px;
     font-weight: 600;
 }
 
-#pageNumber{
+#pageNumber {
     font-size: 16px;
     font-weight: 600;
 }
-

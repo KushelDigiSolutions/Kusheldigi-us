@@ -11,16 +11,40 @@ const filterContainer = document.querySelector('.filterContainer');
 
 let allBlogs;
 
+// const fetchAllBlog = async () => {
+//     try {
+//         const response = await fetch(`${baseUrl}/api/v1/auth/getAllBlog`);
+//         const data = await response.json();
+//         if (response.ok) {
+//             allBlogs = data.blogs;
+//             console.log("Fetched Blogs:", allBlogs);
+//             showFirstBlog();
+//             filterBlogsByCategory();
+//             renderBlogs();
+//         } else {
+//             console.error("Failed to fetch blogs:", data?.message);
+//         }
+//     } catch (error) {
+//         console.error("Error fetching blogs:", error);
+//     }
+// };
+// fetchAllBlog();
+
 const fetchAllBlog = async () => {
     try {
         const response = await fetch(`${baseUrl}/api/v1/auth/getAllBlog`);
         const data = await response.json();
         if (response.ok) {
-            allBlogs = data.blogs;
-            console.log("Fetched Blogs:", allBlogs);
+            const filteredBlogs = data.blogs.filter(
+                (blog) => blog.domain === "kusheldigi.com"
+            );
+
+            allBlogs = filteredBlogs;
+            console.log("Filtered Blogs (kusheldigi.us):", allBlogs);
             showFirstBlog();
             filterBlogsByCategory();
             renderBlogs();
+            filterContainer.removeAttribute('id');
         } else {
             console.error("Failed to fetch blogs:", data?.message);
         }
@@ -28,7 +52,9 @@ const fetchAllBlog = async () => {
         console.error("Error fetching blogs:", error);
     }
 };
+
 fetchAllBlog();
+
 
 const showFirstBlog = () => {
     if (allBlogs?.length > 0) {
@@ -120,10 +146,10 @@ const showLatestBlogs = () => {
           <div class="news-content">
               <a href="#" class="news-title" ><h3 class="news-title" id="newBlogTil">${blog?.title}</h3></a>
               <p class="cardBlogStpaa">${new Date(blog?.date).toLocaleDateString("en-GB", {
-            day: "numeric",
-            month: "long",
-            year: "numeric"
-        })}</p>
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            })}</p>
           </div>
       </div>`
         ))
@@ -151,7 +177,7 @@ const filterBlogsByCategory = () => {
     webdevBlogs = allBlogs.filter((blog) => blog.category?.title?.toLowerCase() === "web development");
     businessBlogs = allBlogs.filter((blog) => blog.category?.title?.toLowerCase() === "business");
 
-    console.log('digitak',digitalMarketingBlogs);
+    console.log('digitak', digitalMarketingBlogs);
     displayEcommerceBlogs(ecommerceBlog);
     displaySeoBlogs(seoBlogs);
     displayDigitalMarketing(digitalMarketingBlogs);
@@ -173,25 +199,43 @@ const ecommerceBlogsDiv = document.getElementById('ecommerceBlogsDiv');
 
 function displayEcommerceBlogs(blogs) {
     ecommerceBlogsDiv.innerHTML = '';
-    blogs.forEach((item) => (
-        ecommerceBlogsDiv.innerHTML += `<div class="cardBlogSt" onclick="navigateToBlog('${item._id}')">
-        <div class="cardBlogStImg">
-          <img src=${item?.images[0]} alt="">
-        </div>
-
-        <p class="cardBlogStpaa">${new Date(item?.date).toLocaleDateString("en-GB", {
+    blogs.forEach((item) => {
+        ecommerceBlogsDiv.innerHTML += `
+        <div class="cardBlogSt" onclick="navigateToBlog('${item._id}')">
+         
+          <div class="cardBlogStImg">
+            <img src="${item?.images[0]}" alt="">
+          </div>
+  
+          <p class="cardBlogStpaa">${new Date(item?.date).toLocaleDateString("en-GB", {
             day: "numeric",
             month: "long",
             year: "numeric"
         })}</p>
-        <div class="cardBlogStpaara1">
-          <p class="cardBlogStpaara">${item?.title} </p>
+  
+          <div class="cardBlogStpaara1">
+            <p class="cardBlogStpaara">${item?.title}</p>
+          </div>
+  
+          <p class="cardBlogStpaaragr">${item?.subdescription}</p>
+  
+         <p class="cardBlogStpaarw">
+  Read More
+  <span class="timeWithIcon">
+    <img src="img/clock.svg" class="iconBlogClock" alt="Clock icon" />
+    ${item?.time}
+  </span>
+</p>
+
+        </p>
         </div>
-        <p class="cardBlogStpaaragr">${item?.subdescription}</p>
-        <p class="cardBlogStpaarw">Read More</p>
-      </div>`
-    ))
+      `;
+    });
 }
+
+
+
+
 
 const seoBlogsDiv = document.getElementById('seoBlogsDiv');
 
@@ -222,7 +266,14 @@ function displaySeoBlogs(blogs) {
             </div>
             <p class="event-description">${item?.subdescription}</p>
             <div class="event-author">
-              <p class="cardBlogStpaarw">Read More</p>
+              <p class="cardBlogStpaarw">
+  Read More
+  <span class="timeWithIcon">
+    <img src="img/clock.svg" class="iconBlogClock" alt="Clock icon" />
+    ${item?.time}
+  </span>
+</p>
+              
             </div>
           </div>
         `
@@ -248,7 +299,13 @@ function displayDigitalMarketing(blogs) {
             <p class="cardBlogStpaara">${item?.title}</p>
           </div>
           <p class="cardBlogStpaaragr">${item?.subdescription}</p>
-          <p class="cardBlogStpaarw">Read More</p>
+           <p class="cardBlogStpaarw">
+  Read More
+  <span class="timeWithIcon">
+    <img src="img/clock.svg" class="iconBlogClock" alt="Clock icon" />
+    ${item?.time}
+  </span>
+</p>
         </div>
         `
     ))
@@ -256,29 +313,34 @@ function displayDigitalMarketing(blogs) {
 
 const webDevBlogsDiv = document.getElementById('webDevBlogsDiv');
 
-function displayWebDevBlogs (blogs){
+function displayWebDevBlogs(blogs) {
     webDevBlogsDiv.innerHTML = ''
-    blogs.forEach((item)=>(
+    blogs.forEach((item) => (
         webDevBlogsDiv.innerHTML += `<div class="blogSixMaiDivBlS" onclick="navigateToBlog('${item._id}')">
             <div class="blogSixMaiDivBImgS">
               <img src=${item.images[0]} alt="">
             </div>
             <p class="blogSixMaiDivBImpaa">${new Date(item?.date).toLocaleDateString("en-GB", {
-                day: "numeric",
-                month: "long",
-                year: "numeric"
-            })}</p>
-            <p class="blogSixMaiDivparaa">${item?.title.slice(0,22)}...</p>
-            <p class="blogSixMaiDivpaA">Read More</p>
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        })}</p>
+            <p class="blogSixMaiDivparaa">${item?.title}</p>
+            <p class="blogSixMaiDivpaA">Read More
+            <span class="timeWithIcon">
+    <img src="img/clock.svg" class="iconBlogClock" alt="Clock icon" />
+    ${item?.time}
+  </span>
+            </p>
           </div> `
     ))
 }
 
 const businessBlogsDiv = document.getElementById('businessBlogsDiv');
 
-function displayBusinessBlogs (blogs){
+function displayBusinessBlogs(blogs) {
     businessBlogsDiv.innerHTML = '';
-    blogs.forEach((item)=> (
+    blogs.forEach((item) => (
         businessBlogsDiv.innerHTML += `
         <div class="cardBlogSt" onclick="navigateToBlog('${item._id}')">
           <div class="cardBlogStImg">
@@ -293,7 +355,13 @@ function displayBusinessBlogs (blogs){
             <p class="cardBlogStpaara">${item?.title}</p>
           </div>
           <p class="cardBlogStpaaragr">${item?.subdescription}</p>
-          <p class="cardBlogStpaarw">Read More</p>
+           <p class="cardBlogStpaarw">
+  Read More
+  <span class="timeWithIcon">
+    <img src="img/clock.svg" class="iconBlogClock" alt="Clock icon" />
+    ${item?.time}
+  </span>
+</p>
         </div>
         `
     ))
@@ -380,45 +448,62 @@ function filterByCategory(category) {
         return;
     }
 
-    const filteredBlogs = allBlogs.filter(blog => blog.category?.title?.toLowerCase() === category.toLowerCase());
+    const filteredBlogs = allBlogs.filter(blog =>
+        blog.category?.title?.toLowerCase() === category.toLowerCase()
+    );
 
     console.log(`Filtered Blogs for ${category}:`, filteredBlogs);
-    displayFilteredBlogs(filteredBlogs);
+    displayFilteredBlogs(filteredBlogs, category); 
 }
 
-function displayFilteredBlogs(blogs) {
-    const filteredBlogContainer = document.getElementById("filteredBlogContainer");
-    filteredBlogContainer.innerHTML = ""; 
+
+function displayFilteredBlogs(blogs, categoryTitle) {
+    filterContainer.innerHTML = ""; 
 
     if (blogs.length === 0) {
-        filteredBlogContainer.innerHTML = "<p>No blogs found for this category.</p>";
+        filterContainer.innerHTML = "<p class='nofilter'>No blogs found for this category.</p>";
         return;
     }
 
-    blogs.forEach((blog) => {
-        const blogHTML = `
-            <div class="cardBlogSt" onclick="navigateToBlog('${blog._id}')">
-                <div class="cardBlogStImg">
-                    <img src="${blog.images?.[0] || 'default-image.jpg'}" alt="${blog.title}">
+    const sectionHTML = `
+        <div class="filtered-heading">
+            <h2>${categoryTitle.charAt(0).toUpperCase() + categoryTitle.slice(1)}</h2>
+            <hr />
+        </div>
+        <div id="filteredBlogContainer">
+            ${blogs.map(blog => `
+                <div class="cardBlogSt" onclick="navigateToBlog('${blog._id}')">
+                    <div class="cardBlogStImg">
+                        <img src="${blog.images?.[0] || 'default-image.jpg'}" alt="${blog.title}">
+                    </div>
+                    <p class="cardBlogStpaa">${new Date(blog.date).toLocaleDateString("en-GB", {
+                        day: "numeric", month: "long", year: "numeric"
+                    })}</p>
+                    <div class="cardBlogStpaara1">
+                        <p class="cardBlogStpaara">${blog.title}</p>
+                    </div>
+                    <p class="cardBlogStpaaragr">${blog.subdescription}</p>
+                    <p class="cardBlogStpaarw">
+                        Read More
+                        <span class="timeWithIcon">
+                            <img src="img/clock.svg" class="iconBlogClock" alt="Clock icon" />
+                            ${blog?.time || "5 min"}
+                        </span>
+                    </p>
                 </div>
-                <p class="cardBlogStpaa">${new Date(blog.date).toLocaleDateString("en-GB", {
-                    day: "numeric", month: "long", year: "numeric"
-                })}</p>
-                <div class="cardBlogStpaara1">
-                    <p class="cardBlogStpaara">${blog.title}</p>
-                </div>
-                <p class="cardBlogStpaaragr">${blog.subdescription}</p>
-                <p class="cardBlogStpaarw">Read More</p>
-            </div>`;
-        
-        filteredBlogContainer.innerHTML += blogHTML;
-    });
+            `).join("")}
+        </div>
+    `;
+
+    filterContainer.innerHTML = sectionHTML;
 }
+
+
 
 categoryDiv.addEventListener("click", (event) => {
     if (event.target.classList.contains("button")) {
         const category = event.target.innerText.trim();
-        
+
         document.querySelectorAll("#categoryDiv .button").forEach(btn => {
             btn.classList.remove("btnblo");
         });
@@ -426,6 +511,7 @@ categoryDiv.addEventListener("click", (event) => {
         event.target.classList.add("btnblo");
 
         filterByCategory(category);
+        // filterContainer.setAttribute('id', 'filteredBlogContainer');
     }
 });
 
