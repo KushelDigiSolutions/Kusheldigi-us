@@ -643,38 +643,36 @@ img {
 
 
 
-
 .mainDsContain {
-  background-color: #f8f8ff;
-
+  background-color: #f8f8ff
 }
 
 .mainDsDiv {
   max-width: 1720px;
   margin: auto;
-  padding: 50px 50px;
+  padding: 50px
 }
 
 .mainDsDivtitle {
   text-align: center;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 600;
 }
 
 .mainDsDivNum p {
-
+  line-height: 58px;
   font-size: 45px;
-  font-weight: 300;
+  font-weight: 500
 }
 
 .mainDsDivNumstart {
   text-align: center;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 500
 }
 
 .mainDsDiv {
-  text-align: center;
+  text-align: center
 }
 
 .ds25-container {
@@ -683,66 +681,69 @@ img {
   align-items: center;
   gap: 70px;
   padding-bottom: 70px;
-  background-color: #f8f8ff;
+  background-color: #f8f8ff
 }
 
 .ds25Content {
+  line-height: 32px;
   height: 69px;
-  width: 360px;
-  font-size: 27px !important;
-  color: black;
+  width: 303px;
+  font-size: 25px!important;
   font-weight: 600;
 }
 
 .ds25-left {
-  width: 26%;
-  position: relative;
+  width: 20%;
+  position: relative
 }
 
 .ds25-arrow {
   font-size: 30px;
-  color: #0056b3;
-  transform: rotate(180deg);
+  color: #0c61ff;
+  transform: rotate(180deg)
+}
+
+.svgArrowDiv {
+  width: 100%
 }
 
 .ds25-heading {
   position: relative;
   top: 50px;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 50px;
-  line-height: 1.4;
+  line-height: 1.4
 }
 
 .ds25-left-item {
   position: relative;
-  top: 24px;
+  top: 15px;
   font-size: 26px;
   font-weight: 400;
   margin-bottom: 40px;
-  padding-right: 40px;
+  padding-right: 40px
 }
 
 .ds25-subtext {
-  font-size: 19px;
+  font-size: 19px
 }
 
 .freeSubtextDs {
   height: 70px;
   display: flex;
-
-  font-weight: 500;
+  font-weight: 500
 }
 
 .ds25-plus {
   position: absolute;
   right: -38px;
-  top: 18px;
+  top: 13px;
   transform: translateY(-50%);
   width: 25px;
   height: 25px;
-  background-color: #0056b3;
-  color: white;
+  background-color: #0c61ff;
+  color: #fff;
   font-size: 22px;
   font-weight: 400;
   border-radius: 50%;
@@ -751,76 +752,86 @@ img {
   justify-content: center;
   cursor: pointer;
   z-index: 3;
-  animation: pulseGlow 2s infinite;
+  animation: pulseGlow 2s, upward 1s ease-in-out;
   box-shadow: 0 0 0 rgba(59, 59, 240, 0.7);
   transition: box-shadow 0.3s ease-in-out;
 }
+
+
 
 @keyframes pulseGlow {
   0% {
     box-shadow: 0 0 0 0 rgba(59, 59, 240, 0.7);
   }
-
   70% {
     box-shadow: 0 0 0 10px rgba(59, 59, 240, 0);
   }
-
   100% {
     box-shadow: 0 0 0 0 rgba(59, 59, 240, 0);
   }
 }
 
+@keyframes upward {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+
 .ds25-popup {
   position: absolute;
-  top: 0px;
-  left: 450px;
-  width: 280px;
-  background: white;
+  top: 0;
+  left: 370px;
+  width: 360px;
+  background: #fff;
   padding: 16px 20px;
   border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
   z-index: 2;
-  animation: fadeIn 0.2s ease;
+  animation: fadeIn .2s ease;
+  cursor: pointer;
 }
 
 .ds25-step-wrapper {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center
 }
 
 .ds25-bottom-arrow {
   position: relative;
-  right: 217px;
-  margin-top: -23px;
-  z-index: -1;
+  right: 218px;
+  bottom:15px;
 }
 
 .ds25-step-title {
-  color: #0056b3;
-  font-size: 19px;
+  color: #0c61ff;
+  font-size: 18px;
   font-weight: 700;
-  margin-bottom: 10px;
+  margin-bottom: 10px
 }
 
 .ds25-popup p {
   font-size: 14px;
   color: #333;
-  font-weight: 600;
   line-height: 1.5;
   margin: 0;
+  font-weight: 600;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-4px);
+  0% {
+      opacity: 0;
+      transform: translateY(-4px)
   }
 
   to {
-    opacity: 1;
-    transform: translateY(0);
+      opacity: 1;
+      transform: translateY(0)
   }
 }
 
@@ -828,17 +839,20 @@ img {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  gap: 38px;
-  z-index: 1;
+  gap: 30px;
+  z-index: 1
 }
 
 .ds25-step {
-  display: flex;
-  align-items: center;
-  background-color: #0056b3;
-  color: white;
+  background-color: #0c61ff;
+  color: #fff;
   border-radius: 50px;
-  padding: 14px 30px;
+  padding: 14px 30px
+}
+
+.ds25-step,.ds25-step-num {
+  display: flex;
+  align-items: center
 }
 
 .ds25-step-num {
@@ -846,192 +860,709 @@ img {
   font-weight: 600;
   width: 36px;
   height: 36px;
-  display: flex;
-  align-items: center;
   justify-content: center;
   margin-right: 20px;
   flex-shrink: 0;
   position: relative;
-  z-index: 1;
+  z-index: 1
 }
 
-.ds25-step-num::before,
-.ds25-step-num::after {
+.ds25-step-num:after,.ds25-step-num:before {
   content: "";
   position: absolute;
-  left: 52%;
-    width: 4px;
-    height: 40px;
-  background-color: #0056b3;
-  transform: translateX(0%);
-  z-index: 0;
+  left: 50%;
+  width: 3px;
+  height: 30px;
+  background-color: #0c61ff;
+  transform: translateX(0);
+  z-index: 0
 }
 
-.ds25-step-num::before {
-  top: -50px;
+.ds25-step-num:before {
+  top: -50px
 }
 
-.ds25-step-num::after {
-  bottom: -50px;
+.ds25-step-num:after {
+  bottom: -50px
 }
 
 .ds25-step-text {
   font-size: 17px;
   width: 420px;
-  line-height: 1.4;
+  line-height: 1.4
 }
 
 .ds25-arrow-wrapper {
   position: absolute;
-  top: 0px;
-  left: -80px;
+  top: 0;
+  left: -80px
 }
 
 .ds25-arrow-svg {
-  transform: rotate(-40deg);
+  transform: rotate(-40deg)
 }
 
 .mainDsDivNum {
   position: relative;
-  display: inline-block;
+  display: inline-block
 }
 
 .from0to1-underline {
   position: absolute;
-  bottom: -14px;
   left: 0;
   width: 100%;
   height: 20px;
-  z-index: 0;
+  z-index: 0
 }
 
-@media (max-width: 1025px) {
+@media screen and (max-width: 1025px) {
   .ds25-right {
-    align-items: flex-start;
+      align-items:flex-start
   }
 
-  .ds25-step-num::before,
-  .ds25-step-num::after {
-    display: none;
+  .ds25-step-num:after,.ds25-step-num:before {
+      display: none
   }
 
   .ds25-bottom-arrow {
-    position: initial;
-    display: none;
+      position: static;
+      display: none
   }
 
   .ds25-container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
-    padding: 30px;
+      align-items: flex-start;
+      gap: 40px;
+      padding: 30px
   }
 
   .ds25-left {
-    width: 100%;
+      width: 37%
   }
 
   .ds25Content {
-    width: 100%;
-    font-size: 22px !important;
-  }
-
-  .ds25-popup {
-    position: static;
-    width: 100%;
-    margin-top: 10px;
-    left: auto;
-    top: auto;
+      width: 100%;
+      font-size: 20px!important
   }
 
   .ds25-arrow-wrapper {
-    display: none;
+      display: none
   }
 
   .ds25-plus {
-    right: 10px;
-    top: 10px;
-  }
-
-  .ds25-step-text {
-    width: auto;
-  }
-}
-
-@media (max-width: 767px) {
-  .ds25-bottom-arrow {
-    position: initial;
-    display: none;
-  }
-
-  .freeSubtextDs {
-    width: 300px;
-  }
-
-  .mainDsContain {
-    padding: 30px 20px;
-  }
-
-  .mainDsDivNum p {
-    font-size: 30px;
-  }
-
-  .mainDsDivtitle,
-  .mainDsDivNumstart {
-    font-size: 17px;
-  }
-
-  .ds25-left-item {
-    font-size: 20px;
-    padding-right: 0;
-  }
-
-  .ds25Content {
-    font-size: 20px !important;
-    width: 90%;
+      right: 10px;
+      top: 10px
   }
 
   .ds25-step {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 16px;
-  }
-
-  .ds25-step-num {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-
-  .ds25-step-num::before,
-  .ds25-step-num::after {
-    display: none;
+      max-width: 350px;
+      border-radius: 80px;
+      padding: 8px 20px
   }
 
   .ds25-step-text {
-    font-size: 15px;
-    width: 100%;
+      font-size: 13px;
+      width: unset;
+      line-height: 1.4
+  }
+
+  .ds25-step-num {
+      font-size: 26px;
+      font-weight: 600;
+      margin-right: 0
+  }
+
+  .ds25-left-item {
+      position: relative;
+      top: 15px;
+      font-size: 23px;
+      font-weight: 400;
+      margin-bottom: 25px;
+      padding-right: 40px
   }
 
   .ds25-popup {
-    position: static;
-    width: 100%;
-    margin-top: 8px;
-  }
-
-  .ds25-plus {
-    right: 0;
-    top: 10px;
+      position: absolute;
+      top: 0;
+      left: 400px
   }
 }
 
-@media(max-width:450px) {
+@media screen and (max-width: 768px) {
   .ds25-bottom-arrow {
-    position: initial;
-    display: none;
+      position:static;
+      display: none
   }
 
   .freeSubtextDs {
-    width: 90%;
+      width: 300px
+  }
+
+  .mainDsContain {
+      padding: 30px 20px
+  }
+
+  .mainDsDivNum p {
+      text-align: center;
+      font-size: 30px
+  }
+
+  .mainDsDivNumstart,.mainDsDivtitle {
+      font-size: 12px
+  }
+
+  .ds25-left-item {
+      font-size: 20px;
+      padding-right: 0
+  }
+
+  .ds25-container {
+      padding: 0
+  }
+
+  .ds25Content {
+      font-size: 20px!important;
+      width: 90%
+  }
+
+  .ds25-step {
+      align-items: center;
+      padding: 16px
+  }
+
+  .ds25-step-num {
+      font-size: 28px;
+      margin-bottom: 10px
+  }
+
+  .ds25-step-num:after,.ds25-step-num:before {
+      display: none
+  }
+
+  .ds25-step-text {
+      text-align: center;
+      font-size: 13px
+  }
+
+  .ds25-plus {
+      right: 0;
+      top: 10px
+  }
+
+  .ds25-popup {
+      position: absolute;
+      top: 0;
+      left: 300px
+  }
+
+  .ds25-left-item {
+      margin-bottom: 48px
+  }
+}
+
+@media (max-width: 600px) {
+  .ds25-container {
+      flex-direction:row;
+      gap: 15px
+  }
+
+  .ds25Content {
+      font-size: 12px!important;
+      line-height: 19px
+  }
+
+  .ds25-step-text {
+      font-size: 10px
+  }
+
+  .ds25-step {
+      flex-direction: row;
+      padding: 8px;
+      max-width: 225px
+  }
+
+  .ds25-step-num {
+      font-size: 14px;
+      margin: 0!important
+  }
+
+  .ds25-popup {
+      position: fixed;
+      background: #fff;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      height: 100dvh;
+      flex-direction: column;
+      padding: 0 40px;
+      margin: 0!important;
+      border-radius: 0
+  }
+
+  .ds25-popup,.ds25-popupclose {
+      display: flex;
+      justify-content: center;
+      align-items: center
+  }
+
+  .ds25-popupclose {
+      width: 25px;
+      height: 25px;
+      background-color: #0c61ff;
+      color: #fff;
+      font-size: 22px;
+      font-weight: 400;
+      border-radius: 50%;
+      cursor: pointer;
+      animation: pulseGlow 2s infinite;
+      box-shadow: 0 0 0 rgba(59,59,240,.7);
+      margin-bottom: 10px
+  }
+
+  .ds25-left-item {
+      margin-bottom: 20px
+  }
+
+  .ds25-popup p {
+      text-align: center
+  }
+}
+
+@media(max-width: 450px) {
+  .mainDsDiv {
+      padding:10px 10px 32px
+  }
+
+  .ds25-bottom-arrow {
+      position: static;
+      display: none
+  }
+
+  .freeSubtextDs {
+      width: 90%
+  }
+
+  .ds25-step-text {
+      width: 100%
+  }
+
+  .ds25-step-num {
+      font-size: 14px;
+      margin: 8px!important;
+      width: unset;
+      height: unset
+  }
+
+  .ds25-plus {
+      right: -12px;
+      top: 10px
+  }
+
+  .ds25-left-item {
+      margin-bottom: 20px
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ds25-left-item {
+      margin-bottom:26px
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .ds25-left-item {
+      margin-bottom:36px
+  }
+}
+
+ 
+.h2testimonialwrap {
+  width: 100%;
+  position: relative;
+  background: #f6f5f4;
+  padding: 45px 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px
+}
+
+.testiTopDetails {
+  display: flex;
+  justify-content: center;
+  max-width: 1720px;
+  width: 100%;
+  align-items: flex-start;
+  padding: 0 60px;
+  gap: 30px;
+  margin: 0 auto
+}
+
+.testiTopDetails .tettopleft {
+  display: flex;
+  flex-direction: column
+}
+
+.testiTopDetails .tettopleft p:first-child {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+  color: #000;
+}
+
+.testiTopDetails .tettopleft p:nth-child(2) {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 44px;
+  text-align: left;
+  max-width: 450px
+}
+
+.testright {
+  display: flex;
+  align-items: center;
+  gap: 30px
+}
+
+.testswipsingle {
+  width: 98%!important;
+  height: 420px;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+
+}
+
+
+.reviewsss {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px
+}
+
+.projectre,.reviewname,.reviewsss { 
+  text-align: left;
+  color: #222
+}
+
+.projectre,.reviewname {
+  font-size: 18px;
+  line-height: 28px
+}
+
+.reviewname {
+  font-weight: 600
+}
+
+.projectre {
+  font-weight: 700
+}
+
+.roudned,.swiper-button-next2,.swiper-button-prev2 {
+  width: 44px;
+  height: 44px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .3s
+}
+
+.roudned svg,.swiper-button-next2 svg,.swiper-button-prev2 svg {
+  width: 14px;
+  height: 14px;
+  transition: stroke .3s;
+  border: none
+}
+
+.home2Leftarrow,.home2rightarrow {
+  font-size: 40px;
+  transition: .4s;
+  color: #000
+}
+
+.roudned svg path,.swiper-button-next2 svg path,.swiper-button-prev2 svg path {
+  stroke: #0e151d
+}
+
+.roudned:hover,.swiper-button-next2:hover,.swiper-button-prev2:hover {
+  border-color: #1063ff
+}
+
+.roudned:hover svg path,.swiper-button-next2:hover svg path,.swiper-button-prev2:hover svg path {
+  stroke: #1063ff!important
+}
+
+.home2Leftarrow {
+  font-weight: 300!important
+}
+
+.home2Leftarrow:hover,.home2rightarrow:hover {
+  color: #1063ff
+}
+
+
+.testImageCloud {
+  display: flex;
+  align-items: center;
+   justify-content: space-between;
+}
+
+@media (max-width: 1250px) {
+  .singswiperdiv {
+      width:400px;
+      height: 400px;
+      min-height: 0
+  }
+
+  .brandswipe {
+      height: 107px!important
+  }
+
+  .mySwiper32 {
+      width: 100%;
+      transform: translateY(-50%) translateX(20px)
+  }
+
+  .swiplidebtn {
+      bottom: 44px
+  }
+
+  .insidebtns p,.swiplidebtn p {
+      font-size: 18px
+  }
+
+  .testswipsingle {
+    max-width: 500px;
+    width: 100%;
+    height: 510px !important;
+}
+}
+
+@media (max-width: 1150px) {
+  .testswipsingle img {
+      width:100px
+  }
+
+  .projectre,.reviewname,.reviewsss {
+      font-size: 14px
+  }
+
+ 
+}
+
+@media (max-width: 1090px) {
+  .brandswipe {
+      height:97px!important
+  }
+
+  
+}
+
+@media (max-width: 810px) {
+  .testiTopDetails .tettopleft p:first-child {
+      font-size:20px
+  }
+
+  .testiTopDetails .tettopleft p:nth-child(2) {
+      font-size: 30px
+  }
+
+  .swiplidebtn {
+      bottom: 20px
+  }
+
+  .brandswipe {
+      height: 77px!important
+  }
+
+  .testswipsingle {
+    max-width: 500px;
+    width: 100%;
+    height: 480px !important;
+}
+}
+
+@media (max-width: 750px) {
+  .singswiperdiv {
+      width:280px;
+      height: 280px
+  }
+
+  .swipebtns32 {
+      transform: translateY(-100px) translateX(-40px)
+  }
+
+  .h2swiperwrap {
+      max-height: 250px
+  }
+
+  .testswipsingle {
+    max-width: 500px;
+    width: 100%;
+    height: 530px !important;
+}
+}
+
+@media (max-width: 700px) {
+  .brandswipe {
+      height:57px!important
+  }
+
+ 
+}
+
+@media (max-width: 600px) {
+  .swiplidebtn {
+      align-items:flex-start!important;
+      bottom: 6px;
+      gap: 4px
+  }
+
+  .singswiperdiv {
+      width: 260px;
+      height: 260px
+  }
+
+  .h2testimonialwrap{
+    padding: 40px;
+  }
+
+  .testswipsingle {
+      max-width: 500px;
+      width: 100%;
+      height: fit-content;
+  }
+
+  .swipebtns32 {
+      transform: translateY(-70px) translateX(-40px);
+      margin-bottom: 30px
+  }
+
+  .brandswipe {
+      height: 47px!important
+  }
+
+  .insidebtns span {
+      font-size: 8px
+  }
+
+  .swiplidebtn p {
+      font-size: 10px
+  }
+
+  .insidebtns p {
+      font-size: 18px
+  }
+
+  .h2braswiperwrap h3 {
+      font-size: 32px;
+      line-height: 42px
+  }
+
+  .viewworkbtns {
+      width: 180px;
+      height: 50px
+  }
+
+  .reviewsss,.viewworkbtns span {
+      font-size: 16px;
+      line-height: 26px
+  }
+
+  .testiTopDetails .tettopleft p:first-child {
+      font-size: 18px;
+      line-height: 28px
+  }
+
+  .testiTopDetails .tettopleft p:nth-child(2) {
+      font-size: 30px;
+      line-height: 40px
+  }
+
+  .projectre,.reviewname {
+      font-size: 14px
+  }
+}
+
+@media (max-width: 550px) {
+  .testright {
+      transform:translateX(-20px)
+  }
+
+  .testiTopDetails {
+      padding: 0 20px
+  }
+
+  .testiTopDetails .tettopleft p:first-child {
+      font-size: 16px
+  }
+
+  .testiTopDetails .tettopleft p:nth-child(2) {
+      font-size: 22px
+  }
+
+  .singswiperdiv {
+      margin: 0 auto;
+      max-width: 200px;
+      max-height: 200px
+  }
+
+  .swipebtns32 {
+      transform: translateY(-20px) translateX(-40px);
+      margin-bottom: 30px
+  }
+
+  .sec3cont {
+      padding: 40px 20px!important
+  }
+
+  .mySwiper32 {
+      transform: translateY(-30%) translateX(0)
+  }
+
+  .brandswipe {
+      height: 84px!important
+  }
+
+  .viewworkbtns {
+      width: 140px;
+      height: 42px
+  }
+
+  .viewworkbtns span {
+      font-size: 12px
+  }
+
+  .h2braswiperwrap h3 {
+      font-size: 24px;
+      line-height: 34px
+  }
+
+  .testswipsingle {
+      max-width: 90vw;
+      width: 100%;
+      height: fit-content !important;
+  }
+
+  .roudned {
+      width: 30px;
+      height: 30px
+  }
+
+  .h2swiperwrap {
+      max-height: 220px
+  }
+}
+
+@media (max-width: 440px) {
+  .singswiperdiv {
+      width:200px;
+      height: 200px
   }
 }

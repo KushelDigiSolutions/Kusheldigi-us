@@ -3418,7 +3418,7 @@ input::-webkit-outer-spin-button {
 
 .upper-modal-box {
   background: #083792;
-  min-height: 335px;
+  min-height: 340px;
   width: 100%;
   border-radius: 15px;
   display: flex;
@@ -3444,11 +3444,12 @@ input::-webkit-outer-spin-button {
 
 .popup-para>i,
 .popup-sm-heading {
-  font-size: 19px
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .popup-para {
-  font-size: 14px
+  font-size: 18px
 }
 
 .popup-para>i {
@@ -3691,7 +3692,8 @@ input::-webkit-outer-spin-button {
 }
 
 .contact-textArea {
-  min-height: 100px
+  min-height: 100px;
+  resize: none;
 }
 
 .contact-form-btn {
@@ -3916,7 +3918,7 @@ input::-webkit-outer-spin-button {
 
   .cross-icon {
     right: -63px;
-    top: -48px
+    top: -20px
   }
 
   .contact-container>.container {
@@ -4390,6 +4392,13 @@ input::-webkit-outer-spin-button {
   }
 }
 
+@media (min-width:600px) and (max-width:767px){
+  .swiper-container{
+    width: 70% !important;
+    margin: auto !important;
+  }
+}
+
 @media (max-width:768px) {
   .tech-section {
     padding: 45px 0;
@@ -4420,7 +4429,7 @@ input::-webkit-outer-spin-button {
     width: 80%;
     overflow: hidden;
     display: block;
-    margin-left: 4rem;
+    margin: auto;
     border-radius: 15px
   }
 
@@ -4534,4 +4543,405 @@ input::-webkit-outer-spin-button {
 
 #callBlinking {
   animation: 1.2s ease-in-out infinite smoothBlink
+}
+
+
+
+
+
+
+ 
+.h2testimonialwrap {
+  width: 100%;
+  position: relative;
+  background: #f6f5f4;
+  padding: 45px 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px
+}
+
+.testiTopDetails {
+  display: flex;
+  justify-content: center;
+  max-width: 1720px;
+  width: 100%;
+  align-items: flex-start;
+  padding: 0 60px;
+  gap: 30px;
+  margin: 0 auto
+}
+
+.testiTopDetails .tettopleft {
+  display: flex;
+  flex-direction: column
+}
+
+.testiTopDetails .tettopleft p:first-child {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+  color: #000;
+}
+
+.testiTopDetails .tettopleft p:nth-child(2) {
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 44px;
+  text-align: left;
+  max-width: 450px
+}
+
+.testright {
+  display: flex;
+  align-items: center;
+  gap: 30px
+}
+
+.testswipsingle {
+  width: 98%!important;
+  height: 420px;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* .testswipsingle img {
+  width: 120px;
+  height: auto;
+} */
+
+.reviewsss {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px
+}
+
+.projectre,.reviewname,.reviewsss { 
+  text-align: left;
+  color: #222;
+  margin:0;
+}
+
+.projectre,.reviewname {
+  font-size: 18px;
+  line-height: 28px
+}
+
+.reviewname {
+  font-weight: 600
+}
+
+.projectre {
+  font-weight: 700
+}
+
+.roudned,.swiper-button-next2,.swiper-button-prev2 {
+  width: 44px;
+  height: 44px;
+  border: 2px solid #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .3s
+}
+
+.roudned svg,.swiper-button-next2 svg,.swiper-button-prev2 svg {
+  width: 14px;
+  height: 14px;
+  transition: stroke .3s;
+  border: none
+}
+
+.home2Leftarrow,.home2rightarrow {
+  font-size: 40px;
+  transition: .4s;
+  color: #000
+}
+
+.roudned svg path,.swiper-button-next2 svg path,.swiper-button-prev2 svg path {
+  stroke: #0e151d
+}
+
+.roudned:hover,.swiper-button-next2:hover,.swiper-button-prev2:hover {
+  border-color: #1063ff
+}
+
+.roudned:hover svg path,.swiper-button-next2:hover svg path,.swiper-button-prev2:hover svg path {
+  stroke: #1063ff!important
+}
+
+.home2Leftarrow {
+  font-weight: 300!important
+}
+
+.home2Leftarrow:hover,.home2rightarrow:hover {
+  color: #1063ff
+}
+
+
+.testImageCloud {
+  display: flex;
+  align-items: center;
+   justify-content: space-between;
+}
+
+@media (max-width: 1250px) {
+  .singswiperdiv {
+      width:400px;
+      height: 400px;
+      min-height: 0
+  }
+
+  .brandswipe {
+      height: 107px!important
+  }
+
+  .mySwiper32 {
+      width: 100%;
+      transform: translateY(-50%) translateX(20px)
+  }
+
+  .swiplidebtn {
+      bottom: 44px
+  }
+
+  .insidebtns p,.swiplidebtn p {
+      font-size: 18px
+  }
+
+  .testswipsingle {
+    max-width: 500px;
+    width: 100%;
+    height: 510px !important;
+}
+}
+
+@media (max-width: 1150px) {
+  .testswipsingle img {
+      width:100px
+  }
+
+  .projectre,.reviewname,.reviewsss {
+      font-size: 14px
+  }
+
+ 
+}
+
+@media (max-width: 1090px) {
+  .brandswipe {
+      height:97px!important
+  }
+
+  
+}
+
+@media (max-width: 810px) {
+  .testiTopDetails .tettopleft p:first-child {
+      font-size:20px
+  }
+
+  .testiTopDetails .tettopleft p:nth-child(2) {
+      font-size: 30px
+  }
+
+  .swiplidebtn {
+      bottom: 20px
+  }
+
+  .brandswipe {
+      height: 77px!important
+  }
+
+  .testswipsingle {
+    max-width: 500px;
+    width: 100%;
+    height: 480px !important;
+}
+}
+
+@media (max-width: 750px) {
+  .singswiperdiv {
+      width:280px;
+      height: 280px
+  }
+
+  .swipebtns32 {
+      transform: translateY(-100px) translateX(-40px)
+  }
+
+  .h2swiperwrap {
+      max-height: 250px
+  }
+
+  .testswipsingle {
+    max-width: 500px;
+    width: 100%;
+    height: 530px !important;
+}
+}
+
+@media (max-width: 700px) {
+  .brandswipe {
+      height:57px!important
+  }
+
+ 
+}
+
+@media (max-width: 600px) {
+  .swiplidebtn {
+      align-items:flex-start!important;
+      bottom: 6px;
+      gap: 4px
+  }
+
+  .singswiperdiv {
+      width: 260px;
+      height: 260px
+  }
+
+  .h2testimonialwrap{
+    padding: 40px;
+  }
+
+  .testswipsingle {
+      max-width: 500px;
+      width: 100%;
+      height: fit-content;
+  }
+
+  .swipebtns32 {
+      transform: translateY(-70px) translateX(-40px);
+      margin-bottom: 30px
+  }
+
+  .brandswipe {
+      height: 47px!important
+  }
+
+  .insidebtns span {
+      font-size: 8px
+  }
+
+  .swiplidebtn p {
+      font-size: 10px
+  }
+
+  .insidebtns p {
+      font-size: 18px
+  }
+
+  .h2braswiperwrap h3 {
+      font-size: 32px;
+      line-height: 42px
+  }
+
+  .viewworkbtns {
+      width: 180px;
+      height: 50px
+  }
+
+  .reviewsss,.viewworkbtns span {
+      font-size: 16px;
+      line-height: 26px
+  }
+
+  .testiTopDetails .tettopleft p:first-child {
+      font-size: 18px;
+      line-height: 28px
+  }
+
+  .testiTopDetails .tettopleft p:nth-child(2) {
+      font-size: 30px;
+      line-height: 40px
+  }
+
+  .projectre,.reviewname {
+      font-size: 14px
+  }
+}
+
+@media (max-width: 550px) {
+  .testright {
+      transform:translateX(-20px)
+  }
+
+  .testiTopDetails {
+      padding: 0 20px
+  }
+
+  .testiTopDetails .tettopleft p:first-child {
+      font-size: 16px
+  }
+
+  .testiTopDetails .tettopleft p:nth-child(2) {
+      font-size: 22px
+  }
+
+  .singswiperdiv {
+      margin: 0 auto;
+      max-width: 200px;
+      max-height: 200px
+  }
+
+  .swipebtns32 {
+      transform: translateY(-20px) translateX(-40px);
+      margin-bottom: 30px
+  }
+
+  .sec3cont {
+      padding: 40px 20px!important
+  }
+
+  .mySwiper32 {
+      transform: translateY(-30%) translateX(0)
+  }
+
+  .brandswipe {
+      height: 84px!important
+  }
+
+  .viewworkbtns {
+      width: 140px;
+      height: 42px
+  }
+
+  .viewworkbtns span {
+      font-size: 12px
+  }
+
+  .h2braswiperwrap h3 {
+      font-size: 24px;
+      line-height: 34px
+  }
+
+  .testswipsingle {
+      max-width: 90vw;
+      width: 100%;
+      height: fit-content !important;
+  }
+
+  .roudned {
+      width: 30px;
+      height: 30px
+  }
+
+  .h2swiperwrap {
+      max-height: 220px
+  }
+}
+
+@media (max-width: 440px) {
+  .singswiperdiv {
+      width:200px;
+      height: 200px
+  }
 }

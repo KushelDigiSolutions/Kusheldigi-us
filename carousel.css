@@ -86,13 +86,15 @@
     border: none;
 }
 
-.blue-bg {
+.right-carousel-inner-btn{
     background-color: #0000ff;
     color: #fff;
 }
 
-.blue-bg:hover{
-    background-color: #2a2aff;
+.right-carousel-inner-btn:hover{
+    background-color: #ffffff;
+    color: #0000ff;
+    border: 1px solid #0000ff;
 }
 
 .right-carousel-item {
@@ -103,10 +105,10 @@
 
  
 
-.blue-bg {
+/* .blue-bg {
     background-color: #0000ff;
     color: #fff;
-}
+} */
 
 .right-carousel-heading{
     font-size: 36px !important;
@@ -198,21 +200,38 @@
     }
 }
 
-.swiper-button-prev,.swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
+    border: 1px solid black;
     align-items: center;
-    background-color: #0000ff;   
+    background-color: #ffffff;  
 }
 
-.swiper-button-prev::after,.swiper-button-next::after{
+.swiper-button-prev::after,
+.swiper-button-next::after {
     font-size: 20px;
     font-weight: 900;
-    color: #fff;
+    color: #000000;  
 }
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: #0000ff; 
+    border: none;
+}
+
+.swiper-button-prev:hover::after,
+.swiper-button-next:hover::after {
+    color: #ffffff; 
+}
+
+
+
 
 @media screen and (max-width:1300px){
     .carousel-item {

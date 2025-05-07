@@ -7,8 +7,9 @@
     <title>eCommerce client-section</title>
     <link rel="stylesheet" href="styles.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script>:contentReference[oaicite:6]{index=6}
+    
 
 
     <style>
@@ -22,361 +23,372 @@
             padding: 0;
         }
 
-        .client-section {
-            padding: 0px 50px;
-            max-width: 1720px;
-            margin: 0 auto;
-        }
+        .h2testimonialwrap {
+    width: 100%;
+    position: relative;
+    background: #f6f5f4;
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px
+}
 
-        .client-head {
-            font-size: 37px;
-            margin-bottom: 30px;
-        }
+.testiTopDetails {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1720px;
+    width: 100%;
+    align-items: flex-start;
+    padding: 0 60px;
+    gap: 30px;
+    margin: 0 auto
+}
 
+.testiTopDetails .tettopleft {
+    display: flex;
+    flex-direction: column
+}
 
+.testiTopDetails .tettopleft p:first-child {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    text-align: left
+}
 
-        .client-cards {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+.testiTopDetails .tettopleft p:nth-child(2) {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 44px;
+    text-align: left;
+    max-width: 450px
+}
 
-        }
+.testright {
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
 
-        .client-logo {
-            padding: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-radius: 37px;
-        }
+.testswipsingle {
+    width: 98%!important;
+    height: 340px;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    gap: 18px;
+    flex-direction: column;
+    background: #fff
+}
 
+.testswipsingle img {
+    width: 120px;
+    height: 18px
+}
 
+.reviewsss {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px
+}
 
-        .client-logo img {
-            max-width: 100%;
-        }
+.projectre,.reviewname,.reviewsss {
+    font-family: sf-ui-display-medium,sans-serif;
+    text-align: left;
+    color: #222
+}
 
-        h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            line-height: 28px;
-        }
+.projectre,.reviewname {
+    font-size: 18px;
+    line-height: 28px
+}
 
+.reviewname {
+    font-weight: 600
+}
 
-        .client-img {
-            width: 80px;
-            height: 80px;
-        }
+.projectre {
+    font-weight: 500
+}
 
-        .review-head {
-            width: 100%;
-            height: auto;
-        }
+.roudned,.swiper-button-next2,.swiper-button-prev2 {
+    width: 44px;
+    height: 44px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color .3s
+}
 
-        .review-head .frst-head {
-            font-size: 16px;
-            line-height: 0;
-            margin: 24px 0;
-            color: #362a2a;
-            font-weight: 900;
-        }
+.roudned svg,.swiper-button-next2 svg,.swiper-button-prev2 svg {
+    width: 14px;
+    height: 14px;
+    transition: stroke .3s;
+    border: none
+}
 
-        .review-head .sec-head {
-            font-size: 14px;
-            line-height: 0;
-            color: #362a2a;
-            font-weight: 600;
-        }
+.home2Leftarrow,.home2rightarrow {
+    font-size: 40px;
+    transition: .4s;
+    color: #000
+}
 
-        .review-para {
-            font-size: 16px;
-            line-height: 28px;
-            margin-top: 2rem;
-            font-weight: 100;
-        }
+.roudned svg path,.swiper-button-next2 svg path,.swiper-button-prev2 svg path {
+    stroke: #0e151d
+}
 
-        .swipe-client {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
+.roudned:hover,.swiper-button-next2:hover,.swiper-button-prev2:hover {
+    border-color: #1063ff
+}
 
-        .swiper-container {
-            width: 100%;
-            max-width: 1200px;
-            position: relative;
-            margin: 0 auto;
-            overflow: hidden;
-        }
+.roudned:hover svg path,.swiper-button-next2:hover svg path,.swiper-button-prev2:hover svg path {
+    stroke: #1063ff!important
+}
 
-        .swiper-wrapper {
-            display: flex;
-            align-items: center; 
-        }
+.home2Leftarrow {
+    font-weight: 300!important
+}
 
-        .swiper-slide {
-            background: #ffffff;
-            padding: 15px 18px 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: left;
-            width: 29% !important;
-            height: 400px;
-            /* height: 100%; */
-        }
+.home2Leftarrow:hover,.home2rightarrow:hover {
+    color: #1063ff
+}
 
-        /* Navigation Buttons */
-        .swiper-button-prev,
-        .swiper-button-next {
-            color: #ffffff !important;
-            position: absolute;
-            top: 60%;
-            transform: translateY(-50%);
-            z-index: 10;
-            width: 30px;
-            height: 30px;
-            background: rgba(13, 130, 225, 0.8);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            display: none;
-        }
+@media (max-width: 1250px) {
+    .singswiperdiv {
+        width:400px;
+        height: 400px;
+        min-height: 0
+    }
 
-        .swiper-button-prev {
-            left: 7rem;
-        }
+    .brandswipe {
+        height: 107px!important
+    }
 
-        .swiper-button-next {
-            right: 8rem;
-        }
+    .mySwiper32 {
+        width: 100%;
+        transform: translateY(-50%) translateX(20px)
+    }
 
-        .swiper-button-prev::after,
-        .swiper-button-next::after {
-            font-size: 15px;
-            font-weight: bold;
-        }
+    .swiplidebtn {
+        bottom: 44px
+    }
 
+    .insidebtns p,.swiplidebtn p {
+        font-size: 18px
+    }
+}
 
-        @media (max-width: 1024px) {
-            .swiper-slide {
-                width: 44.2% !important;
-            }
+@media (max-width: 1150px) {
+    .testswipsingle img {
+        width:100px
+    }
 
-            .swiper-button-prev {
-                left: 2px;
-            }
+    .projectre,.reviewname,.reviewsss {
+        font-size: 14px
+    }
+}
 
-            .swiper-button-next {
-                right: 2px;
-            }
+@media (max-width: 1090px) {
+    .brandswipe {
+        height:97px!important
+    }
+}
 
+@media (max-width: 810px) {
+    .testiTopDetails .tettopleft p:first-child {
+        font-size:20px
+    }
 
-        }
+    .testiTopDetails .tettopleft p:nth-child(2) {
+        font-size: 30px
+    }
 
-        @media (max-width: 768px) {
-            .swiper-slide {
-                width: 94.2% !important;
-            }
+    .swiplidebtn {
+        bottom: 20px
+    }
 
-            .swiper-button-prev,
-            .swiper-button-next {
-                width: 25px;
-                height: 25px;
-            }
+    .brandswipe {
+        height: 77px!important
+    }
+}
 
-            .swiper-button-prev {
-                left: 2px;
-            }
+@media (max-width: 750px) {
+    .singswiperdiv {
+        width:280px;
+        height: 280px
+    }
 
-            .swiper-button-next {
-                right: 2px;
-            }
-        }
+    .swipebtns32 {
+        transform: translateY(-100px) translateX(-40px)
+    }
 
-        @media(max-width:480px) {
-            .swiper-slide {
-                width: 88.5% !important;
-                box-shadow: none;
-            }
+    .h2swiperwrap {
+        max-height: 250px
+    }
+}
 
-            .swiper-button-prev,
-            .swiper-button-next {
-                width: 25px;
-                height: 25px;
-                display: none;
-            }
+@media (max-width: 700px) {
+    .brandswipe {
+        height:57px!important
+    }
+}
 
-            .swiper-button-prev {
-                left: 2px;
-            }
+@media (max-width: 600px) {
+    .swiplidebtn {
+        align-items:flex-start!important;
+        bottom: 6px;
+        gap: 4px
+    }
 
-            .swiper-button-next {
-                right: 2px;
-            }
-            iframe{
-                height: 656px;
-            }
+    .singswiperdiv {
+        width: 260px;
+        height: 260px
+    }
 
-            .review-para{
-                font-size: 14px;
-                line-height: 22px;
-                font-weight: 500;
-            }
+    .testswipsingle {
+        max-width: 500px;
+        width: 100%;
+        height: fit-content
+    }
 
-        }
+    .swipebtns32 {
+        transform: translateY(-70px) translateX(-40px);
+        margin-bottom: 30px
+    }
 
-        @media (max-width:320px) {
-            .swiper-slide {
-                width: 93% !important;
-            }
+    .brandswipe {
+        height: 47px!important
+    }
 
-            .swiper-button-prev,
-            .swiper-button-next {
-                width: 25px;
-                height: 25px;
-            }
+    .insidebtns span {
+        font-size: 8px
+    }
 
-            .swiper-button-prev {
-                left: 2px;
-            }
+    .swiplidebtn p {
+        font-size: 10px
+    }
 
-            .swiper-button-next {
-                right: 2px;
-            }
-           
-        }
+    .insidebtns p {
+        font-size: 18px
+    }
+
+    .h2braswiperwrap h3 {
+        font-size: 32px;
+        line-height: 42px
+    }
+
+    .viewworkbtns {
+        width: 180px;
+        height: 50px
+    }
+
+    .reviewsss,.viewworkbtns span {
+        font-size: 16px;
+        line-height: 26px
+    }
+
+    .testiTopDetails .tettopleft p:first-child {
+        font-size: 18px;
+        line-height: 28px
+    }
+
+    .testiTopDetails .tettopleft p:nth-child(2) {
+        font-size: 30px;
+        line-height: 40px
+    }
+
+    .projectre,.reviewname {
+        font-size: 14px
+    }
+}
+
+@media (max-width: 550px) {
+    .testright {
+        transform:translateX(-20px)
+    }
+
+    .testiTopDetails {
+        padding: 0 20px
+    }
+
+    .testiTopDetails .tettopleft p:first-child {
+        font-size: 16px
+    }
+
+    .testiTopDetails .tettopleft p:nth-child(2) {
+        font-size: 22px
+    }
+
+    .singswiperdiv {
+        margin: 0 auto;
+        max-width: 200px;
+        max-height: 200px
+    }
+
+    .swipebtns32 {
+        transform: translateY(-20px) translateX(-40px);
+        margin-bottom: 30px
+    }
+
+    .sec3cont {
+        padding: 40px 20px!important
+    }
+
+    .mySwiper32 {
+        transform: translateY(-30%) translateX(0)
+    }
+
+    .brandswipe {
+        height: 84px!important
+    }
+
+    .viewworkbtns {
+        width: 140px;
+        height: 42px
+    }
+
+    .viewworkbtns span {
+        font-size: 12px
+    }
+
+    .h2braswiperwrap h3 {
+        font-size: 24px;
+        line-height: 34px
+    }
+
+    .testswipsingle {
+        max-width: 90vw;
+        width: 100%;
+        height: 64vh!important
+    }
+
+    .roudned {
+        width: 30px;
+        height: 30px
+    }
+
+    .h2swiperwrap {
+        max-height: 220px
+    }
+}
+
+@media (max-width: 440px) {
+    .singswiperdiv {
+        width:200px;
+        height: 200px
+    }
+}
+
 
 
     </style>
 </head>
 
 <body>
-    <section class="client-section">
-        <!-- <h2 class="client-head">Hear From our Clients</h2> -->
-        <h2 class="client-head">What Our Clients Say</h2>
-        <div class="swipe-client">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide client-card">
-                        <div class="client-logo"><img
-                                src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1746101666/MITHAL_pgyiph_venbhx.webp"
-                                alt="miital-industry" class="client-img">
-                            <span class="client-img1"><img loading="lazy"  width="135"
-                                    src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1746101660/Group_1171279525_fwt6t3_eaer5e.webp"
-                                    alt="kushel_image" />
-                            </span>
-                        </div>
-                        <div class="review-head">
-                            <h3 class="frst-head">Shikhar Mittal</h3>
-                            <h3 class="sec-head">–Mittal Industries</h3>
-                        </div>
-                        <p class="review-para">
-                            Kushel Digi Solutions delivered exceptional ecommerce development services and helped us
-                            built a highly functional online platform. The team's technical skills and experience is
-                            really commendable which provided a seamless digital upgrade.
-
-                        </p>
-                    </div>
-                    <div class="swiper-slide client-card">
-                        <div class="client-logo"><img
-                                src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1746101661/manish-bhai-1_szhixt_gguahs.webp"
-                                alt="Slides365" class="client-img">
-                            <span class="client-img1"><img loading="lazy"  width="135"
-                                    src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1746101660/Group_1171279525_fwt6t3_eaer5e.webp"
-                                    alt="kushel_image" />
-                            </span>
-                        </div>
-                        <div class="review-head">
-                            <h3 class="frst-head">Annu Koteshwara
-                            </h3>
-                            <h3 class="sec-head">–Slides365</h3>
-                        </div>
-                        <p class="review-para">
-                            From designing to execution, Kushel Digi Solutions was the best choice for the innovative
-                            development of our project. Their expertise as well as attention to detail in website
-                            development & BigCommerce solutions ensured to enhance our digital strategy and user's
-                            online experience.
-
-                        </p>
-                    </div>
-                    <div class="swiper-slide client-card">
-                        <div class="client-logo"><img
-                                src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1746101665/manish-bhai-3_ryln48_peccbr.webp"
-                                alt="MyCrazySimpleCMS" class="client-img">
-                            <span class="client-img1"><img loading="lazy"  width="135"
-                                    src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1746101660/Group_1171279525_fwt6t3_eaer5e.webp"
-                                    alt="kushel_image" />
-                            </span>
-                        </div>
-                        <div class="review-head">
-                            <h3 class="frst-head">Aron Kiefer</h3>
-                            <h3 class="sec-head">– MyCrazySimpleCMS</h3>
-                        </div>
-                        <p class="review-para">
-                            Kushel Digi Solutions understands the core of eCommerce development and gives BigCommerce
-                            solutions which turned out as a massive game changer for our online business storefront.
-                            Their team of professionals helped gaining us scalability and improved customer service
-                            experience.
-                        </p>
-                    </div>
-                    <div class="swiper-slide client-card">
-                        <div class="client-logo"><img
-                                src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1746101662/manish-bhai-2_wl3fur_mragwr.webp"
-                                alt="Nirviex" class="client-img">
-                            <span class="client-img1"><img loading="lazy"  width="135"
-                                    src="https://res.cloudinary.com/dqjbzgksw/image/upload/v1746101660/Group_1171279525_fwt6t3_eaer5e.webp"
-                                    alt="kushel_image" />
-                            </span>
-                        </div>
-                        <div class="review-head">
-                            <h3 class="frst-head">Rupam Ray</h3>
-                            <h3 class="sec-head">– Nirviex.in
-                            </h3>
-                        </div>
-                        <p class="review-para">
-                            Working with Kushel Digi Solutions was a fantastic experience. Their strategic approach to
-                            eCommerce development and website development exceeded our expectations, therefore made the
-                            entire process reliable and hassle free. The team was highly responsive and offered
-                            customised solutions for every problem.
-                        </p>
-                    </div>
-
-
-                </div>
-
-                <!-- Navigation Buttons -->
-
-            </div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-        </div>
-    </section>
-
-    <script>
-        var swiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            loop: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-                320: { slidesPerView: 1 },
-                768: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 }
-            }
-        });
-
-
-    </script>
+    
+      
 
 </body>
 

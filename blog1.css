@@ -669,6 +669,8 @@ body{
 /* Individual Card Styling */
 .cardBlogSt {
     padding-top: 30px;
+    text-decoration: none !important;
+
 }
 
 /* Image Styling */
@@ -681,7 +683,7 @@ body{
 
 /* Category Label */
 .cardBlogStpaa {
-    color: rgb(218, 76, 76);
+    color: #007bff;
     text-transform: uppercase;
     font-size: 14px;
     line-height: 24px;
@@ -695,6 +697,8 @@ body{
     font-size: 24px;
     line-height: 32px;
     margin-top: 8px;
+    color: #040404;
+    text-decoration: none !important;
 }
 
 /* Blog Description */
@@ -703,6 +707,7 @@ body{
     font-size: 16px;
     line-height: 24px;
     color: #040404;
+    font-weight: 500;
 }
 
 /* Author Name */
@@ -923,7 +928,7 @@ body{
 #popAni{
     position: absolute;
     right: 0px;
-    top: 39px;
+    top: 15px;
     width: 38px;
     height: 40px;
     border-radius: 64px;

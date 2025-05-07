@@ -2,6 +2,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
 
+
+
 .navbarwrap {
     position: relative;
     background-color: #fff;
@@ -469,9 +471,9 @@
 .bimagelogMain {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     gap: 43px;
-    /* padding: 0px 30px; */
+    padding: 30px;
     /* flex-wrap: wrap;*/
 }
 
@@ -483,7 +485,7 @@
 }
 
 .bimageloDi {
-
+    padding-bottom: 3rem;
     max-width: 500px;
 }
 
@@ -500,8 +502,9 @@
 }
 
 .bimageloDiPara {
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 600;
+    color: black;
 }
 
 .bimageloDiParra {
@@ -515,6 +518,8 @@
     /* padding-top: 30px; */
     font-size: 15px;
     font-weight: 600;
+    color: black;
+
 }
 
 /* Responsive Design */
@@ -602,15 +607,39 @@
     color: #333;
 }
 
+.cardBlogStaa{
+    text-decoration: none !important;
+}
+
 .timeWithIcon {
     display: flex;
     align-items: center;
     gap: 4px;
 }
 
+.blogClockTime , .blogClockTime1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bimageloDiPargaph , .bimageloDiPargaph1{
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.blogClockTime1 a{
+    text-decoration: none!important;
+}
+
 .iconBlogClock {
     width: 25px;
     height: 25px;
+}
+
+.ALLt p{
+    font-size: 44px;
+    font-weight: 700;
 }
 
 
@@ -636,17 +665,18 @@
 .cardBlogStpaara {
     font-weight: 600;
     width: 400px;
-    line-height: 30px;
-    font-size: 19px;
+    line-height: 28px;
+    font-size: 20px;
 }
 
 
 .cardBlogStpaaragr {
     padding-top: 10px;
     font-size: 15.5px;
-    line-height: 29px;
+    line-height: 25px;
     width: 405px;
     font-weight: 500;
+    color: black;
 }
 
 .cardBlogStpaarw {
@@ -720,6 +750,8 @@
     /* white-space: nowrap; */
     position: relative;
     /* display: inline;*/
+    color: #000;
+    text-decoration: none;
 }
 
 /* 🟢 Underline animation (Initially hidden) */
@@ -745,9 +777,9 @@
 
 /* third section start */
 .newMainSec {
-    margin-top: 120px;
+    /* margin-top: 120px; */
+    /* padding: 40px 20px; */
     background-color: aliceblue;
-    padding: 40px 20px;
     height: auto;
     /* ✅ Removed fixed height */
 }
@@ -756,6 +788,8 @@
 .newsroom-section {
     max-width: 1380px;
     margin: 0 auto;
+    margin-top: 120px; 
+    padding: 40px 20px;
 }
 
 /* Header Styling */
@@ -807,7 +841,6 @@
 /* Title Styling */
 .news-title {
     font-size: 26px;
-
     font-weight: 700;
     color: #000;
     margin-bottom: 5px;
@@ -1203,13 +1236,16 @@
 }
 
 .cardsectFive {
-    /* padding-left: 90px; */
+    padding-left: 70px;
 }
 
 .cardsectFive p {
-    line-height: 100px;
+    /* line-height: 100px; */
+    padding-top: 5rem;
     font-size: 40px;
     font-weight: 700;
+    max-width: 1440px;
+    margin: auto;
 }
 
 .cardsectFive hr {
@@ -1432,14 +1468,14 @@
     gap: 2rem;
 }
 
-.navbuttonbtn {
+.prev-btn , .next-btn{
     border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 4px 12px;
     border-radius: 5px;
     font-weight: 600;
 }
 
-#pageNumber {
+#pagenumber {
     font-size: 16px;
     font-weight: 600;
 }

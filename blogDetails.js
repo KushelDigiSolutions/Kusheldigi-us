@@ -74,7 +74,7 @@ function renderBlogs(recentBlogs) {
     if (recentBlogs.length > 0) {
         recentBlogs.forEach(blog => {
             const blogHTML = `
-                <a href="/blogdetails/${blog._id}" class="cardBlogSt">
+                <a href="/blogDetails.html?id=${blog._id}" class="cardBlogSt">
                     <div class="cardBlogStImg">
                         <img src="${blog.images?.[0] || 'default-image.jpg'}" alt="${blog.title}" />
                     </div>
@@ -90,6 +90,7 @@ function renderBlogs(recentBlogs) {
                     </div>
                     <p class="cardBlogStpaaragr">${blog.subdescription}</p>
                     <p class="cardBlogStpaarw">Read More</p>
+                    
                 </a>`;
             blogContainer.innerHTML += blogHTML;
         });
