@@ -1410,7 +1410,8 @@ footer {
 }
 
 .blog-section-date {
-  font-size: 12px
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .viewAllBtnKcom {
@@ -1918,6 +1919,17 @@ footer {
 
 .social-icons-1>a:first-child {
   margin-left: 0
+}
+
+
+@media (max-width:1200px){
+  .social-icons-1{
+        width: 146px;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .back-to-top {

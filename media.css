@@ -183,7 +183,7 @@
     }
     .bimageloDiPara {
         font-size: 1.5rem;
-        line-height: 32px;
+        line-height: 25px;
     }
     .bimageloDiParra {
         font-size: 16px;
@@ -191,6 +191,11 @@
     }
     .bimageloDiPaara {
         font-size: 13px;
+    }
+
+    .bimageloDi>p {
+        font-size: 20px !important;
+        margin: 0;
     }
 }
 
@@ -215,6 +220,12 @@
     .bimagelogMain {
         width: 100%;
     }
+
+    .cardBlogStImg img {
+        width: 100%;
+        height: auto;
+        transition: transform 0.3s ease-in-out;
+    }
 }
 
 @media (max-width: 768px) {
@@ -231,9 +242,9 @@
     }
     .cardMainBlogSec {
         padding: 0;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         padding-right: 0;
-        gap: 15px;
+        gap: 30px;
     }
     .cardBlogStImg img {
         width: 100%;
@@ -261,6 +272,15 @@
     .cardBlogStpaarw {
         font-size: 14px;
     }
+
+    .cardMainBlogSec {
+        padding: 0;
+        grid-template-columns: repeat(1, 1fr);
+        padding-right: 0;
+        gap: 40px;
+    }
+
+    
 }
 
 

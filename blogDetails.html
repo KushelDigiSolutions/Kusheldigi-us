@@ -98,7 +98,6 @@
 
     <div class="article-container">
       <h3 id="currentBlogTitle" class="MainBloggSeCh3">
-        How AI Went from Buzz to <br class="brrr"> ‘Buzz off While I Generate This’
       </h3>
       <div class="MainBloggSeCh3Img">
         <img id="currentBlogImage" src="./assets/NL-Ai-transformation-blog-hero-min (1).webp" alt="">
@@ -110,9 +109,15 @@
     <section class="third-section">
       <div class="thirddd">
         <div class="social-icon">
-          <div class="icon"><i class="ri-facebook-fill"></i></div>
-          <div class="icon"><i class="ri-linkedin-fill"></i></div>
-          <div class="icon"><i class="ri-twitter-x-fill"></i></div>
+          <a class="iconss" href="https://www.facebook.com/kusheldigisolutions/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+            <div class="icon"><i class="ri-facebook-fill"></i></div>
+          </a>
+          <a class="iconss" href="https://www.linkedin.com/company/kusheldigisolutions/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+            <div class="icon"><i class="ri-linkedin-fill"></i></div>
+          </a>
+          <a class="iconss" href="https://x.com/KushelDigisoln" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+            <div class="icon"><i class="ri-twitter-x-fill"></i></div>
+          </a>
           <div class="icon" id="iconPop">
             <span class="thanksTxt1 displayNone">Thanks</span>
 
@@ -121,48 +126,42 @@
         </div>
         <div class="mainBloContentSt">
           <div class="mainBloContentStPara">
-            <p> <b id="blogAuthor">Mia Maček</b></p>
-
-            <!-- <p>Content Specialist</p>
-              <br> <br>
-              <p>4 min Read in <b>Culture</b>
-                <br> <br>
-              </p> -->
+            <p> <b id="blogAuthor"></b></p>
+            <p id="designation"></p>
+              <!-- <br> -->
+              <p><b id="time"></b> Read Deep Think Big<br/>
+                <br>
+              </p>
             <p> Published ON<br>
-              <b id="blogDate">Nov 15, 2024</b>
+              <b id="blogDate"></b>
             </p>
           </div>
           <!-- left content -->
           <div class="mainBloContentDiv">
-            <p id="currentBlogPara" class="mainBloContentPa">AI’s early days were filled with lofty promises, fears of
-              domination, and hopes of
-              revolution. Two years later, we’re no longer holding our breath. The hype cycle has moved on, and it’s
-              time
-              to talk about what comes after the spectacle.</p>
-
-
-
-
-
-
-
-
-
+            <p id="currentBlogPara" class="mainBloContentPa"></p>
+              
             <!-- card section -->
-            <div class="cardBlogSub">
-            </div>
+            <!-- <div class="cardBlogSub">
+            </div> -->
             <div class="cardSocial">
               <div class="profile">
-                <!-- <img src="assets/Cybersecurity_chalanges_2025-blog-hero-min.webp" alt="Profile Picture">
+                <!-- <img src="assets/Cybersecurity_chalanges_2025-blog-hero-min.webp" alt="Profile Picture"> -->
                 <div class="profile-info">
-                  <h4>Mia Maček</h4>
-                  <p>Content Specialist</p>
-                </div> -->
+                  <p> <b id="blogAuthor1"></b></p>
+                  <p id="designation1"></p>
+                </div>
               </div>
               <div class="social-icons">
-                <div class="icon"><i class="ri-facebook-fill"></i></div>
-                <div class="icon"><i class="ri-linkedin-fill"></i></div>
-                <div class="icon"><i class="ri-twitter-x-fill"></i></div>
+                <a class="iconss" href="https://www.facebook.com/kusheldigisolutions/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                  <div class="icon"><i class="ri-facebook-fill"></i></div>
+                </a>
+                <a class="iconss" href="https://www.linkedin.com/company/kusheldigisolutions/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                  <div class="icon"><i class="ri-linkedin-fill"></i></div>
+                </a>
+                <a class="iconss" href="https://x.com/KushelDigisoln" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                  <div class="icon"><i class="ri-twitter-x-fill"></i></div>
+                </a>
+                
                 <div id="popAni" class="icon">
                   <span class="thanksTxt displayNone">Thanks</span><i class="ri-hand-heart-line"></i>
                 </div>
@@ -193,24 +192,25 @@
 
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggleBtn = document.querySelector(".toggle-btn-1");
-        const tocList = document.querySelector(".toc-list");
-
-        // Default hidden state already set in HTML & CSS
-        toggleBtn.addEventListener("click", function () {
-          if (tocList.classList.contains("toc-hidden")) {
-            tocList.classList.remove("toc-hidden");
-            toggleBtn.innerHTML = 'hide &#9650;'; // Up Arrow
-          } else {
-            tocList.classList.add("toc-hidden");
-            toggleBtn.innerHTML = 'expand &#9660;'; // Down Arrow
-          }
-        });
+      window.addEventListener("scroll", () => {
+        const socialIcon = document.querySelector(".social-icon");
+        const triggerSection = document.querySelector(".third-section");
+    
+        const sectionTop = triggerSection.offsetTop;
+        const sectionHeight = triggerSection.offsetHeight;
+        const scrollY = window.scrollY;
+    
+        const hidePoint = sectionTop + sectionHeight * 0.85;
+    
+        if (scrollY >= sectionTop && scrollY < hidePoint) {
+          socialIcon.classList.add("fixed");
+        } else {
+          socialIcon.classList.remove("fixed");
+        }
       });
-
-
     </script>
+    
+    
 
     <div id="footer"></div>
 

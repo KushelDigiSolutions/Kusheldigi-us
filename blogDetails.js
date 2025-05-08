@@ -37,6 +37,12 @@ async function fetchBlogDetails() {
 
             document.getElementById('currentBlogPara').innerHTML = data?.blog?.description || "No Content Available";
             document.getElementById('blogAuthor').innerHTML = data?.blog?.author
+            document.getElementById('designation').innerHTML = data?.blog?.designation;
+            document.getElementById('time').innerHTML = data?.blog?.time || "N/A";
+            document.getElementById('blogAuthor1').innerHTML = data?.blog?.author
+            document.getElementById('designation1').innerHTML = data?.blog?.designation;
+
+
         } else {
             document.querySelector(".article-container").innerHTML = "<p>Blog not found.</p>";
         }

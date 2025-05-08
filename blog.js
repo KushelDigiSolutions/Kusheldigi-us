@@ -3,14 +3,14 @@ const domainToFilter = "kusheldigi.us";
 // const phoneNumber = "9045301702";
 
 let getAllBlogs = [],
-    allCatBlogs = [],
-    recentBlog = [],
-    selectedCategory = null,
-    defaultCategories = [],
-    filteredBlogs = [],
-    currentPage = 1,
-    tasksPerPage = 5,
-    isCategorySelected = false;
+  allCatBlogs = [],
+  recentBlog = [],
+  selectedCategory = null,
+  defaultCategories = [],
+  filteredBlogs = [],
+  currentPage = 1,
+  tasksPerPage = 5,
+  isCategorySelected = false;
 
 async function fetchData() {
   try {
@@ -142,8 +142,8 @@ function renderPaginatedBlogs() {
       <p class="bimageloDiParra">${currentTasks[0].subdescription}</p>
     </div>` : "<p>No Blogs Available</p>";
 
-    const small = document.getElementById("paginated-small");
-    small.innerHTML = currentTasks.slice(1).map(item => `
+  const small = document.getElementById("paginated-small");
+  small.innerHTML = currentTasks.slice(1).map(item => `
       <a href="/blogDetails.html?id=${item._id}" class="smallBlogCard">
         <img src="${item.images?.[0] || 'fallback.jpg'}" alt="${item.title}" />
       </a>`).join("");
@@ -154,6 +154,11 @@ function renderPaginatedBlogs() {
     <button onclick="changePage(-1)" ${currentPage === 1 ? "disabled" : ""} class="prev-btn">Prev</button>
     <span id="pagenumber">${currentPage}</span>
     <button onclick="changePage(1)" ${currentPage === totalPages ? "disabled" : ""} class="next-btn">Next</button>`;
+}
+
+function renderAllBlogs() {
+  document.getElementById("all-blog").innerHTML = `<p>All</p>
+        <hr /><br />`
 }
 
 function changePage(step) {
@@ -175,16 +180,19 @@ function renderAllSections() {
     renderFeaturedBlog();
     renderLatestArticles();
     renderPaginatedBlogs();
+    renderAllBlogs();
   } else {
-   
+
     document.getElementById("featured-blog").innerHTML = "";
     document.getElementById("latest-articles").innerHTML = "";
     document.getElementById("paginated-main").innerHTML = "";
     document.getElementById("paginated-small").innerHTML = "";
     document.getElementById("pagination-controls").innerHTML = "";
+    document.getElementById("all-blog").innerHTML = "";
   }
 
   renderCategorySections();
+
 }
 
 window.onload = fetchData;

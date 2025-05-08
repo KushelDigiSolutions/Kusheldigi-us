@@ -459,7 +459,10 @@
 }
 
 .mainsecBlo {
-    padding-top: 20px;
+    /* padding-top: 20px; */
+    max-width: 1720px;
+    margin: 0 auto;
+    padding: 20px 80px;
 }
 
 @media(min-width:1366px) and (max-width:1499px) {
@@ -471,9 +474,9 @@
 .bimagelogMain {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     gap: 43px;
-    padding: 30px;
+    /* padding: 30px; */
     /* flex-wrap: wrap;*/
 }
 
@@ -589,12 +592,24 @@
 
 /* second row start */
 .cardMainBlogSec {
-
     margin: 0 auto;
-    max-width: 1380px;
+    max-width: 1720px;
     display: grid;
-    grid-template-columns: repeat(3, 2fr);
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+}
 
+.cardBlogSt {
+    padding-top: 2.5rem;
+    width: auto;
+}
+
+.cardBlogStpaa {
+    color: #1566ff;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 50px;
+    font-weight: 600;
 }
 
 
@@ -643,28 +658,11 @@
 }
 
 
-.cardBlogSt {
-    padding-top: 2.5rem;
-    width: 420px;
-}
-
-.cardBlogStImg img {
-    width: 414px;
-    height: 219px;
-}
-
-.cardBlogStpaa {
-    color: #1566ff;
-    text-transform: uppercase;
-    font-size: 17px;
-    line-height: 50px;
-    font-weight: 600;
-
-}
+ 
 
 .cardBlogStpaara {
     font-weight: 600;
-    width: 400px;
+    /* width: 400px; */
     line-height: 28px;
     font-size: 20px;
 }
@@ -674,7 +672,7 @@
     padding-top: 10px;
     font-size: 15.5px;
     line-height: 25px;
-    width: 405px;
+    /* width: 405px; */
     font-weight: 500;
     color: black;
 }
@@ -723,8 +721,8 @@
 
 
 .cardBlogStImg img {
-    width: 414px;
-    height: 219px;
+    width: 100%;
+    height: auto;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -805,7 +803,7 @@
 }
 
 .newsroom-header h5 {
-    font-size: 44px;
+    font-size: 40px;
     font-weight: 700;
 }
 
@@ -943,7 +941,7 @@
     }
 
     .news-image {
-        width: 160px;
+        width: auto;
         height: 160px;
     }
 
@@ -970,7 +968,7 @@
     }
 
     .news-image {
-        width: 140px;
+        width: auto;
         height: 140px;
     }
 
@@ -980,9 +978,10 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 540px) {
     .newsroom-section {
         padding: 20px;
+        margin: 20px;
     }
 
     .newsroom-header {
@@ -1235,9 +1234,9 @@
     margin: auto;
 }
 
-.cardsectFive {
+/* .cardsectFive {
     padding-left: 70px;
-}
+} */
 
 .cardsectFive p {
     /* line-height: 100px; */
@@ -1380,8 +1379,8 @@
 
 /* seven row start */
 .eightBlogSMain {
-    /* padding-top: 50px; */
-    padding: 80px 0px 136px 0px;
+    padding-top: 50px;
+    /* padding: 80px 0px 136px 0px; */
     max-width: 1380px;
     margin: auto;
 }
