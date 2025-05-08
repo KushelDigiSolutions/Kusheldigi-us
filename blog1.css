@@ -62,6 +62,11 @@ body {
     padding: 25px 0;
 }
 
+.mainBloContentPa ul{
+    list-style-position: inside;
+    padding-left: 20px ;
+}
+
 .mainBloContpara {
     font-size: 21px;
     font-weight: 500;
@@ -403,15 +408,14 @@ body {
 
 .social-icon.fixed {
     position: fixed !important;
-    top: 50%;
+    top: 30%;
     right: 60px;
     transform: translateX(0);
     opacity: 1;
 }
 
 .social-icon.hide {
-    transform: translateX(100px);
-    /* slide out to right */
+    transform: translateX(100px); 
     opacity: 0;
 }
 

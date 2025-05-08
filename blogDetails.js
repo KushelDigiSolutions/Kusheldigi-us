@@ -92,7 +92,7 @@ function renderBlogs(recentBlogs) {
                         })}
                     </p>
                     <div class="cardBlogStpaara1">
-                        <p class="cardBlogStpaara">${blog.title.slice(0, 27)}...</p>
+                        <p class="cardBlogStpaara">${blog.title}</p>
                     </div>
                     <p class="cardBlogStpaaragr">${blog.subdescription}</p>
                     <p class="cardBlogStpaarw">Read More</p>
