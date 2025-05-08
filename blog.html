@@ -80,46 +80,6 @@
 
   </script>
 
-  <script>
-    function changeContent(category) {
-      let blogContainer = document.querySelector(".blog-container");
-
-      // Content ko temporarily remove karke wapas add karna
-      let originalContent = blogContainer.innerHTML;
-      blogContainer.innerHTML = ""; // Purana content hatao
-
-      setTimeout(() => {
-        blogContainer.innerHTML = originalContent; // Wapas same content load karo
-      }, 100); // Short delay for smooth effect
-    }
-
-  </script>
-
-
-
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      let blogCards = document.querySelectorAll(".blog-card");
-
-      blogCards.forEach((card, index) => {
-        setTimeout(() => {
-          card.classList.add("show");
-        }, index * 300); 
-      });
-
-     
-      document.getElementById("loadMore").addEventListener("click", function () {
-        document.querySelectorAll(".hidden").forEach((card, index) => {
-          setTimeout(() => {
-            card.classList.remove("hidden");
-            card.classList.add("show");
-          }, index * 300);
-        });
-        this.style.display = "none";
-      });
-    });
-  </script>
 
   <div id="footer"></div>
 
@@ -152,8 +112,8 @@
           console.error("Error loading footer:", xhr.status, xhr.statusText);
         }
       });
-    });
-    // Use jQuery to load the header
+    }); 
+    
     $(document).ready(function () {
       $('#header').load('header.html', function (response, status, xhr) {
         if (status === "error") {

@@ -1,8 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+    box-sizing: border-box; 
 
 }
 
@@ -12,54 +11,33 @@ body {
 
 .MainBloggSeC {
     margin: 0 auto;
-    max-width: 1720px;
-    /* padding: 45px 0px 0px 10px; */
+    max-width: 1720px; 
     padding: 45px 50px;
 }
 
 .MainBloggSeCh3 {
     font-size: 5.1rem;
-    font-weight: bolder;
-    /* width: 960px; */
-    /* max-width: 1345px; */
+    font-weight: bolder; 
     margin: auto;
 }
 
 .MainBloggSeCh3Img img {
     padding-top: 70px;
-    height: auto;
-    /* max-height: 650px; */
-    /* padding-left: 83px; */
+    height: auto; 
     width: 100%;
     margin: auto;
-    object-fit: cover;
-    /* border-radius: 12px;*/
+    object-fit: cover; 
 }
 
 
-
-
-
-
-/* .MainBloggSeCh3Img img {
-    padding-top: 70px;
-    height: 680px;
-    width: 100%;
-} */
-
-/* content third row start */
 .mainBloContentSt {
     margin-top: 90px;
-    display: flex;
-    /* justify-content: start; */
-    gap: 50px;
-    /* padding: 90px 0px 0px 0px; */
+    display: flex; 
+    gap: 50px; 
     align-items: self-start;
 }
 
-.mainBloContentStPara {
-    /* position: relative;
-    right: 10%; */
+.mainBloContentStPara { 
     margin-top: 8px;
 }
 
@@ -72,11 +50,16 @@ body {
 
 }
 
-/* left content  */
 .mainBloContentPa {
     width: 763px;
     font-size: 20px;
     font-weight: 600;
+}
+
+.mainBloContentPa img{
+    max-width: 100%;
+    height: auto;
+    padding: 25px 0;
 }
 
 .mainBloContpara {
