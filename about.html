@@ -660,11 +660,19 @@
 
 
   <script>
+    document.addEventListener("DOMContentLoaded", generateCaptcha);
+
     document.addEventListener("DOMContentLoaded", () => {
       const form = document.getElementById("contactForm");
       const submitButton = form.querySelector(".contact-form-btn");
 
       form.addEventListener("submit", async (event) => {
+        if (!isCaptchaVerified) {
+          event.preventDefault();
+          alert("Please verify the captcha before submitting the form.");
+          return;
+        }
+
         event.preventDefault();
         submitButton.disabled = true;
         submitButton.innerText = "Sending...";
@@ -687,7 +695,10 @@
 
           const result = await response.json();
           if (response.ok) {
-            window.location.href = "thankyou.html";
+            form.reset();
+            setTimeout(() => {
+              window.location.href = "thankyou.html";
+            }, 300);
           } else {
             alert(`Failed to send email: ${result.message || "Unknown error"}`);
           }
@@ -705,10 +716,9 @@
         phoneInput.value = phoneInput.value.replace(/\D/g, "").slice(0, 10);
       });
     });
-
   </script>
 
-
+  <script src="captcha.js"></script>
   <script src="mail.js"></script>
 
 

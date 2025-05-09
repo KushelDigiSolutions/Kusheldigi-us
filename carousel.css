@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Wix+Madefor+Display:wght@400..800&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,14 +20,15 @@
 
 .carousel-container-heading {
     text-align: center;
-    font-size: 5.7rem;
-    line-height: 7rem;
-    font-weight: 500;
+    font-size: 47px;
+    line-height: 60px;
+    font-weight: 600;
 }
 
 .carousel-container-para {
-    margin: 20px 0px;
+    /* margin: 20px 0px; */
     font-size: 19px;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -66,14 +67,14 @@
     align-items: center;
 }
 
-.left-carousel-item > img {
+.left-carousel-item>img {
     aspect-ratio: 2/1;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
- 
+
 
 .left-carousel-btn {
     background: white;
@@ -86,12 +87,12 @@
     border: none;
 }
 
-.right-carousel-inner-btn{
+.right-carousel-inner-btn {
     background-color: #0000ff;
     color: #fff;
 }
 
-.right-carousel-inner-btn:hover{
+.right-carousel-inner-btn:hover {
     background-color: #ffffff;
     color: #0000ff;
     border: 1px solid #0000ff;
@@ -103,14 +104,14 @@
     padding: 15px 20px;
 }
 
- 
+
 
 /* .blue-bg {
     background-color: #0000ff;
     color: #fff;
 } */
 
-.right-carousel-heading{
+.right-carousel-heading {
     font-size: 36px !important;
     font-weight: 700;
 }
@@ -129,13 +130,13 @@
     width: 290px;
 }
 
-.right-service-stack > ul {
+.right-service-stack>ul {
     /* margin-left: 30px; */
     margin-top: 10px;
     list-style: disc;
 }
 
-.right-service-stack > ul > li {
+.right-service-stack>ul>li {
     font-weight: 600 !important;
     font-size: 17px;
     margin: 2px 0px;
@@ -153,7 +154,7 @@
     margin: 20px 0px;
 }
 
-.service-stack-heading{
+.service-stack-heading {
     font-size: 21px;
     font-weight: 700;
 }
@@ -166,7 +167,7 @@
     margin-top: 20px;
 }
 
-@media screen and (max-width:576px){
+@media screen and (max-width:576px) {
     .carousel-container-heading {
         font-size: 28px;
         line-height: 32px;
@@ -179,12 +180,13 @@
         height: auto;
     }
 
-    .left-carousel-item , .right-carousel-item {
+    .left-carousel-item,
+    .right-carousel-item {
         width: 100%;
     }
 
-    .right-service-stack > ul {
-         text-align: left;
+    .right-service-stack>ul {
+        text-align: left;
     }
 
     .right-service-stack-div {
@@ -209,31 +211,31 @@
     justify-content: center;
     border: 1px solid black;
     align-items: center;
-    background-color: #ffffff;  
+    background-color: #ffffff;
 }
 
 .swiper-button-prev::after,
 .swiper-button-next::after {
     font-size: 20px;
     font-weight: 900;
-    color: #000000;  
+    color: #000000;
 }
 
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
-    background-color: #0000ff; 
+    background-color: #0000ff;
     border: none;
 }
 
 .swiper-button-prev:hover::after,
 .swiper-button-next:hover::after {
-    color: #ffffff; 
+    color: #ffffff;
 }
 
 
 
 
-@media screen and (max-width:1300px){
+@media screen and (max-width:1300px) {
     .carousel-item {
         width: 90%;
         height: auto;
@@ -241,14 +243,15 @@
         flex-direction: column;
     }
 
-    .left-carousel-item,.right-carousel-item{
+    .left-carousel-item,
+    .right-carousel-item {
         width: 100% !important;
     }
 
-    
+
 }
 
-@media screen and (max-width:576px){
+@media screen and (max-width:576px) {
     .carousel-container {
         padding: 40px 10px;
     }
@@ -262,7 +265,7 @@
         width: 85%;
     }
 
-    .left-carousel-item > img {
+    .left-carousel-item>img {
         aspect-ratio: 1/1;
     }
 
@@ -270,21 +273,23 @@
         display: none;
     }
 
-    .swiper-button-prev,.swiper-button-next {
+    .swiper-button-prev,
+    .swiper-button-next {
         width: 30px;
         height: 30px;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #0000ff;   
-    }
-    
-    .swiper-button-prev::after,.swiper-button-next::after{
-        font-size: 13px;
-        font-weight: 900;
-        color: #fff;
+        background-color: #ffffff;
     }
 
-     
+    .swiper-button-prev::after,
+    .swiper-button-next::after {
+        font-size: 13px;
+        font-weight: 900;
+        color: #000000;
+    }
+
+
 }

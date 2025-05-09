@@ -22,9 +22,9 @@ body {
 
 .form-container {
   width: 100%;
-  max-width: 1660px;
+  max-width: 1720px;
   margin: 0 auto;
-  padding: 28px 95px
+  padding: 28px 95px;
 }
 
 
@@ -139,7 +139,7 @@ h4 {
   border-radius: 20px;
   z-index: 1;
   position: relative;
-  max-height: 650px;
+  max-height: 670px;
   height: 100%;
   background: #ffffff;
   /* form body */
@@ -148,17 +148,7 @@ h4 {
 
 }
 
-/* .contact-us-section .right-box .form-wrap:before {
-    content: "";
-    width: 210px;
-    height: 210px;
-    background: url(./image/8years.png) 0 0 no-repeat;
-    position: absolute;
-    top: -31px;
-    right: -21px;
-    background-size: contain;
-
-} */
+ 
 
 .contact-us-section .right-box .form-wrap .form-top {
   padding: 18px 32px 20px;
@@ -174,16 +164,18 @@ h4 {
 
 }
 
+
 .contact-us-section .right-box .form-wrap .form-top h2 {
   font-weight: 700;
-  margin: 0 0 5px;
+  /* margin: 0 0 5px; */
   font-size: 32px;
   line-height: 38px;
   color: rgba(255, 255, 255, 0.899);
 }
 
 .contact-us-section .right-box .form-wrap .form-top p {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
   color: rgb(249, 246, 246);
   line-height: 2.4;
 }
@@ -297,6 +289,7 @@ input::-webkit-inner-spin-button {
   align-items: center;
   padding-left: 20px;
   position: relative;
+  font-weight: 600;
 }
 
 .contact-us-section .right-box .form-wrap .form-top .soc-box a i {
@@ -329,7 +322,7 @@ img {
 }
 
 .contact-us-section .right-box .form-box {
-  margin: 30px 0 0;
+  margin: 18px 0 0;
 }
 
 
@@ -414,10 +407,7 @@ img {
   position: relative;
 }
 
-.contact-us-section .right-box .form-box .form-conf span {
-  display: inline-block;
-  font-size: 16px;
-}
+
 
 .contact-us-section .right-box .form-box .form-conf span i {
   margin-right: 3px;
@@ -442,13 +432,14 @@ img {
 }
 
 .contact-us-section .right-box .form-box .form-conf span.signnda {
-  padding: 0 20px;
+  padding: 0 12px;
   position: relative;
 }
 
 .contact-us-section .right-box .form-box .form-conf span {
   display: inline-block;
-  font-size: 16px;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .contact-us-section .right-box .form-box .form-conf span.signnda:before {
@@ -456,7 +447,7 @@ img {
   width: 1px;
   height: 20px;
   position: absolute;
-  left: 9px;
+  left: 3px;
   top: 0;
   background: rgba(65, 65, 65, .3);
 }
@@ -577,9 +568,8 @@ img {
   max-width: 500px;
   overflow: hidden;
   position: relative;
-  margin: 80px auto;
-  padding: 0 15px;
-  /* adds spacing on small screens */
+  margin: 0 auto;
+  padding: 38px 0;
 }
 
 .slider-track {
@@ -644,11 +634,13 @@ img {
 
 
 .mainDsContain {
-  background-color: #f8f8ff
+  background-color: #f8f8ff;
+  max-width: 1720px;
+  margin: auto; 
 }
 
 .mainDsDiv {
-  max-width: 1720px;
+  /* max-width: 1720px; */
   margin: auto;
   padding: 50px
 }
@@ -752,12 +744,10 @@ img {
   justify-content: center;
   cursor: pointer;
   z-index: 3;
-  animation: pulseGlow 2s, upward 1s ease-in-out;
+  animation: pulseGlow 2s infinite, upward 1s ease-in-out;
   box-shadow: 0 0 0 rgba(59, 59, 240, 0.7);
   transition: box-shadow 0.3s ease-in-out;
 }
-
-
 
 @keyframes pulseGlow {
   0% {
@@ -771,9 +761,10 @@ img {
   }
 }
 
+
 @keyframes upward {
   from {
-    transform: translateY(20px);
+    transform: translateY(50px);
   }
   to {
     transform: translateY(-50%);
@@ -793,6 +784,10 @@ img {
   z-index: 2;
   animation: fadeIn .2s ease;
   cursor: pointer;
+}
+
+.ds25-popup.shift-up {
+  transform: translateY(-50px);
 }
 
 .ds25-step-wrapper {
@@ -1178,12 +1173,14 @@ img {
  
 .h2testimonialwrap {
   width: 100%;
-  position: relative;
-  background: #f6f5f4;
-  padding: 45px 90px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px
+    position: relative;
+    background: #f6f5f4;
+    padding: 45px 90px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 1720px;
 }
 
 .testiTopDetails {

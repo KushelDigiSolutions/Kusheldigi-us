@@ -332,10 +332,12 @@ iframe {
   align-items: center;
   height: auto
 }
-.heroImg img{
+
+.heroImg img {
   height: 446px;
   width: 869px;
 }
+
 .sec-2cont {
   max-width: 1420px;
   padding: 40px
@@ -1922,11 +1924,10 @@ footer {
 }
 
 
-@media (max-width:1200px){
-  .social-icons-1{
-        width: 146px;
-    display: flex
-;
+@media (max-width:1200px) {
+  .social-icons-1 {
+    width: 146px;
+    display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -1976,8 +1977,8 @@ footer p {
 .discover_body h6 {
   color: #15202e;
   font-weight: 600;
-  font-size: clamp(16px, 1.5vw, 20px);
-  padding: 10px 0
+  font-size: clamp(16px, 1.5vw, 22px);
+  padding: 10px 0;
 }
 
 .discover_body .p1 {
@@ -2020,10 +2021,10 @@ footer p {
 
 .discover_box p {
   color: #15202e;
-  font-weight: 400;
-  font-size: clamp(16px, 1.3vw, 18.5px);
+  font-weight: 500;
+  font-size: clamp(16px, 1.3vw, 17.5px);
   line-height: 30px;
-  width: 91%
+  width: 100%;
 }
 
 .containpufds span,
@@ -2181,8 +2182,9 @@ footer p {
   }
 
   .logo-heading p {
-    font-size: 18px !important;
-    line-height: 24px !important
+    font-size: 21px !important;
+    line-height: 24px !important;
+    font-weight: 500;
   }
 
   .hoGet_inTouchWrap .getInSingleBox {
@@ -3321,7 +3323,7 @@ a:hover {
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
-  border:none;
+  border: none;
 }
 
 .captcha-btn:hover,
@@ -4294,16 +4296,19 @@ input::-webkit-outer-spin-button {
 }
 
 .plt-head {
-  font-size: 37px;
-  margin-bottom: 30px
+  font-size: 45px;
+  font-weight: 600;
+  margin: 0;
+  padding-bottom: 20px;
 }
 
 .plt-para {
   font-size: 17px;
   color: #362a2a;
+  font-weight: 600;
   max-width: 1096px;
   margin: 0 auto 30px;
-  padding: 0 15px
+  padding: 0 15px;
 }
 
 .plt-cards {
@@ -4312,16 +4317,41 @@ input::-webkit-outer-spin-button {
   gap: 20px
 }
 
+
+@media (max-width: 880px) {
+  .plt-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .plt-card {
+    width: 100%;
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 680px) {
+  .plt-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 .plt-card {
   background: #fff;
-  padding: 18px 20px 33px;
+  padding: 18px 20px;
   border-radius: 20px;
   text-align: left;
   border: 2px solid #80808057;
   width: 430px;
-  height:480px;
-  position: relative
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 
 .plt-card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, .2)
@@ -4366,14 +4396,13 @@ input::-webkit-outer-spin-button {
   font-size: 17px;
   display: flex;
   align-items: center;
-  position: absolute;
-  bottom: 6.5rem
+  margin-top: auto;
 }
+
 
 @media (min-width:1200px) {
   .plt-card {
     width: 426px;
-    /* height: auto */
   }
 
   .plt-btn {
@@ -4404,8 +4433,8 @@ input::-webkit-outer-spin-button {
   }
 }
 
-@media (min-width:600px) and (max-width:767px){
-  .swiper-container{
+@media (min-width:600px) and (max-width:767px) {
+  .swiper-container {
     width: 70% !important;
     margin: auto !important;
   }
@@ -4416,9 +4445,11 @@ input::-webkit-outer-spin-button {
     padding: 45px 0;
     height: auto
   }
-  .services-box-icon img{
+
+  .services-box-icon img {
     width: 20px !important;
   }
+
   .tech-heading {
     padding: 0 auto;
     text-align: center
@@ -4502,14 +4533,15 @@ input::-webkit-outer-spin-button {
   .plt-card {
     width: 100%;
     padding: 18px;
-    height: 518px
+    height: auto;
   }
 
   .plt-btn {
     font-size: 15px;
     bottom: 3rem
   }
-  .services-box-icon img{
+
+  .services-box-icon img {
     width: 20px !important;
   }
 }
@@ -4541,20 +4573,23 @@ input::-webkit-outer-spin-button {
   transform: scale(1.1)
 }
 
-@keyframes smoothBlink {
-
-  0%,
-  100% {
-    opacity: 1
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 59, 240, 0.7);
   }
 
-  50% {
-    opacity: .4
+  70% {
+    box-shadow: 0 0 0 10px rgba(59, 59, 240, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 59, 240, 0);
   }
 }
 
 #callBlinking {
-  animation: 1.2s ease-in-out infinite smoothBlink
+  animation: pulseGlow 2s infinite, upward 1s ease-in-out;
+  border-radius: 50%;
 }
 
 
@@ -4562,7 +4597,7 @@ input::-webkit-outer-spin-button {
 
 
 
- 
+
 .h2testimonialwrap {
   width: 100%;
   position: relative;
@@ -4570,7 +4605,9 @@ input::-webkit-outer-spin-button {
   padding: 45px 90px;
   display: flex;
   flex-direction: column;
-  gap: 40px
+  gap: 40px;
+  margin: 0 auto;
+  max-width: 1720px;
 }
 
 .testiTopDetails {
@@ -4612,7 +4649,7 @@ input::-webkit-outer-spin-button {
 }
 
 .testswipsingle {
-  width: 98%!important;
+  width: 98% !important;
   height: 420px;
   padding: 30px;
   border-radius: 10px;
@@ -4634,13 +4671,16 @@ input::-webkit-outer-spin-button {
   line-height: 26px
 }
 
-.projectre,.reviewname,.reviewsss { 
+.projectre,
+.reviewname,
+.reviewsss {
   text-align: left;
   color: #222;
-  margin:0;
+  margin: 0;
 }
 
-.projectre,.reviewname {
+.projectre,
+.reviewname {
   font-size: 18px;
   line-height: 28px
 }
@@ -4653,7 +4693,9 @@ input::-webkit-outer-spin-button {
   font-weight: 700
 }
 
-.roudned,.swiper-button-next2,.swiper-button-prev2 {
+.roudned,
+.swiper-button-next2,
+.swiper-button-prev2 {
   width: 44px;
   height: 44px;
   border: 2px solid #000;
@@ -4664,36 +4706,46 @@ input::-webkit-outer-spin-button {
   transition: border-color .3s
 }
 
-.roudned svg,.swiper-button-next2 svg,.swiper-button-prev2 svg {
+.roudned svg,
+.swiper-button-next2 svg,
+.swiper-button-prev2 svg {
   width: 14px;
   height: 14px;
   transition: stroke .3s;
   border: none
 }
 
-.home2Leftarrow,.home2rightarrow {
+.home2Leftarrow,
+.home2rightarrow {
   font-size: 40px;
   transition: .4s;
   color: #000
 }
 
-.roudned svg path,.swiper-button-next2 svg path,.swiper-button-prev2 svg path {
+.roudned svg path,
+.swiper-button-next2 svg path,
+.swiper-button-prev2 svg path {
   stroke: #0e151d
 }
 
-.roudned:hover,.swiper-button-next2:hover,.swiper-button-prev2:hover {
+.roudned:hover,
+.swiper-button-next2:hover,
+.swiper-button-prev2:hover {
   border-color: #1063ff
 }
 
-.roudned:hover svg path,.swiper-button-next2:hover svg path,.swiper-button-prev2:hover svg path {
-  stroke: #1063ff!important
+.roudned:hover svg path,
+.swiper-button-next2:hover svg path,
+.swiper-button-prev2:hover svg path {
+  stroke: #1063ff !important
 }
 
 .home2Leftarrow {
-  font-weight: 300!important
+  font-weight: 300 !important
 }
 
-.home2Leftarrow:hover,.home2rightarrow:hover {
+.home2Leftarrow:hover,
+.home2rightarrow:hover {
   color: #1063ff
 }
 
@@ -4701,259 +4753,264 @@ input::-webkit-outer-spin-button {
 .testImageCloud {
   display: flex;
   align-items: center;
-   justify-content: space-between;
+  justify-content: space-between;
 }
 
 @media (max-width: 1250px) {
   .singswiperdiv {
-      width:400px;
-      height: 400px;
-      min-height: 0
+    width: 400px;
+    height: 400px;
+    min-height: 0
   }
 
   .brandswipe {
-      height: 107px!important
+    height: 107px !important
   }
 
   .mySwiper32 {
-      width: 100%;
-      transform: translateY(-50%) translateX(20px)
+    width: 100%;
+    transform: translateY(-50%) translateX(20px)
   }
 
   .swiplidebtn {
-      bottom: 44px
+    bottom: 44px
   }
 
-  .insidebtns p,.swiplidebtn p {
-      font-size: 18px
+  .insidebtns p,
+  .swiplidebtn p {
+    font-size: 18px
   }
 
   .testswipsingle {
     max-width: 500px;
     width: 100%;
     height: 510px !important;
-}
+  }
 }
 
 @media (max-width: 1150px) {
   .testswipsingle img {
-      width:100px
+    width: 100px
   }
 
-  .projectre,.reviewname,.reviewsss {
-      font-size: 14px
+  .projectre,
+  .reviewname,
+  .reviewsss {
+    font-size: 14px
   }
 
- 
+
 }
 
 @media (max-width: 1090px) {
   .brandswipe {
-      height:97px!important
+    height: 97px !important
   }
 
-  
+
 }
 
 @media (max-width: 810px) {
   .testiTopDetails .tettopleft p:first-child {
-      font-size:20px
+    font-size: 20px
   }
 
   .testiTopDetails .tettopleft p:nth-child(2) {
-      font-size: 30px
+    font-size: 30px
   }
 
   .swiplidebtn {
-      bottom: 20px
+    bottom: 20px
   }
 
   .brandswipe {
-      height: 77px!important
+    height: 77px !important
   }
 
   .testswipsingle {
     max-width: 500px;
     width: 100%;
     height: 480px !important;
-}
+  }
 }
 
 @media (max-width: 750px) {
   .singswiperdiv {
-      width:280px;
-      height: 280px
+    width: 280px;
+    height: 280px
   }
 
   .swipebtns32 {
-      transform: translateY(-100px) translateX(-40px)
+    transform: translateY(-100px) translateX(-40px)
   }
 
   .h2swiperwrap {
-      max-height: 250px
+    max-height: 250px
   }
 
   .testswipsingle {
     max-width: 500px;
     width: 100%;
     height: 530px !important;
-}
+  }
 }
 
 @media (max-width: 700px) {
   .brandswipe {
-      height:57px!important
+    height: 57px !important
   }
 
- 
+
 }
 
 @media (max-width: 600px) {
   .swiplidebtn {
-      align-items:flex-start!important;
-      bottom: 6px;
-      gap: 4px
+    align-items: flex-start !important;
+    bottom: 6px;
+    gap: 4px
   }
 
   .singswiperdiv {
-      width: 260px;
-      height: 260px
+    width: 260px;
+    height: 260px
   }
 
-  .h2testimonialwrap{
+  .h2testimonialwrap {
     padding: 40px;
   }
 
   .testswipsingle {
-      max-width: 500px;
-      width: 100%;
-      height: fit-content;
+    max-width: 500px;
+    width: 100%;
+    height: fit-content;
   }
 
   .swipebtns32 {
-      transform: translateY(-70px) translateX(-40px);
-      margin-bottom: 30px
+    transform: translateY(-70px) translateX(-40px);
+    margin-bottom: 30px
   }
 
   .brandswipe {
-      height: 47px!important
+    height: 47px !important
   }
 
   .insidebtns span {
-      font-size: 8px
+    font-size: 8px
   }
 
   .swiplidebtn p {
-      font-size: 10px
+    font-size: 10px
   }
 
   .insidebtns p {
-      font-size: 18px
+    font-size: 18px
   }
 
   .h2braswiperwrap h3 {
-      font-size: 32px;
-      line-height: 42px
+    font-size: 32px;
+    line-height: 42px
   }
 
   .viewworkbtns {
-      width: 180px;
-      height: 50px
+    width: 180px;
+    height: 50px
   }
 
-  .reviewsss,.viewworkbtns span {
-      font-size: 16px;
-      line-height: 26px
+  .reviewsss,
+  .viewworkbtns span {
+    font-size: 16px;
+    line-height: 26px
   }
 
   .testiTopDetails .tettopleft p:first-child {
-      font-size: 18px;
-      line-height: 28px
+    font-size: 18px;
+    line-height: 28px
   }
 
   .testiTopDetails .tettopleft p:nth-child(2) {
-      font-size: 30px;
-      line-height: 40px
+    font-size: 30px;
+    line-height: 40px
   }
 
-  .projectre,.reviewname {
-      font-size: 14px
+  .projectre,
+  .reviewname {
+    font-size: 14px
   }
 }
 
 @media (max-width: 550px) {
   .testright {
-      transform:translateX(-20px)
+    transform: translateX(-20px)
   }
 
   .testiTopDetails {
-      padding: 0 20px
+    padding: 0 20px
   }
 
   .testiTopDetails .tettopleft p:first-child {
-      font-size: 16px
+    font-size: 16px
   }
 
   .testiTopDetails .tettopleft p:nth-child(2) {
-      font-size: 22px
+    font-size: 22px
   }
 
   .singswiperdiv {
-      margin: 0 auto;
-      max-width: 200px;
-      max-height: 200px
+    margin: 0 auto;
+    max-width: 200px;
+    max-height: 200px
   }
 
   .swipebtns32 {
-      transform: translateY(-20px) translateX(-40px);
-      margin-bottom: 30px
+    transform: translateY(-20px) translateX(-40px);
+    margin-bottom: 30px
   }
 
   .sec3cont {
-      padding: 40px 20px!important
+    padding: 40px 20px !important
   }
 
   .mySwiper32 {
-      transform: translateY(-30%) translateX(0)
+    transform: translateY(-30%) translateX(0)
   }
 
   .brandswipe {
-      height: 84px!important
+    height: 84px !important
   }
 
   .viewworkbtns {
-      width: 140px;
-      height: 42px
+    width: 140px;
+    height: 42px
   }
 
   .viewworkbtns span {
-      font-size: 12px
+    font-size: 12px
   }
 
   .h2braswiperwrap h3 {
-      font-size: 24px;
-      line-height: 34px
+    font-size: 24px;
+    line-height: 34px
   }
 
   .testswipsingle {
-      max-width: 90vw;
-      width: 100%;
-      height: fit-content !important;
+    max-width: 90vw;
+    width: 100%;
+    height: fit-content !important;
   }
 
   .roudned {
-      width: 30px;
-      height: 30px
+    width: 30px;
+    height: 30px
   }
 
   .h2swiperwrap {
-      max-height: 220px
+    max-height: 220px
   }
 }
 
 @media (max-width: 440px) {
   .singswiperdiv {
-      width:200px;
-      height: 200px
+    width: 200px;
+    height: 200px
   }
 }

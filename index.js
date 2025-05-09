@@ -42,32 +42,35 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-const popCaptchaBtn = document.querySelector('.pop-captcha-btn');
-
 let popCorrectAnswer = 0;
-
+let isPopCaptchaVerified = false;  
+ 
 function popGenerateCaptcha() {
     const firstNo = Math.floor(Math.random() * 10);
     const secondNo = Math.floor(Math.random() * 10);
     popCorrectAnswer = firstNo + secondNo;
-    document.getElementById(
-        "pop-captchaQuestion"
-    ).innerText = `${firstNo} + ${secondNo} =`;
+    document.getElementById("pop-captchaQuestion").innerText = `${firstNo} + ${secondNo} =`;
     document.getElementById("pop-captchaAnswer").value = "";
 }
-
+ 
 function popVerifyCaptcha() {
-    const userAnswer = parseInt(
-        document.getElementById("pop-captchaAnswer").value
-    );
+    const userAnswer = parseInt(document.getElementById("pop-captchaAnswer").value);
     if (userAnswer !== popCorrectAnswer) {
         alert("Wrong Captcha! Try again.");
         popGenerateCaptcha();
         return false;
     }
     alert('Captcha Verified!!');
+    isPopCaptchaVerified = true;  
     return true;
 }
+ 
+const popCaptchaBtn = document.querySelector('.pop-captcha-btn');
+popCaptchaBtn.addEventListener('click', () => {
+    if (popVerifyCaptcha()) {
+        popCaptchaBtn.disabled = true; 
+    }
+});
 
 popCaptchaBtn.addEventListener('click', popVerifyCaptcha);
 
@@ -90,18 +93,23 @@ document.querySelector('.cross-icon').addEventListener('click', function () {
 
 
 
+document.addEventListener("DOMContentLoaded", popGenerateCaptcha);
+ 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".pop-contact-form");
     const submitButton = form.querySelector(".pop-contact-form-btn");
 
-    form.addEventListener("submit", async (event) => {
-        event.preventDefault();
+    form.addEventListener("submit", async (event) => { 
+        if (!isPopCaptchaVerified) {
+            event.preventDefault();
+            alert("Please verify the captcha before submitting the form.");
+            return;
+        }
 
-        // Disable button & show loader
+        event.preventDefault(); 
         submitButton.innerHTML = "Sending...";
         submitButton.disabled = true;
 
-        // Collect form data
         const formData = {
             popFullname: document.getElementById("popName").value,
             popEmail: document.getElementById("popEmail").value,
@@ -118,9 +126,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             const result = await response.json();
-
             if (response.ok) {
-                window.location.href = "thankyou.html";
+                form.reset(); 
+                window.location.href = "thankyou.html"; 
             } else {
                 alert(`Failed to send email: ${result.message || "Unknown error"}`);
             }
@@ -132,22 +140,24 @@ document.addEventListener("DOMContentLoaded", () => {
             submitButton.disabled = false;
         }
     });
-
-    // Phone number validation (Only digits, max 10 characters)
-    const popMobile = document.getElementById("popMobile");
-    popMobile.addEventListener("input", () => {
-        popMobile.value = popMobile.value.replace(/[^0-9]/g, "").slice(0, 10);
-    });
 });
 
 
+
+document.addEventListener("DOMContentLoaded", generateCaptcha);
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contactForm");
     const submitButton = form.querySelector(".contact-form-btn");
 
-    form.addEventListener("submit", async (event) => {
-        event.preventDefault();
+    form.addEventListener("submit", async (event) => { 
+        if (!isCaptchaVerified) {
+            event.preventDefault();
+            alert("Please verify the captcha before submitting the form.");
+            return;
+        }
+
+        event.preventDefault(); 
         submitButton.disabled = true;
         submitButton.innerText = "Sending...";
 
@@ -169,7 +179,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const result = await response.json();
             if (response.ok) {
-                window.location.href = "thankyou.html";
+                form.reset(); 
+                setTimeout(() => {
+                  window.location.href = "thankyou.html";
+                }, 300); 
             } else {
                 alert(`Failed to send email: ${result.message || "Unknown error"}`);
             }

@@ -12,7 +12,7 @@ body {
 .MainBloggSeC {
     margin: 0 auto;
     max-width: 1720px; 
-    padding: 45px 50px;
+    padding: 45px 50px 0px;
 }
 
 .MainBloggSeCh3 {
@@ -62,9 +62,22 @@ body {
     padding: 25px 0;
 }
 
-.mainBloContentPa ul{
+.mainBloContentPa ul , ol{
     list-style-position: inside;
     padding-left: 20px ;
+}
+
+/* .mainBloContentPa li{
+    font-weight: 500!important;
+} */
+
+.mainBloContentPa p{
+    font-weight: 400;
+}
+
+.mainBloContentPa .ql-align-justify{
+    color: #1a1919;
+    list-style: auto; 
 }
 
 .mainBloContpara {

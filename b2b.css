@@ -1,5 +1,5 @@
 .b2b-section {
-    font-family: Wix Madefor Display,sans-serif;
+    font-family: Wix Madefor Display, sans-serif;
     text-align: center;
     max-width: 1720px;
     margin: auto;
@@ -7,24 +7,26 @@
 }
 
 .b2b-head {
-    width: 800px;
+    /* width: 800px; */
     text-align: center;
     font-size: 47px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 50px;
-    margin: auto auto 2rem
+    margin: 0 auto;
 }
 
-.b2b-para,.b2b-paraa {
-    font-size: 17px;
-    font-weight: 500;
+.b2b-para,
+.b2b-paraa {
+    font-size: 19px;
+    font-weight: 600;
     color: #362a2a;
     max-width: 1142px;
     margin: 0 auto;
-    line-height: 30px
+    line-height: 27px;
 }
 
-.b2b-headss,.b2b-paraa {
+.b2b-headss,
+.b2b-paraa {
     text-align: center;
     padding-top: 20px
 }
@@ -36,7 +38,7 @@
 
 .b2b-headsss {
     font-size: 40px;
- 
+
     line-height: 68px;
     font-weight: 500
 }
@@ -49,7 +51,8 @@
     margin: 0 auto
 }
 
-.left-b2b-cards,.right-b2b-cards {
+.left-b2b-cards,
+.right-b2b-cards {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -75,16 +78,21 @@
     margin-bottom: 5rem
 }
 
-.left-b2b-card-2:hover,.left-b2b-card:hover,.right-b2b-card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+.left-b2b-card-2:hover,
+.left-b2b-card:hover,
+.right-b2b-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
     transform: translateY(-5px)
 }
 
-.left-b2b-card-2:hover .b2b-logo img,.left-b2b-card:hover .b2b-logo img,.right-b2b-card:hover .b2b-logo img {
+.left-b2b-card-2:hover .b2b-logo img,
+.left-b2b-card:hover .b2b-logo img,
+.right-b2b-card:hover .b2b-logo img {
     transform: scale(1.03)
 }
 
-.left-b2b-card,.right-b2b-card {
+.left-b2b-card,
+.right-b2b-card {
     position: relative;
     background: #fff;
     border: 1px solid #80808045;
@@ -97,8 +105,9 @@
     overflow: hidden
 }
 
-.left-b2b-card:hover,.right-b2b-card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,.2);
+.left-b2b-card:hover,
+.right-b2b-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
     transform: translateY(-5px)
 }
 
@@ -115,7 +124,8 @@
     transition: transform .4s ease-in-out
 }
 
-.left-b2b-card:hover .b2b-logo img,.right-b2b-card:hover .b2b-logo img {
+.left-b2b-card:hover .b2b-logo img,
+.right-b2b-card:hover .b2b-logo img {
     transform: scale(1.03)
 }
 
@@ -132,7 +142,8 @@
     gap: 15px
 }
 
-.b2b-btn,.b2b-btn:hover {
+.b2b-btn,
+.b2b-btn:hover {
     color: #000
 }
 
@@ -142,12 +153,16 @@
 }
 
 @media (max-width: 1200px) {
-    .b2b-content,.left-b2b-cards,.right-b2b-cards {
-        flex-direction:column;
+
+    .b2b-content,
+    .left-b2b-cards,
+    .right-b2b-cards {
+        flex-direction: column;
         align-items: center
     }
 
-    .left-b2b-cards,.right-b2b-cards {
+    .left-b2b-cards,
+    .right-b2b-cards {
         gap: 20px
     }
 
@@ -162,7 +177,7 @@
 
 @media (max-width: 992px) {
     .b2b-head {
-        width:100%;
+        width: 100%;
         font-size: 42px
     }
 
@@ -174,17 +189,19 @@
         font-size: 36px
     }
 
-    .b2b-para,.b2b-paraa {
+    .b2b-para,
+    .b2b-paraa {
         font-size: 16px;
         line-height: 28px;
         padding: 0 15px
     }
 
     .left-b2b-card-2 {
-        width: 85%!important
+        width: 85% !important
     }
 
-    .left-b2b-card,.right-b2b-card {
+    .left-b2b-card,
+    .right-b2b-card {
         width: 85%
     }
 
@@ -201,7 +218,7 @@
 
 @media (max-width: 768px) {
     .b2b-head {
-        width:100%;
+        width: 100%;
         font-size: 36px
     }
 
@@ -214,17 +231,19 @@
         line-height: normal
     }
 
-    .b2b-para,.b2b-paraa {
+    .b2b-para,
+    .b2b-paraa {
         font-size: 15px;
         line-height: 26px
     }
 
     .left-b2b-card-2 {
-        width: 90%!important;
+        width: 90% !important;
         margin-bottom: 0
     }
 
-    .left-b2b-card,.right-b2b-card {
+    .left-b2b-card,
+    .right-b2b-card {
         width: 90%
     }
 
@@ -249,12 +268,12 @@
 
 @media (max-width: 576px) {
     .b2b-head {
-        width:100%;
+        width: 100%;
         font-size: 32px
     }
 
     .contact-heading {
-        font-size: 24px!important;
+        font-size: 24px !important;
         font-weight: 500
     }
 
@@ -270,17 +289,19 @@
         font-size: 28px
     }
 
-    .b2b-para,.b2b-paraa {
+    .b2b-para,
+    .b2b-paraa {
         font-size: 14px;
         line-height: 24px
     }
 
     .left-b2b-card-2 {
-        width: 95%!important;
+        width: 95% !important;
         margin-bottom: 0
     }
 
-    .left-b2b-card,.right-b2b-card {
+    .left-b2b-card,
+    .right-b2b-card {
         width: 95%
     }
 
@@ -297,7 +318,7 @@
 
 @media(max-width: 508px) {
     .plt-head {
-        font-size:18px
+        font-size: 18px
     }
 
     .plt-para {
@@ -313,9 +334,10 @@
 
 @media (max-width: 400px) {
     .b2b-head {
-        width:100%;
+        width: 100%;
         font-size: 27px;
-        margin-bottom: 19px!important
+        line-height: 34px;
+        margin-bottom: 19px !important
     }
 
     .b2b-headss {
@@ -329,10 +351,12 @@
         margin: 21px auto
     }
 
-    .b2b-para,.b2b-paraa {
+    .b2b-para,
+    .b2b-paraa {
         font-size: 14px;
         line-height: 22px;
-        text-align: center
+        text-align: center;
+        padding: 0;
     }
 
     .b2b-btn {
