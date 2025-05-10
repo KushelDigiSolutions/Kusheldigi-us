@@ -326,7 +326,7 @@
 }
 
 
-.nofilter{
+.nofilter {
     max-width: 1365px;
     margin: auto;
     font-size: 20px;
@@ -344,14 +344,14 @@
         font-size: 24px;
     }
 }
- 
+
 @media (max-width: 600px) {
     #filteredBlogContainer {
         grid-template-columns: 1fr;
         padding: 0px;
     }
 
-    .filtered-heading{
+    .filtered-heading {
         padding: 0;
     }
 
@@ -474,9 +474,9 @@
 .bimagelogMain {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 43px;
-    /* padding: 30px; */
+    padding-top: 30px;
     /* flex-wrap: wrap;*/
 }
 
@@ -622,7 +622,7 @@
     color: #333;
 }
 
-.cardBlogStaa{
+.cardBlogStaa {
     text-decoration: none !important;
 }
 
@@ -632,19 +632,21 @@
     gap: 4px;
 }
 
-.blogClockTime , .blogClockTime1{
+.blogClockTime,
+.blogClockTime1 {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.bimageloDiPargaph , .bimageloDiPargaph1{
+.bimageloDiPargaph,
+.bimageloDiPargaph1 {
     font-size: 17px;
     font-weight: 700;
 }
 
-.blogClockTime1 a{
-    text-decoration: none!important;
+.blogClockTime1 a {
+    text-decoration: none !important;
 }
 
 .iconBlogClock {
@@ -652,13 +654,13 @@
     height: 25px;
 }
 
-.ALLt p{
+.ALLt p {
     font-size: 44px;
     font-weight: 700;
 }
 
 
- 
+
 
 .cardBlogStpaara {
     font-weight: 600;
@@ -786,7 +788,7 @@
 .newsroom-section {
     max-width: 1380px;
     margin: 0 auto;
-    margin-top: 120px; 
+    margin-top: 120px;
     padding: 40px 20px;
 }
 
@@ -1249,17 +1251,11 @@
 
 .cardsectFive hr {
     /* margin-top:25px; */
-    width: 96.5%;
+    width: 100%;
 }
 
-/* fifth row end */
-
-/* six row start */
 .blogSixMainSec {
-    /* margin-top: 10%; */
     height: 1000px;
-    /* padding-left: 0 !important; */
-
     background-color: #E4EBF5;
 }
 
@@ -1455,8 +1451,8 @@
 }
 
 .bimageloDi>p {
-    font-size: 20px !important;
-    margin-top: 3rem;
+    font-size: 25px !important;
+    /* margin-top: 3rem; */
 }
 
 
@@ -1467,7 +1463,8 @@
     gap: 2rem;
 }
 
-.prev-btn , .next-btn{
+.prev-btn,
+.next-btn {
     border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 4px 12px;
     border-radius: 5px;

@@ -84,7 +84,7 @@
   </script>
 
 
-  
+
 
 
 
@@ -100,7 +100,7 @@
       <h3 id="currentBlogTitle" class="MainBloggSeCh3">
       </h3>
       <div class="MainBloggSeCh3Img">
-        <img id="currentBlogImage" src="./assets/NL-Ai-transformation-blog-hero-min (1).webp" alt="">
+        <img id="currentBlogImage" src="" alt="">
       </div>
     </div>
 
@@ -109,13 +109,16 @@
     <section class="third-section">
       <div class="thirddd">
         <div class="social-icon">
-          <a class="iconss" href="https://www.facebook.com/kusheldigisolutions/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+          <a class="iconss" href="https://www.facebook.com/kusheldigisolutions/" target="_blank"
+            rel="noopener noreferrer" style="text-decoration: none;">
             <div class="icon"><i class="ri-facebook-fill"></i></div>
           </a>
-          <a class="iconss" href="https://www.linkedin.com/company/kusheldigisolutions/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+          <a class="iconss" href="https://www.linkedin.com/company/kusheldigisolutions/" target="_blank"
+            rel="noopener noreferrer" style="text-decoration: none;">
             <div class="icon"><i class="ri-linkedin-fill"></i></div>
           </a>
-          <a class="iconss" href="https://x.com/KushelDigisoln" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+          <a class="iconss" href="https://x.com/KushelDigisoln" target="_blank" rel="noopener noreferrer"
+            style="text-decoration: none;">
             <div class="icon"><i class="ri-twitter-x-fill"></i></div>
           </a>
           <div class="icon" id="iconPop">
@@ -128,10 +131,10 @@
           <div class="mainBloContentStPara">
             <p> <b id="blogAuthor"></b></p>
             <p id="designation"></p>
-              <!-- <br> -->
-              <p><b id="time"></b> Read Deep Think Big<br/>
-                <br>
-              </p>
+            <!-- <br> -->
+            <p><b id="time"></b> Read Deep Think Big<br />
+              <br>
+            </p>
             <p> Published ON<br>
               <b id="blogDate"></b>
             </p>
@@ -140,23 +143,26 @@
           <div class="mainBloContentDiv">
             <p id="currentBlogPara" class="mainBloContentPa"></p>
             <div class="cardSocial">
-              <div class="profile"> 
+              <div class="profile">
                 <div class="profile-info">
                   <p> <b id="blogAuthor1"></b></p>
                   <p id="designation1"></p>
                 </div>
               </div>
               <div class="social-icons">
-                <a class="iconss" href="https://www.facebook.com/kusheldigisolutions/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                <a class="iconss" href="https://www.facebook.com/kusheldigisolutions/" target="_blank"
+                  rel="noopener noreferrer" style="text-decoration: none;">
                   <div class="icon"><i class="ri-facebook-fill"></i></div>
                 </a>
-                <a class="iconss" href="https://www.linkedin.com/company/kusheldigisolutions/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                <a class="iconss" href="https://www.linkedin.com/company/kusheldigisolutions/" target="_blank"
+                  rel="noopener noreferrer" style="text-decoration: none;">
                   <div class="icon"><i class="ri-linkedin-fill"></i></div>
                 </a>
-                <a class="iconss" href="https://x.com/KushelDigisoln" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                <a class="iconss" href="https://x.com/KushelDigisoln" target="_blank" rel="noopener noreferrer"
+                  style="text-decoration: none;">
                   <div class="icon"><i class="ri-twitter-x-fill"></i></div>
                 </a>
-                
+
                 <div id="popAni" class="icon">
                   <span class="thanksTxt displayNone">Thanks</span><i class="ri-hand-heart-line"></i>
                 </div>
@@ -190,22 +196,35 @@
       window.addEventListener("scroll", () => {
         const socialIcon = document.querySelector(".social-icon");
         const triggerSection = document.querySelector(".third-section");
-    
-        const sectionTop = triggerSection.offsetTop;
+
+        const sectionTop = triggerSection.getBoundingClientRect().top;
         const sectionHeight = triggerSection.offsetHeight;
         const scrollY = window.scrollY;
-    
-        const hidePoint = sectionTop + sectionHeight * 0.80;
-    
-        if (scrollY >= sectionTop && scrollY < hidePoint) {
+        const windowHeight = window.innerHeight;
+
+        const absoluteTop = triggerSection.offsetTop;
+        const hidePoint = absoluteTop + sectionHeight * 0.8;
+
+        const middleViewport = windowHeight / 2;
+
+        // Remove previous classes
+        socialIcon.classList.remove("fixed", "hide");
+
+        // Check if section's middle is in viewport
+        if (sectionTop < middleViewport && scrollY < hidePoint) {
           socialIcon.classList.add("fixed");
-        } else {
+        }
+
+        // Check if passed 80% of the section
+        if (scrollY >= hidePoint) {
           socialIcon.classList.remove("fixed");
+          socialIcon.classList.add("hide");
         }
       });
     </script>
-    
-    
+
+
+
 
     <div id="footer"></div>
 
@@ -316,53 +335,52 @@
 
 
     <script>
-    const popAnimation = document.getElementById('iconPop');
-    const thanksTxt1 = document.querySelector('.thanksTxt1')
-    popAnimation.addEventListener('click', function (e) {
-      console.log('clickkkkkkkkkkk', e)
-      thanksTxt1.classList.add('displayBlock');
-      popAnimation.style.width = '112px';
-      confetti({
+      const popAnimation = document.getElementById('iconPop');
+      const thanksTxt1 = document.querySelector('.thanksTxt1')
+      popAnimation.addEventListener('click', function (e) {
+        console.log('clickkkkkkkkkkk', e)
+        thanksTxt1.classList.add('displayBlock');
+        popAnimation.style.width = '112px';
+        confetti({
 
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+        });
+
+        setTimeout(() => {
+          thanksTxt1.classList.remove('displayBlock');
+          thanksTxt1.classList.add('displayNone');
+          popAnimation.style.width = '38px';
+        }, 2000);
       });
 
+      const popAni = document.getElementById('popAni');
+      const thanksTxt = document.querySelector('.thanksTxt')
 
-      setTimeout(() => {
-        thanksTxt1.classList.remove('displayBlock');
-        thanksTxt1.classList.add('displayNone');
-        popAnimation.style.width = '38px';
-      }, 2000);
-    });
+      popAni.addEventListener('click', function (e) {
+        console.log('clickkkkkkkkkkk', e)
+        thanksTxt.classList.add('displayBlock');
+        popAni.style.width = '112px';
+        confetti({
+          particleCount: 100,
+          spread: 70,
+          origin: { y: 0.6 },
+        });
 
-    const popAni = document.getElementById('popAni');
-    const thanksTxt = document.querySelector('.thanksTxt')
 
-    popAni.addEventListener('click', function (e) {
-      console.log('clickkkkkkkkkkk', e)
-      thanksTxt.classList.add('displayBlock');
-      popAni.style.width = '112px';
-      confetti({
-        particleCount: 100,
-        spread: 70,
-        origin: { y: 0.6 },
+
+        // popAni.innerText = 'Thanks!';
+
+
+        setTimeout(() => {
+          thanksTxt.classList.remove('displayBlock');
+          thanksTxt.classList.add('displayNone')
+          popAni.style.width = '38px';
+        }, 2000);
+
       });
-
-
-
-      // popAni.innerText = 'Thanks!';
-
-
-      setTimeout(() => {
-        thanksTxt.classList.remove('displayBlock');
-        thanksTxt.classList.add('displayNone')
-        popAni.style.width = '38px';
-      }, 2000);
-
-    });
-  </script>
+    </script>
 
 
 

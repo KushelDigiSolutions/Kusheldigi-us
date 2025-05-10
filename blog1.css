@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; 
+    box-sizing: border-box;
 
 }
 
@@ -11,33 +11,33 @@ body {
 
 .MainBloggSeC {
     margin: 0 auto;
-    max-width: 1720px; 
+    max-width: 1720px;
     padding: 45px 50px 0px;
 }
 
 .MainBloggSeCh3 {
     font-size: 5.1rem;
-    font-weight: bolder; 
+    font-weight: bolder;
     margin: auto;
 }
 
 .MainBloggSeCh3Img img {
-    padding-top: 70px;
-    height: auto; 
+    padding-top: 40px;
+    height: auto;
     width: 100%;
     margin: auto;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 
 .mainBloContentSt {
     margin-top: 90px;
-    display: flex; 
-    gap: 50px; 
+    display: flex;
+    gap: 50px;
     align-items: self-start;
 }
 
-.mainBloContentStPara { 
+.mainBloContentStPara {
     margin-top: 8px;
 }
 
@@ -56,28 +56,40 @@ body {
     font-weight: 600;
 }
 
-.mainBloContentPa img{
+.mainBloContentPa img {
     max-width: 100%;
     height: auto;
     padding: 25px 0;
 }
 
-.mainBloContentPa ul , ol{
+.mainBloContentPa ul,
+ol {
     list-style-position: inside;
-    padding-left: 20px ;
+    margin-left: 10px;
+    list-style: auto;
 }
+
+h3[dir="ltr"] {
+    font-weight: 600;
+}
+
+h2[dir="ltr"] {
+    font-weight: 700;
+}
+
+
 
 /* .mainBloContentPa li{
     font-weight: 500!important;
 } */
 
-.mainBloContentPa p{
+.mainBloContentPa p {
     font-weight: 400;
 }
 
-.mainBloContentPa .ql-align-justify{
+.mainBloContentPa .ql-align-justify {
     color: #1a1919;
-    list-style: auto; 
+    list-style: auto;
 }
 
 .mainBloContpara {
@@ -213,7 +225,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background: white;
-    padding: 15px;
+    padding: 15px 10px 12px 0;
     border-radius: 8px;
     margin-top: 20px;
     flex-wrap: wrap;
@@ -301,7 +313,7 @@ body {
     color: inherit;
 }
 
- 
+
 
 
 
@@ -388,49 +400,34 @@ body {
     margin: auto;
 }
 
-
 .social-icon {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 150px !important;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 150px !important;
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 1000; 
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
 .social-icon.fixed {
-    position: fixed;
-    top: 35%;
-}
-
-
-.social-icon {
-    position: absolute;
-    top: 0;
-    right: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 150px !important;
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    opacity: 1;
-    transform: translateX(0);
-}
-
-.social-icon.fixed {
-    position: fixed !important;
-    top: 30%;
-    right: 60px;
-    transform: translateX(0);
-    opacity: 1;
+  position: fixed !important;
+  top: 49%;
+  right: 70px;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .social-icon.hide {
-    transform: translateX(100px); 
-    opacity: 0;
+  transform: translateX(80px);
+  opacity: 0;
 }
+
+
 
 
 .hidden {
@@ -683,7 +680,7 @@ body {
 .cardsectFiveMain {
     max-width: 1720px;
     margin: 0 auto;
-    padding: 20px 50px;
+    padding: 80px 50px;
 }
 
 .moreee {
@@ -709,18 +706,31 @@ body {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
-
-.cardBlogSt {
-    text-decoration: none !important;
+ 
+.cardBlogSt { 
     display: flex;
     flex-direction: column;
+    padding: 12px 12px 0px 12px;
+    cursor: pointer;
+    border-bottom: 1px solid #000;
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
 }
-
+ 
+.cardBlogSt:hover {
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 60px 40px -7px;
+    text-decoration: none;
+}
+ 
 .cardBlogStImg img {
     width: 100%;
-    height: 220px; 
+    height: 220px;
+    object-fit: cover;
+    transition: all 0.3s ease;
 }
-
+ 
 .cardBlogStpaa {
     color: #007bff;
     text-transform: uppercase;
@@ -729,16 +739,19 @@ body {
     font-weight: 600;
     margin-top: 12px;
 }
-
+ 
+.cardBlogStpaara1 {
+    margin-top: 8px;
+}
+ 
 .cardBlogStpaara {
     font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    margin-top: 8px;
+    font-size: 19px;
+    line-height: 28px;
     color: #040404;
     text-decoration: none !important;
 }
-
+ 
 .cardBlogStpaaragr {
     padding-top: 8px;
     font-size: 16px;
@@ -746,14 +759,15 @@ body {
     color: #040404;
     font-weight: 500;
 }
-
+ 
 .cardBlogStpaarw {
     font-weight: 600;
     font-size: 15px;
     line-height: 24px;
     color: #222;
-    margin-top: 10px;
+    margin-top: auto; 
 }
+
 
 @media (max-width: 1200px) {
     .cardMainBlogSec {

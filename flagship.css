@@ -133,13 +133,18 @@
         line-height: 40px;
         font-size: 30px;
         font-weight: 500;
-    }
+    } 
+}
 
-    
+@media (max-width:480px){
+    .flagship-head{
+            font-size: 32px !important;
+    font-weight: 700 !important;
+    }
 }
 @media (max-width:1200px){
     .flagship-head{
-        line-height: 40px;
+        line-height: 52px;
         font-size: 30px;
         font-weight: 500;
     }

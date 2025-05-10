@@ -196,7 +196,6 @@ iframe {
   transition: .3s
 }
 
-.blog-section-blogs-wrapper .blog-section-blog:last-child,
 .crossimage,
 .l-img,
 .popup-modal,
@@ -204,7 +203,7 @@ iframe {
 .small_nav_logo,
 .swiper-container,
 .threelines {
-  display: none
+  display: none;
 }
 
 .svg_drop {

@@ -28,7 +28,7 @@ async function fetchBlogDetails() {
                 });
             }
 
-            document.getElementById("currentBlogImage").src = data.blog.images?.[0] || "default-image.jpg";
+            document.getElementById("currentBlogImage").src = data.blog.banner?.[0] || "default-image.jpg";
 
             const blogDescriptionElement = document.getElementById("blogDescription");
             if (blogDescriptionElement) {
