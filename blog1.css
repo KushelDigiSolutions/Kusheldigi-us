@@ -720,10 +720,14 @@ h2[dir="ltr"] {
  
 .cardBlogStImg img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    height: auto; 
     transition: all 0.3s ease;
 }
+
+.cardBlogSt:hover > .cardBlogStImg img{
+    transform: scale(1.02);
+}
+
  
 .cardBlogStpaa {
     color: #007bff;
