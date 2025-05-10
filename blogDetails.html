@@ -206,16 +206,13 @@
         const hidePoint = absoluteTop + sectionHeight * 0.8;
 
         const middleViewport = windowHeight / 2;
-
-        // Remove previous classes
+ 
         socialIcon.classList.remove("fixed", "hide");
-
-        // Check if section's middle is in viewport
+ 
         if (sectionTop < middleViewport && scrollY < hidePoint) {
           socialIcon.classList.add("fixed");
         }
-
-        // Check if passed 80% of the section
+ 
         if (scrollY >= hidePoint) {
           socialIcon.classList.remove("fixed");
           socialIcon.classList.add("hide");
