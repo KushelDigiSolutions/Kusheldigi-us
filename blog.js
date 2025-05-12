@@ -12,29 +12,73 @@ let getAllBlogs = [],
   tasksPerPage = 5,
   isCategorySelected = false;
 
-async function fetchData() {
+// async function fetchData() {
+//   try {
+//     const allBlogRes = await fetch(`${baseUrl}/api/v1/auth/getAllBlog`);
+//     const allBlogData = await allBlogRes.json();
+//     getAllBlogs = allBlogData.blogs.filter(blog => blog.domain?.includes(domainToFilter));
+
+//     const catBlogRes = await fetch(`${baseUrl}/api/v1/auth/allcatBlogs`);
+//     const catBlogData = await catBlogRes.json();
+//     allCatBlogs = catBlogData.data;
+//     console.log("All Cat..", allCatBlogs);
+
+//     const latestRes = await fetch(`${baseUrl}/api/v1/auth/recentBlogs`);
+//     const latestData = await latestRes.json();
+//     recentBlog = latestData.data;
+//     console.log("All Rec..", recentBlog);
+
+//     defaultCategories = allCatBlogs.slice(0, 5);
+
+//     renderCategoryButtons();
+//     renderAllSections();
+//   } catch (err) {
+//     console.error("Error fetching data:", err);
+//   }
+// }
+
+async function fetchAllBlogs() {
   try {
-    const [allBlogRes, catBlogRes, latestRes] = await Promise.all([
-      fetch(`${baseUrl}/api/v1/auth/getAllBlog`),
-      fetch(`${baseUrl}/api/v1/auth/allcatBlogs`),
-      fetch(`${baseUrl}/api/v1/auth/recentBlogs`),
-    ]);
-
-    const allBlogData = await allBlogRes.json();
-    const catBlogData = await catBlogRes.json();
-    const latestData = await latestRes.json();
-
-    getAllBlogs = allBlogData.blogs.filter(blog => blog.domain?.includes(domainToFilter));
-    allCatBlogs = catBlogData.data;
-    recentBlog = latestData.data;
-    defaultCategories = allCatBlogs.slice(0, 5);
-
-    renderCategoryButtons();
-    renderAllSections();
+    const res = await fetch(`${baseUrl}/api/v1/auth/getAllBlog`);
+    const data = await res.json();
+    getAllBlogs = data.blogs.filter(blog => blog.domain?.includes(domainToFilter));
   } catch (err) {
-    console.error("Error fetching data:", err);
+    console.error("Error fetching all blogs:", err);
   }
 }
+
+async function fetchCategoryBlogs() {
+  try {
+    const res = await fetch(`${baseUrl}/api/v1/auth/allcatBlogs`);
+    const data = await res.json();
+    allCatBlogs = data.data;
+    defaultCategories = allCatBlogs.slice(0, 5);
+  } catch (err) {
+    console.error("Error fetching category blogs:", err);
+  }
+}
+
+async function fetchRecentBlogs() {
+  try {
+    const res = await fetch(`${baseUrl}/api/v1/auth/recentBlogs`);
+    const data = await res.json();
+    recentBlog = data.data;
+  } catch (err) {
+    console.error("Error fetching recent blogs:", err);
+  }
+}
+
+
+async function fetchData() {
+  await fetchAllBlogs();
+  await fetchCategoryBlogs();
+  await fetchRecentBlogs();
+
+  renderCategoryButtons();
+  renderAllSections();
+}
+
+
 
 function renderCategoryButtons() {
   const container = document.getElementById("category-buttons");
