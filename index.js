@@ -506,7 +506,7 @@ $(document).ready(function () {
   <a href="/">Home</a>
   <a href="about.html">About Us</a>
   <a href="service.html">Services</a>
-  <a href="blog.html">Blog</a>
+  <a href="blogs.html">Blog</a>
   <a href="portfolio.html">Portfolio</a>
   <a href="contact.html" class="nav_button descfonts_kkyu">Contact Us</a>
 `;
