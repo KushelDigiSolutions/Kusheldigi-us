@@ -871,7 +871,7 @@
           love?
         </p>
       </div>
-      <a href="/blog.html"><button class="viewAllBtnKcom">View More</button></a>
+      <a href="/blogs.html"><button class="viewAllBtnKcom">View More</button></a>
     </div>
 
     <div id="blog-section-blogs-wrapper" class="blog-section-blogs-wrapper"></div>
@@ -931,7 +931,7 @@
 
     blogs.forEach((blog) => {
       const blogLink = document.createElement("a");
-      blogLink.href = `/blogDetails.html?id=${blog._id}`;
+      blogLink.href = `/blog.html?slug=${blog.slug}`;
       blogLink.className = "blog-section-blog";
 
       blogLink.innerHTML = `

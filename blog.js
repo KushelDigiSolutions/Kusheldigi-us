@@ -41,7 +41,7 @@ async function fetchAllBlogs() {
   try {
     const res = await fetch(`${baseUrl}/api/v1/auth/getAllBlog`);
     const data = await res.json();
-    getAllBlogs = data.blogs.filter(blog => blog.domain?.includes(domainToFilter));
+    getAllBlogs = data.blogs.filter(blog => blog.domain?.includes(domainToFilter)).reverse();
   } catch (err) {
     console.error("Error fetching all blogs:", err);
   }
@@ -110,19 +110,19 @@ function renderFeaturedBlog() {
   document.getElementById("featured-blog").innerHTML = `
     <div class="bimagelogMain">
       <div class="bimagelog">
-        <a href="/blogDetails.html?id=${blog._id}"><img src="${blog.images}" alt="" /></a>
+        <a href="/blog.html?slug=${blog.slug}"><img src="${blog.images}" alt="" /></a>
       </div>
       <div class="bimageloDi">
         <p class="bimageloDiPa">${new Date(blog.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}</p>
         <div class="bimageloDiPara11">
-          <a href="/blogDetails.html?id=${blog._id}">
+          <a href="/blog.html?slug=${blog.slug}">
             <div class="bimageloDiPARa12">
               <p class="bimageloDiPara">${blog.title}</p>
             </div>
           </a>
           <p class="bimageloDiParra">${blog.subdescription}</p>
           <div class="blogClockTime">
-            <a href="/blogDetails.html?id=${blog._id}"><span class="bimageloDiPaara">Read More</span></a>
+            <a href="/blog.html?slug=${blog.slug}"><span class="bimageloDiPaara">Read More</span></a>
             <span class="bimageloDiPargaph"><img src="img/clock.svg" alt="clock" class="iconBlogClock"></img> ${blog.time}</span>
           </div>
         </div>
@@ -137,7 +137,7 @@ function renderLatestArticles() {
       <div class="newsroom-header"><h5>Latest Articles</h5></div><hr /><br />
       <div class="news-grid">
         ${recentBlog.map(item => `
-          <a href="/blogDetails.html?id=${item._id}" class="news-item">
+          <a href="/blog.html?slug=${item.slug}" class="news-item">
             <img src="${item.images[0]}" alt="" class="news-image" />
             <div class="news-content">
               <h3 class="news-title">${item.title}</h3>
@@ -156,14 +156,14 @@ function renderCategorySections() {
       <div class="cardMainBlogSec">
         ${cat.blogs.slice(0, 6).map(item => `
           <div class="cardBlogSt">
-            <a class="cardBlogStaa" href="/blogDetails.html?id=${item._id}">
+            <a class="cardBlogStaa" href="/blog.html?slug=${item.slug}">
               <div class="cardBlogStImg"><img src="${item.images[0]}" alt="${item.title}" /></div>
               <p class="cardBlogStpaa">${new Date(item.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}</p>
               <div class="cardBlogStpaara1"><p class="cardBlogStpaara">${item.title}</p></div>
               <p class="cardBlogStpaaragr">${item.subdescription?.slice(0, 100)}...</p>
             </a>
             <div class="blogClockTime1">
-              <a href="/blogDetails.html?id=${item._id}"><p class="cardBlogStpaarw">Read More</p></a>
+              <a href="/blog.html?slug=${item.slug}"><p class="cardBlogStpaarw">Read More</p></a>
               <span class="bimageloDiPargaph1"><img src="img/clock.svg" alt="clock" class="iconBlogClock"></img> ${item.time}</span>
             </div>
           </div>`).join("")}
@@ -179,16 +179,16 @@ function renderPaginatedBlogs() {
   const main = document.getElementById("paginated-main");
   main.innerHTML = currentTasks[0] ? `
     <div class="bimagelog">
-      <a href="/blogDetails.html?id=${currentTasks[0]._id}"><img src="${currentTasks[0].images[0]}" alt="${currentTasks[0].title}" /></a>
+      <a href="/blog.html?slug=${currentTasks[0].slug}"><img src="${currentTasks[0].images[0]}" alt="${currentTasks[0].title}" /></a>
     </div>
     <div class="bimageloDi">
-      <a href="/blogDetails.html?id=${currentTasks[0]._id}"><h2 class="bimageloDiPara">${currentTasks[0].title}</h2></a>
+      <a href="/blog.html?slug=${currentTasks[0].slug}"><h2 class="bimageloDiPara">${currentTasks[0].title}</h2></a>
       <p class="bimageloDiParra">${currentTasks[0].subdescription}</p>
     </div>` : "<p>No Blogs Available</p>";
 
   const small = document.getElementById("paginated-small");
   small.innerHTML = currentTasks.slice(1).map(item => `
-      <a href="/blogDetails.html?id=${item._id}" class="smallBlogCard">
+      <a href="/blog.html?slug=${item._id}" class="smallBlogCard">
         <img src="${item.images?.[0] || 'fallback.jpg'}" alt="${item.title}" />
       </a>`).join("");
 

@@ -2,7 +2,7 @@ const baseUrl = "https://backblog.kusheldigi.com";
 
 function getBlogIdFromURL() {
     const params = new URLSearchParams(window.location.search);
-    return params.get("id");
+    return params.get("slug");
 }
 
 async function fetchBlogDetails() {
@@ -13,35 +13,49 @@ async function fetchBlogDetails() {
     }
 
     try {
-        const response = await fetch(`${baseUrl}/api/v1/auth/getBlog/${blogId}`);
+        const response = await fetch(`${baseUrl}/api/v1/auth/SingleBlogBySlug/${blogId}`);
         const data = await response.json();
 
-        if (response.ok && data.blog) {
-            console.log("Fetched Blog Data:", data);
+        // console.log("Fetched Blog Data:", data.data[0]);
+        const blogData = data.data[0];
+        if (response.ok && data) {
 
-            document.getElementById("currentBlogTitle").innerHTML = data.blog.title || "No Title";
+            document.getElementById("currentBlogTitle").innerHTML = blogData.title || "No Title";
 
             const blogDateElement = document.getElementById("blogDate");
             if (blogDateElement) {
-                blogDateElement.textContent = new Date(data.blog.date).toLocaleDateString("en-GB", {
+                blogDateElement.textContent = new Date(blogData.date).toLocaleDateString("en-GB", {
                     day: "numeric", month: "long", year: "numeric"
                 });
             }
 
-            document.getElementById("currentBlogImage").src = data.blog.banner?.[0] || "default-image.jpg";
+            document.getElementById("currentBlogImage").src = blogData.banner?.[0] || "default-image.jpg";
 
             const blogDescriptionElement = document.getElementById("blogDescription");
             if (blogDescriptionElement) {
-                blogDescriptionElement.textContent = data.blog.subdescription || "No Description Available";
+                blogDescriptionElement.textContent = blogData.subdescription || "No Description Available";
             }
 
-            document.getElementById('currentBlogPara').innerHTML = data?.blog?.description || "No Content Available";
-            document.getElementById('blogAuthor').innerHTML = data?.blog?.author
-            document.getElementById('designation').innerHTML = data?.blog?.designation;
-            document.getElementById('time').innerHTML = data?.blog?.time || "N/A";
-            document.getElementById('blogAuthor1').innerHTML = data?.blog?.author
-            document.getElementById('designation1').innerHTML = data?.blog?.designation;
+            document.getElementById('currentBlogPara').innerHTML = blogData?.description || "No Content Available";
+            document.getElementById('blogAuthor').innerHTML = blogData?.author
+            document.getElementById('designation').innerHTML = blogData?.designation;
+            document.getElementById('time').innerHTML = blogData?.time || "N/A";
+            document.getElementById('blogAuthor1').innerHTML = blogData?.author
+            document.getElementById('designation1').innerHTML = blogData?.designation;
 
+            setTimeout(() => {
+                const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+                accordionHeaders.forEach(header => {
+                    header.addEventListener('click', () => {
+                        const content = header.nextElementSibling;
+                        const isVisible = content.style.display === 'block';
+
+                        content.style.display = isVisible ? 'none' : 'block';
+                        header.classList.toggle('active', !isVisible);
+                    });
+                });
+            }, 0);
 
         } else {
             document.querySelector(".article-container").innerHTML = "<p>Blog not found.</p>";
@@ -80,16 +94,16 @@ function renderBlogs(recentBlogs) {
     if (recentBlogs.length > 0) {
         recentBlogs.forEach(blog => {
             const blogHTML = `
-                <a href="/blogDetails.html?id=${blog._id}" class="cardBlogSt">
+                <a href="/blog.html?slug=${blog.slug}" class="cardBlogSt">
                     <div class="cardBlogStImg">
                         <img src="${blog.images?.[0] || 'default-image.jpg'}" alt="${blog.title}" />
                     </div>
                     <p class="cardBlogStpaa">
                         ${new Date(blog.date).toLocaleDateString("en-GB", {
-                            day: "numeric",
-                            month: "long",
-                            year: "numeric"
-                        })}
+                day: "numeric",
+                month: "long",
+                year: "numeric"
+            })}
                     </p>
                     <div class="cardBlogStpaara1">
                         <p class="cardBlogStpaara">${blog.title}</p>
@@ -104,5 +118,7 @@ function renderBlogs(recentBlogs) {
         blogContainer.innerHTML = "<p>No recent blogs available.</p>";
     }
 }
+
+
 
 fetchRecentBlogs();
