@@ -52,7 +52,7 @@ async function fetchCategoryBlogs() {
     const res = await fetch(`${baseUrl}/api/v1/auth/allcatBlogs`);
     const data = await res.json();
     allCatBlogs = data.data;
-    defaultCategories = allCatBlogs.slice(0, 5);
+    defaultCategories = allCatBlogs.reverse().slice(0, 5);
   } catch (err) {
     console.error("Error fetching category blogs:", err);
   }
@@ -83,15 +83,6 @@ async function fetchData() {
 function renderCategoryButtons() {
   const container = document.getElementById("category-buttons");
   container.innerHTML = "";
-
-  allCatBlogs.forEach(cat => {
-    const btn = document.createElement("button");
-    btn.className = "button category-button";
-    btn.textContent = cat.title;
-    btn.onclick = () => handleCategoryClick(cat.title);
-    container.appendChild(btn);
-  });
-
   const resetBtn = document.createElement("button");
   resetBtn.className = "button category-button";
   resetBtn.textContent = "Show All";
@@ -102,6 +93,16 @@ function renderCategoryButtons() {
     renderAllSections();
   };
   container.appendChild(resetBtn);
+
+  allCatBlogs.forEach(cat => {
+    const btn = document.createElement("button");
+    btn.className = "button category-button";
+    btn.textContent = cat.title;
+    btn.onclick = () => handleCategoryClick(cat.title);
+    container.appendChild(btn);
+  });
+
+
 }
 
 function renderFeaturedBlog() {
@@ -136,7 +137,7 @@ function renderLatestArticles() {
     <div class="newsroom-section">
       <div class="newsroom-header"><h5>Latest Articles</h5></div><hr /><br />
       <div class="news-grid">
-        ${recentBlog.map(item => `
+        ${recentBlog.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 6).map(item => `
           <a href="/blog.html?slug=${item.slug}" class="news-item">
             <img src="${item.images[0]}" alt="" class="news-image" />
             <div class="news-content">
@@ -154,7 +155,7 @@ function renderCategorySections() {
     <div class="category-blog-section">
       <div class="cardsectFive"><p>${cat.title}</p><hr /></div>
       <div class="cardMainBlogSec">
-        ${cat.blogs.slice(0, 6).map(item => `
+        ${cat.blogs.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 6).map(item => `
           <div class="cardBlogSt">
             <a class="cardBlogStaa" href="/blog.html?slug=${item.slug}">
               <div class="cardBlogStImg"><img src="${item.images[0]}" alt="${item.title}" /></div>

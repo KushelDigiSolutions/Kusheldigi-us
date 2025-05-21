@@ -196,9 +196,9 @@
 }
 
 .typing h1 {
-    font-size: 8rem;
+    font-size: 92px;
     font-weight: 700 !important;
-
+    color: #000;
 }
 
 .bttnn {
@@ -228,12 +228,13 @@
     font-weight: 600;
     font-family: "Wix Madefor Display";
     background-color: white;
+    color: #000;
     transition: color 0.3s ease-in-out;
     cursor: pointer;
 }
 
 .btnblo {
-    background-color: #007bff;
+    background-color: #1566ff;
     cursor: pointer;
     color: white;
 }
@@ -246,7 +247,6 @@
     width: 100%;
     height: 100%;
     background-color: #007bff;
-
     transition: bottom 0.4s ease-in-out;
     z-index: -1;
 }
@@ -371,6 +371,7 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
+    margin: 0;
 }
 
 .bimageloDiPaara {
@@ -475,7 +476,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 43px;
+    gap: 40px;
     padding-top: 30px;
     /* flex-wrap: wrap;*/
 }
@@ -489,7 +490,7 @@
 
 .bimageloDi {
     padding-bottom: 3rem;
-    max-width: 500px;
+    max-width: 550px;
 }
 
 .bimageloDiPa {
@@ -500,13 +501,14 @@
     color: #1566ff;
 }
 
-.bimageloDiPara11 {
+/* .bimageloDiPara11 {
     padding-top: 20px;
-}
+} */
 
 .bimageloDiPara {
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 600;
+    line-height: 48px;
     color: black;
 }
 
@@ -663,10 +665,10 @@
 
 
 .cardBlogStpaara {
-    font-weight: 600;
+    font-weight: 700;
     /* width: 400px; */
-    line-height: 28px;
-    font-size: 20px;
+    line-height: 32px;
+    font-size: 24px;
 }
 
 
@@ -728,13 +730,12 @@
     transition: transform 0.3s ease-in-out;
 }
 
-/* 🟢 Image zoom effect on .cardBlogStpaara or image hover */
 .cardBlogStImg:hover img,
 .cardBlogStpaara:hover~.cardBlogStImg img {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
-
-/* 🟢 Heading container */
+ 
 .cardBlogStpaara1 {
     display: inline-block;
     position: relative;
@@ -744,17 +745,13 @@
 .cardBlogStpaara:hover~.cardBlogStImg img {
     transform: scale(1.1) !important;
 }
-
-/* 🟢 Underline effect on .cardBlogStpaara */
-.cardBlogStpaara {
-    /* white-space: nowrap; */
-    position: relative;
-    /* display: inline;*/
+ 
+.cardBlogStpaara { 
+    position: relative; 
     color: #000;
     text-decoration: none;
 }
-
-/* 🟢 Underline animation (Initially hidden) */
+ 
 .cardBlogStpaara::after {
     content: "";
     position: absolute;
@@ -765,26 +762,17 @@
     background-color: black;
     transition: width 0.3s ease-in-out;
 }
-
-/* 🟢 Underline and image zoom when image is hovered */
+ 
 .cardBlogStImg:hover~.cardBlogStpaara1 .cardBlogStpaara::after,
 .cardBlogStpaara1:hover .cardBlogStpaara::after {
     width: 100%;
-}
+} 
 
-
-/* second row end */
-
-/* third section start */
-.newMainSec {
-    /* margin-top: 120px; */
-    /* padding: 40px 20px; */
+.newMainSec { 
     background-color: aliceblue;
-    height: auto;
-    /* ✅ Removed fixed height */
+    height: auto; 
 }
-
-/* Center Content */
+ 
 .newsroom-section {
     max-width: 1380px;
     margin: 0 auto;
@@ -792,10 +780,8 @@
     padding: 40px 20px;
 }
 
-/* Header Styling */
 .newsroom-header {
     display: flex;
-
     align-items: flex-end;
     justify-content: space-between;
     font-size: 50px;
@@ -809,36 +795,29 @@
     font-weight: 700;
 }
 
-/* Grid Layout */
 .news-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    /* ✅ Auto Responsive */
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); 
     gap: 38px;
     padding-top: 20px;
 }
-
-/* News Item */
+ 
 .news-item {
     display: flex;
     gap: 40px;
     align-items: flex-start;
 }
-
-/* Image Styling */
+ 
 .news-image {
     width: 190px;
     height: 190px;
     object-fit: cover;
-
 }
-
-/* Content */
+ 
 .news-content {
     flex: 1;
 }
-
-/* Title Styling */
+ 
 .news-title {
     font-size: 26px;
     font-weight: 700;
@@ -850,11 +829,7 @@
     transition: color 0.3s;
 }
 
-.news-title:hover {
-    /* color: #ff3b30; */
-}
-
-/* More News Link */
+  
 .more-news {
 
     margin-top: 20px;
@@ -873,10 +848,7 @@
 .more-news a:hover {
     color: #1566ff;
 }
-
-/* updated code */
-
-/* Image Styling */
+ 
 .news-image {
     width: 260px;
     height: auto;
@@ -887,8 +859,7 @@
 .news-item:hover .news-image {
     transform: scale(1.1);
 }
-
-/* Underline Animation */
+ 
 #newBlogTil::after {
     content: "";
     display: block;
@@ -904,8 +875,7 @@
 .news-item:hover #newBlogTil::after {
     width: 100%;
 }
-
-/* Underline Animation */
+ 
 #newBlogTil {
     position: relative;
     display: inline-block;
@@ -1451,7 +1421,7 @@
 }
 
 .bimageloDi>p {
-    font-size: 25px !important;
+    font-size: 20px !important;
     /* margin-top: 3rem; */
 }
 
