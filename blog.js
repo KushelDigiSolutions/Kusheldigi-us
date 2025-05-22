@@ -137,12 +137,12 @@ function renderLatestArticles() {
     <div class="newsroom-section">
       <div class="newsroom-header"><h5>Latest Articles</h5></div><hr /><br />
       <div class="news-grid">
-        ${recentBlog.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 6).map(item => `
+        ${getAllBlogs.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 6).map(item => `
           <a href="/blog.html?slug=${item.slug}" class="news-item">
             <img src="${item.images[0]}" alt="" class="news-image" />
             <div class="news-content">
-              <h3 class="news-title">${item.title}</h3>
-              <p class="cardBlogStpaa">${new Date(item.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+            <p class="cardBlogStpaa">${new Date(item.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}</p>
+            <h3 class="news-title">${item.title}</h3>
             </div>
           </a>`).join("")}
       </div>

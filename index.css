@@ -3722,7 +3722,7 @@ input::-webkit-outer-spin-button {
 .captcha-box {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 20px;
   align-items: center;
   margin: 20px 0
 }
