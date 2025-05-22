@@ -416,8 +416,7 @@
 .bimagelog {
     display: inline-block;
     width: 826px;
-    height: auto;
-    /* Ensures content inside is affected */
+    height: auto; 
 }
 
 .bimagelog img {
@@ -427,7 +426,6 @@
     transition: transform 0.4s ease-in-out;
 }
 
-/* Underline Animation */
 .bimageloDiPara {
     font-size: 42px;
     font-weight: 600;
@@ -435,8 +433,7 @@
     display: inline-block;
     cursor: pointer;
 }
-
-/* Initially hidden underline */
+ 
 .bimageloDiPara::after {
     content: "";
     position: absolute;
@@ -447,20 +444,16 @@
     background-color: black;
     transition: width 0.4s ease-in-out;
 }
-
-/* Hovering over the image triggers both effects */
+ 
 .bimagelog:hover img {
-    transform: scale(1.02);
-    /* Zoom-out effect */
+    transform: scale(1.02); 
 }
 
 .bimagelog:hover~.bimageloDi .bimageloDiPara::after {
-    width: 100%;
-    /* Expands underline from left to right */
+    width: 100%; 
 }
 
-.mainsecBlo {
-    /* padding-top: 20px; */
+.mainsecBlo { 
     max-width: 1720px;
     margin: 0 auto;
     padding: 20px 80px;
@@ -775,7 +768,6 @@
  
 .newsroom-section {
     max-width: 1380px;
-    margin: 0 auto;
     margin-top: 120px;
     padding: 40px 20px;
 }
@@ -1213,7 +1205,7 @@
     font-size: 40px;
     font-weight: 700;
     max-width: 1440px;
-    margin: auto;
+    margin: 0;
 }
 
 .cardsectFive hr {
@@ -1337,19 +1329,14 @@
 .blogSixMaiDivBlS:hover .blogSixMaiDivparaa::after {
     width: 100%;
 }
-
-/* six row end */
-
-/* seven row start */
+ 
 .eightBlogSMain {
-    padding-top: 50px;
-    /* padding: 80px 0px 136px 0px; */
+    padding-top: 50px; 
     max-width: 1380px;
-    margin: auto;
+    margin: 0;
 }
 
-.eightBlogSMainDiv {
-    /* padding-left: 90px; */
+.eightBlogSMainDiv { 
     max-width: 1380px;
     margin: auto;
 
