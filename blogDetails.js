@@ -137,7 +137,6 @@ function renderBlogs(recentBlogs) {
                     </div>
                     <p class="cardBlogStpaaragr">${blog.subdescription}</p>
                     <p class="cardBlogStpaarw">Read More</p>
-                    
                 </a>`;
             blogContainer.innerHTML += blogHTML;
         });

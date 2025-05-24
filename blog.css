@@ -681,13 +681,13 @@
 .cardBlogStpaarw {
     display: inline;
     position: relative;
+    margin: 0;
 }
 
 .cardBlogStpaarw::after {
     content: "";
     position: absolute;
     left: 0;
-
     bottom: 0px;
     width: 0;
     height: 2px;
@@ -713,7 +713,9 @@
     overflow: hidden;
     display: inline-block;
 }
-
+.cardBlogStaa1{
+    min-height: 500px;
+}
 
 .cardBlogStImg img {
     width: 100%;

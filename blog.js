@@ -161,10 +161,12 @@ function renderCategorySections() {
       .map(item => `
           <div class="cardBlogSt">
             <a class="cardBlogStaa" href="/blog.html?slug=${item.slug}">
+            <div class="cardBlogStaa1">
               <div class="cardBlogStImg"><img src="${item.images[0]}" alt="${item.title}" /></div>
               <p class="cardBlogStpaa">${new Date(item.date).toLocaleDateString("en-GB", { day: 'numeric', month: 'long', year: 'numeric' })}</p>
               <div class="cardBlogStpaara1"><p class="cardBlogStpaara">${item.title}</p></div>
-              <p class="cardBlogStpaaragr">${item.subdescription?.slice(0, 100)}...</p>
+              <p class="cardBlogStpaaragr">${item.subdescription?.slice(0, 110)}...</p>
+              </div>
             </a>
             <div class="blogClockTime1">
               <a href="/blog.html?slug=${item.slug}"><p class="cardBlogStpaarw">Read More</p></a>
