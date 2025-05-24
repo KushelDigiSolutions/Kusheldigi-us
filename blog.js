@@ -124,7 +124,7 @@ function renderFeaturedBlog() {
           <p class="bimageloDiParra">${blog.subdescription}</p>
           <div class="blogClockTime">
             <a href="/blog.html?slug=${blog.slug}"><span class="bimageloDiPaara">Read More</span></a>
-            <span class="bimageloDiPargaph"><img src="img/clock.svg" alt="clock" class="iconBlogClock"></img> ${blog.time}</span>
+            <span class="bimageloDiPargaph"><img src="img/clock.svg" alt="clock" class="iconBlogClock"></img> ${blog.time}Min</span>
           </div>
         </div>
       </div>
@@ -155,7 +155,10 @@ function renderCategorySections() {
     <div class="category-blog-section">
       <div class="cardsectFive"><p>${cat.title}</p><hr /></div>
       <div class="cardMainBlogSec">
-        ${cat.blogs.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 6).map(item => `
+        ${cat.blogs.filter((item) => item.domain.includes("kusheldigi.us"))
+      .sort((a, b) => new Date(b.date) - new Date(a.date))
+      .slice(0, 6)
+      .map(item => `
           <div class="cardBlogSt">
             <a class="cardBlogStaa" href="/blog.html?slug=${item.slug}">
               <div class="cardBlogStImg"><img src="${item.images[0]}" alt="${item.title}" /></div>
@@ -165,7 +168,7 @@ function renderCategorySections() {
             </a>
             <div class="blogClockTime1">
               <a href="/blog.html?slug=${item.slug}"><p class="cardBlogStpaarw">Read More</p></a>
-              <span class="bimageloDiPargaph1"><img src="img/clock.svg" alt="clock" class="iconBlogClock"></img> ${item.time}</span>
+              <span class="bimageloDiPargaph1"><img src="img/clock.svg" alt="clock" class="iconBlogClock"></img> ${item.time} Min</span>
             </div>
           </div>`).join("")}
       </div>
@@ -189,7 +192,7 @@ function renderPaginatedBlogs() {
 
   const small = document.getElementById("paginated-small");
   small.innerHTML = currentTasks.slice(1).map(item => `
-      <a href="/blog.html?slug=${item._id}" class="smallBlogCard">
+      <a href="/blog.html?slug=${item.slug}" class="smallBlogCard">
         <img src="${item.images?.[0] || 'fallback.jpg'}" alt="${item.title}" />
       </a>`).join("");
 

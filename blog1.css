@@ -70,6 +70,7 @@ body {
 ol {
     list-style-position: inside;
     margin-left: 10px;
+    padding-left: 2rem;
     list-style: auto;
 }
 
@@ -463,6 +464,7 @@ h2[dir="ltr"] {
         align-items: flex-start;
         text-align: left;
         margin: 0;
+        gap: 0px;
     }
 
     .mainBloContentPa,

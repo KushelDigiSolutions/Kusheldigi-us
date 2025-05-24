@@ -1,4 +1,5 @@
 const baseUrl = "https://backblog.kusheldigi.com";
+const domainToFilter = "kusheldigi.us";
 
 function getBlogIdFromURL() {
     const params = new URLSearchParams(window.location.search);
@@ -69,14 +70,39 @@ async function fetchBlogDetails() {
 document.addEventListener("DOMContentLoaded", fetchBlogDetails);
 
 
+// async function fetchRecentBlogs() {
+//     try {
+//         const response = await fetch(`${baseUrl}/api/v1/auth/getRecentBlog`);
+//         const data = await response.json();
+
+//         if (response.ok) {
+//             console.log("Fetched Recent Blogs:", data.blogs);
+//             renderBlogs(data.blogs);
+//         } else {
+//             console.error("Failed to fetch blogs:", data?.message);
+//             document.getElementById("cardMainBlogSec").innerHTML = "<p>Failed to load blogs.</p>";
+//         }
+//     } catch (error) {
+//         console.error("Error fetching blogs:", error);
+//         document.getElementById("cardMainBlogSec").innerHTML = "<p>Error loading blogs.</p>";
+//     }
+// }
+
+
 async function fetchRecentBlogs() {
     try {
         const response = await fetch(`${baseUrl}/api/v1/auth/getRecentBlog`);
         const data = await response.json();
 
-        if (response.ok) {
-            console.log("Fetched Recent Blogs:", data.blogs);
-            renderBlogs(data.blogs);
+        if (response.ok) { 
+            const filteredBlogs = data.blogs
+                .filter(blog =>
+                    Array.isArray(blog.domain) && blog.domain.includes("kusheldigi.us")
+                )
+                .sort((a, b) => new Date(b.date) - new Date(a.date)) 
+                .slice(0, 6); 
+
+            renderBlogs(filteredBlogs);
         } else {
             console.error("Failed to fetch blogs:", data?.message);
             document.getElementById("cardMainBlogSec").innerHTML = "<p>Failed to load blogs.</p>";
@@ -86,6 +112,7 @@ async function fetchRecentBlogs() {
         document.getElementById("cardMainBlogSec").innerHTML = "<p>Error loading blogs.</p>";
     }
 }
+
 
 function renderBlogs(recentBlogs) {
     const blogContainer = document.getElementById("cardMainBlogSec");

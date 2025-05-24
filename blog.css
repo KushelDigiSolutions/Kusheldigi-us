@@ -652,10 +652,8 @@
 .ALLt p {
     font-size: 44px;
     font-weight: 700;
+    color: #000;
 }
-
-
-
 
 .cardBlogStpaara {
     font-weight: 700;
@@ -780,6 +778,7 @@
     font-weight: 600;
     font-family: "Wix Madefor Display";
     margin-bottom: 20px;
+    color: #000;
 }
 
 .newsroom-header h5 {
@@ -813,6 +812,7 @@
 .news-title {
     font-size: 24px;
     font-weight: 700;
+    line-height: 32px;
     color: #000;
     margin:auto;
     font-family: "Wix Madefor Display";
@@ -823,7 +823,6 @@
 
   
 .more-news {
-
     margin-top: 20px;
     text-align: right;
     color: #1566ff;
@@ -1206,6 +1205,7 @@
     font-weight: 700;
     max-width: 1440px;
     margin: 0;
+    color: #000;
 }
 
 .cardsectFive hr {
