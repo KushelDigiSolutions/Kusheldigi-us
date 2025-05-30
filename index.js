@@ -81,7 +81,7 @@ const popupModal = document.querySelector('.popup-modal');
 document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
         popupModal.classList.add('showpopup');
-    }, 10000)
+    }, 15000)
 })
 
 document.querySelector('.cross-icon').addEventListener('click', function () {

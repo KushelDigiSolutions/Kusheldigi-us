@@ -914,7 +914,7 @@
         <img src="${blog.images?.[0]}" alt="blogs" class="blog-section-blog-image" />
         <div class="blog-section-content">
           <h3 class="blog-section-blog-title">${blog.title}</h3>
-          <p class="blog-section-blog-desc">${blog.subdescription}</p>
+          <p class="blog-section-blog-desc">${blog.subdescription.slice(0,150)}...</p>
           <div class="blog-section-author-details">
             <div class="blog-section-blog-autorname">
               <span class="blog-section-author">${blog.author}</span>
