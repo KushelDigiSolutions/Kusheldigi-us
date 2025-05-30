@@ -52,7 +52,7 @@ async function fetchCategoryBlogs() {
     const res = await fetch(`${baseUrl}/api/v1/auth/allcatBlogs`);
     const data = await res.json();
     allCatBlogs = data.data;
-    defaultCategories = allCatBlogs.reverse().slice(0, 5);
+    defaultCategories = allCatBlogs.slice(0, 5);
   } catch (err) {
     console.error("Error fetching category blogs:", err);
   }

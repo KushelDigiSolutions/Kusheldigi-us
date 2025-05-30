@@ -125,7 +125,7 @@
         text-align: center;
     }
     .bimageloDiPara {
-        font-size: 2.2rem;
+        font-size: 3rem;
         width: 100%;
         line-height: 40px;
         text-align: left;
@@ -219,6 +219,14 @@
 
     .bimagelogMain {
         width: 100%;
+        
+    }
+
+    .bimagelogMain {
+        flex-direction: column;
+        align-items: center;
+        /* text-align: center; */
+        gap: 20px;
     }
 
     .cardBlogStImg img {

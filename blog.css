@@ -199,6 +199,7 @@
     font-size: 92px;
     font-weight: 700 !important;
     color: #000;
+    margin: 0;
 }
 
 .bttnn {
@@ -273,7 +274,7 @@
 
 @media (max-width: 480px) {
     .typing h1 {
-        font-size: 8vw;
+        font-size: 10vw;
     }
 
     .button {
@@ -421,7 +422,7 @@
 
 .bimagelog img {
     width: 100%;
-    max-width: 833px;
+    /* max-width: 833px; */
     height: auto;
     transition: transform 0.4s ease-in-out;
 }
@@ -476,9 +477,8 @@
 
 .bimagelog img {
     width: 100%;
-    max-width: 833px;
+    /* max-width: 833px; */
     height: auto;
-
 }
 
 .bimageloDi {
@@ -514,7 +514,7 @@
 
 .bimageloDiPaara {
     /* padding-top: 30px; */
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 600;
     color: black;
 
@@ -530,11 +530,15 @@
     }
 
     .mainsecBlo {
-        padding: 30px;
+        padding: 30px 45px;
+    }
+
+    .bimageloDi>p {
+        text-align: left;
     }
 
     .bimageloDi {
-        max-width: 90%;
+        max-width: 98%;
     }
 
     .bimageloDiPara {
@@ -768,7 +772,7 @@
  
 .newsroom-section {
     max-width: 1380px;
-    margin-top: 120px;
+    margin-top: 50px;
     padding: 40px 20px;
 }
 
@@ -1335,7 +1339,7 @@
 .eightBlogSMain {
     padding-top: 50px; 
     max-width: 1380px;
-    margin: 0;
+    margin: auto;
 }
 
 .eightBlogSMainDiv { 

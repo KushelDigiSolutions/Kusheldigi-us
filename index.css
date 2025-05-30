@@ -1755,7 +1755,7 @@ footer {
 }
 
 .footer-logoss .egplus-logo img {
-  width: 283px;
+  width: 200px;
   height: auto
 }
 
@@ -1799,9 +1799,9 @@ footer {
     width: 120px
   }
 
-  .footer-logoss .egplus-logo img {
+  /* .footer-logoss .egplus-logo img {
     width: 260px
-  }
+  } */
 }
 
 @media (max-width:768px) {
