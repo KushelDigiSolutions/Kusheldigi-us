@@ -582,9 +582,10 @@
         line-height: 22px;
     }
 
-    .bimageloDiPaara {
-        font-size: 13px;
+    .bimageloDiPaara , .bimageloDiPargaph , .bimageloDiPargaph1 {
+        font-size: 14px !important;
     }
+    
 }
 
 /* first row end */

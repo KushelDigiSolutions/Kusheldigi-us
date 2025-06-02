@@ -1694,6 +1694,10 @@ footer {
   display: flex
 }
 
+.footer-hr{
+  margin: 0;
+}
+
 .footer-section h6 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -4200,7 +4204,7 @@ input::-webkit-outer-spin-button {
   }
 
   .footer-logoss .egplus-logo img {
-    width: 280px
+    width: 180px
   }
 
   .faq-section {
